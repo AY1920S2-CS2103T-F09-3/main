@@ -14,6 +14,9 @@ deploy:
   on:
     branch: master
 
+after_success:
+  - .travis/publish-site.sh
+
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
