@@ -60,7 +60,7 @@ image:appveyor/ci-pending.png[Commit build]
 +
 image:appveyor/ci-log.png[AppVeyor build]
 +
-.  Update the link to the "build status" badge at the top of `README.adoc` to point to the AppVeyor build status of your own repo.
+.  Update the link to the "build status" badge at the top of `README.md` to point to the AppVeyor build status of your own repo.
 * To find your build status badge URL, first go to your project settings by clicking on the "Settings" icon:
 +
 image:appveyor/project-settings-1.png[Click on project settings]
@@ -91,4 +91,4 @@ The asciidoc code should look similar to:
 https://ci.appveyor.com/project/damithc/addressbook-level3[image:https://ci.appveyor.com/api/projects/status/3boko2x2vr5cc3w2?svg=true[Build status]]
 ----
 +
-Copy and paste the asciidoc code to your `README.adoc` file.
+Copy and paste the asciidoc code to your `README.md` file.

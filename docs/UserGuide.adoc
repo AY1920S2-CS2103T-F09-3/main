@@ -1,4 +1,4 @@
-= AddressBook Level 3 - User Guide
+= iGrad - User Guide
 :site-section: UserGuide
 :toc:
 :toc-title:
@@ -11,167 +11,484 @@
 ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
 endif::[]
-:repoURL: https://github.com/se-edu/addressbook-level3
+:repoURL: https://github.com/AY1920S2-CS2103T-F09-3/main
 
-By: `Team SE-EDU`      Since: `Jun 2016`      Licence: `MIT`
+By: `Team-iGrad`      Since: `Feb 2020`
 
 == Introduction
 
-AddressBook Level 3 (AB3) is for those who *prefer to use a desktop app for managing contacts*. More importantly, AB3 is *optimized for those who prefer to work with a Command Line Interface* (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB3 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <<Quick Start>> to get started. Enjoy!
+Sick of having tracking your university progress the manual way?
+Start getting rid of your Excel sheets and scribbled down notes and download _iGrad_ right now!
 
-== Quick Start
+What is _iGrad_?
 
-.  Ensure you have Java `11` or above installed in your Computer.
-.  Download the latest `addressbook.jar` link:{repoURL}/releases[here].
-.  Copy the file to the folder you want to use as the home folder for your Address Book.
-.  Double-click the file to start the app. The GUI should appear in a few seconds.
-+
-image::Ui.png[width="790"]
-+
-.  Type the command in the command box and press kbd:[Enter] to execute it. +
-e.g. typing *`help`* and pressing kbd:[Enter] will open the help window.
-.  Some example commands you can try:
+_iGrad_ is the app to track your university progress, for students who are frustrated with the
+limited features the university provides, by students who are frustrated by the limited
+features the university provides.
 
-* *`list`* : lists all contacts
-* **`add`**`n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : adds a contact named `John Doe` to the Address Book.
-* **`delete`**`3` : deletes the 3rd contact shown in the current list
-* *`exit`* : exits the app
+_iGrad_ offers users the ability to create custom courses and graduation requirements,
+ensuring the *maximum* degree of flexibility when planning and keeping track of your progress
 
-.  Refer to <<Features>> for details of each command.
+_iGrad_ also retrieves data directly from https://nusmods.com[NUS Mods], ensuring that module
+information is always up to date.
 
-[[Features]]
+_iGrad_ calculates your CAP at every step, ensuring you never have to use a CAP calculator again
+
+Finally, the _iGrad_ team is always open to feedback and suggestions from the public will always be followed up on.
+
 == Features
 
+==== Course Builder
+
+iGrad was built with every NUS student in mind. Our custom course builder allows you to build
+the course of your dreams.
+
+==== Modular Credits (MCs) Tracker
+
+We are sick of counting our MCs at the beginning of every semester too. Easily see how many MCs you
+have left in order to apply for graduation.
+
+==== Cumulative Average Point (CAP) Tracker
+
+No more googling CAP calculators. iGrad's CAP tracker keeps track of your CAP at every step and
+even offers predictive services so you know how well you have to do
+in order to achieve your dream Cumulative Point Average (CAP).
+
+== Components
+
+image:https://user-images.githubusercontent.com/34233605/75425925-9774ff80-597e-11ea-87f5-228f95b5c84f.png[]
+
+==== Courses
+
+A course is simply a group of requirements. It is also how we keep track of your overall CAP
+and MCs.
+
+==== Requirements
+
+A requirement consists of at least one module. Fulfill all modules within a requirement to
+complete it.
+
+==== Modules
+
+A module is the building block of all other components. Mark your modules as done and give it
+a grade. You can also add optional memos to help you remember why
+you took the module.
+
+== Walkthrough
+
+==== Start up the application
+
+==== Enter your course details
+
+==== Key in your graduation requirements
+
+==== Assign your modules
+
+==== Mark a module as done
+
+==== Key in a memo
+
+==== Track your MCs
+
+==== View your CAP
+
+==== Export your data
+
+== Command List
+
+==== help
+
+Displays a help message to the user. Lists all possible commands
+and provides a link to the user guide online.
+
+Command Format
+
+----
+help
+----
+
+WARNING: Constraints
+
+NIL
+
+TIP: Expected Outcome
+
+A help message should be displayed
+
+'''
+
+==== course
+
+Add, modify or remove your course.
+
+Command Format
+
+----
+course add n/COURSE_NAME
+
+course modify COURSE_NAME: [n/COURSE_NAME] [u/MCs]
+
+course remove n/COURSE_NAME
+----
+
+Command Sample
+
+----
+/*
+ * Creating a course named "Computer Science"
+ */
+course add n/Computer Science
+
+
+/*
+ * Renaming your current course to "Information Systems"
+ */
+course modify Computer Science: n/Information Systems
+
+/*
+ * Removing your current course
+ */
+course remove
+----
+
+Constraints
 ====
-*Command Format*
-
-* Words in `UPPER_CASE` are the parameters to be supplied by the user e.g. in `add n/NAME`, `NAME` is a parameter which can be used as `add n/John Doe`.
-* Items in square brackets are optional e.g `n/NAME [t/TAG]` can be used as `n/John Doe t/friend` or as `n/John Doe`.
-* Items with `…`​ after them can be used multiple times including zero times e.g. `[t/TAG]...` can be used as `{nbsp}` (i.e. 0 times), `t/friend`, `t/friend t/family` etc.
-* Parameters can be in any order e.g. if the command specifies `n/NAME p/PHONE_NUMBER`, `p/PHONE_NUMBER n/NAME` is also acceptable.
+1. `(all)`: You can only have at most one course at any one time
+2. `course remove`: Removing a course removes all data from the system (including modules, requirements, etc)
 ====
 
-=== Viewing help : `help`
+Expected Outcome
+[NOTE]
+You should be able to see the added and/or modified course name in the
+top panel. For remove course, all data would be reset
 
-Format: `help`
+'''
 
-=== Adding a person: `add`
+==== requirement
 
-Adds a person to the address book +
-Format: `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]...`
+Add, modify or remove a graduation requirement category (under a course).
 
-[TIP]
-A person can have any number of tags (including 0)
+Command Format
 
-Examples:
+----
+1. requirement add n/REQUIREMENT_NAME: u/NO_OF_MCS
 
-* `add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01`
-* `add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal`
 
-=== Listing all persons : `list`
+/*
+ * At least one option must be specified.
+ */
+2. requirement modify n/REQUIREMENT_NAME: [n/REQUIREMENT_NAME] [u/NO_OF_MCS]
 
-Shows a list of all persons in the address book. +
-Format: `list`
 
-=== Editing a person : `edit`
+3. requirement remove n/REQUIREMENT_NAME
+----
 
-Edits an existing person in the address book. +
-Format: `edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]...`
+Command Sample
 
-****
-* Edits the person at the specified `INDEX`. The index refers to the index number shown in the displayed person list. The index *must be a positive integer* 1, 2, 3, ...
-* At least one of the optional fields must be provided.
-* Existing values will be updated to the input values.
-* When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.
-* You can remove all the person's tags by typing `t/` without specifying any tags after it.
-****
+----
+/*
+ * Adding a requirement named "Unrestricted Electives" which
+ * requires 32 MCs to fulfill
+ */
+requirement add n/Unrestricted Electives: u/32
 
-Examples:
 
-* `edit 1 p/91234567 e/johndoe@example.com` +
-Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively.
-* `edit 2 n/Betsy Crower t/` +
-Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags.
+/*
+ * Renaming a requirement named "Unrestricted Electives" to "Math and Sciences", and
+ * changing the number of MCs to 20 (to fulfill)
+ */
+requirement modify n/Unrestricted Electives: n/Math and Sciences u/32
 
-=== Locating persons by name: `find`
 
-Finds persons whose names contain any of the given keywords. +
-Format: `find KEYWORD [MORE_KEYWORDS]`
+/*
+ * Removing a requirement named "Unrestricted Electives"
+ */
+requirement remove n/Unrestricted Electives
+----
 
-****
-* The search is case insensitive. e.g `hans` will match `Hans`
-* The order of the keywords does not matter. e.g. `Hans Bo` will match `Bo Hans`
-* Only the name is searched.
-* Only full words will be matched e.g. `Han` will not match `Hans`
-* Persons matching at least one keyword will be returned (i.e. `OR` search). e.g. `Hans Bo` will return `Hans Gruber`, `Bo Yang`
-****
+Constraints
+[WARNING]
+====
+1. `(all)`: Requirement names have to be unique
+2. `(all)`: The number of MCs under all requirements have to be in total equals (strictly) to number of MCs for your course
+====
 
-Examples:
+Expected Outcome
+[NOTE]
+You should be able to see the created and/or modified requirement details reflected in the
+main panel
 
-* `find John` +
-Returns `john` and `John Doe`
-* `find Betsy Tim John` +
-Returns any person having names `Betsy`, `Tim`, or `John`
+'''
 
-// tag::delete[]
-=== Deleting a person : `delete`
 
-Deletes the specified person from the address book. +
-Format: `delete INDEX`
+==== assign
 
-****
-* Deletes the person at the specified `INDEX`.
-* The index refers to the index number shown in the displayed person list.
-* The index *must be a positive integer* 1, 2, 3, ...
-****
+Assigns (and creates) a module under a graduation requirement category.
 
-Examples:
+Command Format
 
-* `list` +
-`delete 2` +
-Deletes the 2nd person in the address book.
-* `find Betsy` +
-`delete 1` +
-Deletes the 1st person in the results of the `find` command.
+----
+1. assign n/REQUIREMENT_NAME: n/MODULE_CODE, t/MODULE_TITLE u/MCs; ...
+----
 
-// end::delete[]
-=== Clearing all entries : `clear`
+Command Sample
 
-Clears all entries from the address book. +
-Format: `clear`
+----
+/**
+* Assigns (and creates) a module "LAJ1201" (4 MCs) and another module "CS1101S" (4 MCs) to the requirement "Unrestricted Electives"
+*/
+assign n/Unrestricted Electives: n/LAJ1201 u/4, n/CS1101S u/4
+----
 
-=== Exiting the program : `exit`
+Constraints
+[WARNING]
+====
+1. A module cannot be assigned if there are not enough MCs left under a graduation requirement (category).
+2. The module code (e.g, CS1101S, ST2334), have to be unique
+====
 
-Exits the program. +
-Format: `exit`
+Expected Outcome
+[NOTE]
+You should be able to see the newly assigned module(s) displayed in the main panel, under their respective requirement categories.
+main panel
 
-=== Saving the data
+'''
 
-Address book data are saved in the hard disk automatically after any command that changes the data. +
-There is no need to save manually.
+==== module
 
-// tag::dataencryption[]
-=== Encrypting data files `[coming in v2.0]`
+Modify or remove a module. You would be able to tag (modify) a module with information such as; semester, grade or memo notes information.
 
-_{explain how the user can enable/disable data encryption}_
-// end::dataencryption[]
+Command Format
 
-== FAQ
+----
+/*
+ * SEMESTER is specified in format Y_S_ ( e.g. Y1S2 - Year 1 Semester 2 )
+ */
 
-*Q*: How do I transfer my data to another Computer? +
-*A*: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder.
 
-== Command Summary
+/*
+ * At least one option must be specified.
+ */
+1. module modify n/MODULE_CODE: [n/MODULE_CODE] [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]
 
-* *Add* `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]...` +
-e.g. `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`
-* *Clear* : `clear`
-* *Delete* : `delete INDEX` +
-e.g. `delete 3`
-* *Edit* : `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]...` +
-e.g. `edit 2 n/James Lee e/jameslee@example.com`
-* *Find* : `find KEYWORD [MORE_KEYWORDS]` +
-e.g. `find James Jake`
-* *List* : `list`
-* *Help* : `help`
+
+2. module remove n/[MODULE_CODE]
+----
+
+Command Sample
+
+----
+/*
+ * Tagging the module, CS1101, with "Y1S2" and grade "A+", and also renaming it to CS1101S
+ */
+module modify n/CS1101: n/CS1101S s/Y1S2 g/A+
+
+
+/*
+ * Tagging the module, ST2234, with "Y2S1" and giving it a memo "pretty easy module"
+*/
+module modify n/ST2334: s/Y2S1 m/pretty easy module
+
+
+/*
+ * Removing a module named "CS1101S"
+ */
+module remove n/CS1101S
+----
+
+Constraints
+[WARNING]
+====
+1. `(module modify)` There must be enough MCs left under a graduation requirement (category) for all modules.
+2. `(all)` The module code (e.g, CS1101S, ST2334), have to be unique
+====
+
+Expected Outcome
+[NOTE]
+You should be able to see the modified module details reflected in the main panel
+
+'''
+==== exam
+
+View your examination results.
+
+Command Format
+
+----
+/**
+* SEMESTER is optional.
+* If not specified, displays results for all semesters.
+*/
+exam s/SEMESTER
+----
+
+Command Sample
+
+----
+/**
+* Displays exam results for Year 3 Semester 2
+*/
+exam s/Y3S2
+----
+
+Constraints
+[WARNING]
+====
+-Nill
+====
+
+Expected Outcome
+[NOTE]
+You should be able to view your exam results (in a pop-up)
+
+'''
+
+==== achieve
+
+Calculates the average grade needed to achieve the CAP you desire/
+
+Command Format
+
+----
+1. achieve c/DESIRED_CAP
+----
+
+Command Sample
+
+----
+/**
+* Calculates the avergae grade needed
+* to achieve a CAP of 4.50
+*/
+achieve c/4.50
+----
+
+Constraints
+[WARNING]
+====
+-Nill
+====
+
+Expected Outcome
+[NOTE]
+You should be able to view the average grade needed to achieve the CAP you desire (in a pop-up)
+
+'''
+
+
+==== export
+
+Exports all data in a (prettified) text file. If information is sufficient,
+this file can be submitted to NUS as a study plan.
+
+Command Format
+
+----
+1. export
+----
+
+Constraints
+[WARNING]
+====
+-Nill
+====
+
+Expected Outcome
+[NOTE]
+A text file "study_plan.txt" should be generated in  the same folder as the iGrad application.
+
+'''
+
+==== exit
+
+Exits the program
+
+Command Format
+
+----
+exit
+----
+
+Constraints
+[WARNING]
+====
+-Nill
+====
+
+Expected Outcome
+[NOTE]
+The application should exit
+
+## FAQs
+
+_I'm not an NUS student. Can I still use iGrad?_
+
+As long as your university follows a similar <<fig-1,hierachical structure>>!
+However, we will be unable to provide features such as validation from NUSMods.
+
+== Cheat Sheet
+
+____
+
+This segment contains all the commands detailed in this guide in a consolidated list
+
+____
+
+`help`
+
+`course add n/COURSE_NAME`
+
+`course modify: [n/COURSE_NAME] [u/MCs]`
+
+`course remove n/COURSE_NAME`
+
+`requirement add n/REQUIREMENT_NAME: u/NO_OF_MCS`
+
+`requirement modify n/REQUIREMENT_NAME: [n/REQUIREMENT_NAME] [u/NO_OF_MCS]`
+
+`requirement remove n/REQUIREMENT_NAME`
+
+`module add n/MODULE_CODE [n/MODULE_TITLE] [n/DESCRIPTION]`
+
+`module modify MODULE_CODE: [n/MODULE_CODE] [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]`
+
+`module remove n/[MODULE_CODE]`
+
+`assign REQUIREMENT_NAME: n/MODULE_CODE`
+
+`exam s/SEMESTER`
+
+`achieve c/DESIRED_CAP`
+
+`export`
+
+`exit`
+
+## Glossary
+
+|===
+| |
+
+|Course |A course is the entire programme of studies required to complete a university degree
+|Graduation requirement |Requirements specified by the university in order for a student to graduate
+|Module |Each module of study has a unique module code consisting of a two- or three-letter prefix that generally denotes the discipline, and four digits, the first of which indicates the level of the module
+|Cumulative Average Point (CAP) |The Cumulative Average Point (CAP) is the weighted average grade point of the letter grades of all the modules taken by the students.
+|Semester |A semester is a part of the academic year. Each semester typically lasts 13 weeks in NUS.
+|Modular Credits (MCs) |A modular credit (MC) is a unit of the effort, stated in terms of time, expected of a typical student in managing his/her workload.
+|NUS Mods |A timetabling application built for NUS students, by NUS students. Much like this iGrad!
+| |
+|===
+
+*Handy Links*
+
+http://www.nus.edu.sg/registrar/academic-information-policies/graduate/modular-system[NUS - Modular System]
+
+http://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/degree-requirements[NUS - Degree Requirements]
+
+http://www.nus.edu.sg/nusbulletin/yong-siew-toh-conservatory-of-music/undergraduate-education/degree-requirements/grading-system-and-regulations/[NUS - Grading System and Regulations]
+
+http://www.nus.edu.sg/registrar/calendar[NUS - Academic Calendar]

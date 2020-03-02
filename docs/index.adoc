@@ -1,2 +1,2 @@
 :stylesDir: stylesheets
-include::../README.adoc[]
+include::../README.md[]
