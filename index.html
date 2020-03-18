@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><meta name="author" content="&amp;amp;gt; A handy guide to help you make the most of your application"><title>iGrad</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><meta name="author" content="&amp;amp;gt; A handy guide to help you make the most of your application"><name>iGrad</name><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">AddressBook-Level3</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level3"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>iGrad</h1><div class="details"><span class="author" id="author">&amp;amp;gt; A handy guide to help you make the most of your application</span><br></div></div><div id="content"><div class="sect1">
 <h2 id="table-of-contents"><a class="link" href="#table-of-contents">Table of Contents</a></h2>
@@ -12,7 +12,7 @@
 <p>[Features](#Features)</p>
 <div class="literalblock">
 <div class="content">
-<pre>2.1 [Course Builder](#course-builder)</pre>
+<pre>2.1 [Course Builder](#courseInfo-builder)</pre>
 </div>
 </div>
 <div class="literalblock">
@@ -56,7 +56,7 @@
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>5.2 [`course`](#course)</pre>
+<pre>5.2 [`courseInfo`](#courseInfo)</pre>
 </div>
 </div>
 <div class="literalblock">
@@ -66,47 +66,32 @@
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>5.4 [`assign`](#assign)</pre>
+<pre>5.4 [`module`](#module)</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>5.5 [`module`](#module)</pre>
+<pre>5.5 [`assign`](#assign)</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>5.6 [`modify`](#modify)</pre>
+<pre>5.6 [`exam`](#exam)</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>5.7 [`delete`](#delete)</pre>
+<pre>5.7 [`achieve`](#achieve)</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>5.8 [`exam`](#exam)</pre>
+<pre>5.8 [`export`](#export)</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>5.9 [`achieve`](#achieve)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>5.10 [`batch`](#batch)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>5.11 [`export`](#export)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>5.12 [`exit`](#exit)</pre>
+<pre>5.9 [`exit`](#exit)</pre>
 </div>
 </div>
 </li>
@@ -161,8 +146,8 @@ information is always up to date.</p>
 <div class="sect3">
 <h4 id="course-builder"><a class="link" href="#course-builder">Course Builder</a></h4>
 <div class="paragraph">
-<p>iGrad was built with every NUS student in mind. Our custom course builder allows you to build
-the course of your dreams.</p>
+<p>iGrad was built with every NUS student in mind. Our custom courseInfo builder allows you to build
+the courseInfo of your dreams.</p>
 </div>
 </div>
 <div class="sect3">
@@ -192,7 +177,7 @@ in order to achieve your dream Cumulative Point Average (CAP).</p>
 <div class="sect3">
 <h4 id="courses"><a class="link" href="#courses">Courses</a></h4>
 <div class="paragraph">
-<p>A course is simply a group of requirements. It is also how we keep track of your overall CAP
+<p>A courseInfo is simply a group of requirements. It is also how we keep track of your overall CAP
 and MCs.</p>
 </div>
 </div>
@@ -223,7 +208,7 @@ you took the module.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="2-enter-your-course-details"><a class="link" href="#2-enter-your-course-details">2. Enter your course details</a></h4>
+<h4 id="2-enter-your-courseinfo-details"><a class="link" href="#2-enter-your-courseinfo-details">2. Enter your courseInfo details</a></h4>
 <div class="paragraph">
 <p>![](<a href="https://user-images.githubusercontent.com/34233605/75436477-9dbfa780-598f-11ea-9076-8d4e4e09c8bc.png" class="bare">https://user-images.githubusercontent.com/34233605/75436477-9dbfa780-598f-11ea-9076-8d4e4e09c8bc.png</a>)</p>
 </div>
@@ -296,9 +281,9 @@ and provides a link to the user guide online.</p>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="code-course-code"><a class="link" href="#code-course-code"><code>course</code></a></h4>
+<h4 id="code-courseinfo-code"><a class="link" href="#code-courseinfo-code"><code>courseInfo</code></a></h4>
 <div class="paragraph">
-<p>Creates a course.</p>
+<p>Creates a courseInfo. (TODO: Add in modify and remove)</p>
 </div>
 <div class="paragraph">
 <p>Command Format</p>
@@ -309,9 +294,9 @@ and provides a link to the user guide online.</p>
 <div class="literalblock">
 <div class="content">
 <pre>/*
-* Creating a course named "Computer Science"
+* Creating a courseInfo named "Computer Science"
 */
-course n/Computer Science</pre>
+courseInfo add n/Computer Science</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -322,21 +307,21 @@ course n/Computer Science</pre>
 </div>
 <div class="paragraph">
 <p>top panel
-    course n/COURSE_NAME</p>
+    courseInfo add n/COURSE_NAME</p>
 </div>
 <hr>
 </div>
 <div class="sect3">
 <h4 id="code-requirement-code"><a class="link" href="#code-requirement-code"><code>requirement</code></a></h4>
 <div class="paragraph">
-<p>Creates a graduation requirement.</p>
+<p>Creates a graduation requirement. (TODO: Add in modify and remove)</p>
 </div>
 <div class="paragraph">
 <p>Command Format</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>requirement n/REQUIREMENT_NAME u/NO_OF_MCS</pre>
+<pre>requirement add n/REQUIREMENT_NAME u/NO_OF_MCS</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -348,7 +333,7 @@ course n/Computer Science</pre>
 * Creating a requirement named "Unrestricted Electives"
 * which requires 32 MCs to fulfill
 */
-requirement n/Unrestricted Electives u/32</pre>
+requirement add n/Unrestricted Electives u/32</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -363,50 +348,9 @@ requirement n/Unrestricted Electives u/32</pre>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="code-assign-code"><a class="link" href="#code-assign-code"><code>assign</code></a></h4>
-<div class="paragraph">
-<p>Assigns a module to a graduation requirement. If there is good internet
-connectivity, the module will be validated with NUS Mods and its description
-will be auto-filled.</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/**
-* DESCRIPTION is optional
-*/
-assign n/REQUIREMENT_NAME: n/MODULE_CODE t/MODULE_TITLE u/NO_OF_MCS d/DESCRIPTION</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/**
-* Assigns module "LAJ1201 Japanese 1" worth 4 MCs
-* to requirement "Unrestricted Electives"
-*/
-assign n/Unrestricted Electives: n/LAJ1201 t/Japanese 1 u/4</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="paragraph">
-<p>a graduation requirement</p>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<hr>
-</div>
-<div class="sect3">
 <h4 id="code-module-code"><a class="link" href="#code-module-code"><code>module</code></a></h4>
 <div class="paragraph">
-<p>Tags a module with semester, grade or memo notes.</p>
+<p>Creates a module with semester, grade or memo notes information. (TODO: Add in modify and remove)</p>
 </div>
 <div class="paragraph">
 <p>Command Format</p>
@@ -417,7 +361,7 @@ assign n/Unrestricted Electives: n/LAJ1201 t/Japanese 1 u/4</pre>
 * At least one option must be specified.
 * SEMESTER is specified in format Y_S_ ( e.g. Y1S2 - Year 1 Semester 2 )
 */
-module n/MODULE_CODE: s/SEMESTER g/GRADE m/MEMO_NOTES</pre>
+module add n/MODULE_CODE [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -428,7 +372,7 @@ module n/MODULE_CODE: s/SEMESTER g/GRADE m/MEMO_NOTES</pre>
 <pre>/**
 * Tags CS1101 with "Y1S2" and grade "A+"
 */
-module n/CS1101: s/Y1S2 g/A+</pre>
+module add n/CS1101 s/Y1S2 g/A+</pre>
 </div>
 </div>
 <div class="literalblock">
@@ -436,7 +380,7 @@ module n/CS1101: s/Y1S2 g/A+</pre>
 <pre>/**
 * Tags ST2234 with "Y2S1" and gives it a memo "pretty easy module"
 */
-module n/ST2334: s/Y2S1 m/pretty easy module</pre>
+module add n/ST2334 s/Y2S1 m/pretty easy module</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -448,29 +392,21 @@ module n/ST2334: s/Y2S1 m/pretty easy module</pre>
 <hr>
 </div>
 <div class="sect3">
-<h4 id="code-modify-code"><a class="link" href="#code-modify-code"><code>modify</code></a></h4>
+<h4 id="code-assign-code"><a class="link" href="#code-assign-code"><code>assign</code></a></h4>
 <div class="paragraph">
-<p>Modify course, graduation requirements or modules</p>
+<p>Assigns a module to a graduation requirement. If there is good internet
+connectivity, the module will be validated with NUSMods and its description
+will be auto-filled.</p>
 </div>
 <div class="paragraph">
 <p>Command Format</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>modify course n/COURSE_NAME</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>modify req n/REQUIREMENT_NAME: u/NO_OF_MCS</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
 <pre>/**
-* At least one option must be specified
+* DESCRIPTION is optional
 */
-modify module n/MODULE_CODE: t/MODULE_NAME u/NO_OF_MCS</pre>
+assign REQUIREMENT_NAME n/MODULE_CODE</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -479,59 +415,17 @@ modify module n/MODULE_CODE: t/MODULE_NAME u/NO_OF_MCS</pre>
 <div class="literalblock">
 <div class="content">
 <pre>/**
-* Modifies CS4239 and gives it the title "Machine Learning" and updates
-* it to be worth 5 MCs
+* Assigns module "LAJ1201" (Japanese 1)
+* to requirement "Unrestricted Electives"
 */
-modify module n/CS4239: t/Machine Learning u/5</pre>
+assign Unrestricted Electives n/LAJ1201</pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Constraints</p>
 </div>
 <div class="paragraph">
-<p>have to be unique</p>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="code-delete-code"><a class="link" href="#code-delete-code"><code>delete</code></a></h4>
-<div class="paragraph">
-<p>Deletes course, graduation requirements or modules</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>del course n/COURSE_NAME</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>del req n/REQUIREMENT_NAME</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>del module n/MODULE_CODE</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/**
-* Deletes the course "Computer Science"
-*/
-del course n/Computer Science</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
+<p>a graduation requirement</p>
 </div>
 <div class="paragraph">
 <p>Expected Outcome</p>
@@ -550,7 +444,7 @@ del course n/Computer Science</pre>
 <div class="content">
 <pre>/**
 * SEMESTER is optional.
-* If not specified, displays results for all semesters.
+* If not specified, displays results for all tags.
 */
 exam s/SEMESTER</pre>
 </div>
@@ -607,42 +501,6 @@ achieve c/4.50</pre>
 </div>
 <div class="paragraph">
 <p>the CAP you desire</p>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="code-batch-code"><a class="link" href="#code-batch-code"><code>batch</code></a></h4>
-<div class="paragraph">
-<p>Executes a series of commands written in a text (.txt) file</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>batch f/ FILE_PATH</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>batch f/ C:\Users\wayne\OneDrive\Desktop\commands.txt</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="paragraph">
-<p>Partial execution will not take place.</p>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<div class="paragraph">
-<p>in the text file. Please cross-check changes with the file to ensure
-this is so.</p>
 </div>
 <hr>
 </div>
@@ -719,43 +577,40 @@ However, we will be unable to provide features such as validation from NUS Mods.
 <p><code>help</code></p>
 </div>
 <div class="paragraph">
-<p><code>course n/COURSE_NAME</code></p>
+<p><code>courseInfo add n/COURSE_NAME</code></p>
 </div>
 <div class="paragraph">
-<p><code>requirement n/REQUIREMENT_NAME u/NO_OF_MCS</code></p>
+<p><code>courseInfo modify n/NEW_COURSE_NAME</code></p>
 </div>
 <div class="paragraph">
-<p><code>assign n/REQUIREMENT_NAME: n/MODULE_CODE t/MODULE_TITLE u/NO_OF_MCS d/DESCRIPTION</code></p>
+<p><code>courseInfo remove</code></p>
 </div>
 <div class="paragraph">
-<p><code>module n/MODULE_CODE: s/SEMESTER g/GRADE m/MEMO_NOTES</code></p>
+<p><code>requirement add n/REQUIREMENT_NAME u/NO_OF_MCS</code></p>
 </div>
 <div class="paragraph">
-<p><code>modify course n/COURSE_NAME</code></p>
+<p><code>requirement modify REQUIREMENT_NAME [n/REQUIREMENT_NAME] [u/NO_OF_MCS]</code></p>
 </div>
 <div class="paragraph">
-<p><code>modify req n/REQUIREMENT_NAME: u/NO_OF_MCS</code></p>
+<p><code>requirement remove REQUIREMENT_NAME</code></p>
 </div>
 <div class="paragraph">
-<p><code>modify module n/MODULE_CODE: t/MODULE_NAME u/NO_OF_MCS</code></p>
+<p><code>module add n/MODULE_CODE [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</code></p>
 </div>
 <div class="paragraph">
-<p><code>del course n/COURSE_NAME</code></p>
+<p><code>module modify MODULE_CODE [n/MODULE_CODE] [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</code></p>
 </div>
 <div class="paragraph">
-<p><code>del req n/REQUIREMENT_NAME</code></p>
+<p><code>module remove MODULE_CODE</code></p>
 </div>
 <div class="paragraph">
-<p><code>del module n/MODULE_CODE</code></p>
+<p><code>assign REQUIREMENT_NAME n/MODULE_CODE</code></p>
 </div>
 <div class="paragraph">
 <p><code>exam s/SEMESTER</code></p>
 </div>
 <div class="paragraph">
 <p><code>achieve c/DESIRED_CAP</code></p>
-</div>
-<div class="paragraph">
-<p><code>batch f/ FILE_PATH</code></p>
 </div>
 <div class="paragraph">
 <p><code>export</code></p>
@@ -771,7 +626,7 @@ However, we will be unable to provide features such as validation from NUS Mods.
 <div class="paragraph">
 <p>|               |               |
 | ------------- |-------------  |
-|Course        |A course is the entire programme of studies required to complete a university degree |
+|Course        |A courseInfo is the entire programme of studies required to complete a university degree |
 |Graduation requirement      |Requirements specified by the university in order for a student to graduate |
 |Module      |Each module of study has a unique module code consisting of a two- or three-letter prefix that generally denotes the discipline, and four digits, the first of which indicates the level of the module |
 |Cumulative Average Point (CAP) |The Cumulative Average Point (CAP) is the weighted average grade point of the letter grades of all the modules taken by the students. |
@@ -796,4 +651,4 @@ However, we will be unable to provide features such as validation from NUS Mods.
 <p>[NUS - Academic Calendar](<a href="http://www.nus.edu.sg/registrar/calendar" class="bare">http://www.nus.edu.sg/registrar/calendar</a>)</p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-09 12:45:29 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-18 18:50:41 UTC</div></div></div></body></html>
