@@ -1,7 +1,6 @@
 package igrad.logic.commands;
 
 import java.io.IOException;
-
 import igrad.csvwriter.CsvWriter;
 import igrad.logic.commands.exceptions.CommandException;
 import igrad.model.Model;
@@ -29,7 +28,7 @@ public class ExportCommand extends Command {
         try {
             CsvWriter csvWriter = new CsvWriter(model.getSortedModuleList(new SortBySemester()));
             csvWriter.write();
-        } catch (IOException e) {
+        } catch (NullPointerException | IOException e) {
             throw new CommandException(EXPORT_ERROR_MESSAGE);
         }
 

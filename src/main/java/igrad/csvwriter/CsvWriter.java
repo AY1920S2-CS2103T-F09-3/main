@@ -1,9 +1,9 @@
 package igrad.csvwriter;
 
-import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.List;
-
+import igrad.commons.util.FileUtil;
 import igrad.model.module.Module;
 
 /**
@@ -11,13 +11,10 @@ import igrad.model.module.Module;
  */
 public class CsvWriter {
 
-    private static final String fileName = "study_plan.csv";
-    private FileWriter csvWriter;
+    private static final Path filePath = Path.of("study_plan.csv");
     private List<Module> sortedList;
 
-    public CsvWriter(List<Module> sortedList) throws IOException {
-        csvWriter = new FileWriter(fileName);
-
+    public CsvWriter(List<Module> sortedList){
         this.sortedList = sortedList;
     }
 
@@ -25,68 +22,60 @@ public class CsvWriter {
      * Writes to CSV
      */
     public void write() throws IOException {
-        writeHeaders();
-        writeBody();
-        closeWriter();
-    }
-
-    private void closeWriter() throws IOException {
-        csvWriter.flush();
-        csvWriter.close();
-    }
-
-    private void appendNewLine() throws IOException {
-        csvWriter.append("\n");
-    }
-
-    private void append(String text) throws IOException {
-        csvWriter.append(text);
-        csvWriter.append(",");
+        String data = getHeaders() + getBody();
+        FileUtil.writeToFile(filePath, data);
     }
 
     /**
      * Writes each module as a line. Separates modules taken in different semesters
      * by a new line.
      */
-    private void writeBody() throws IOException {
+    private String getBody() {
+
+        StringBuilder body = new StringBuilder();
 
         for (int i = 0; i < sortedList.size(); i++) {
             Module module = sortedList.get(i);
 
-            append(module.getSemester().toString());
-            append(module.getModuleCode().toString());
-            append(module.getTitle().toString());
-            append(module.getCredits().toString());
-            appendNewLine();
+            body.append(module.getSemester().toString());
+            body.append(module.getModuleCode().toString());
+            body.append(module.getTitle().toString());
+            body.append(module.getCredits().toString());
 
             if (i < sortedList.size() - 1) {
+                body.append("\n");
                 Module nextModule = sortedList.get(i + 1);
                 if (!nextModule.getSemester().equals(module.getSemester())) {
-                    appendNewLine();
+                    body.append("\n");
                 }
             }
-
         }
+
+        return body.toString();
     }
 
     /**
      * Writes the headers of the CSV file.
      */
-    private void writeHeaders() throws IOException {
+    private String getHeaders() {
 
-        String[] headers = {
+        StringBuilder headers = new StringBuilder();
+
+        String[] headerArray = {
             "Semester",
             "Module Code",
             "Module Title",
             "MCs"
         };
 
-        for (String header : headers) {
-            append(header);
+        for (String header : headerArray) {
+            headers.append(header);
+            headers.append(",");
         }
 
-        appendNewLine();
+        headers.append("\n");
 
+        return headers.toString();
     }
 
 }

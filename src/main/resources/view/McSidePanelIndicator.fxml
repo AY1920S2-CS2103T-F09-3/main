@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mcPanelPlaceholder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="320.0" style="-fx-background-color: #2a2a2a;" styleClass="mcSidePanel" stylesheets="DarkTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="mcPanelPlaceholder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="320.0" style="-fx-background-color: #2a2a2a;" styleClass="mcSidePanel" stylesheets="DarkTheme.css" xmlns="http://javafx.com/javafx/11.0.0" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ProgressIndicator fx:id="progressIndicator" layoutX="145.0" layoutY="139.0" prefHeight="400.0" prefWidth="27.0" progress="0.52" scaleX="5.0" scaleY="5.0" styleClass="progress-indicator" />
       <Circle fill="#1f93ff00" layoutX="160.0" layoutY="114.0" radius="42.0" stroke="#2a2a2a" strokeType="OUTSIDE" strokeWidth="20.0" />

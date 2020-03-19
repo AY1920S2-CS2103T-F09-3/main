@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.stage.Stage?>
 
-<fx:root minHeight="750.0" minWidth="800.0" onCloseRequest="#handleExit" title="iGrad" type="javafx.stage.Stage" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root minHeight="750.0" minWidth="800.0" onCloseRequest="#handleExit" title="iGrad" type="javafx.stage.Stage" xmlns="http://javafx.com/javafx/11.0.0" xmlns:fx="http://javafx.com/fxml/1">
     <icons>
         <Image url="@/images/iGrad_Shibu.png" />
     </icons>
