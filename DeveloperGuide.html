@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">AddressBook-Level3</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level3"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>iGrad - Developer Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>AY1920S2-CS2103T-F09-3</code>      Since: <code>Jan 2020</code>      Licence: <code>MIT</code></p>
+<p>By: <code>AY1920S2-CS2103T-F09-3</code>      Since: <code>Feb 2020</code>      Licence: <code>MIT</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -22,10 +22,12 @@
 </li>
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
-<li><a href="#proposed-undo-redo-feature">3.1. [Proposed] Undo/Redo feature</a></li>
-<li><a href="#proposed-data-encryption">3.2. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.3. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.4. Configuration</a></li>
+<li><a href="#adding-modules-from-nus-mods">3.1. Adding Modules from NUS Mods</a></li>
+<li><a href="#requirements-feature">3.2. Requirements Feature</a></li>
+<li><a href="#proposed-undo-redo-feature">3.3. [Proposed] Undo/Redo feature</a></li>
+<li><a href="#proposed-data-encryption">3.4. [Proposed] Data Encryption</a></li>
+<li><a href="#logging">3.5. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.6. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -67,7 +69,8 @@
 <div class="title">Figure 1. Architecture Diagram</div>
 </div>
 <div class="paragraph">
-<p>The <strong><em>Architecture Diagram</em></strong> given above explains the high-level design of the App. Given below is a quick overview of each component.</p>
+<p>The <strong><em>Architecture Diagram</em></strong> given above explains the high-level design of the App.
+Given below is a quick overview of each component.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -83,7 +86,8 @@ Refer to the <a href="UsingPlantUml.html">Using PlantUML guide</a> to learn how 
 </table>
 </div>
 <div class="paragraph">
-<p><code>Main</code> has two classes called <a href="https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/igrad/Main.java"><code>Main</code></a> and <a href="https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/igrad/MainApp.java"><code>MainApp</code></a>. It is responsible for,</p>
+<p><code>Main</code> has two classes called <a href="https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/igrad/Main.java"><code>Main</code></a> and <a href="https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/igrad/MainApp.java"><code>MainApp</code></a>.
+It is responsible for,</p>
 </div>
 <div class="ulist">
 <ul>
@@ -107,7 +111,7 @@ The following class plays an important role at the architecture level:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>The rest of the App consists of four components.</p>
+<p>The rest of the App consists of five components.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -123,10 +127,13 @@ The following class plays an important role at the architecture level:</p>
 <li>
 <p><a href="#Design-Storage"><strong><code>Storage</code></strong></a>: Reads data from, and writes data to, the hard disk.</p>
 </li>
+<li>
+<p><a href="#Design-Services"><strong><code>Services</code></strong></a>: Interacts with an external Application Programming Interface (API) to obtain data for the App.</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Each of the four components</p>
+<p>Each of the first four components</p>
 </div>
 <div class="ulist">
 <ul>
@@ -139,7 +146,7 @@ The following class plays an important role at the architecture level:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>For example, the <code>Logic</code> component (see the class diagram given below) defines it&#8217;s API in the <code>Logic.java</code> interface and exposes its functionality using the <code>LogicManager.java</code> class.</p>
+<p>For example, the <code>Logic</code> component (see the class diagram given below) defines its API in the <code>Logic.java</code> interface and exposes its functionality using the <code>LogicManager.java</code> class.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -173,10 +180,13 @@ The following class plays an important role at the architecture level:</p>
 <p><strong>API</strong> : <a href="https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/igrad/ui/Ui.java"><code>Ui.java</code></a></p>
 </div>
 <div class="paragraph">
-<p>The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>PersonListPanel</code>, <code>StatusBarFooter</code> etc. All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
+<p>The UI consists of a <code>MainWindow</code> that is made up of parts e.g.<code>CommandBox</code>, <code>ResultDisplay</code>, <code>ModuleListPanel</code>, <code>StatusBarFooter</code> etc.
+All these, including the <code>MainWindow</code>, inherit from the abstract <code>UiPart</code> class.</p>
 </div>
 <div class="paragraph">
-<p>The <code>UI</code> component uses JavaFx UI framework. The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder. For example, the layout of the <a href="https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/igrad/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/se-edu/addressbook-level3/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
+<p>The <code>UI</code> component uses JavaFx UI framework.
+The layout of these UI parts are defined in matching <code>.fxml</code> files that are in the <code>src/main/resources/view</code> folder.
+For example, the layout of the <a href="https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/igrad/ui/MainWindow.java"><code>MainWindow</code></a> is specified in <a href="https://github.com/se-edu/addressbook-level3/tree/master/src/main/resources/view/MainWindow.fxml"><code>MainWindow.fxml</code></a></p>
 </div>
 <div class="paragraph">
 <p>The <code>UI</code> component,</p>
@@ -265,10 +275,10 @@ The lifeline for <code>ModuleDeleteCommandParser</code> should end at the destro
 <p>stores a <code>UserPref</code> object that represents the user&#8217;s preferences.</p>
 </li>
 <li>
-<p>stores the Address Book data.</p>
+<p>stores the Course Book data.</p>
 </li>
 <li>
-<p>exposes an unmodifiable <code>ObservableList&lt;Person&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.</p>
+<p>exposes an unmodifiable <code>ObservableList&lt;Module&gt;</code> that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.</p>
 </li>
 <li>
 <p>does not depend on any of the other three components.</p>
@@ -282,7 +292,9 @@ The lifeline for <code>ModuleDeleteCommandParser</code> should end at the destro
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book</code>, which <code>Person</code> can reference. This would allow <code>Address Book</code> to only require one <code>Tag</code> object per unique <code>Tag</code>, instead of each <code>Person</code> needing their own <code>Tag</code> object. An example of how such a model may look like is given below.<br>
+As a more OOP model, we can store a <code>Tag</code> list in <code>Course Book</code>, which <code>Module</code> can reference.
+This would allow <code>Course Book</code> to only require one <code>Tag</code> object per unique <code>Tag</code>, instead of each <code>Module</code> needing their own <code>Tag</code> object.
+An example of how such a model may look like is given below.<br>
 <br>
 <span class="image"><img src="images/BetterModelClassDiagram.png" alt="BetterModelClassDiagram"></span>
 </td>
@@ -310,7 +322,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <p>can save <code>UserPref</code> objects in json format and read it back.</p>
 </li>
 <li>
-<p>can save the Address Book data in json format and read it back.</p>
+<p>can save the Course Book data in json format and read it back.</p>
 </li>
 </ul>
 </div>
@@ -318,7 +330,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <div class="sect2">
 <h3 id="Design-Commons"><a class="link" href="#Design-Commons">2.6. Common classes</a></h3>
 <div class="paragraph">
-<p>Classes used by multiple components are in the <code>seedu.addressbook.commons</code> package.</p>
+<p>Classes used by multiple components are in the <code>iGrad.commons</code> package.</p>
 </div>
 </div>
 </div>
@@ -330,35 +342,181 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <p>This section describes some noteworthy details on how certain features are implemented.</p>
 </div>
 <div class="sect2">
-<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">3.1. [Proposed] Undo/Redo feature</a></h3>
+<h3 id="adding-modules-from-nus-mods"><a class="link" href="#adding-modules-from-nus-mods">3.1. Adding Modules from NUS Mods</a></h3>
 <div class="sect3">
-<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.1.1. Proposed Implementation</a></h4>
+<h4 id="implementation-2"><a class="link" href="#implementation-2">3.1.1. Implementation</a></h4>
 <div class="paragraph">
-<p>The undo/redo mechanism is facilitated by <code>VersionedAddressBook</code>.
-It extends <code>AddressBook</code> with an undo/redo history, stored internally as an <code>addressBookStateList</code> and <code>currentStatePointer</code>.
+<p>The automatic filling in of module details on addition of a new module is facilitated by <code>NusModsRequester</code>.
+It creates a new instance of <code>GetRequestManager</code> in order to make a request to <a href="https://nusmods.com/">NUSMods</a>.
+Upon receiving a response, it creates an instance of <code>JsonParsedModule</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>JsonParsedModule</code> parses the JSON object given in the response of the initial request and stores the following values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>title</code> e.g. Software Engineering</p>
+</li>
+<li>
+<p><code>moduleCode</code> e.g. CS2103T</p>
+</li>
+<li>
+<p><code>credits</code> e.g. 4</p>
+</li>
+<li>
+<p><code>description</code> e.g. This module introduces the necessary conceptual and analytical tools for systematic and rigorous development of software systems&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The above process is initiated by <code>AddAutoCommandParser</code> which then converts a <code>JsonParsedModule</code> instance to a <code>Module</code>.</p>
+</div>
+<div class="paragraph">
+<p>The sequence diagram below provide further insight into its execution:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AutoAddSequenceDiagram.png" alt="AutoAddSequenceDiagram">
+</div>
+</div>
+<div class="paragraph">
+<p>As NUSMods might not always have the latest data for the current academic year, a follow up request is made when an empty response is received.</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram illustrates this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/AutoAddActivityDiagram.png" alt="AutoAddActivityDiagram">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
+<div class="paragraph">
+<p>As with all network requests, this feature might not work as intended in certain circumstances. Possible cases are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="1">
+<li>
+<p>High Network Congestion</p>
+</li>
+<li>
+<p>Poor Network Connection</p>
+</li>
+<li>
+<p>NUSMods Offline</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In such situations, the user would be prompted to manually fill in the necessary details for a module. The compulsory
+and optional fields are shown in the class diagram below:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ModuleClassDiagram.png" alt="ModuleClassDiagram">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Pros</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Time taken to add a module with accurate <code>moduleCode</code>, <code>title</code> and <code>credits</code> is reduced by a factor of <strong>0.85</strong> (statistic derived from user trials).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Cons</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Successful addition of module is not always guaranteed.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="requirements-feature"><a class="link" href="#requirements-feature">3.2. Requirements Feature</a></h3>
+<div class="paragraph">
+<p>Within a course, there are multiple requirements to be tracked.</p>
+</div>
+<div class="sect3">
+<h4 id="implementation-3"><a class="link" href="#implementation-3">3.2.1. Implementation</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/RequirementClassDiagram.png" alt="RequirementClassDiagram">
+</div>
+<div class="title">Figure 9. Structure of the Requirement class</div>
+</div>
+<div class="paragraph">
+<p>A requirement consists of three components: name, credits and unique module list.
+The unique module list implies that each requirement stores modules assigned to that requirement.
+Multiple requirements can exist in the course book at any one time.</p>
+</div>
+<div class="paragraph">
+<p>The requirement-related commands that can be called are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>requirement add</code> - adds a new requirement to the course book</p>
+</li>
+<li>
+<p><code>requirement edit</code> - edits an existing requirement in the course book</p>
+</li>
+<li>
+<p><code>requirement delete</code> - deletes an existing requirement from the course book</p>
+</li>
+<li>
+<p><code>assign</code> - assigns a module to the requirement</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here is how the requirement class updates when a requirement is added:</p>
+</div>
+<div class="paragraph">
+<p><code>[insert diagram here]</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">3.3. [Proposed] Undo/Redo feature</a></h3>
+<div class="sect3">
+<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.3.1. Proposed Implementation</a></h4>
+<div class="paragraph">
+<p>The undo/redo mechanism is facilitated by <code>VersionedCourseBook</code>.
+It extends <code>CourseBook</code> with an undo/redo history, stored internally as an <code>addressBookStateList</code> and <code>currentStatePointer</code>.
 Additionally, it implements the following operations:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>VersionedAddressBook#commit()</code>&#8201;&#8212;&#8201;Saves the current courseInfo book state in its history.</p>
+<p><code>VersionedCourseBook#commit()</code>&#8201;&#8212;&#8201;Saves the current course book state in its history.</p>
 </li>
 <li>
-<p><code>VersionedAddressBook#undo()</code>&#8201;&#8212;&#8201;Restores the previous courseInfo book state from its history.</p>
+<p><code>VersionedCourseBook#undo()</code>&#8201;&#8212;&#8201;Restores the previous course book state from its history.</p>
 </li>
 <li>
-<p><code>VersionedAddressBook#redo()</code>&#8201;&#8212;&#8201;Restores a previously undone courseInfo book state from its history.</p>
+<p><code>VersionedCourseBook#redo()</code>&#8201;&#8212;&#8201;Restores a previously undone course book state from its history.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>These operations are exposed in the <code>Model</code> interface as <code>Model#commitAddressBook()</code>, <code>Model#undoAddressBook()</code> and <code>Model#redoAddressBook()</code> respectively.</p>
+<p>These operations are exposed in the <code>Model</code> interface as <code>Model#commitCourseBook()</code>, <code>Model#undoCourseBook()</code> and <code>Model#redoCourseBook()</code> respectively.</p>
 </div>
 <div class="paragraph">
 <p>Given below is an example usage scenario and how the undo/redo mechanism behaves at each step.</p>
 </div>
 <div class="paragraph">
-<p>Step 1. The user launches the application for the first time. The <code>VersionedAddressBook</code> will be initialized with the initial courseInfo book state, and the <code>currentStatePointer</code> pointing to that single memo book state.</p>
+<p>Step 1. The user launches the application for the first time.
+The <code>VersionedCourseBook</code> will be initialized with the initial course book state, and the <code>currentStatePointer</code> pointing to that single memo book state.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -366,8 +524,8 @@ Additionally, it implements the following operations:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Step 2. The user executes <code>delete 5</code> command to delete the 5th module in the courseInfo book. The <code>delete</code> command calls <code>Model#commitAddressBook()</code>, causing the modified state of the courseInfo book after the <code>delete 5</code> command executes to be saved in the <code>addressBookStateList</code>, and the <code>currentStatePointer</code> is shifted to the newly inserted courseInfo book state.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD Step 2. The user executes <code>delete 5</code> command to delete the 5th module in the course book.
+The <code>delete</code> command calls <code>Model#commitCourseBook()</code>, causing the modified state of the course book after the <code>delete 5</code> command executes to be saved in the <code>addressBookStateList</code>, and the <code>currentStatePointer</code> is shifted to the newly inserted course book state.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -375,7 +533,8 @@ Step 2. The user executes <code>delete 5</code> command to delete the 5th module
 </div>
 </div>
 <div class="paragraph">
-<p>Step 3. The user executes <code>add n/David &#8230;&#8203;</code> to add a new module. The <code>add</code> command also calls <code>Model#commitAddressBook()</code>, causing another modified address courseInfo book state to be saved into the <code>addressBookStateList</code>.</p>
+<p>Step 3. The user executes <code>add n/David &#8230;&#8203;</code> to add a new module.
+The <code>add</code> command also calls <code>Model#commitCourseBook()</code>, causing another modified address course book state to be saved into the <code>addressBookStateList</code>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -389,13 +548,14 @@ Step 2. The user executes <code>delete 5</code> command to delete the 5th module
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If a command fails its execution, it will not call <code>Model#commitAddressBook()</code>, so the courseInfo book state will not be saved into the <code>addressBookStateList</code>.
+If a command fails its execution, it will not call <code>Model#commitCourseBook()</code>, so the course book state will not be saved into the <code>addressBookStateList</code>.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Step 4. The user now decides that adding the module was a mistake, and decides to undo that action by executing the <code>undo</code> command. The <code>undo</code> command will call <code>Model#undoAddressBook()</code>, which will shift the <code>currentStatePointer</code> once to the left, pointing it to the previous courseInfo book state, and restores the courseInfo book to that state.</p>
+<p>Step 4. The user now decides that adding the module was a mistake, and decides to undo that action by executing the <code>undo</code> command.
+The <code>undo</code> command will call <code>Model#undoCourseBook()</code>, which will shift the <code>currentStatePointer</code> once to the left, pointing it to the previous course book state, and restores the course book to that state.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -409,7 +569,9 @@ If a command fails its execution, it will not call <code>Model#commitAddressBook
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If the <code>currentStatePointer</code> is at index 0, pointing to the initial courseInfo book state, then there are no previous courseInfo book states to restore. The <code>undo</code> command uses <code>Model#canUndoAddressBook()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo.
+If the <code>currentStatePointer</code> is at index 0, pointing to the initial course book state, then there are no previous course book states to restore.
+The <code>undo</code> command uses <code>Model#canUndoCourseBook()</code> to check if this is the case.
+If so, it will return an error to the user rather than attempting to perform the undo.
 </td>
 </tr>
 </table>
@@ -435,7 +597,7 @@ The lifeline for <code>UndoCommand</code> should end at the destroy marker (X) b
 </table>
 </div>
 <div class="paragraph">
-<p>The <code>redo</code> command does the opposite&#8201;&#8212;&#8201;it calls <code>Model#redoAddressBook()</code>, which shifts the <code>currentStatePointer</code> once to the right, pointing to the previously undone state, and restores the courseInfo book to that state.</p>
+<p>The <code>redo</code> command does the opposite&#8201;&#8212;&#8201;it calls <code>Model#redoCourseBook()</code>, which shifts the <code>currentStatePointer</code> once to the right, pointing to the previously undone state, and restores the course book to that state.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -444,13 +606,17 @@ The lifeline for <code>UndoCommand</code> should end at the destroy marker (X) b
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If the <code>currentStatePointer</code> is at index <code>addressBookStateList.size() - 1</code>, pointing to the latest courseInfo book state, then there are no undone courseInfo book states to restore. The <code>redo</code> command uses <code>Model#canRedoAddressBook()</code> to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo.
+If the <code>currentStatePointer</code> is at index <code>addressBookStateList.size() - 1</code>, pointing to the latest course book state, then there are no undone course book states to restore.
+The <code>redo</code> command uses <code>Model#canRedoCourseBook()</code> to check if this is the case.
+If so, it will return an error to the user rather than attempting to perform the redo.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Step 5. The user then decides to execute the command <code>list</code>. Commands that do not modify the courseInfo book, such as <code>list</code>, will usually not call <code>Model#commitAddressBook()</code>, <code>Model#undoAddressBook()</code> or <code>Model#redoAddressBook()</code>. Thus, the <code>addressBookStateList</code> remains unchanged.</p>
+<p>Step 5. The user then decides to execute the command <code>list</code>.
+Commands that do not modify the course book, such as <code>list</code>, will usually not call <code>Model#commitCourseBook()</code>, <code>Model#undoCourseBook()</code> or <code>Model#redoCourseBook()</code>.
+Thus, the <code>addressBookStateList</code> remains unchanged.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -458,7 +624,10 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="paragraph">
-<p>Step 6. The user executes <code>clear</code>, which calls <code>Model#commitAddressBook()</code>. Since the <code>currentStatePointer</code> is not pointing at the end of the <code>addressBookStateList</code>, all courseInfo book states after the <code>currentStatePointer</code> will be purged. We designed it this way because it no longer makes sense to redo the <code>add n/David &#8230;&#8203;</code> command. This is the behavior that most modern desktop applications follow.</p>
+<p>Step 6. The user executes <code>clear</code>, which calls <code>Model#commitCourseBook()</code>.
+Since the <code>currentStatePointer</code> is not pointing at the end of the <code>addressBookStateList</code>, all course book states after the <code>currentStatePointer</code> will be purged.
+We designed it this way because it no longer makes sense to redo the <code>add n/David &#8230;&#8203;</code> command.
+This is the behavior that most modern desktop applications follow.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -475,13 +644,13 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.3.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Saves the entire courseInfo book.</p>
+<p><strong>Alternative 1 (current choice):</strong> Saves the entire course book.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -514,14 +683,15 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Use a list to store the history of courseInfo book states.</p>
+<p><strong>Alternative 1 (current choice):</strong> Use a list to store the history of course book states.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project.</p>
 </li>
 <li>
-<p>Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both <code>HistoryManager</code> and <code>VersionedAddressBook</code>.</p>
+<p>Cons: Logic is duplicated twice.
+For example, when a new command is executed, we must remember to update both <code>HistoryManager</code> and <code>VersionedCourseBook</code>.</p>
 </li>
 </ul>
 </div>
@@ -534,7 +704,8 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <p>Pros: We do not need to maintain a separate list, and just reuse what is already in the codebase.</p>
 </li>
 <li>
-<p>Cons: Requires dealing with commands that have already been undone: We must remember to skip these commands. Violates Single Responsibility Principle and Separation of Concerns as <code>HistoryManager</code> now needs to do two different things.</p>
+<p>Cons: Requires dealing with commands that have already been undone: We must remember to skip these commands.
+Violates Single Responsibility Principle and Separation of Concerns as <code>HistoryManager</code> now needs to do two different things.</p>
 </li>
 </ul>
 </div>
@@ -545,20 +716,21 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.2. [Proposed] Data Encryption</a></h3>
+<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.4. [Proposed] Data Encryption</a></h3>
 <div class="paragraph">
 <p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.3. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.5. Logging</a></h3>
 <div class="paragraph">
-<p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
+<p>We are using <code>java.util.logging</code> package for logging.
+The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.4, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.6, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -589,7 +761,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.4. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.6. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -646,7 +818,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Value proposition</strong>: convenient courseInfo requirements tracker for NUS undergraduates</p>
+<p><strong>Value proposition</strong>: convenient course requirements tracker for NUS undergraduates</p>
 </div>
 </div>
 </div>
@@ -688,7 +860,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">first-time user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">create a courseInfo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">create a course</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -706,7 +878,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">careless user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">change the graduation requirements which I assigned to a courseInfo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">change the graduation requirements which I assigned to a course</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">amend any mistakes made when entering data</p></td>
 </tr>
 <tr>
@@ -724,7 +896,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">basic user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">see information regarding the courseInfo I created, including graduation requirements, modules and gaps (e.g. modules that are unassigned) that need to be filled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">see information regarding the course I created, including graduation requirements, modules and gaps (e.g. modules that are unassigned) that need to be filled</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -810,10 +982,10 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <p>iGrad starts up.</p>
 </li>
 <li>
-<p>User requests to create a courseInfo.</p>
+<p>User requests to create a course.</p>
 </li>
 <li>
-<p>iGrad creates the courseInfo.</p>
+<p>iGrad creates the course.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -826,16 +998,17 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a. The courseInfo name is not provided.</p>
+<p>2a.
+The course name is not provided.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>2a1. iGrad prompts user for courseInfo name.</p>
+<p>2a1. iGrad prompts user for course name.</p>
 </li>
 <li>
-<p>2a2. User enters a courseInfo name.</p>
+<p>2a2. User enters a course name.</p>
 <div class="paragraph">
-<p>Steps 2a1-2a2 are repeated until the a non-empty courseInfo name is provided.</p>
+<p>Steps 2a1-2a2 are repeated until the a non-empty course name is provided.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 3.</p>
@@ -853,10 +1026,10 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to create a courseInfo.</p>
+<p>User requests to create a course.</p>
 </li>
 <li>
-<p>iGrad creates courseInfo (UC01).</p>
+<p>iGrad creates course (UC01).</p>
 </li>
 <li>
 <p>User requests to create a requirement.</p>
@@ -875,7 +1048,8 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a. The requirement name is not provided.</p>
+<p>3a.
+The requirement name is not provided.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -918,7 +1092,8 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. Module data fails to get pulled due to network error.</p>
+<p>1a.
+Module data fails to get pulled due to network error.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -935,7 +1110,8 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1b. Module data does not exist on NUSMods.</p>
+<p>1b.
+Module data does not exist on NUSMods.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -972,7 +1148,8 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a. Module does not exist in system.</p>
+<p>1a.
+Module does not exist in system.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -989,7 +1166,8 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1b. Module has already been assigned to the requirement.</p>
+<p>1b.
+Module has already been assigned to the requirement.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1035,13 +1213,17 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="sect1">
 <h2 id="glossary"><a class="link" href="#glossary">Appendix E: Glossary</a></h2>
 <div class="sectionbody">
-<div class="dlist">
+<div id="mainstream-os" class="dlist">
 <dl>
-<dt class="hdlist1"><a id="mainstream-os"></a> Mainstream OS</dt>
+<dt class="hdlist1">Mainstream OS</dt>
 <dd>
 <p>Windows, Linux, Unix, OS-X</p>
 </dd>
-<dt class="hdlist1"><a id="private-contact-detail"></a> Private contact detail</dt>
+</dl>
+</div>
+<div id="private-contact-detail" class="dlist">
+<dl>
+<dt class="hdlist1">Private contact detail</dt>
 <dd>
 <p>A contact detail that is not meant to be shared with others</p>
 </dd>
@@ -1131,15 +1313,13 @@ Expected: Shows the GUI with a set of sample contacts. The window size may not b
 </li>
 <li>
 <p>Re-launch the app by double-clicking the jar file.<br>
-Expected: The most recent window size and location is retained.</p>
+   Expected: The most recent window size and location is retained.
+<em>{ more test cases &#8230;&#8203; }</em></p>
 </li>
 </ol>
 </div>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -1155,11 +1335,15 @@ Expected: The most recent window size and location is retained.</p>
 </li>
 <li>
 <p>Test case: <code>delete 1</code><br>
-Expected: First module is deleted from the list. Details of the deleted module shown in the status message. Timestamp in the status bar is updated.</p>
+   Expected: First module is deleted from the list.
+Details of the deleted module shown in the status message.
+Timestamp in the status bar is updated.</p>
 </li>
 <li>
 <p>Test case: <code>delete 0</code><br>
-Expected: No module is deleted. Error details shown in the status message. Status bar remains the same.</p>
+   Expected: No module is deleted.
+Error details shown in the status message.
+Status bar remains the same.</p>
 </li>
 <li>
 <p>Other incorrect delete commands to try: <code>delete</code>, <code>delete x</code> (where x is larger than the list size) <em>{give more}</em><br>
@@ -1183,16 +1367,14 @@ Expected: Similar to previous.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><em>{explain how to simulate a missing/corrupted file and the expected behavior}</em></p>
+<p><em>{explain how to simulate a missing/corrupted file and the expected behavior}</em>
+<em>{ more test cases &#8230;&#8203; }</em></p>
 </li>
 </ol>
 </div>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
 </div>
 </div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-25 13:04:18 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-26 01:46:02 UTC</div></div></div></body></html>
