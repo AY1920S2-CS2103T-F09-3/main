@@ -455,7 +455,7 @@ and optional fields are shown in the class diagram below:</p>
 <div class="content">
 <img src="images/RequirementClassDiagram.png" alt="RequirementClassDiagram">
 </div>
-<div class="title">Figure 9. Structure of the Requirement class</div>
+<div class="title">Figure 9. Structure of the Requirement class.</div>
 </div>
 <div class="paragraph">
 <p>A requirement consists of three components: name, credits and unique module list.
@@ -484,8 +484,31 @@ Multiple requirements can exist in the course book at any one time.</p>
 <div class="paragraph">
 <p>Here is how the requirement class updates when a requirement is added:</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/RequirementAddSequenceDiagram.png" alt="RequirementAddSequenceDiagram">
+</div>
+<div class="title">Figure 10. Sequence Diagram when adding a requirement.</div>
+</div>
 <div class="paragraph">
-<p><code>[insert diagram here]</code></p>
+<p>When the user adds a requirement, the user has to specify two prefixes: <code>n/</code> for name and <code>u/</code> for credits value (number of credits needed to fulfill for the requirement).
+Then, the application proceeds to do the following steps</p>
+</div>
+<div class="paragraph">
+<p>Step 1: The RequirementAddCommandParser is called to parse the RequirementAddCommand with the <code>n/</code> and the <code>u/</code> prefixes into a new requirement.</p>
+</div>
+<div class="paragraph">
+<p>Step 2: The RequirementAddCommand is executed to add the new requirement to the model. In this step, the following check is performed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Check if a requirement with the same name already exists in the course book.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Step 3: The new requirement is added to the course book.</p>
 </div>
 </div>
 </div>
@@ -1380,4 +1403,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-26 05:59:27 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-27 01:17:10 UTC</div></div></div></body></html>
