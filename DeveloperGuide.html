@@ -458,7 +458,7 @@ and optional fields are shown in the class diagram below:</p>
 <div class="title">Figure 9. Structure of the Requirement class.</div>
 </div>
 <div class="paragraph">
-<p>A requirement consists of three components: name, credits and unique module list.
+<p>A requirement consists of three components: title, credits and unique module list.
 The unique module list implies that each requirement stores modules assigned to that requirement.
 Multiple requirements can exist in the course book at any one time.</p>
 </div>
@@ -491,7 +491,7 @@ Multiple requirements can exist in the course book at any one time.</p>
 <div class="title">Figure 10. Sequence Diagram when adding a requirement.</div>
 </div>
 <div class="paragraph">
-<p>When the user adds a requirement, the user has to specify two prefixes: <code>n/</code> for name and <code>u/</code> for credits value (number of credits needed to fulfill for the requirement).
+<p>When the user adds a requirement, the user has to specify two prefixes: <code>n/</code> for title and <code>u/</code> for credits value (number of credits needed to fulfill for the requirement).
 Then, the application proceeds to do the following steps</p>
 </div>
 <div class="paragraph">
@@ -503,7 +503,7 @@ Then, the application proceeds to do the following steps</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Check if a requirement with the same name already exists in the course book.</p>
+<p>Check if a requirement with the same title already exists in the course book.</p>
 </li>
 </ul>
 </div>
@@ -1075,16 +1075,16 @@ The course name is not provided.</p>
 <ul class="none">
 <li>
 <p>3a.
-The requirement name is not provided.</p>
+The requirement title is not provided.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>3a1. iGrad prompts user for requirement name.</p>
+<p>3a1. iGrad prompts user for requirement title.</p>
 </li>
 <li>
-<p>3a2. User enters a requirement name.</p>
+<p>3a2. User enters a requirement title.</p>
 <div class="paragraph">
-<p>Steps 3a1-3a2 are repeated until the a non-empty requirement name is provided.</p>
+<p>Steps 3a1-3a2 are repeated until the a non-empty requirement title is provided.</p>
 </div>
 <div class="paragraph">
 <p>Use case resumes at step 4.</p>
@@ -1403,4 +1403,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-27 03:50:01 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-29 03:24:06 UTC</div></div></div></body></html>
