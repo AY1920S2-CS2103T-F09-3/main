@@ -7,7 +7,7 @@
 </div>
 </div>
 <div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
+<div id="toctitle"></div>
 <ul class="sectlevel1">
 <li><a href="#introduction">1. Introduction</a></li>
 <li><a href="#features">2. Features</a>
@@ -45,11 +45,10 @@
 <li><a href="#course-2">6.2. course</a></li>
 <li><a href="#requirement">6.3. requirement</a></li>
 <li><a href="#module">6.4. module</a></li>
-<li><a href="#assign">6.5. assign</a></li>
-<li><a href="#grade">6.6. grade</a></li>
-<li><a href="#achieve">6.7. achieve</a></li>
-<li><a href="#export">6.8. export</a></li>
-<li><a href="#exit">6.9. exit</a></li>
+<li><a href="#grade">6.5. grade</a></li>
+<li><a href="#achieve">6.6. achieve</a></li>
+<li><a href="#export">6.7. export</a></li>
+<li><a href="#exit">6.8. exit</a></li>
 </ul>
 </li>
 <li><a href="#faqs">7. FAQs</a></li>
@@ -85,13 +84,21 @@ information is always up to date.</p>
 <p><em>iGrad</em> calculates your CAP at every step, ensuring you never have to use a CAP calculator again</p>
 </div>
 <div class="paragraph">
-<p>Finally, the <em>iGrad</em> team is always open to feedback and suggestions from the public will always be followed up on.</p>
+<p>Finally, the <em>iGrad</em> team is always open to feedback and suggestions from the public which
+will always be followed up on.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="features"><a class="link" href="#features">2. Features</a></h2>
 <div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>This segment highlights the key features of iGrad.</p>
+</div>
+</blockquote>
+</div>
 <div class="sect3">
 <h4 id="course-builder"><a class="link" href="#course-builder">2.1. Course Builder</a></h4>
 <div class="paragraph">
@@ -119,6 +126,13 @@ in order to achieve your dream CAP.</p>
 <div class="sect1">
 <h2 id="components"><a class="link" href="#components">3. Components</a></h2>
 <div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>This segment contains details on the structure of iGrad.</p>
+</div>
+</blockquote>
+</div>
 <div class="paragraph">
 <p><span class="image"><img src="https://user-images.githubusercontent.com/34233605/75425925-9774ff80-597e-11ea-87f5-228f95b5c84f.png" alt="75425925 9774ff80 597e 11ea 87f5 228f95b5c84f"></span></p>
 </div>
@@ -176,7 +190,7 @@ Specifies the constraints of the command or situation.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Specifies command outcomes.
+Specifies expected command outcomes.
 </td>
 </tr>
 </table>
@@ -243,8 +257,12 @@ Specifies extra tips you can use when navigating through our app.
 <div class="sect1">
 <h2 id="command-list"><a class="link" href="#command-list">6. Command List</a></h2>
 <div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
 <div class="paragraph">
-<p>Here are the list of commands you can use to make full use of iGrad.</p>
+<p>This segment contains a list of commands with examples that you can use to make full use of iGrad.</p>
+</div>
+</blockquote>
 </div>
 <div class="paragraph">
 <p>Take note of the following when using our commands:</p>
@@ -298,7 +316,7 @@ A popup for the list of all commands as well as the link to the user guide is sh
 <div class="sect3">
 <h4 id="course-2"><a class="link" href="#course-2">6.2. course</a></h4>
 <div class="paragraph">
-<p>Add, edit or remove your course.</p>
+<p>Add, edit or delete your course.</p>
 </div>
 <div class="paragraph">
 <p>Command Format</p>
@@ -307,31 +325,36 @@ A popup for the list of all commands as well as the link to the user guide is sh
 <div class="content">
 <pre>course add n/COURSE_NAME
 
-course edit COURSE_NAME [n/COURSE_NAME] [u/MCs]
+course edit [n/COURSE_NAME] [u/MCs]
 
-course remove n/COURSE_NAME</pre>
+course delete n/COURSE_NAME</pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Command Sample</p>
 </div>
+<div class="paragraph">
+<p>Creating a course named "Computer Science"</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>/*
- * Creating a course named "Computer Science"
- */
-course add n/Computer Science
-
-
-/*
- * Renaming your current course to "Information Systems"
- */
-course edit Computer Science n/Information Systems
-
-/*
- * Removing your current course
- */
-course remove</pre>
+<pre>course add n/Computer Science</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Renaming your current course to "Information Systems"</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>course edit n/Information Systems</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Removing your current course</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>course delete</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -350,7 +373,7 @@ course remove</pre>
 <p><code>(all)</code>: You can only have at most one course at any one time</p>
 </li>
 <li>
-<p><code>course remove</code>: Removing a course removes all data from the system (including modules, requirements, etc)</p>
+<p><code>course delete</code>: Removing a course deletes all data from the system (including modules, requirements, etc)</p>
 </li>
 </ol>
 </div>
@@ -369,7 +392,7 @@ course remove</pre>
 </td>
 <td class="content">
 You should be able to see the added and/or modified course name in the
-top panel. For remove course, all data would be reset
+top panel. For delete course, all data would be reset
 </td>
 </tr>
 </table>
@@ -379,53 +402,71 @@ top panel. For remove course, all data would be reset
 <div class="sect3">
 <h4 id="requirement"><a class="link" href="#requirement">6.3. requirement</a></h4>
 <div class="paragraph">
-<p>Add, edit or remove a graduation requirement.</p>
+<p>Add, edit or delete a graduation requirement.</p>
 </div>
 <div class="paragraph">
 <p>Command Format</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>requirement add n/REQUIREMENT_NAME u/MCS_REQUIRED
+<pre>requirement add n/REQUIREMENT_TITLE u/MCS_REQUIRED
 
-requirement edit REQUIREMENT_NAME [n/NEW_REQUIREMENT_NAME] [u/NEW_MCS_REQUIRED]
+requirement edit REQUIREMENT_CODE [n/NEW_REQUIREMENT_TITLE] [u/NEW_MCS_REQUIRED]
 
-requirement remove NAME</pre>
+requirement delete REQUIREMENT_CODE
+
+requirement assign REQUIREMENT_CODE [n/MODULE_CODE ...]</pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Command Sample</p>
 </div>
+<div class="paragraph">
+<p>Adding a requirement named "Unrestricted Electives" which requires 32 MCs.</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>/*
- * Adding a requirement named "Unrestricted Electives" which
- * requires 32 MCs.
- */
-requirement add n/Unrestricted Electives u/32
-
-
-/*
- * Renaming requirement "Unrestricted Electives" to "Maths and Sciences",
- * and changing the number of MCs required to 20.
- */
-requirement edit Unrestricted Electives n/Maths and Sciences u/32
-
-/*
- * Renaming requirement "Unrestricted Electives" to "Maths and Sciences".
- */
-requirement edit Unrestricted Electives n/Maths and Sciences
-
-/*
- * Changing number of required MCs for requirement "Unrestricted Electives"
- * to 20.
- */
-requirement edit Unrestricted Electives u/20
-
-/*
- * Removing requirement named "Unrestricted Electives".
- */
-requirement remove Unrestricted Electives</pre>
+<pre>requirement add n/Unrestricted Electives u/32</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Renaming requirement "Unrestricted Electives" to "Maths and Sciences", and changing the number of MCs required to 20.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>requirement edit Unrestricted Electives n/Maths and Sciences u/32</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Renaming requirement "Unrestricted Electives" to "Maths and Sciences".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>requirement edit Unrestricted Electives n/Maths and Sciences</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Changing number of required MCs for requirement "Unrestricted Electives" to 20.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>requirement edit Unrestricted Electives u/20</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Removing requirement named "Unrestricted Electives".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>requirement delete Unrestricted Electives</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Assigning modules to requirement.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>requirement assign UE0 n/CS1101S n/CS1231S n/CS2030S n/CS2040S</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -469,48 +510,58 @@ You should be able to see the requirement created and/or edited in the main pane
 <div class="sect3">
 <h4 id="module"><a class="link" href="#module">6.4. module</a></h4>
 <div class="paragraph">
-<p>Modify or remove a module. You would be able to tag (edit) a module with information such as; semester, grade or memo notes information.</p>
+<p>Modify or delete a module. You would be able to tag (edit) a module with information such as; semester, grade or memo notes information.</p>
 </div>
 <div class="paragraph">
 <p>Command Format</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>/*
- * SEMESTER is specified in format Y_S_ ( e.g. Y1S2 - Year 1 Semester 2 )
- */
+<pre>module edit MODULE_CODE [n/MODULE_CODE] [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]
 
-
-/*
- * At least one option must be specified.
- */
-1. module edit MODULE_CODE [n/MODULE_CODE] [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]
-
-
-2. module remove MODULE_CODE</pre>
+module delete MODULE_CODE</pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Note:</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+SEMESTER is specified in format Y_S_ ( e.g. Y1S2 - Year 1 Semester 2 )
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Command Sample</p>
 </div>
+<div class="paragraph">
+<p>Tagging the module, CS1101, with "Y1S2" and grade "A+", and also renaming it to CS1101S</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>/*
- * Tagging the module, CS1101, with "Y1S2" and grade "A+", and also renaming it to CS1101S
- */
-module edit n/CS1101: n/CS1101S s/Y1S2 g/A+
-
-
-/*
- * Tagging the module, ST2234, with "Y2S1" and giving it a memo "pretty easy module"
-*/
-module edit n/ST2334: s/Y2S1 m/pretty easy module
-
-
-/*
- * Removing a module named "CS1101S"
- */
-module remove n/CS1101S</pre>
+<pre>module edit n/CS1101: n/CS1101S s/Y1S2 g/A+</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Tagging the module, ST2234, with "Y2S1" and giving it a memo "pretty easy module"</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>module edit n/ST2334: s/Y2S1 m/pretty easy module</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Removing a module named "CS1101S"</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>module delete n/CS1101S</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -555,73 +606,7 @@ You should be able to see the modified module details reflected in the main pane
 <hr>
 </div>
 <div class="sect3">
-<h4 id="assign"><a class="link" href="#assign">6.5. assign</a></h4>
-<div class="paragraph">
-<p>Assigns (and creates) a module under a graduation requirement category.</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>1. assign REQUIREMENT_NAME n/MODULE_CODE, t/MODULE_TITLE u/MCs; ...</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>/**
-* Assigns (and creates) a module "LAJ1201" (4 MCs) and another module "CS1101S" (4 MCs) to the requirement "Unrestricted Electives"
-*/
-assign Unrestricted Electives n/LAJ1201 u/4, n/CS1101S u/4</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>A module cannot be assigned if there are not enough MCs left under a graduation requirement (category).</p>
-</li>
-<li>
-<p>The module code (e.g, CS1101S, ST2334), have to be unique</p>
-</li>
-</ol>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-You should be able to see the newly assigned module(s) displayed in the main panel, under their respective requirement categories.
-main panel
-</td>
-</tr>
-</table>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="grade"><a class="link" href="#grade">6.6. grade</a></h4>
+<h4 id="grade"><a class="link" href="#grade">6.5. grade</a></h4>
 <div class="paragraph">
 <p>Assigns a grade to a module.</p>
 </div>
@@ -636,12 +621,12 @@ main panel
 <div class="paragraph">
 <p>Command Sample</p>
 </div>
+<div class="paragraph">
+<p>Assigns grade 'A' to the module 'CS2103T'.</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>/*
- * Assigns grade 'A' to the module 'CS2103T'.
- */
-grade CS2103T g/A</pre>
+<pre>grade CS2103T g/A</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -662,28 +647,27 @@ You should now see the grade reflected under the module you assigned to.
 <hr>
 </div>
 <div class="sect3">
-<h4 id="achieve"><a class="link" href="#achieve">6.7. achieve</a></h4>
+<h4 id="achieve"><a class="link" href="#achieve">6.6. achieve</a></h4>
 <div class="paragraph">
-<p>Calculates the average grade needed to achieve the CAP you desire/</p>
+<p>Calculates the average grade needed to achieve the CAP you desire</p>
 </div>
 <div class="paragraph">
 <p>Command Format</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>1. achieve c/DESIRED_CAP</pre>
+<pre>achieve c/DESIRED_CAP</pre>
 </div>
 </div>
 <div class="paragraph">
 <p>Command Sample</p>
 </div>
+<div class="paragraph">
+<p>Calculates the average grade needed to achieve a CAP of 4.50</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>/**
-* Calculates the avergae grade needed
-* to achieve a CAP of 4.50
-*/
-achieve c/4.50</pre>
+<pre>achieve c/4.50</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -704,7 +688,7 @@ You should be able to view the average grade needed to achieve the CAP you desir
 <hr>
 </div>
 <div class="sect3">
-<h4 id="export"><a class="link" href="#export">6.8. export</a></h4>
+<h4 id="export"><a class="link" href="#export">6.7. export</a></h4>
 <div class="paragraph">
 <p>Exports all data in a (prettified) text file. If information is sufficient,
 this file can be submitted to NUS as a study plan.</p>
@@ -735,7 +719,7 @@ A text file "study_plan.txt" should be generated in  the same folder as the iGra
 <hr>
 </div>
 <div class="sect3">
-<h4 id="exit"><a class="link" href="#exit">6.9. exit</a></h4>
+<h4 id="exit"><a class="link" href="#exit">6.8. exit</a></h4>
 <div class="paragraph">
 <p>Exits the program</p>
 </div>
@@ -797,34 +781,40 @@ However, we will be unable to provide features such as validation from NUSMods.<
 <p><code>course edit [n/COURSE_NAME] [u/MCs]</code></p>
 </div>
 <div class="paragraph">
-<p><code>course remove COURSE_NAME</code></p>
+<p><code>course delete COURSE_NAME</code></p>
 </div>
 <div class="paragraph">
-<p><code>requirement add n/REQUIREMENT_NAME u/MCS_REQUIRED</code></p>
+<p><code>requirement add n/REQUIREMENT_TITLE u/MCS_REQUIRED</code></p>
 </div>
 <div class="paragraph">
-<p><code>requirement edit REQUIREMENT_NAME [n/REQUIREMENT_NAME] [u/MCS_REQUIRED]</code></p>
+<p><code>requirement edit REQUIREMENT_CODE [n/REQUIREMENT_TITLE] [u/MCS_REQUIRED]</code></p>
 </div>
 <div class="paragraph">
-<p><code>requirement remove REQUIREMENT_NAME</code></p>
+<p><code>requirement delete REQUIREMENT_CODE</code></p>
 </div>
 <div class="paragraph">
-<p><code>module add n/MODULE_CODE [n/MODULE_TITLE] [n/DESCRIPTION]</code></p>
+<p><code>requirement assign REQUIREMENT_CODE [n/MODULE_CODE &#8230;&#8203;]</code></p>
 </div>
 <div class="paragraph">
-<p><code>module edit MODULE_CODE [n/MODULE_CODE] [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</code></p>
+<p><code>requirement unassign REQUIREMENT_CODE [n/MODULE_CODE &#8230;&#8203;]</code></p>
 </div>
 <div class="paragraph">
-<p><code>module remove [MODULE_CODE]</code></p>
+<p><code>module add n/MODULE_CODE [n/MODULE_TITLE] [n/DESCRIPTION] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</code></p>
 </div>
 <div class="paragraph">
-<p><code>assign REQUIREMENT_NAME n/MODULE_CODE</code></p>
+<p><code>module edit MODULE_CODE [n/MODULE_CODE] [n/MODULE_TITLE] [n/DESCRIPTION] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</code></p>
 </div>
 <div class="paragraph">
-<p><code>grade MODULE_CODE g/GRADE</code></p>
+<p><code>module delete MODULE_CODE</code></p>
+</div>
+<div class="paragraph">
+<p><code>module done MODULE_CODE g/GRADE</code></p>
 </div>
 <div class="paragraph">
 <p><code>achieve c/DESIRED_CAP</code></p>
+</div>
+<div class="paragraph">
+<p><code>undo</code></p>
 </div>
 <div class="paragraph">
 <p><code>export</code></p>
@@ -844,8 +834,8 @@ However, we will be unable to provide features such as validation from NUSMods.<
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"></th>
-<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">Terms</th>
+<th class="tableblock halign-left valign-top">Definition</th>
 </tr>
 </thead>
 <tbody>
@@ -887,16 +877,13 @@ However, we will be unable to provide features such as validation from NUSMods.<
 <p><strong>Handy Links</strong></p>
 </div>
 <div class="paragraph">
-<p><a href="http://www.nus.edu.sg/registrar/academic-information-policies/graduate/modular-system">NUS - Modular System</a></p>
-</div>
-<div class="paragraph">
 <p><a href="http://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/degree-requirements">NUS - Degree Requirements</a></p>
 </div>
 <div class="paragraph">
-<p><a href="http://www.nus.edu.sg/nusbulletin/yong-siew-toh-conservatory-of-music/undergraduate-education/degree-requirements/grading-system-and-regulations/">NUS - Grading System and Regulations</a></p>
+<p><a href="http://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/modular-system">NUS - Modular System, Grading and Regulations</a></p>
 </div>
 <div class="paragraph">
 <p><a href="http://www.nus.edu.sg/registrar/calendar">NUS - Academic Calendar</a></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-29 13:01:42 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-02 03:13:41 UTC</div></div></div></body></html>
