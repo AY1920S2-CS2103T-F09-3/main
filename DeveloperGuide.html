@@ -22,9 +22,9 @@
 </li>
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
-<li><a href="#adding-modules-from-nus-mods">3.1. Adding Modules from NUS Mods</a></li>
-<li><a href="#requirements-feature">3.2. Requirements Feature</a></li>
-<li><a href="#courseinfo-feature">3.3. CourseInfo Feature</a></li>
+<li><a href="#courseinfo-feature">3.1. CourseInfo Feature</a></li>
+<li><a href="#adding-modules-from-nus-mods">3.2. Adding Modules from NUS Mods</a></li>
+<li><a href="#requirements-feature">3.3. Requirements Feature</a></li>
 <li><a href="#proposed-undo-redo-feature">3.4. [Proposed] Undo/Redo feature</a></li>
 <li><a href="#proposed-data-encryption">3.5. [Proposed] Data Encryption</a></li>
 <li><a href="#logging">3.6. Logging</a></li>
@@ -346,9 +346,43 @@ An example of how such a model may look like is given below.<br>
 <p>This section describes some noteworthy details on how certain features are implemented.</p>
 </div>
 <div class="sect2">
-<h3 id="adding-modules-from-nus-mods"><a class="link" href="#adding-modules-from-nus-mods">3.1. Adding Modules from NUS Mods</a></h3>
+<h3 id="courseinfo-feature"><a class="link" href="#courseinfo-feature">3.1. CourseInfo Feature</a></h3>
+<div class="paragraph">
+<p>A <code>CourseBook</code> contains only one course information.</p>
+</div>
 <div class="sect3">
 <h4 id="implementation-2"><a class="link" href="#implementation-2">3.1.1. Implementation</a></h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/CourseInfoClassDiagram.png" alt="CourseInfoClassDiagram">
+</div>
+<div class="title">Figure 9. Structure of CourseInfo Class</div>
+</div>
+<div class="paragraph">
+<p>A course consists of one information: Name. One course should only have one name.</p>
+</div>
+<div class="paragraph">
+<p>The course related commands that can be called are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>course add</code> - adds a new course with name to the course book</p>
+</li>
+<li>
+<p><code>course edit</code> - edits name of existing course in the course book</p>
+</li>
+<li>
+<p><code>course delete</code> - deletes existing course and all information in the course book</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-modules-from-nus-mods"><a class="link" href="#adding-modules-from-nus-mods">3.2. Adding Modules from NUS Mods</a></h3>
+<div class="sect3">
+<h4 id="implementation-3"><a class="link" href="#implementation-3">3.2.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The automatic filling in of module details on addition of a new module is facilitated by <code>NusModsRequester</code>.
 It creates a new instance of <code>GetRequestManager</code> in order to make a request to <a href="https://nusmods.com/">NUSMods</a>.
@@ -397,7 +431,7 @@ Upon receiving a response, it creates an instance of <code>JsonParsedModule</cod
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
+<h4 id="design-considerations"><a class="link" href="#design-considerations">3.2.2. Design Considerations</a></h4>
 <div class="paragraph">
 <p>As with all network requests, this feature might not work as intended in certain circumstances. Possible cases are:</p>
 </div>
@@ -446,17 +480,17 @@ and optional fields are shown in the class diagram below:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="requirements-feature"><a class="link" href="#requirements-feature">3.2. Requirements Feature</a></h3>
+<h3 id="requirements-feature"><a class="link" href="#requirements-feature">3.3. Requirements Feature</a></h3>
 <div class="paragraph">
 <p>Within a course, there are multiple requirements to be tracked.</p>
 </div>
 <div class="sect3">
-<h4 id="implementation-3"><a class="link" href="#implementation-3">3.2.1. Implementation</a></h4>
+<h4 id="implementation-4"><a class="link" href="#implementation-4">3.3.1. Implementation</a></h4>
 <div class="imageblock">
 <div class="content">
 <img src="images/RequirementClassDiagram.png" alt="RequirementClassDiagram">
 </div>
-<div class="title">Figure 9. Structure of the Requirement class.</div>
+<div class="title">Figure 10. Structure of the Requirement class.</div>
 </div>
 <div class="paragraph">
 <p>A requirement consists of three components: title, credits and unique module list.
@@ -489,7 +523,7 @@ Multiple requirements can exist in the course book at any one time.</p>
 <div class="content">
 <img src="images/RequirementAddSequenceDiagram.png" alt="RequirementAddSequenceDiagram">
 </div>
-<div class="title">Figure 10. Sequence Diagram when adding a requirement.</div>
+<div class="title">Figure 11. Sequence Diagram when adding a requirement.</div>
 </div>
 <div class="paragraph">
 <p>When the user adds a requirement, the user has to specify two prefixes: <code>n/</code> for title and <code>u/</code> for credits value (number of credits needed to fulfill for the requirement).
@@ -510,40 +544,6 @@ Then, the application proceeds to do the following steps</p>
 </div>
 <div class="paragraph">
 <p>Step 3: The new requirement is added to the course book.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="courseinfo-feature"><a class="link" href="#courseinfo-feature">3.3. CourseInfo Feature</a></h3>
-<div class="paragraph">
-<p>A <code>CourseBook</code> contains only one course information.</p>
-</div>
-<div class="sect3">
-<h4 id="implementation-4"><a class="link" href="#implementation-4">3.3.1. Implementation</a></h4>
-<div class="imageblock">
-<div class="content">
-<img src="images/CourseInfoClassDiagram.png" alt="CourseInfoClassDiagram">
-</div>
-<div class="title">Figure 11. Structure of CourseInfo Class</div>
-</div>
-<div class="paragraph">
-<p>A course consists of one information: Name. One course should only have one name.</p>
-</div>
-<div class="paragraph">
-<p>The course related commands that can be called are:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>course add</code> - adds a new course with name to the course book</p>
-</li>
-<li>
-<p><code>course edit</code> - edits name of existing course in the course book</p>
-</li>
-<li>
-<p><code>course delete</code> - deletes existing course and all information in the course book</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -1438,4 +1438,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-02 06:07:54 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-02 15:36:58 UTC</div></div></div></body></html>
