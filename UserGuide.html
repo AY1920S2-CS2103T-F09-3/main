@@ -25,30 +25,15 @@
 </ul>
 </li>
 <li><a href="#how-to-use-this-guide">4. How to use this guide</a></li>
-<li><a href="#walkthrough">5. Walkthrough</a>
-<ul class="sectlevel3">
-<li><a href="#start-up-the-application">5.1. Start up the application</a></li>
-<li><a href="#enter-your-course-details">5.2. Enter your course details</a></li>
-<li><a href="#key-in-your-graduation-requirements">5.3. Key in your graduation requirements</a></li>
-<li><a href="#assign-your-modules">5.4. Assign your modules</a></li>
-<li><a href="#mark-a-module-as-done">5.5. Mark a module as done</a></li>
-<li><a href="#key-in-additional-details-for-your-modules">5.6. Key in additional details for your modules</a></li>
-<li><a href="#track-your-mcs">5.7. Track your MCs</a></li>
-<li><a href="#assign-a-grade-to-your-module">5.8. Assign a grade to your module</a></li>
-<li><a href="#view-your-cap">5.9. View your CAP</a></li>
-<li><a href="#export-your-data">5.10. Export your data</a></li>
-</ul>
-</li>
+<li><a href="#walkthrough">5. Walkthrough</a></li>
 <li><a href="#command-list">6. Command List</a>
 <ul class="sectlevel3">
 <li><a href="#help">6.1. help</a></li>
 <li><a href="#course-2">6.2. course</a></li>
 <li><a href="#requirement">6.3. requirement</a></li>
 <li><a href="#module">6.4. module</a></li>
-<li><a href="#grade">6.5. grade</a></li>
-<li><a href="#achieve">6.6. achieve</a></li>
-<li><a href="#export">6.7. export</a></li>
-<li><a href="#exit">6.8. exit</a></li>
+<li><a href="#export">6.5. export</a></li>
+<li><a href="#exit">6.6. exit</a></li>
 </ul>
 </li>
 <li><a href="#faqs">7. FAQs</a></li>
@@ -212,45 +197,39 @@ Specifies extra tips you can use when navigating through our app.
 <div class="sect1">
 <h2 id="walkthrough"><a class="link" href="#walkthrough">5. Walkthrough</a></h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="start-up-the-application"><a class="link" href="#start-up-the-application">5.1. Start up the application</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="enter-your-course-details"><a class="link" href="#enter-your-course-details">5.2. Enter your course details</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="key-in-your-graduation-requirements"><a class="link" href="#key-in-your-graduation-requirements">5.3. Key in your graduation requirements</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="assign-your-modules"><a class="link" href="#assign-your-modules">5.4. Assign your modules</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="mark-a-module-as-done"><a class="link" href="#mark-a-module-as-done">5.5. Mark a module as done</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="key-in-additional-details-for-your-modules"><a class="link" href="#key-in-additional-details-for-your-modules">5.6. Key in additional details for your modules</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="track-your-mcs"><a class="link" href="#track-your-mcs">5.7. Track your MCs</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="assign-a-grade-to-your-module"><a class="link" href="#assign-a-grade-to-your-module">5.8. Assign a grade to your module</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="view-your-cap"><a class="link" href="#view-your-cap">5.9. View your CAP</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="export-your-data"><a class="link" href="#export-your-data">5.10. Export your data</a></h4>
-
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start up the application</p>
+</li>
+<li>
+<p>Enter your course details</p>
+</li>
+<li>
+<p>Key in your graduation requirements</p>
+</li>
+<li>
+<p>Assign your modules</p>
+</li>
+<li>
+<p>Mark a module as done</p>
+</li>
+<li>
+<p>Key in additional details for your modules</p>
+</li>
+<li>
+<p>Track your MCs</p>
+</li>
+<li>
+<p>Assign a grade to your module</p>
+</li>
+<li>
+<p>View your CAP</p>
+</li>
+<li>
+<p>Export your data</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -316,7 +295,8 @@ A popup for the list of all commands as well as the link to the user guide is sh
 <div class="sect3">
 <h4 id="course-2"><a class="link" href="#course-2">6.2. course</a></h4>
 <div class="paragraph">
-<p>Add, edit or delete your course.</p>
+<p>Add, edit or delete your course. Find out how much CAP you need to maintain
+each semester to achieve your desired CAP.</p>
 </div>
 <div class="paragraph">
 <p>Command Format</p>
@@ -327,7 +307,9 @@ A popup for the list of all commands as well as the link to the user guide is sh
 
 course edit [n/COURSE_NAME] [u/MCs]
 
-course delete n/COURSE_NAME</pre>
+course delete n/COURSE_NAME
+
+course achieve c/DESIRED_CAP s/SEMESTERS_LEFT</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -355,6 +337,15 @@ course delete n/COURSE_NAME</pre>
 <div class="listingblock">
 <div class="content">
 <pre>course delete</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Calculating the average grade needed to achieve a CAP of 4.50 with
+2 semesters left</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>course achieve c/4.50 s/2</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -510,16 +501,20 @@ You should be able to see the requirement created and/or edited in the main pane
 <div class="sect3">
 <h4 id="module"><a class="link" href="#module">6.4. module</a></h4>
 <div class="paragraph">
-<p>Modify or delete a module. You would be able to tag (edit) a module with information such as; semester, grade or memo notes information.</p>
+<p>Add, edit or delete a module. You would be able to tag (edit) a module with information such as; semester, grade or memo notes information.</p>
 </div>
 <div class="paragraph">
 <p>Command Format</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>module edit MODULE_CODE [n/MODULE_CODE] [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]
+<pre>module add n/MODULE_CODE t/MODULE_TITLE u/MCs [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]
 
-module delete MODULE_CODE</pre>
+module edit MODULE_CODE [n/MODULE_CODE] [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]
+
+module delete MODULE_CODE
+
+module done MODULE_CODE g/GRADE</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -541,27 +536,43 @@ SEMESTER is specified in format Y_S_ ( e.g. Y1S2 - Year 1 Semester 2 )
 <p>Command Sample</p>
 </div>
 <div class="paragraph">
-<p>Tagging the module, CS1101, with "Y1S2" and grade "A+", and also renaming it to CS1101S</p>
+<p>Adding the module, CS2103T, with title "Software Engineering" and MCs "4".</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>module edit n/CS1101: n/CS1101S s/Y1S2 g/A+</pre>
+<pre>module add n/CS2103T t/Software Engineering u/4</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Tagging the module, ST2234, with "Y2S1" and giving it a memo "pretty easy module"</p>
+<p>Tagging the module, CS1101, with "Y1S2" and grade "A+", and also renaming it to CS1101S.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>module edit n/ST2334: s/Y2S1 m/pretty easy module</pre>
+<pre>module edit n/CS1101 n/CS1101S s/Y1S2 g/A+</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Removing a module named "CS1101S"</p>
+<p>Tagging the module, ST2234, with "Y2S1" and giving it a memo "pretty easy module".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>module edit n/ST2334 s/Y2S1 m/pretty easy module</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Removing a module named "CS1101S".</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre>module delete n/CS1101S</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Assigning grade 'A' to the module 'CS2103T'.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>module done CS2103T g/A</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -606,89 +617,7 @@ You should be able to see the modified module details reflected in the main pane
 <hr>
 </div>
 <div class="sect3">
-<h4 id="grade"><a class="link" href="#grade">6.5. grade</a></h4>
-<div class="paragraph">
-<p>Assigns a grade to a module.</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>grade MODULE_CODE g/GRADE</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="paragraph">
-<p>Assigns grade 'A' to the module 'CS2103T'.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>grade CS2103T g/A</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-You should now see the grade reflected under the module you assigned to.
-</td>
-</tr>
-</table>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="achieve"><a class="link" href="#achieve">6.6. achieve</a></h4>
-<div class="paragraph">
-<p>Calculates the average grade needed to achieve the CAP you desire</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>achieve c/DESIRED_CAP</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="paragraph">
-<p>Calculates the average grade needed to achieve a CAP of 4.50</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>achieve c/4.50</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-You should be able to view the average grade needed to achieve the CAP you desire (in a pop-up)
-</td>
-</tr>
-</table>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="export"><a class="link" href="#export">6.7. export</a></h4>
+<h4 id="export"><a class="link" href="#export">6.5. export</a></h4>
 <div class="paragraph">
 <p>Exports all data in a (prettified) text file. If information is sufficient,
 this file can be submitted to NUS as a study plan.</p>
@@ -719,7 +648,7 @@ A text file "study_plan.txt" should be generated in  the same folder as the iGra
 <hr>
 </div>
 <div class="sect3">
-<h4 id="exit"><a class="link" href="#exit">6.8. exit</a></h4>
+<h4 id="exit"><a class="link" href="#exit">6.6. exit</a></h4>
 <div class="paragraph">
 <p>Exits the program</p>
 </div>
@@ -784,6 +713,9 @@ However, we will be unable to provide features such as validation from NUSMods.<
 <p><code>course delete COURSE_NAME</code></p>
 </div>
 <div class="paragraph">
+<p><code>course achieve c/DESIRED_CAP</code></p>
+</div>
+<div class="paragraph">
 <p><code>requirement add n/REQUIREMENT_TITLE u/MCS_REQUIRED</code></p>
 </div>
 <div class="paragraph">
@@ -799,7 +731,7 @@ However, we will be unable to provide features such as validation from NUSMods.<
 <p><code>requirement unassign REQUIREMENT_CODE [n/MODULE_CODE &#8230;&#8203;]</code></p>
 </div>
 <div class="paragraph">
-<p><code>module add n/MODULE_CODE [n/MODULE_TITLE] [n/DESCRIPTION] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</code></p>
+<p><code>module add n/MODULE_CODE n/MODULE_TITLE u/MCs [n/DESCRIPTION] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</code></p>
 </div>
 <div class="paragraph">
 <p><code>module edit MODULE_CODE [n/MODULE_CODE] [n/MODULE_TITLE] [n/DESCRIPTION] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</code></p>
@@ -809,9 +741,6 @@ However, we will be unable to provide features such as validation from NUSMods.<
 </div>
 <div class="paragraph">
 <p><code>module done MODULE_CODE g/GRADE</code></p>
-</div>
-<div class="paragraph">
-<p><code>achieve c/DESIRED_CAP</code></p>
 </div>
 <div class="paragraph">
 <p><code>undo</code></p>
@@ -886,4 +815,4 @@ However, we will be unable to provide features such as validation from NUSMods.<
 <p><a href="http://www.nus.edu.sg/registrar/calendar">NUS - Academic Calendar</a></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-02 19:02:09 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-02 19:04:08 UTC</div></div></div></body></html>
