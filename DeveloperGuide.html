@@ -22,7 +22,7 @@
 </li>
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
-<li><a href="#courseinfo-feature">3.1. CourseInfo Feature</a></li>
+<li><a href="#course-feature">3.1. Course Feature</a></li>
 <li><a href="#adding-modules-from-nus-mods">3.2. Adding Modules from NUS Mods</a></li>
 <li><a href="#requirements-feature">3.3. Requirements Feature</a></li>
 <li><a href="#proposed-undo-redo-feature">3.4. [Proposed] Undo/Redo feature</a></li>
@@ -346,7 +346,7 @@ An example of how such a model may look like is given below.<br>
 <p>This section describes some noteworthy details on how certain features are implemented.</p>
 </div>
 <div class="sect2">
-<h3 id="courseinfo-feature"><a class="link" href="#courseinfo-feature">3.1. CourseInfo Feature</a></h3>
+<h3 id="course-feature"><a class="link" href="#course-feature">3.1. Course Feature</a></h3>
 <div class="paragraph">
 <p>A <code>CourseBook</code> contains only one course information.</p>
 </div>
@@ -359,7 +359,8 @@ An example of how such a model may look like is given below.<br>
 <div class="title">Figure 9. Structure of CourseInfo Class</div>
 </div>
 <div class="paragraph">
-<p>A course consists of one information: Name. One course should only have one name.</p>
+<p>A course consists of three information: Name, CAP, and SemsLeft. One course should only have one name,
+and one CAP.</p>
 </div>
 <div class="paragraph">
 <p>The course related commands that can be called are:</p>
@@ -367,15 +368,37 @@ An example of how such a model may look like is given below.<br>
 <div class="ulist">
 <ul>
 <li>
-<p><code>course add</code> - adds a new course with name to the course book</p>
-</li>
-<li>
 <p><code>course edit</code> - edits name of existing course in the course book</p>
 </li>
 <li>
 <p><code>course delete</code> - deletes existing course and all information in the course book</p>
 </li>
+<li>
+<p><code>course achieve</code> - calculates CAP needed to maintain each semester to achieve overall CAP targer</p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Here is how the courseInfo class updates when name of course is edited:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CourseEditSequenceDiagram.png" alt="CourseEditSequenceDiagram">
+</div>
+<div class="title">Figure 10. Sequence Diagram when editing course name.</div>
+</div>
+<div class="paragraph">
+<p>When a user edits name of a course, the user has to specify the prefix <code>/n</code> for name.
+Then the application proceeds to do the following steps:</p>
+</div>
+<div class="paragraph">
+<p>Step 1: The CourseEditCommandParser is called to parse the CourseEditCommand with the n/ prefix.</p>
+</div>
+<div class="paragraph">
+<p>Step 2: The CourseEditCommand is executed to set the new course name to the model.</p>
+</div>
+<div class="paragraph">
+<p>Step 3: The new course name is set in the course book.</p>
 </div>
 </div>
 </div>
@@ -490,7 +513,7 @@ and optional fields are shown in the class diagram below:</p>
 <div class="content">
 <img src="images/RequirementClassDiagram.png" alt="RequirementClassDiagram">
 </div>
-<div class="title">Figure 10. Structure of the Requirement class.</div>
+<div class="title">Figure 11. Structure of the Requirement class.</div>
 </div>
 <div class="paragraph">
 <p>A requirement consists of three components: title, credits and unique module list.
@@ -523,7 +546,7 @@ Multiple requirements can exist in the course book at any one time.</p>
 <div class="content">
 <img src="images/RequirementAddSequenceDiagram.png" alt="RequirementAddSequenceDiagram">
 </div>
-<div class="title">Figure 11. Sequence Diagram when adding a requirement.</div>
+<div class="title">Figure 12. Sequence Diagram when adding a requirement.</div>
 </div>
 <div class="paragraph">
 <p>When the user adds a requirement, the user has to specify two prefixes: <code>n/</code> for title and <code>u/</code> for credits value (number of credits needed to fulfill for the requirement).
@@ -1438,4 +1461,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-03 05:54:11 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 10:14:13 UTC</div></div></div></body></html>
