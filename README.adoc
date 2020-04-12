@@ -1,4 +1,6 @@
 = iGrad
+
+image:https://api.codacy.com/project/badge/Grade/f15c80077ca543afad741bee37e6f4db[link="https://app.codacy.com/gh/AY1920S2-CS2103T-F09-3/main?utm_source=github.com&utm_medium=referral&utm_content=AY1920S2-CS2103T-F09-3/main&utm_campaign=Badge_Grade_Dashboard"]
 ifdef::env-github,env-browser[:relfileprefix: docs/]
 
 https://travis-ci.org/AY1920S2-CS2103T-F09-3/main[image:https://travis-ci.org/AY1920S2-CS2103T-F09-3/main.svg?branch=master[Build Status]]
