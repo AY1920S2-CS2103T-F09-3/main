@@ -13,15 +13,16 @@
 <li><a href="#how-to-use-this-guide">2. How to use this guide</a></li>
 <li><a href="#features">3. Features</a>
 <ul class="sectlevel3">
-<li><a href="#course-builder">3.1. Course Builder</a></li>
-<li><a href="#modular-credits-mcs-tracker">3.2. Modular Credits (MCs) Tracker</a></li>
-<li><a href="#cumulative-average-point-cap-tracker">3.3. Cumulative Average Point (CAP) Tracker</a></li>
+<li><a href="#course-planner">3.1. Course Planner</a></li>
+<li><a href="#mcs-tracker">3.2. MCs Tracker</a></li>
+<li><a href="#cap-tracker">3.3. CAP Tracker</a></li>
+<li><a href="#everything-integrated-into-one-application">3.4. Everything Integrated into One Application</a></li>
 </ul>
 </li>
 <li><a href="#components">4. Components</a>
 <ul class="sectlevel3">
 <li><a href="#course">4.1. Course</a></li>
-<li><a href="#requirements">4.2. Requirements</a></li>
+<li><a href="#degree-requirements">4.2. Degree Requirements</a></li>
 <li><a href="#modules">4.3. Modules</a></li>
 </ul>
 </li>
@@ -173,28 +174,69 @@ Specifies important things to take note of
 <h2 id="features"><a class="link" href="#features">3. Features</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This segment highlights the key features of iGrad.</p>
+<p>Section by: <a href="https://github.com/nathanaelseen">Nathanael Seen</a></p>
+</div>
+<div class="paragraph">
+<p>This segment highlights three key features iGrad offers to NUS students, namely;
+a Course Planner, an MCs Tracker, and a CAP Tracker.</p>
+</div>
+<div class="paragraph">
+<p>If you would like a more in-depth overview of the actual components of our application, please
+refer to the next section; <a href="#components">Section 4, &#8220;Components&#8221;</a>, for more details.</p>
 </div>
 <div class="sect3">
-<h4 id="course-builder"><a class="link" href="#course-builder">3.1. Course Builder</a></h4>
+<h4 id="course-planner"><a class="link" href="#course-planner">3.1. Course Planner</a></h4>
 <div class="paragraph">
-<p>iGrad was built with every NUS student in mind. Our custom course builder allows you to build
-the course of your dreams.</p>
+<p><em>iGrad</em> was built with every NUS student in mind. Our flexible course planner allows you to plan
+a course of your own dreams, be it those of you doing a single degree programme,
+a double degree programme, and even a concurrent degree programme.</p>
+</div>
+<div class="paragraph">
+<p>With our course planner, you would be able to enter your current course details such as your
+<strong>modules</strong> and the various degree <strong>requirements</strong> by which those modules are mapped.</p>
+</div>
+<div class="paragraph">
+<p>(For instance, the <em>Computer Science</em> course has the various
+<strong>modules</strong>, highlighted in <span class="blue">blue</span>, and degree <strong>requirements</strong>, boxed in <span class="red">red</span>):</p>
+</div>
+<div class="paragraph">
+<p><a id="figure-a-anchor"></a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/user-guide/components/graduation_degree_requirements.png" alt="graduation degree requirements">
+</div>
+<div class="title">Figure 1. Computer science degree requirements</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="modular-credits-mcs-tracker"><a class="link" href="#modular-credits-mcs-tracker">3.2. Modular Credits (MCs) Tracker</a></h4>
+<h4 id="mcs-tracker"><a class="link" href="#mcs-tracker">3.2. MCs Tracker</a></h4>
 <div class="paragraph">
-<p>We are sick of counting our MCs at the beginning of every semester. Easily see how many MCs you
-have left in order to apply for graduation.</p>
+<p>We are sick of counting our MCs at the beginning of every semester; be it counting the
+total course MCs left before you can graduate, or tracking the number of MCs left
+for those invidual degree requirements (boxed in <span class="green">green</span>,
+in <a href="#figure-a-anchor"><em>Figure 1</em></a>).</p>
+</div>
+<div class="paragraph">
+<p>With our MCs feature, you would be able to easily keep track of how close you are to
+graduation, as all this information is automatically updated and recomputed, each time you have
+completed a certain module.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="cumulative-average-point-cap-tracker"><a class="link" href="#cumulative-average-point-cap-tracker">3.3. Cumulative Average Point (CAP) Tracker</a></h4>
+<h4 id="cap-tracker"><a class="link" href="#cap-tracker">3.3. CAP Tracker</a></h4>
 <div class="paragraph">
-<p>No more googling CAP calculators. iGrad&#8217;s CAP tracker keeps track of your CAP at every step and
-even offers predictive services so you know how well you have to do
-in order to achieve your dream CAP.</p>
+<p>No more googling for CAP calculators. iGrad&#8217;s CAP tracker helps you keeps track of your current CAP at
+every step of your journey in your course. In addition, it even offers predictive features so you know how
+well you have to do in order to achieve your dream CAP.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="everything-integrated-into-one-application"><a class="link" href="#everything-integrated-into-one-application">3.4. Everything Integrated into One Application</a></h4>
+<div class="paragraph">
+<p>But the best part is that these features are all integrated into our application; <em>iGrad</em>.
+And with all these important pieces of information in one place, you would never go amiss keeping
+track of all your graduation requirements.</p>
 </div>
 </div>
 </div>
@@ -203,31 +245,98 @@ in order to achieve your dream CAP.</p>
 <h2 id="components"><a class="link" href="#components">4. Components</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This segment contains details on the structure of iGrad.</p>
+<p>This segment details the various components of <em>iGrad</em>. As shown in <em>Figure 2</em> below,
+these components follow a hierachical structure, exactly like how an NUS course is structured.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="https://user-images.githubusercontent.com/34233605/75425925-9774ff80-597e-11ea-87f5-228f95b5c84f.png" alt="75425925 9774ff80 597e 11ea 87f5 228f95b5c84f"></span></p>
+<p><a id="figure-b-anchor"></a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/user-guide/components/hierachical_structure.png" alt="hierachical structure">
+</div>
+<div class="title">Figure 2. Hierachical overview of iGrad components</div>
+</div>
+<div class="paragraph">
+<p>Here is how our application looks like (on a typical usage):</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/user-guide/components/app_screenshot_ui.png" alt="app screenshot ui">
+</div>
+<div class="title">Figure 3. iGrad application screenshot</div>
+</div>
+<div class="paragraph">
+<p>The following is the same screenshot of our application, but with the various components
+of our application highlighted:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/user-guide/components/app_screenshot_ui_components_highlighted.png" alt="app screenshot ui components highlighted">
+</div>
+<div class="title">Figure 4. iGrad components screenshot</div>
+</div>
+<div class="paragraph">
+<p>As per the screenshot above (in <em>figure 4</em>):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#course">Course</a> is indicated in <span class="blue">blue</span>,</p>
+</li>
+<li>
+<p><a href="#degree-requirements">Degree Requirements</a> is indicated in <span class="red">red</span>, and</p>
+</li>
+<li>
+<p><a href="#modules">Modules</a> is indicated in <span class="yellow">yellow</span></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You may refer to <a href="#figure-b-anchor"><em>Figure 2</em></a>, if you would like a quick recap on the
+hierachical structuring of these components.</p>
 </div>
 <div class="sect3">
 <h4 id="course"><a class="link" href="#course">4.1. Course</a></h4>
 <div class="paragraph">
-<p>A course is simply a group of requirements. It is also how we keep track of your overall CAP
-and MCs.</p>
+<p>A course is simply a group of degree requirements.</p>
+</div>
+<div class="paragraph">
+<p>It contains important information such as your current CAP, total number of MCs
+you have completed thus far, and semesters left before you can graduate.</p>
+</div>
+<div class="paragraph">
+<p>In short, it helps you keep track of your overall degree progress.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="requirements"><a class="link" href="#requirements">4.2. Requirements</a></h4>
+<h4 id="degree-requirements"><a class="link" href="#degree-requirements">4.2. Degree Requirements</a></h4>
 <div class="paragraph">
-<p>A requirement consists of at least one module. Fulfill all modules within a requirement to
-complete it.</p>
+<p>Under a course are the various degree requirements, such as the ones shown in
+<a href="#figure-b-anchor"><em>Figure 2</em></a> above; <em>Computer Science Foundation</em>,
+<em>Mathematics and Sciences</em>, and <em>Unrestricted Electives</em>.</p>
+</div>
+<div class="paragraph">
+<p>Each requirement comprises of the modules you need to complete in order to fulfill that particular
+requirement.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, each requirement consists of important information such as
+the number of MCs you have already fulfilled.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="modules"><a class="link" href="#modules">4.3. Modules</a></h4>
 <div class="paragraph">
-<p>A module is the building block of all other components. Mark your modules as done and give it
-a grade. You can also add optional memos to help you remember why
-you took the module.</p>
+<p>Finally, modules are the basic building block of all the other components.</p>
+</div>
+<div class="paragraph">
+<p>These could be modules you have taken, modules you are currently taking and modules that
+you plan to take.</p>
+</div>
+<div class="paragraph">
+<p>Each module allows recording of other optional information, such as indicating the grade you
+have obtained for those modules.</p>
 </div>
 </div>
 </div>
@@ -960,7 +1069,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <div class="content">
 <img src="images/user-guide/moduleAutoAddCommand/two_modules.png" alt="user guide\moduleAutoAddCommand\two modules">
 </div>
-<div class="title">Figure 1. Modules CS2103T and CS2101 successfully added</div>
+<div class="title">Figure 5. Modules CS2103T and CS2101 successfully added</div>
 </div>
 </li>
 </ol>
@@ -1149,7 +1258,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <div class="content">
 <img src="images/user-guide/moduleAutoAddCommand/two_modules.png" alt="user guide\moduleAutoAddCommand\two modules">
 </div>
-<div class="title">Figure 2. Modules CS2103T and CS2101 successfully added from NUSMods</div>
+<div class="title">Figure 6. Modules CS2103T and CS2101 successfully added from NUSMods</div>
 </div>
 </li>
 </ol>
@@ -1283,7 +1392,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <div class="content">
 <img src="images/user-guide/moduleAutoAddCommand/one_module.png" alt="user guide\moduleAutoAddCommand\one module">
 </div>
-<div class="title">Figure 3. Modules CS2103T successfully given a grade and a semester</div>
+<div class="title">Figure 7. Modules CS2103T successfully given a grade and a semester</div>
 </div>
 </li>
 </ol>
@@ -1381,7 +1490,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <div class="content">
 <img src="images/user-guide/moduleAutoAddCommand/module_edit.png" alt="user guide\moduleAutoAddCommand\module edit">
 </div>
-<div class="title">Figure 4. Modules CS2103T successfully given a grade and a semester</div>
+<div class="title">Figure 8. Modules CS2103T successfully given a grade and a semester</div>
 </div>
 </li>
 </ol>
@@ -1693,7 +1802,7 @@ administration for processing of Leave of Absence (LOA), exchange programmes or 
 <div class="content">
 <img src="images/user-guide/exportCommand/export_csv_example.png" alt="user guide\exportCommand\export csv example">
 </div>
-<div class="title">Figure 5. Study Plan Example CSV</div>
+<div class="title">Figure 9. Study Plan Example CSV</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1843,7 +1952,7 @@ in one place.</p>
 <p><em>I&#8217;m not an NUS student. Can I still use iGrad?</em></p>
 </div>
 <div class="paragraph">
-<p>As long as your university follows a similar <a href="#fig-1">hierachical structure</a>!
+<p>As long as your university follows a similar <a href="#fig-2">hierachical structure</a>!
 However, we will be unable to provide features such as validation from NUSMods.</p>
 </div>
 <div class="paragraph">
@@ -2084,4 +2193,4 @@ categories:</p>
 <p><a href="http://www.nus.edu.sg/registrar/calendar">NUS - Academic Calendar</a></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-12 12:17:16 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-12 12:58:52 UTC</div></div></div></body></html>
