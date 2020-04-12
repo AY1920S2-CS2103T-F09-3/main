@@ -1,654 +1,74 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><meta name="author" content="&amp;amp;gt; A handy guide to help you make the most of your application"><name>iGrad</name><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><name>iGrad</name><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">iGrad</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-F09-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>iGrad</h1><div class="details"><span class="author" id="author">&amp;amp;gt; A handy guide to help you make the most of your application</span><br></div></div><div id="content"><div class="sect1">
-<h2 id="table-of-contents"><a class="link" href="#table-of-contents">Table of Contents</a></h2>
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">iGrad</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-F09-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>iGrad</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>[Introduction](#Introduction)</p>
-</li>
-<li>
-<p>[Features](#Features)</p>
-<div class="literalblock">
+<div class="paragraph">
+<p><a href="https://travis-ci.org/AY1920S2-CS2103T-F09-3/main"><span class="image"><img src="https://travis-ci.org/AY1920S2-CS2103T-F09-3/main.svg?branch=master" alt="Build Status"></span></a>
+<a href="https://coveralls.io/github/AY1920S2-CS2103T-F09-3/main?branch=master"><span class="image"><img src="https://coveralls.io/repos/github/AY1920S2-CS2103T-F09-3/main/badge.svg?branch=master" alt="Coverage Status"></span></a>
+<a href="https://www.codacy.com/app/AY1920S2-CS2103T-F09-3/main?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=se-edu/addressbook-level3&amp;utm_campaign=Badge_Grade"><span class="image"><img src="https://api.codacy.com/project/badge/Grade/fc0b7775cf7f4fdeaf08776f3d8e364a" alt="Codacy Badge"></span></a></p>
+</div>
+<div class="imageblock">
 <div class="content">
-<pre>2.1 [Course Builder](#courseInfo-builder)</pre>
+<img src="images/Ui.png" alt="Ui" width="600">
 </div>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>2.2 [Modular Credits Tracker](#modular-credits-mcs-tracker)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>2.3 [Cumulative Average Point Tracker](#cumulative-average-point-cap-tracker)</pre>
-</div>
-</div>
-</li>
-<li>
-<p>[Components](#Components)</p>
-<div class="literalblock">
-<div class="content">
-<pre>3.1 [Course](#courses)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>3.2 [Requirements](#requirements)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>3.3 [Modules](#modules)</pre>
-</div>
-</div>
-</li>
-<li>
-<p>[Walkthrough](#walkthrough)</p>
-</li>
-<li>
-<p>[Command List](#command-list)</p>
-<div class="literalblock">
-<div class="content">
-<pre>5.1.[`help`](#help)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>5.2 [`courseInfo`](#courseInfo)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>5.3 [`requirement`](#requirements)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>5.4 [`module`](#module)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>5.5 [`assign`](#assign)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>5.6 [`exam`](#exam)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>5.7 [`achieve`](#achieve)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>5.8 [`export`](#export)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>5.9 [`exit`](#exit)</pre>
-</div>
-</div>
-</li>
-<li>
-<p>[Frequently Asked Questions (FAQ)](#faqs)</p>
-</li>
-<li>
-<p>[Cheat Sheet](#cheat-sheet)</p>
-</li>
-<li>
-<p>[Glossary](#glossary)</p>
-</li>
-</ol>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect1">
-<h2 id="introduction"><a class="link" href="#introduction">Introduction</a></h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>Sick of having tracking your university progress the manual way?
-Start getting rid of your Excel sheets and scribbled down notes and download <strong>iGrad</strong> right now!</p>
+Start getting rid of your Excel sheets and scribbled down notes and download <em>iGrad</em> right now!</p>
 </div>
 <div class="paragraph">
-<p>What is <strong>iGrad</strong>?</p>
+<p>What is <em>iGrad</em>?</p>
 </div>
 <div class="paragraph">
-<p><strong>iGrad</strong> is the app to track your university progress, for students who are frustrated with the
+<p><em>iGrad</em> is the app to track your university progress, for students who are frustrated with the
 limited features the university provides, by students who are frustrated by the limited
 features the university provides.</p>
 </div>
 <div class="paragraph">
-<p><strong>iGrad</strong> offers users the ability to create custom courses and graduation requirements,
+<p><em>iGrad</em> offers users the ability to create custom courses and graduation requirements,
 ensuring the <strong>maximum</strong> degree of flexibility when planning and keeping track of your progress</p>
 </div>
 <div class="paragraph">
-<p><strong>iGrad</strong> also retrieves data directly from [NUS Mods](<a href="https://nusmods.com" class="bare">https://nusmods.com</a>), ensuring that module
+<p><em>iGrad</em> also retrieves data directly from <a href="https://nusmods.com">NUS Mods</a>, ensuring that module
 information is always up to date.</p>
 </div>
 <div class="paragraph">
-<p><strong>iGrad</strong> calculates your CAP at every step, ensuring you never have to use a CAP calculator again</p>
+<p><em>iGrad</em> calculates your CAP at every step, ensuring you never have to use a CAP calculator again</p>
 </div>
 <div class="paragraph">
-<p>Finally, the <strong>iGrad</strong> team is always open to feedback and suggestions from the public will always be followed up on.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="features"><a class="link" href="#features">Features</a></h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="course-builder"><a class="link" href="#course-builder">Course Builder</a></h4>
-<div class="paragraph">
-<p>iGrad was built with every NUS student in mind. Our custom courseInfo builder allows you to build
-the courseInfo of your dreams.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="modular-credits-mcs-tracker"><a class="link" href="#modular-credits-mcs-tracker">Modular Credits (MCs) Tracker</a></h4>
-<div class="paragraph">
-<p>We are sick of counting our MCs at the beginning of every semester too. Easily see how many MCs you
-have left in order to apply for graduation.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="cumulative-average-point-cap-tracker"><a class="link" href="#cumulative-average-point-cap-tracker">Cumulative Average Point (CAP) Tracker</a></h4>
-<div class="paragraph">
-<p>No more googling CAP calculators. iGrad&#8217;s CAP tracker keeps track of your CAP at every step and
-even offers predictive services so you know how well you have to do
-in order to achieve your dream Cumulative Point Average (CAP).</p>
-</div>
+<p>Finally, the <em>iGrad</em> team is always open to feedback and suggestions from the public will always be followed up on.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="components"><a class="link" href="#components">Components</a></h2>
+<h2 id="site-map"><a class="link" href="#site-map">Site Map</a></h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>&lt;a title="fig-1"&gt;<strong>Figure 1</strong>&lt;/a&gt;
-![](<a href="https://user-images.githubusercontent.com/34233605/75425925-9774ff80-597e-11ea-87f5-228f95b5c84f.png" class="bare">https://user-images.githubusercontent.com/34233605/75425925-9774ff80-597e-11ea-87f5-228f95b5c84f.png</a>)</p>
-</div>
-<div class="sect3">
-<h4 id="courses"><a class="link" href="#courses">Courses</a></h4>
-<div class="paragraph">
-<p>A courseInfo is simply a group of requirements. It is also how we keep track of your overall CAP
-and MCs.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="requirements"><a class="link" href="#requirements">Requirements</a></h4>
-<div class="paragraph">
-<p>A requirement consists of at least one module. Fulfill all modules within a requirement to
-complete it.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="modules"><a class="link" href="#modules">Modules</a></h4>
-<div class="paragraph">
-<p>A module is the building block of all other components. Mark your modules as done and give it
-a grade. You can also add optional memos to help you remember why
-you took the module.</p>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="UserGuide.html">User Guide</a></p>
+</li>
+<li>
+<p><a href="DeveloperGuide.html">Developer Guide</a></p>
+</li>
+<li>
+<p><a href="LearningOutcomes.html">Learning Outcomes</a></p>
+</li>
+<li>
+<p><a href="AboutUs.html">About Us</a></p>
+</li>
+<li>
+<p><a href="ContactUs.html">Contact Us</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="walkthrough"><a class="link" href="#walkthrough">Walkthrough</a></h2>
+<h2 id="acknowledgements"><a class="link" href="#acknowledgements">Acknowledgements</a></h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="1-start-up-the-application"><a class="link" href="#1-start-up-the-application">1. Start up the application</a></h4>
 <div class="paragraph">
-<p>Double-click the .jar file to get started right away!</p>
+<p>This project was built on top of Address Book 4 by the <a href="https://se-education.org/">SE-Education team</a></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="2-enter-your-courseinfo-details"><a class="link" href="#2-enter-your-courseinfo-details">2. Enter your courseInfo details</a></h4>
-<div class="paragraph">
-<p>![](<a href="https://user-images.githubusercontent.com/34233605/75436477-9dbfa780-598f-11ea-9076-8d4e4e09c8bc.png" class="bare">https://user-images.githubusercontent.com/34233605/75436477-9dbfa780-598f-11ea-9076-8d4e4e09c8bc.png</a>)</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="3-key-in-your-graduation-requirements"><a class="link" href="#3-key-in-your-graduation-requirements">3. Key in your graduation requirements</a></h4>
-<div class="paragraph">
-<p>![](<a href="https://user-images.githubusercontent.com/34233605/75436492-a1ebc500-598f-11ea-91f1-94509bce253e.png" class="bare">https://user-images.githubusercontent.com/34233605/75436492-a1ebc500-598f-11ea-91f1-94509bce253e.png</a>)</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="4-assign-your-modules"><a class="link" href="#4-assign-your-modules">4. Assign your modules</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="5-mark-a-module-as-done"><a class="link" href="#5-mark-a-module-as-done">5. Mark a module as done</a></h4>
-<div class="paragraph">
-<p>![](<a href="https://user-images.githubusercontent.com/34233605/75436503-a57f4c00-598f-11ea-9902-a912ce16815e.png" class="bare">https://user-images.githubusercontent.com/34233605/75436503-a57f4c00-598f-11ea-9902-a912ce16815e.png</a>)</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="6-key-in-a-memo"><a class="link" href="#6-key-in-a-memo">6. Key in a memo</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="7-track-your-mcs"><a class="link" href="#7-track-your-mcs">7. Track your MCs</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="8-view-your-cap"><a class="link" href="#8-view-your-cap">8. View your CAP</a></h4>
-<div class="paragraph">
-<p>![](<a href="https://user-images.githubusercontent.com/34233605/75436570-bdef6680-598f-11ea-887b-16279de675e6.png" class="bare">https://user-images.githubusercontent.com/34233605/75436570-bdef6680-598f-11ea-887b-16279de675e6.png</a>)</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="9-run-batch-commands"><a class="link" href="#9-run-batch-commands">9. Run batch commands</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="10-export-your-data"><a class="link" href="#10-export-your-data">10. Export your data</a></h4>
-<div class="paragraph">
-<p>![](<a href="https://user-images.githubusercontent.com/34233605/75436540-b4fe9500-598f-11ea-814d-ed3a0bbf5c6a.png" class="bare">https://user-images.githubusercontent.com/34233605/75436540-b4fe9500-598f-11ea-814d-ed3a0bbf5c6a.png</a>)</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="command-list"><a class="link" href="#command-list">Command List</a></h2>
-<div class="sectionbody">
-<div class="sect3">
-<h4 id="code-help-code"><a class="link" href="#code-help-code"><code>help</code></a></h4>
-<div class="paragraph">
-<p>Displays a help message to the user. Lists all possible commands
-and provides a link to the user guide online.</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>help</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="code-courseinfo-code"><a class="link" href="#code-courseinfo-code"><code>courseInfo</code></a></h4>
-<div class="paragraph">
-<p>Creates a courseInfo. (TODO: Add in modify and remove)</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/*
-* Creating a courseInfo named "Computer Science"
-*/
-courseInfo add n/Computer Science</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<div class="paragraph">
-<p>top panel
-    courseInfo add n/COURSE_NAME</p>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="code-requirement-code"><a class="link" href="#code-requirement-code"><code>requirement</code></a></h4>
-<div class="paragraph">
-<p>Creates a graduation requirement. (TODO: Add in modify and remove)</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>requirement add n/REQUIREMENT_NAME u/NO_OF_MCS</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/**
-* Creating a requirement named "Unrestricted Electives"
-* which requires 32 MCs to fulfill
-*/
-requirement add n/Unrestricted Electives u/32</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<div class="paragraph">
-<p>main panel</p>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="code-module-code"><a class="link" href="#code-module-code"><code>module</code></a></h4>
-<div class="paragraph">
-<p>Creates a module with semester, grade or memo notes information. (TODO: Add in modify and remove)</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/**
-* At least one option must be specified.
-* SEMESTER is specified in format Y_S_ ( e.g. Y1S2 - Year 1 Semester 2 )
-*/
-module add n/MODULE_CODE [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/**
-* Tags CS1101 with "Y1S2" and grade "A+"
-*/
-module add n/CS1101 s/Y1S2 g/A+</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/**
-* Tags ST2234 with "Y2S1" and gives it a memo "pretty easy module"
-*/
-module add n/ST2334 s/Y2S1 m/pretty easy module</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="code-assign-code"><a class="link" href="#code-assign-code"><code>assign</code></a></h4>
-<div class="paragraph">
-<p>Assigns a module to a graduation requirement. If there is good internet
-connectivity, the module will be validated with NUSMods and its description
-will be auto-filled.</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/**
-* DESCRIPTION is optional
-*/
-assign REQUIREMENT_NAME n/MODULE_CODE</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/**
-* Assigns module "LAJ1201" (Japanese 1)
-* to requirement "Unrestricted Electives"
-*/
-assign Unrestricted Electives n/LAJ1201</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="paragraph">
-<p>a graduation requirement</p>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="code-exam-code"><a class="link" href="#code-exam-code"><code>exam</code></a></h4>
-<div class="paragraph">
-<p>View your examination results.</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/**
-* SEMESTER is optional.
-* If not specified, displays results for all tags.
-*/
-exam s/SEMESTER</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/**
-* Displays exam results for Year 3 Semester 2
-*/
-exam s/Y3S2</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="code-achieve-code"><a class="link" href="#code-achieve-code"><code>achieve</code></a></h4>
-<div class="paragraph">
-<p>Calculates the average grade needed to achieve the CAP you desire/</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>achieve c/DESIRED_CAP</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>/**
-* Calculates the avergae grade needed
-* to achieve a CAP of 4.50
-*/
-achieve c/4.50</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<div class="paragraph">
-<p>the CAP you desire</p>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="code-export-code"><a class="link" href="#code-export-code"><code>export</code></a></h4>
-<div class="paragraph">
-<p>Exports all data in a text file. If information is sufficient,
-this file can be submitted to NUS as a study plan.</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>export</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<div class="paragraph">
-<p>the same folder as the iGrad application.</p>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="code-exit-code"><a class="link" href="#code-exit-code"><code>exit</code></a></h4>
-<div class="paragraph">
-<p>Exits the program</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>exit</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>## FAQs</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>I&#8217;m not an NUS student. Can I still use iGrad?</strong></p>
-</div>
-<div class="paragraph">
-<p>As long as your university follows a similar [hierachical structure](#fig-1)!
-However, we will be unable to provide features such as validation from NUS Mods.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="cheat-sheet"><a class="link" href="#cheat-sheet">Cheat Sheet</a></h2>
-<div class="sectionbody">
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>This segment contains all the commands detailed in this guide in a consolidated list</p>
-</div>
-</blockquote>
-</div>
-<div class="paragraph">
-<p><code>help</code></p>
-</div>
-<div class="paragraph">
-<p><code>courseInfo add n/COURSE_NAME</code></p>
-</div>
-<div class="paragraph">
-<p><code>courseInfo modify n/NEW_COURSE_NAME</code></p>
-</div>
-<div class="paragraph">
-<p><code>courseInfo remove</code></p>
-</div>
-<div class="paragraph">
-<p><code>requirement add n/REQUIREMENT_NAME u/NO_OF_MCS</code></p>
-</div>
-<div class="paragraph">
-<p><code>requirement modify REQUIREMENT_NAME [n/REQUIREMENT_NAME] [u/NO_OF_MCS]</code></p>
-</div>
-<div class="paragraph">
-<p><code>requirement remove REQUIREMENT_NAME</code></p>
-</div>
-<div class="paragraph">
-<p><code>module add n/MODULE_CODE [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</code></p>
-</div>
-<div class="paragraph">
-<p><code>module modify MODULE_CODE [n/MODULE_CODE] [n/MODULE_TITLE] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</code></p>
-</div>
-<div class="paragraph">
-<p><code>module remove MODULE_CODE</code></p>
-</div>
-<div class="paragraph">
-<p><code>assign REQUIREMENT_NAME n/MODULE_CODE</code></p>
-</div>
-<div class="paragraph">
-<p><code>exam s/SEMESTER</code></p>
-</div>
-<div class="paragraph">
-<p><code>achieve c/DESIRED_CAP</code></p>
-</div>
-<div class="paragraph">
-<p><code>export</code></p>
-</div>
-<div class="paragraph">
-<p><code>exit</code></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>## Glossary</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>|               |               |
-| ------------- |-------------  |
-|Course        |A courseInfo is the entire programme of studies required to complete a university degree |
-|Graduation requirement      |Requirements specified by the university in order for a student to graduate |
-|Module      |Each module of study has a unique module code consisting of a two- or three-letter prefix that generally denotes the discipline, and four digits, the first of which indicates the level of the module |
-|Cumulative Average Point (CAP) |The Cumulative Average Point (CAP) is the weighted average grade point of the letter grades of all the modules taken by the students. |
-|Semester      |A semester is a part of the academic year. Each semester typically lasts 13 weeks in NUS. |
-|Modular Credits (MCs)      |A modular credit (MC) is a unit of the effort, stated in terms of time, expected of a typical student in managing his/her workload. |
-|NUS Mods |A timetabling application built for NUS students, by NUS students. Much like this iGrad! |
-|               |               |</p>
-</div>
-<div class="paragraph">
-<p><strong>Handy Links</strong></p>
-</div>
-<div class="paragraph">
-<p>[NUS - Modular System](<a href="http://www.nus.edu.sg/registrar/academic-information-policies/graduate/modular-system" class="bare">http://www.nus.edu.sg/registrar/academic-information-policies/graduate/modular-system</a>)</p>
-</div>
-<div class="paragraph">
-<p>[NUS - Degree Requirements](<a href="http://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/degree-requirements" class="bare">http://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/degree-requirements</a>)</p>
-</div>
-<div class="paragraph">
-<p>[NUS - Grading System and Regulations](<a href="http://www.nus.edu.sg/nusbulletin/yong-siew-toh-conservatory-of-music/undergraduate-education/degree-requirements/grading-system-and-regulations/" class="bare">http://www.nus.edu.sg/nusbulletin/yong-siew-toh-conservatory-of-music/undergraduate-education/degree-requirements/grading-system-and-regulations/</a>)</p>
-</div>
-<div class="paragraph">
-<p>[NUS - Academic Calendar](<a href="http://www.nus.edu.sg/registrar/calendar" class="bare">http://www.nus.edu.sg/registrar/calendar</a>)</p>
-</div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 15:57:51 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-12 05:57:29 UTC</div></div></div></body></html>

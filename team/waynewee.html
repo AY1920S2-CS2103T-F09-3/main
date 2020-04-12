@@ -1,731 +1,210 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><name>iGrad - User Guide</name><link rel="stylesheet" href="stylesheets/gh-pages.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><name>Wayne Wee - Project Portfolio</name><link rel="stylesheet" href="./gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">iGrad</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-F09-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>iGrad - User Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="./coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="../index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">iGrad</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-F09-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Wayne Wee - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-igrad"><a class="link" href="#project-igrad">PROJECT: iGrad</a></h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>By: <code>Team-iGrad</code>      Since: <code>Feb 2020</code></p>
-</div>
-</div>
-<div id="toc" class="toc">
-<div id="toctitle"></div>
-<ul class="sectlevel1">
-<li><a href="#introduction">1. Introduction</a></li>
-<li><a href="#how-to-use-this-guide">2. How to use this guide</a></li>
-<li><a href="#features">3. Features</a>
-<ul class="sectlevel3">
-<li><a href="#course-builder">3.1. Course Builder</a></li>
-<li><a href="#modular-credits-mcs-tracker">3.2. Modular Credits (MCs) Tracker</a></li>
-<li><a href="#cumulative-average-point-cap-tracker">3.3. Cumulative Average Point (CAP) Tracker</a></li>
-</ul>
-</li>
-<li><a href="#components">4. Components</a>
-<ul class="sectlevel3">
-<li><a href="#course">4.1. Course</a></li>
-<li><a href="#requirements">4.2. Requirements</a></li>
-<li><a href="#modules">4.3. Modules</a></li>
-</ul>
-</li>
-<li><a href="#walkthrough">5. Walkthrough</a></li>
-<li><a href="#command-list">6. Command List</a>
-<ul class="sectlevel3">
-<li><a href="#help">6.1. help</a></li>
-<li><a href="#course-2">6.2. course</a></li>
-<li><a href="#requirement">6.3. requirement</a></li>
-<li><a href="#module">6.4. Module</a>
-<ul class="sectlevel3">
-<li><a href="#ModuleAddCommand">6.4.1. Module Add</a></li>
-<li><a href="#ModuleAutoAddCommand">6.4.2. Module Auto Add</a></li>
-<li><a href="#module-done">6.4.3. Module Done</a></li>
-<li><a href="#module-edit">6.4.4. Module Edit</a></li>
-<li><a href="#module-delete">6.4.5. Module Delete</a></li>
-<li><a href="#module-filter">6.4.6. Module Filter</a></li>
-</ul>
-</li>
-<li><a href="#export">6.5. Export</a></li>
-<li><a href="#exit">6.6. Exit</a></li>
-</ul>
-</li>
-<li><a href="#version-2-0">7. Version 2.0</a>
-<ul class="sectlevel2">
-<li><a href="#module-suggester">7.1. Module Suggester</a></li>
-<li><a href="#integration-with-nusmods">7.2. Integration with NUSMods</a></li>
-</ul>
-</li>
-<li><a href="#faqs">8. FAQs</a></li>
-<li><a href="#cheat-sheet">9. Cheat Sheet</a></li>
-<li><a href="#glossary">10. Glossary</a></li>
-</ul>
-</div>
-</div>
-<div class="sect1">
-<h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Sick of having tracking your university progress the manual way?
-Start getting rid of your Excel sheets and scribbled down notes and download <em>iGrad</em> right now!</p>
-</div>
-<div class="paragraph">
-<p>What is <em>iGrad</em>?</p>
-</div>
-<div class="paragraph">
-<p><em>iGrad</em> is the app to track your university progress, for students who are frustrated with the
-limited features the university provides, by students who are frustrated by the limited
-features the university provides.</p>
-</div>
-<div class="paragraph">
-<p><em>iGrad</em> offers users the ability to create custom courses and graduation requirements,
-ensuring the <strong>maximum</strong> degree of flexibility when planning and keeping track of your progress</p>
-</div>
-<div class="paragraph">
-<p><em>iGrad</em> also retrieves data directly from <a href="https://nusmods.com">NUS Mods</a>, ensuring that module
-information is always up to date.</p>
-</div>
-<div class="paragraph">
-<p><em>iGrad</em> calculates your CAP at every step, ensuring you never have to use a CAP calculator again</p>
-</div>
-<div class="paragraph">
-<p>Finally, the <em>iGrad</em> team is always open to feedback and suggestions from the public which
-will always be followed up on.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="how-to-use-this-guide"><a class="link" href="#how-to-use-this-guide">2. How to use this guide</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You may proceed to <a href="#command-list">Section 6, &#8220;Command List&#8221;</a> if you would like to learn how to use each of the commands, and <a href="#cheat-sheet">Section 9, &#8220;Cheat Sheet&#8221;</a>
-if you would just like a list of all the commands for easy reference.</p>
-</div>
-<div class="paragraph">
-<p>The figure below explains the symbols used throughout the user guide.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Specifies the constraints of the command or situation.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Specifies expected command outcomes.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Specifies extra tips you can use when navigating through our app.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Specifies important things to take note of
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="features"><a class="link" href="#features">3. Features</a></h2>
-<div class="sectionbody">
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>This segment highlights the key features of iGrad.</p>
-</div>
-</blockquote>
-</div>
-<div class="sect3">
-<h4 id="course-builder"><a class="link" href="#course-builder">3.1. Course Builder</a></h4>
-<div class="paragraph">
-<p>iGrad was built with every NUS student in mind. Our custom course builder allows you to build
-the course of your dreams.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="modular-credits-mcs-tracker"><a class="link" href="#modular-credits-mcs-tracker">3.2. Modular Credits (MCs) Tracker</a></h4>
-<div class="paragraph">
-<p>We are sick of counting our MCs at the beginning of every semester. Easily see how many MCs you
-have left in order to apply for graduation.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="cumulative-average-point-cap-tracker"><a class="link" href="#cumulative-average-point-cap-tracker">3.3. Cumulative Average Point (CAP) Tracker</a></h4>
-<div class="paragraph">
-<p>No more googling CAP calculators. iGrad&#8217;s CAP tracker keeps track of your CAP at every step and
-even offers predictive services so you know how well you have to do
-in order to achieve your dream CAP.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="components"><a class="link" href="#components">4. Components</a></h2>
-<div class="sectionbody">
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>This segment contains details on the structure of iGrad.</p>
-</div>
-</blockquote>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="https://user-images.githubusercontent.com/34233605/75425925-9774ff80-597e-11ea-87f5-228f95b5c84f.png" alt="75425925 9774ff80 597e 11ea 87f5 228f95b5c84f"></span></p>
-</div>
-<div class="sect3">
-<h4 id="course"><a class="link" href="#course">4.1. Course</a></h4>
-<div class="paragraph">
-<p>A course is simply a group of requirements. It is also how we keep track of your overall CAP
-and MCs.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="requirements"><a class="link" href="#requirements">4.2. Requirements</a></h4>
-<div class="paragraph">
-<p>A requirement consists of at least one module. Fulfill all modules within a requirement to
-complete it.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="modules"><a class="link" href="#modules">4.3. Modules</a></h4>
-<div class="paragraph">
-<p>A module is the building block of all other components. Mark your modules as done and give it
-a grade. You can also add optional memos to help you remember why
-you took the module.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="walkthrough"><a class="link" href="#walkthrough">5. Walkthrough</a></h2>
-<div class="sectionbody">
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>This segment details a simple tutorial on how to use the application.</p>
-</div>
-</blockquote>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Start up the application</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Open up the application by opening the <code>iGrad.jar</code> file.</p>
-</li>
-<li>
-<p>Select an avatar by typing its name before pressing enter.</p>
-</li>
-<li>
-<p>The avatar will act as your guide for the application.</p>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough1.png" alt="walkthrough1">
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Enter your course details</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Course refers to the name of the course you are currently enrolled in.</p>
-</li>
-<li>
-<p>Enter the name of your course in the format: <code>course add n/COURSE_NAME</code></p>
-</li>
-<li>
-<p>Eg. <code>course add n/Computer Science</code></p>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough2.1.png" alt="walkthrough2.1">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough2.2.png" alt="walkthrough2.2">
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Key in your graduation requirements</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Requirements are categories for modules required in the entered course.</p>
-</li>
-<li>
-<p>Enter your course graduation requirements in the format: <code>requirement add t/REQUIREMENT_TITLE u/MCS_REQUIRED</code></p>
-</li>
-<li>
-<p>Eg. <code>requirement add n/General Education u/20</code></p>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough3.1.png" alt="walkthrough3.1">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough3.2.png" alt="walkthrough3.2">
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Add modules to the tracker</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Modules refer to modules that you have taken or are planning to take.</p>
-</li>
-<li>
-<p>Enter modules into the system in the format: <code>module add n/MODULE_CODE t/MODULE_TITLE u/MCs</code></p>
-</li>
-<li>
-<p>Eg. <code>module add n/GER1000 t/Quantitative Reasoning u/4</code></p>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough4.1.png" alt="walkthrough4.1">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough4.2.png" alt="walkthrough4.2">
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Assign your modules</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Assign modules under their respective requirements.</p>
-</li>
-<li>
-<p>Enter assign in the format: <code>requirement assign REQUIREMENT_CODE n/MODULE_CODE</code></p>
-</li>
-<li>
-<p>Note: Requirement codes are generated by the system.</p>
-</li>
-<li>
-<p>Eg. <code>requirement assign GE0 n/GER1000</code></p>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough5.1.png" alt="walkthrough5.1">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough5.2.png" alt="walkthrough5.2">
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Key in additional details for your modules</p>
-<div class="ulist">
-<ul>
-<li>
-<p>(Teri)</p>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough6.1.png" alt="walkthrough6.1">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough6.2.png" alt="walkthrough6.2">
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Mark a module as done and assign a grade to it</p>
-<div class="ulist">
-<ul>
-<li>
-<p>(Teri)</p>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough7.1.png" alt="walkthrough7.1">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough7.2.png" alt="walkthrough7.2">
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Track your MCs</p>
-<div class="ulist">
-<ul>
-<li>
-<p>(Teri)</p>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough8.png" alt="walkthrough8">
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>View your CAP</p>
-<div class="ulist">
-<ul>
-<li>
-<p>(Teri)</p>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough8.png" alt="walkthrough8">
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Export your data</p>
-<div class="ulist">
-<ul>
-<li>
-<p>(Teri)</p>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough10.1.png" alt="walkthrough10.1">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough10.2.png" alt="walkthrough10.2">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/user-guide/walkthrough10.3.png" alt="walkthrough10.3">
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="command-list"><a class="link" href="#command-list">6. Command List</a></h2>
-<div class="sectionbody">
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>This segment contains a list of commands with examples that you can use to make full use of iGrad.</p>
-</div>
-</blockquote>
-</div>
-<div class="paragraph">
-<p>Take note of the following when using our commands:</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Commands with fields wrapped within square brackets (i.e. []) require at least one of these fields to be specified
-when using the command.
-This means that you need just specify one of these fields while others may be optional based on your usage.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect3">
-<h4 id="help"><a class="link" href="#help">6.1. help</a></h4>
-<div class="paragraph">
-<p>Displays a help message to the user. Lists all possible commands
-and provides a link to the user guide online.</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>help</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-A popup for the list of all commands as well as the link to the user guide is shown.
-<code>INSERT POPUP PHOTO</code>
-</td>
-</tr>
-</table>
-</div>
 <hr>
-</div>
-<div class="sect3">
-<h4 id="course-2"><a class="link" href="#course-2">6.2. course</a></h4>
-<div class="paragraph">
-<p>Add, edit or delete your course. Find out how much CAP you need to maintain
-each semester to achieve your desired CAP.</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre>course add n/COURSE_NAME
-
-course edit [n/COURSE_NAME] [u/MCs]
-
-course delete n/COURSE_NAME
-
-course achieve c/DESIRED_CAP s/SEMESTERS_LEFT</pre>
+<img src="../images/Ui.png" alt="Ui">
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="paragraph">
-<p>Creating a course named "Computer Science"</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>course add n/Computer Science</pre>
+<p>iGrad is a desktop module management and graduation tracking application. The user interacts with it using a CLI, and it has a GUI created with JavaFX, FXML and CSS.</p>
 </div>
 </div>
-<div class="paragraph">
-<p>Renaming your current course to "Information Systems"</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>course edit n/Information Systems</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Removing your current course</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>course delete</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Calculating the average grade needed to achieve a CAP of 4.50 with
-2 semesters left</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>course achieve c/4.50 s/2</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="olist arabic">
-<ol class="arabic">
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
 <li>
-<p><code>(all)</code>: You can only have at most one course at any one time</p>
+<p><strong>Major enhancement</strong>: added <strong>the ability to add, edit and delete modules</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>What it does</em>: allows the user to add, edit and delete modules.</p>
 </li>
 <li>
-<p><code>course delete</code>: Removing a course deletes all data from the system (including modules, requirements, etc)</p>
+<p><em>Justification</em>: This feature is crucial in allowing the application to run as intended. A user can add a module with
+a module code, title and module credits. They can also tag the module with a semester.</p>
 </li>
-</ol>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Expected Outcome</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-You should be able to see the added and/or modified course name in the
-top panel. For delete course, all data would be reset
-</td>
-</tr>
-</table>
-</div>
-<hr>
-</div>
-<div class="sect3">
-<h4 id="requirement"><a class="link" href="#requirement">6.3. requirement</a></h4>
-<div class="paragraph">
-<p>Add, edit or delete a graduation requirement.</p>
-</div>
-<div class="paragraph">
-<p>Command Format</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>requirement add n/REQUIREMENT_TITLE u/MCS_REQUIRED
-
-requirement edit REQUIREMENT_CODE [n/NEW_REQUIREMENT_TITLE] [u/NEW_MCS_REQUIRED]
-
-requirement delete REQUIREMENT_CODE
-
-requirement assign REQUIREMENT_CODE [n/MODULE_CODE ...]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Command Sample</p>
-</div>
-<div class="paragraph">
-<p>Adding a requirement named "Unrestricted Electives" which requires 32 MCs.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>requirement add n/Unrestricted Electives u/32</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Renaming requirement "Unrestricted Electives" to "Maths and Sciences", and changing the number of MCs required to 20.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>requirement edit Unrestricted Electives n/Maths and Sciences u/32</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Renaming requirement "Unrestricted Electives" to "Maths and Sciences".</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>requirement edit Unrestricted Electives n/Maths and Sciences</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Changing number of required MCs for requirement "Unrestricted Electives" to 20.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>requirement edit Unrestricted Electives u/20</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Removing requirement named "Unrestricted Electives".</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>requirement delete Unrestricted Electives</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Assigning modules to requirement.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>requirement assign UE0 n/CS1101S n/CS1231S n/CS2030S n/CS2040S</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Constraints</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="olist arabic">
-<ol class="arabic">
 <li>
-<p>None.</p>
+<p><em>Highlights</em>: This feature was done mainly by refactoring existing code.</p>
 </li>
-</ol>
+<li>
+<p><em>Credits</em>: The original AB3 for laying down most of the code.</p>
+</li>
+</ul>
 </div>
-</td>
-</tr>
-</table>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to add modules based on information from NUSMods</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>What it does</em>: allows the user to add multiple modules at one time based on information from NUSMods.</p>
+</li>
+<li>
+<p><em>Justification</em>: This feature improves the product significantly because a user can make mistakes
+while typing in module information and getting the information directly from NUSMods solves this problem. In addition, the user is now able to add up to 10 modules
+at a time without having to specify more details other than the module code. This speeds things up significantly from having not only to key in modules one by one, but
+also to fill up all the details. Finally, this feature also allows to check for module prerequisites and preclusions that the user might not be aware of.</p>
+</li>
+<li>
+<p><em>Highlights</em>: The only HTTP request made in the whole application.</p>
+</li>
+<li>
+<p><em>Credits</em>: NUSMods (for making all the data public and free to use)</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>Expected Outcome</p>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to undo a previous command</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>What it does</em>: allows the user to undo a previous command.</p>
+</li>
+<li>
+<p><em>Justification</em>: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them.</p>
+</li>
+<li>
+<p><em>Highlights</em>: Had to choose between different implementations of this command.</p>
+</li>
+</ul>
 </div>
-<div class="admonitionblock note">
-<table>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to filter modules</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>What it does</em>: allows the user to filter modules based on certain parameters.</p>
+</li>
+<li>
+<p><em>Justification</em>: This feature improves the product significantly because a user can face difficulty when attempting to look for a certain module.</p>
+</li>
+<li>
+<p><em>Highlights</em>: Added the option to chain parameters by different logical operators, allowing users maximum flexibility</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: added and designed <strong>a clean and user-friendly Graphical User Interface (GUI)</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>What it does</em>: improves the user experience greatly</p>
+</li>
+<li>
+<p><em>Justification</em>: This feature improves the product significantly because no matter how well an application functions, nothing matters if
+the user experience is poor.</p>
+</li>
+<li>
+<p><em>Highlights</em>: Inclusion of an  animal guide, displaying inspirational quotes and a progress bar.</p>
+</li>
+<li>
+<p><em>Credits</em>: <a href="https://github.com/dargohzy">Daryl</a> for the first few iterations and implementations of the GUI, help panel and image
+designs.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to export module data</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>What it does</em>: exports modules tagged with a semester to a .csv file titled study_plan.csv</p>
+</li>
+<li>
+<p><em>Justification</em>: This feature improves the product significantly because it saves the user a lot of time should they wish to
+copy the data somewhere else. The file generated by this command can be used to submit to school administration
+for exchange programme, leave of absence and internship applications.</p>
+</li>
+<li>
+<p><em>Highlights</em>: Only command to write to a .csv file.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Minor enhancement</strong>: did the logic and interface to select an animal guide</p>
+</li>
+<li>
+<p><strong>Minor enhancement</strong>: added a quote generator that displays a random quote each time a command is entered</p>
+</li>
+<li>
+<p><strong>Code contributed</strong>: [<a href="https://github.com/AY1920S2-CS2103T-F09-3/main/tree/master/src/main">Functional code</a>] [<a href="https://github.com/AY1920S2-CS2103T-F09-3/main/tree/master/src/test">Test code</a>]</p>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Project presentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Designed the theme used for the project presentation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Bug fixes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Helped fix some bugs (<a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/301">#301</a>, <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/269">#269</a>, <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/185">#185</a>, <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/158">#158</a>, <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/108">#108</a>, <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/96">#96</a>, <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/95">#95</a>)</p>
+</li>
+<li>
+<p>Removed unnecessary fields (<a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/284">#284</a>, <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/210" class="bare">https://github.com/AY1920S2-CS2103T-F09-3/main/pull/210</a>[#210)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Reported bugs and suggestions for other teams in the class</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-You should be able to see the requirement created and/or edited in the main panel.
-</td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
 </tr>
+</tbody>
 </table>
-</div>
-<hr>
-</div>
 <div class="sect2">
-<h3 id="module"><a class="link" href="#module">6.4. Module</a></h3>
+<h3 id="module"><a class="link" href="#module">Module</a></h3>
 <div class="paragraph">
 <p>This section details each command used to manipulate modules. All module commands begin with the identifier
 <code>module</code> followed by the action e.g. <code>add</code>.</p>
@@ -819,10 +298,10 @@ The following errors are generic and may be encountered when dealing with any mo
 </tbody>
 </table>
 <div class="paragraph">
-<p>These errors can all be resolved by adhering to the restrictions detailed in <a href="#tableModuleParameters">Table 1, &#8220;Module Parameters&#8221;</a></p>
+<p>These errors can all be resolved by adhering to the restrictions detailed in <a href="#tableModuleParameters">Module Parameters</a></p>
 </div>
 <div class="sect3">
-<h4 id="ModuleAddCommand"><a class="link" href="#ModuleAddCommand">6.4.1. Module Add</a></h4>
+<h4 id="ModuleAddCommand"><a class="link" href="#ModuleAddCommand">Module Add</a></h4>
 <div class="paragraph">
 <p>This command adds a module to the module list.</p>
 </div>
@@ -855,7 +334,7 @@ The following errors are generic and may be encountered when dealing with any mo
 and fill in those fields. We do not check if the given <code>MODULE_CODE</code> or <code>MODULE_TITLE</code> refer to actual modules offered by NUS. However, the restrictions stated in the module parameters table still apply.</p>
 </div>
 <div class="paragraph">
-<p><a href="#ModuleAddErrorReference">Table 4, &#8220;Module Add Error Reference&#8221;</a> lists errors you might encounter after issuing this command:</p>
+<p><a href="#ModuleAddErrorReference">Module Add Error Reference</a> lists errors you might encounter after issuing this command:</p>
 </div>
 <table id="ModuleAddErrorReference" class="tableblock frame-all grid-all spread">
 <caption class="title">Table 4. Module Add Error Reference</caption>
@@ -917,7 +396,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <p>The message in the response box should change and you should see the following in the module panel:</p>
 <div class="imageblock">
 <div class="content">
-<img src="images/user-guide/moduleAutoAddCommand/two_modules.png" alt="user guide\moduleAutoAddCommand\two modules">
+<img src="../images/user-guide/moduleAutoAddCommand/two_modules.png" alt="user guide\moduleAutoAddCommand\two modules">
 </div>
 <div class="title">Figure 1. Modules CS2103T and CS2101 successfully added</div>
 </div>
@@ -926,7 +405,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 </div>
 </div>
 <div class="sect3">
-<h4 id="ModuleAutoAddCommand"><a class="link" href="#ModuleAutoAddCommand">6.4.2. Module Auto Add</a></h4>
+<h4 id="ModuleAutoAddCommand"><a class="link" href="#ModuleAutoAddCommand">Module Auto Add</a></h4>
 <div class="paragraph">
 <p>This command adds a module to the module list. The module information is taken
 from the <a href="https://api.nusmods.com/">NUSMods API</a> and includes the <code>MODULE_CODE</code>, <code>MODULE_TITLE</code>
@@ -1021,7 +500,7 @@ You can add up to 10 modules at once! Try this: <code>module add n/CS1101 n/CS12
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#ModuleAutoAddErrorReference">Table 6, &#8220;Module Auto Add Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+<p><a href="#ModuleAutoAddErrorReference">Module Auto Add Error Reference</a> lists the errors you might encounter after issuing this command:</p>
 </div>
 <table id="ModuleAutoAddErrorReference" class="tableblock frame-all grid-all spread">
 <caption class="title">Table 6. Module Auto Add Error Reference</caption>
@@ -1050,7 +529,7 @@ You can add up to 10 modules at once! Try this: <code>module add n/CS1101 n/CS12
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found Error</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to add could not be found on the NUSMods API</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Use the command <a href="#ModuleAddCommand">Section 6.4.1, &#8220;Module Add&#8221;</a> instead</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use the command <a href="#ModuleAddCommand">Module Add</a> instead</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Overload Error</p></td>
@@ -1106,7 +585,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <p>The message in the response box should change and you should see the following in the module panel</p>
 <div class="imageblock">
 <div class="content">
-<img src="images/user-guide/moduleAutoAddCommand/two_modules.png" alt="user guide\moduleAutoAddCommand\two modules">
+<img src="../images/user-guide/moduleAutoAddCommand/two_modules.png" alt="user guide\moduleAutoAddCommand\two modules">
 </div>
 <div class="title">Figure 2. Modules CS2103T and CS2101 successfully added from NUSMods</div>
 </div>
@@ -1136,7 +615,7 @@ the data given by NUSMods. This remains a BETA feature and we hope to upgrade it
 </div>
 </div>
 <div class="sect3">
-<h4 id="module-done"><a class="link" href="#module-done">6.4.3. Module Done</a></h4>
+<h4 id="module-done"><a class="link" href="#module-done">Module Done</a></h4>
 <div class="paragraph">
 <p>This command marks a module as done by giving it a grade and optionally, a semester.</p>
 </div>
@@ -1186,7 +665,7 @@ during special term, you could input the most recent semester instead
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#ModuleDoneErrorReference">Table 8, &#8220;Module Done Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+<p><a href="#ModuleDoneErrorReference">Module Done Error Reference</a> lists the errors you might encounter after issuing this command:</p>
 </div>
 <table id="ModuleDoneErrorReference" class="tableblock frame-all grid-all spread">
 <caption class="title">Table 8. Module Done Error Reference</caption>
@@ -1240,7 +719,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <p>The message in the response box should change and you should see the following</p>
 <div class="imageblock">
 <div class="content">
-<img src="images/user-guide/moduleAutoAddCommand/one_module.png" alt="user guide\moduleAutoAddCommand\one module">
+<img src="../images/user-guide/moduleAutoAddCommand/one_module.png" alt="user guide\moduleAutoAddCommand\one module">
 </div>
 <div class="title">Figure 3. Modules CS2103T successfully given a grade and a semester</div>
 </div>
@@ -1249,7 +728,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 </div>
 </div>
 <div class="sect3">
-<h4 id="module-edit"><a class="link" href="#module-edit">6.4.4. Module Edit</a></h4>
+<h4 id="module-edit"><a class="link" href="#module-edit">Module Edit</a></h4>
 <div class="paragraph">
 <p>This command edits the editable fields in a module which include the <code>MODULE_TITLE</code>, <code>MODULE_CREDITS</code>, <code>SEMESTER</code>.
 Although it is possible to edit the fields as listed, it is unadvisable unless you made a mistake while keying
@@ -1284,7 +763,7 @@ in the values.</p>
 change the values as you wish as long as they follow the restrictions as listed in the parameters table.</p>
 </div>
 <div class="paragraph">
-<p><a href="#ModuleEditErrorReference">Table 10, &#8220;Module Edit Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+<p><a href="#ModuleEditErrorReference">Module Edit Error Reference</a> lists the errors you might encounter after issuing this command:</p>
 </div>
 <table id="ModuleEditErrorReference" class="tableblock frame-all grid-all spread">
 <caption class="title">Table 10. Module Edit Error Reference</caption>
@@ -1338,7 +817,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <p>The message in the response box should change and you should see the following</p>
 <div class="imageblock">
 <div class="content">
-<img src="images/user-guide/moduleAutoAddCommand/module_edit.png" alt="user guide\moduleAutoAddCommand\module edit">
+<img src="../images/user-guide/moduleAutoAddCommand/module_edit.png" alt="user guide\moduleAutoAddCommand\module edit">
 </div>
 <div class="title">Figure 4. Modules CS2103T successfully given a grade and a semester</div>
 </div>
@@ -1347,7 +826,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 </div>
 </div>
 <div class="sect3">
-<h4 id="module-delete"><a class="link" href="#module-delete">6.4.5. Module Delete</a></h4>
+<h4 id="module-delete"><a class="link" href="#module-delete">Module Delete</a></h4>
 <div class="paragraph">
 <p>This command deletes a module from the module list.</p>
 </div>
@@ -1391,7 +870,7 @@ Restoring the module is only possible using the <code>undo</code> command which 
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#ModuleDeleteErrorReference">Table 12, &#8220;Module Delete Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+<p><a href="#ModuleDeleteErrorReference">Module Delete Error Reference</a> lists the errors you might encounter after issuing this command:</p>
 </div>
 <table id="ModuleDeleteErrorReference" class="tableblock frame-all grid-all spread">
 <caption class="title">Table 12. Module Delete Error Reference</caption>
@@ -1448,7 +927,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 </div>
 </div>
 <div class="sect3">
-<h4 id="module-filter"><a class="link" href="#module-filter">6.4.6. Module Filter</a></h4>
+<h4 id="module-filter"><a class="link" href="#module-filter">Module Filter</a></h4>
 <div class="paragraph">
 <p>This command allows you to find your modules by various parameters. You can filter the
 complete module list by <code>SEMESTER</code>, <code>MODULE_CREDITS</code> and <code>GRADE</code>.</p>
@@ -1610,323 +1089,471 @@ This section contains information which requires prior knowledge of discrete mat
 </table>
 </div>
 <div class="paragraph">
-<p>The flag <code>-o</code>, is present, sets the logical operator used in concatenating the parameters as <em>"or"</em>. The default logical operator used is <em>"and"</em>.
-'''</p>
+<p>The flag <code>-o</code>, is present, sets the logical operator used in concatenating the parameters as <em>"or"</em>. The default logical operator used is <em>"and"</em>.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="export"><a class="link" href="#export">6.5. Export</a></h3>
-<div class="paragraph">
-<p>This command exports your data to a comma-separated values (.csv) file. This file can then be submitted to the relevant
-administration for processing of Leave of Absence (LOA), exchange programmes or internship applications.</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 14. Export Quick Reference</caption>
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 100%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exports your data to a .csv file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="module-feature"><a class="link" href="#module-feature">Module Feature</a></h3>
+<div class="sect3">
+<h4 id="module-component"><a class="link" href="#module-component">Module Component</a></h4>
+<div class="paragraph">
+<p>The <code>Module</code> component is the building block of all other components in the system.
+In order to track the number of <code>credits</code> left to fulfill
+for each <code>requirement</code>, each <code>module</code> is stored in a <code>UniqueModuleList</code> and the <code>credits</code> tied to each
+<code>module</code> is then tabulated.</p>
+</div>
+<div class="paragraph">
+<p>Besides being necessary in tracking the amount of credits left for a <code>requirement</code>, <code>modules</code> are also
+used to decide which <code>semester</code> the user is currently in. When a <code>semester</code> is tagged to a <code>module</code>, either when
+a new <code>module</code> is added or an existing <code>module</code> is edited, the latest <code>semester</code> of all <code>modules</code> in the <code>filteredList</code> of modules is taken
+to be the current semester.</p>
+</div>
+<div class="paragraph">
+<p>A module must have the following non-optional values:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value Type</th>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Software Engineering</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>export</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ModuleCode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CS2103T</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>export</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Credits</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ModulePrerequisites</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CS2030, CS2040</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ModulePreclusions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CS2103, CS2103T, CS2113T, CS2113</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>How it Works</strong></p>
+<p>A module may also have the following optional values:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value Type</th>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Semester</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y3S1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grade</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A+</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><a href="#moduleClassDiagram">Module Class Diagram</a> illustrates the relation between the various classes:</p>
+</div>
+<div id="moduleClassDiagram" class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/ModuleClassDiagram.png" alt="ModuleClassDiagram">
+</div>
+<div class="title">Figure 5. Module Class Diagram</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="module-add-auto"><a class="link" href="#module-add-auto">Module Add Auto</a></h4>
+<div class="sect4">
+<h5 id="overview-2"><a class="link" href="#overview-2">Overview</a></h5>
+<div class="paragraph">
+<p>The "automatic" addition of <code>modules</code> allows users to add up to 10 <code>modules</code> at once with all non-optional values filled in.
+This is done by making a HTTP GET request to the <a href="https://api.nusmods.com/">NUSMods API</a> and fetching the module data
+given in a JSON format.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="implementation"><a class="link" href="#implementation">Implementation</a></h5>
+<div class="paragraph">
+<p>The automatic filling in of <code>module</code> details on addition of a new <code>module</code> is facilitated by <code>NusModsRequester</code>.
+It creates a new instance of <code>GetRequestManager</code> which it relies on to make a request to the <a href="https://api.nusmods.com/">NUSMods API</a>.
+Upon receiving a response, it creates an instance of JsonParsedModule.</p>
 </div>
 <div class="paragraph">
-<p>We write your data to a .csv file <em>study_plan.csv</em> using the modules you have added and include the fields <code>MODULE_CODE</code>, <code>MODULE_TITLE</code>, <code>SEMESTER</code> and <code>CREDITS</code>.</p>
+<p><code>JsonParsedModule</code> parses the JSON object given in the response of the initial request and stores the following values:</p>
 </div>
+<table id="JsonParsedModuleTableOfValues" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 14. JsonParsedModule Table of Values</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value Type</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Software Engineering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">moduleCode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CS2103T</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">credits</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prerequisite</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CS2040C or (CS2030 and (CS2040 or its equivalent))</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">preclusion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CS2103, CS2103T, (CS2113T for CS2113), (CS2113 for CS2113T)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<a href="#JsonParsedModuleTableOfValues">JsonParsedModule Table of Values</a> illustrates the difficulty in parsing <code>prerequisites</code> and <code>preclusions</code> as
+the data provided is not in a standard format
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The created <code>JsonParsedModule</code> object is then converted into a <code>Module</code> object, which is subsequently added
+to the <code>courseBook</code> via the method <code>addModule</code> of the <code>ModelManager</code>.</p>
+</div>
+<div class="paragraph">
+<p><a href="#moduleAddAutoSequenceDiagram">Module Add Auto Sequence Diagram</a> illustrates this:</p>
+</div>
+<div id="moduleAddAutoSequenceDiagram" class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/ModuleAddAutoSequenceDiagram.png" alt="ModuleAddAutoSequenceDiagram">
+</div>
+<div class="title">Figure 6. Module Add Auto Sequence Diagram</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h5>
+<div class="paragraph">
+<p>Most of the design considerations arose as a result of having to make a network request.</p>
+</div>
+<div class="paragraph">
+<p><strong>A <em>secondary</em> module addition feature</strong></p>
+</div>
+<div class="paragraph">
+<p>As with all network requests, this feature might not work as intended in certain circumstances. Possible cases are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>High Network Congestion</p>
+</li>
+<li>
+<p>Poor Network Connection</p>
+</li>
+<li>
+<p>NUSMods Offline</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In such situations, it becomes difficult or impossible to carry out the addition of <code>modules</code> using this command.
+Therefore, this feature was built on top of the primary <code>module add</code> feature, ensuring that the user
+could still manage to add <code>modules</code> even when faced with the issues as listed above.</p>
+</div>
+<div class="paragraph">
+<p>The use case for this situation is as follows:</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>System: iGrad</p>
+</div>
+<div class="paragraph">
+<p>Use case: UCM1 - Add module via NUSMods</p>
+</div>
+<div class="paragraph">
+<p>Actor: User, NUSMods</p>
+</div>
+<div class="paragraph">
+<p>MSS:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User wants to add a module.</p>
+</li>
+<li>
+<p>iGrad requires user to specify the module codes.</p>
+</li>
+<li>
+<p>User enters the module codes corresponding to the modules
+he wishes to add.</p>
+</li>
+<li>
+<p>iGrad sends a request to NUSMods.</p>
+</li>
+<li>
+<p>NUSMods responds with the requested data.</p>
+</li>
+<li>
+<p>iGrad adds the module to the module list.</p>
+</li>
+<li>
+<p>User views the module in the module list.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+<div class="paragraph">
+<p>Extensions:</p>
+</div>
+<div class="paragraph">
+<p>5a. NUSMods does not respond with the requested data.</p>
+</div>
+<div class="paragraph">
+<p>5a1. User adds module manually</p>
+</div>
+<div id="moduleAutoAddUseCaseDiagram" class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/ModuleAutoAddUseCaseDiagram.png" alt="ModuleAutoAddUseCaseDiagram">
+</div>
+<div class="title">Figure 7. Module Auto Add Use Case Diagram</div>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Messages for individual modules</strong></p>
+</div>
+<div class="paragraph">
+<p>As this feature allows a user to add <code>modules</code> by batches, it is possible that one or more <code>modules</code> in
+the batch are invalid or require warning messages. In order to facilitate this, the processing of the list of <code>modules</code> and the
+generation of error and warning messages were done in parallel. This was because if the list of <code>modules</code> was processed first,
+<code>modules</code> with issues would be filtered out without notice, leading to a confusing user experience.</p>
+</div>
+<div id="moduleAddAutoBatchProcessing" class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/ModuleAddAutoBatchActivityDiagram.png" alt="ModuleAddAutoBatchActivityDiagram">
+</div>
+<div class="title">Figure 8. Module Add Auto Batch Processing</div>
+</div>
+<div class="paragraph">
+<p><strong>Improving the user experience [PROPOSED]</strong></p>
+</div>
+<div class="paragraph">
+<p>Due to network latency - the Round Trip Time taken from when a request is made to when a response is
+received - the user might experience a situation where it appears that the application has stopped working.</p>
+</div>
+<div class="paragraph">
+<p>For a large batch of <code>modules</code>, the application might also display a <em>not responding</em> label in the toolbar.
+In order to improve the user experience, it is ideal that a loader be displayed when waiting for the response from the server.
+However, due to time constraints, this was not implemented.</p>
+</div>
+<div class="paragraph">
+<p><strong>Getting the latest data [DEPRECATED]</strong></p>
+</div>
+<div class="paragraph">
+<p>Past iterations of this feature made a maximum of two requests for one <code>module</code>. The first request would
+attempt to get the <code>module</code> for the current academic year, whilst the second request attempted to get
+the <code>module</code> for the previous academic year, in the event the module for the current academic year was not available.</p>
+</div>
+<div class="paragraph">
+<p>This process is illustrated in <a href="#previousImplementationOfModuleAddAuto">Previous implementation of Module Add Auto</a>. However, it was decided
+that the benefits of making a maximum of one request outweighed that of getting the latest module information and thus,
+currently only one request is made.</p>
+</div>
+<div id="previousImplementationOfModuleAddAuto" class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/ModuleAddAutoActivityDiagram.png" alt="ModuleAddAutoActivityDiagram">
+</div>
+<div class="title">Figure 9. Previous implementation of Module Add Auto</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="module-filter-2"><a class="link" href="#module-filter-2">Module Filter</a></h4>
+<div class="sect4">
+<h5 id="overview-3"><a class="link" href="#overview-3">Overview</a></h5>
+<div class="paragraph">
+<p>The average number of <code>modules</code> a student has for a 4 year program in NUS is 40. The application window, however, can display
+a maximum of 9 <code>modules</code> for a 17" screen and considerably less for smaller displays. As a result, it is imperative that users have
+a way to filter <code>modules</code> so that only what is required is displayed.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="implementation-2"><a class="link" href="#implementation-2">Implementation</a></h5>
+<div class="paragraph">
+<p>The filtering of modules is done by calling the <code>execute</code> function of <code>ModuleFilterCommand</code>.<code>ModuleFilterCommand</code> takes in
+optional parameters <code>Semester</code>, <code>Credits</code>, <code>Grade</code> and an operator, which could be <code>AND</code> or <code>OR</code>.</p>
+</div>
+<div class="paragraph">
+<p>The matching is done by the functions <code>checkSemesterMatch(Module m)</code>, <code>checkCreditsMatch(Module m)</code> and <code>checkGradeMatch(Module m)</code>. Unlike
+the other two functions, <code>checkCreditsMatch(Module m)</code> does not check if the actual <code>credits</code> for a module is present since the
+<code>credits</code> field in a module is compulsory.</p>
+</div>
+<div class="paragraph">
+<p>The <code>AND</code> operator specifies that the provided parameters be chained with the logical <em>and</em> operator.</p>
+</div>
+<div class="paragraph">
+<p>The <code>OR</code> operator specifies that provided parameters be chained with the logical <em>or</em> operator.</p>
+</div>
+<div class="paragraph">
+<p>When the filter command is issued, the <code>Model</code> updates the module list based on the predicate given. <a href="#moduleFilterSequenceDiagram">Module Filter Sequence Diagram</a>
+illustrates this sequence of events:</p>
+</div>
+<div id="moduleFilterSequenceDiagram" class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/ModuleFilterSequenceDiagram.png" alt="ModuleFilterSequenceDiagram">
+</div>
+<div class="title">Figure 10. Module Filter Sequence Diagram</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="design-considerations-2"><a class="link" href="#design-considerations-2">Design Considerations</a></h5>
+<div class="paragraph">
+<p><strong>Resetting the state</strong></p>
+</div>
+<div class="paragraph">
+<p>When this command is issued, the modules that do not match the predicate given will disappear from the module list.
+It is thus necessary to allow the user to issue a new command in order to view all the modules again.</p>
+</div>
+<div class="paragraph">
+<p>Whilst creating a new command such as <code>module reset</code> was proposed, it was decided that a new command would only serve to
+make the user experience more complicated than it should be.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, an allowance was made for <code>module filter</code> to reset the state when receiving no parameters, a divergence from
+the way other functions handled the situation of empty parameters.</p>
+</div>
+<div class="paragraph">
+<p><a href="#moduleFilterActivityDiagram">Module Filter Activity Diagram</a> illustrates this clearly:</p>
+</div>
+<div id="moduleFilterActivityDiagram" class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/ModuleFilterActivityDiagram.png" alt="ModuleFilterActivityDiagram">
+</div>
+<div class="title">Figure 11. Module Filter Activity Diagram</div>
+</div>
+<div class="paragraph">
+<p>The <code>filteredList</code> of <code>modules</code> therefore takes three general states (see <a href="#moduleFilterStateDiagram">Module Filter State Diagram</a>):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Initial State</p>
+<div class="paragraph">
+<p>The <code>module</code> list is unfiltered. All <code>modules</code> are displayed.</p>
+</div>
+</li>
+<li>
+<p>Filtered by <code>AND</code> State</p>
+<div class="paragraph">
+<p>The <code>module</code> list is filtered by a predicate composed of the provided parameters
+chained together with the logical <em>and</em> operator</p>
+</div>
+</li>
+<li>
+<p>Filtered by <code>OR</code> State</p>
+<div class="paragraph">
+<p>The <code>module</code> list is filtered by a predicate composed of the provided parameters
+chained together with the logical <em>or</em> operator</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="moduleFilterStateDiagram" class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/ModuleFilterStateDiagram.png" alt="ModuleFilterStateDiagram">
+</div>
+<div class="title">Figure 12. Module Filter State Diagram</div>
+</div>
+<div class="paragraph">
+<p><strong>Displaying Filter State [PROPOSED]</strong></p>
+</div>
+<div class="paragraph">
+<p>An issue with the filtering of modules is that when the current state is not obvious, the
+user might lose track of what the module list is filtering on. To solve this problem,
+it would be an improvement to display the current state prominently to the user.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="project-eezee"><a class="link" href="#project-eezee">PROJECT: Eezee</a></h2>
+<div class="sectionbody">
 <div class="imageblock">
 <div class="content">
-<img src="images/user-guide/exportCommand/export_csv_example.png" alt="user guide\exportCommand\export csv example">
+<img src="../images/eezee-screenshot.png" alt="eezee screenshot">
 </div>
-<div class="title">Figure 5. Study Plan Example CSV</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Modules that have not been tagged with a semester will not be written
-</td>
-</tr>
-</table>
 </div>
 <div class="paragraph">
-<p>After issuing the command, you will be able to find the file in the same folder as the app&#8217;s executable.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-For example, if the app is stored in your Desktop folder, the file <em>study_plan.csv</em> will be created in the Desktop folder as well
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><a href="#ExportErrorReference">Table 15, &#8220;Export Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
-</div>
-<table id="ExportErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 15. Export Error Reference</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Explanation</th>
-<th class="tableblock halign-left valign-top">Solution</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Write Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unable to write to file</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">You have the file open. The system is unable to write to an open file</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Close the file and try again</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data Not Found Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Nothing to write</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">You do not have any modules tagged with a semester</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tag at least one module with a semester and try again</p></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="exit"><a class="link" href="#exit">6.6. Exit</a></h3>
-<div class="paragraph">
-<p>This command assists you in exiting the program.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 16. Exit Quick Reference</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exits the program</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exit</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exit</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Additional Information</strong></p>
-</div>
-<div class="paragraph">
-<p>You can also exit the program by clicking the close icon on the top right hand corner of the application&#8217;s window.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="version-2-0"><a class="link" href="#version-2-0">7. Version 2.0</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This sections details features that would be packaged with the next release</p>
-</div>
-<div class="sect2">
-<h3 id="module-suggester"><a class="link" href="#module-suggester">7.1. Module Suggester</a></h3>
-<div class="paragraph">
-<p>Using tried and tested recommendation algorithms such as <a href="https://en.wikipedia.org/wiki/Collaborative_filtering">collborative filtering</a>, we would be able to automatically suggest
-to you what modules to take next.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 17. Suggest Quick Reference</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Suggests modules to take</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>suggest NUMBER_OF_MODULES</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>suggest 4</code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="integration-with-nusmods"><a class="link" href="#integration-with-nusmods">7.2. Integration with NUSMods</a></h3>
-<div class="paragraph">
-<p>We plan to integrate with popular timetabling application NUSMods so that you can manage all aspects of your academics
-in one place.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="faqs"><a class="link" href="#faqs">8. FAQs</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>I&#8217;m not an NUS student. Can I still use iGrad?</em></p>
-</div>
-<div class="paragraph">
-<p>As long as your university follows a similar <a href="#fig-1">hierachical structure</a>!
-However, we will be unable to provide features such as validation from NUSMods.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="cheat-sheet"><a class="link" href="#cheat-sheet">9. Cheat Sheet</a></h2>
-<div class="sectionbody">
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>This segment contains all the commands detailed in this guide in a consolidated list.</p>
-</div>
-</blockquote>
-</div>
-<div class="paragraph">
-<p><code>help</code></p>
-</div>
-<div class="paragraph">
-<p><code>course add n/COURSE_NAME</code></p>
-</div>
-<div class="paragraph">
-<p><code>course edit [n/COURSE_NAME] [u/MCs]</code></p>
-</div>
-<div class="paragraph">
-<p><code>course delete COURSE_NAME</code></p>
-</div>
-<div class="paragraph">
-<p><code>course achieve c/DESIRED_CAP</code></p>
-</div>
-<div class="paragraph">
-<p><code>requirement add n/REQUIREMENT_TITLE u/MCS_REQUIRED</code></p>
-</div>
-<div class="paragraph">
-<p><code>requirement edit REQUIREMENT_CODE [n/REQUIREMENT_TITLE] [u/MCS_REQUIRED]</code></p>
-</div>
-<div class="paragraph">
-<p><code>requirement delete REQUIREMENT_CODE</code></p>
-</div>
-<div class="paragraph">
-<p><code>requirement assign REQUIREMENT_CODE [n/MODULE_CODE &#8230;&#8203;]</code></p>
-</div>
-<div class="paragraph">
-<p><code>module add n/MODULE_CODE n/MODULE_TITLE u/MCs [n/DESCRIPTION] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</code></p>
-</div>
-<div class="paragraph">
-<p><code>module edit MODULE_CODE [n/MODULE_CODE] [n/MODULE_TITLE] [n/DESCRIPTION] [u/MCs] [s/SEMESTER] [g/GRADE] [m/MEMO_NOTES]</code></p>
-</div>
-<div class="paragraph">
-<p><code>module delete MODULE_CODE</code></p>
-</div>
-<div class="paragraph">
-<p><code>module done MODULE_CODE g/GRADE</code></p>
-</div>
-<div class="paragraph">
-<p><code>undo</code></p>
-</div>
-<div class="paragraph">
-<p><code>export</code></p>
-</div>
-<div class="paragraph">
-<p><code>exit</code></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="glossary"><a class="link" href="#glossary">10. Glossary</a></h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Terms</th>
-<th class="tableblock halign-left valign-top">Definition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Course</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A course is the entire programme of studies required to complete a university degree</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Graduation requirement</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Requirements specified by the university in order for a student to graduate</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Module</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Each module of study has a unique module code consisting of a two- or three-letter prefix that generally denotes the discipline, and four digits, the first of which indicates the level of the module</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cumulative Average Point (CAP)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Cumulative Average Point (CAP) is the weighted average grade point of the letter grades of all the modules taken by the students.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Semester</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A semester is a part of the academic year. Each semester typically lasts 13 weeks in NUS.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Modular Credits (MCs)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A modular credit (MC) is a unit of the effort, stated in terms of time, expected of a typical student in managing his/her workload.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NUSMods</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A timetabling application built for NUS students, by NUS students. Much like this iGrad!</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Handy Links</strong></p>
-</div>
-<div class="paragraph">
-<p><a href="http://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/degree-requirements">NUS - Degree Requirements</a></p>
-</div>
-<div class="paragraph">
-<p><a href="http://www.nus.edu.sg/registrar/academic-information-policies/undergraduate-students/modular-system">NUS - Modular System, Grading and Regulations</a></p>
-</div>
-<div class="paragraph">
-<p><a href="http://www.nus.edu.sg/registrar/calendar">NUS - Academic Calendar</a></p>
+<p>Singapore&#8217;s Largest B2B Marketplace</p>
 </div>
 </div>
 </div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-12 05:57:29 UTC</div></div></div></body></html>

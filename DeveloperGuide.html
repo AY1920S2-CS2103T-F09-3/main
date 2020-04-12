@@ -13,7 +13,19 @@
 <li><a href="#design">2. Design</a>
 <ul class="sectlevel2">
 <li><a href="#Design-Architecture">2.1. Architecture</a></li>
-<li><a href="#Design-Ui">2.2. UI component</a></li>
+<li><a href="#Design-Ui">2.2. UI component</a>
+<ul class="sectlevel3">
+<li><a href="#mainwindow">2.2.1. MainWindow</a></li>
+<li><a href="#avatarselectionpanel">2.2.2. AvatarSelectionPanel</a></li>
+<li><a href="#commandbox">2.2.3. CommandBox</a></li>
+<li><a href="#commandreceivedpanel">2.2.4. CommandReceivedPanel</a></li>
+<li><a href="#resultdisplay">2.2.5. ResultDisplay</a></li>
+<li><a href="#modulelistpanel">2.2.6. ModuleListPanel</a></li>
+<li><a href="#requirementlistpanel">2.2.7. RequirementListPanel</a></li>
+<li><a href="#progresssidepanel">2.2.8. ProgressSidePanel</a></li>
+<li><a href="#other-components">2.2.9. Other Components</a></li>
+</ul>
+</li>
 <li><a href="#Design-Logic">2.3. Logic component</a></li>
 <li><a href="#Design-Model">2.4. Model component</a></li>
 <li><a href="#Design-Storage">2.5. Storage component</a></li>
@@ -22,13 +34,40 @@
 </li>
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
-<li><a href="#course-feature">3.1. Course Feature</a></li>
-<li><a href="#module-feature">3.2. Module Feature</a></li>
-<li><a href="#requirements-feature">3.3. Requirements Feature</a></li>
-<li><a href="#proposed-undo-redo-feature">3.4. [Proposed] Undo/Redo feature</a></li>
-<li><a href="#proposed-data-encryption">3.5. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.6. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.7. Configuration</a></li>
+<li><a href="#course-feature">3.1. Course Feature</a>
+<ul class="sectlevel3">
+<li><a href="#implementation-2">3.1.1. Implementation</a></li>
+</ul>
+</li>
+<li><a href="#module-feature">3.2. Module Feature</a>
+<ul class="sectlevel3">
+<li><a href="#module-component">3.2.1. Module Component</a></li>
+<li><a href="#module-add-auto">3.2.2. Module Add Auto</a></li>
+<li><a href="#module-filter">3.2.3. Module Filter</a></li>
+</ul>
+</li>
+<li><a href="#requirements-feature">3.3. Requirements Feature</a>
+<ul class="sectlevel3">
+<li><a href="#implementation-5">3.3.1. Implementation</a></li>
+</ul>
+</li>
+<li><a href="#export-feature">3.4. Export Feature</a>
+<ul class="sectlevel3">
+<li><a href="#overview-3">3.4.1. Overview</a></li>
+<li><a href="#implementation-6">3.4.2. Implementation</a></li>
+<li><a href="#design-considerations-3">3.4.3. Design Considerations</a></li>
+</ul>
+</li>
+<li><a href="#undo-feature">3.5. Undo Feature</a>
+<ul class="sectlevel3">
+<li><a href="#overview-4">3.5.1. Overview</a></li>
+<li><a href="#implementation-7">3.5.2. Implementation</a></li>
+<li><a href="#design-considerations-4">3.5.3. Design Considerations</a></li>
+</ul>
+</li>
+<li><a href="#proposed-data-encryption">3.6. [Proposed] Data Encryption</a></li>
+<li><a href="#logging">3.7. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.8. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -65,7 +104,7 @@
 <h3 id="Design-Architecture"><a class="link" href="#Design-Architecture">2.1. Architecture</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/ArchitectureDiagram.png" alt="ArchitectureDiagram">
+<img src="images/developer-guide/ArchitectureDiagram.png" alt="ArchitectureDiagram">
 </div>
 <div class="title">Figure 1. Architecture Diagram</div>
 </div>
@@ -151,7 +190,7 @@ The following class plays an important role at the architecture level:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/LogicClassDiagram.png" alt="LogicClassDiagram">
+<img src="images/developer-guide/LogicClassDiagram.png" alt="LogicClassDiagram">
 </div>
 <div class="title">Figure 2. Class Diagram of the Logic Component</div>
 </div>
@@ -161,7 +200,7 @@ The following class plays an important role at the architecture level:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/ArchitectureSequenceDiagram.png" alt="ArchitectureSequenceDiagram">
+<img src="images/developer-guide/ArchitectureSequenceDiagram.png" alt="ArchitectureSequenceDiagram">
 </div>
 <div class="title">Figure 3. Component interactions for <code>module delete CS1010</code> command</div>
 </div>
@@ -173,7 +212,7 @@ The following class plays an important role at the architecture level:</p>
 <h3 id="Design-Ui"><a class="link" href="#Design-Ui">2.2. UI component</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/UiClassDiagram.png" alt="UiClassDiagram">
+<img src="images/developer-guide/UiClassDiagram.png" alt="UiClassDiagram">
 </div>
 <div class="title">Figure 4. Structure of the UI Component</div>
 </div>
@@ -202,14 +241,177 @@ For example, the layout of the <a href="https://github.com/se-edu/addressbook-le
 </li>
 </ul>
 </div>
+<div class="sect3">
+<h4 id="mainwindow"><a class="link" href="#mainwindow">2.2.1. MainWindow</a></h4>
+<div class="paragraph">
+<p>The <code>MainWindow</code> class serves as the hub for all the UI components, and contains the following UI classes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AvatarSelectionPanel</code> - Avatar selection screen on first-time startup.</p>
+</li>
+<li>
+<p><code>CommandBox</code> - Command box for user input.</p>
+</li>
+<li>
+<p><code>CommandReceivedPanel</code> - Displays the last command entered.</p>
+</li>
+<li>
+<p><code>ResultDisplay</code> - Displays the resultant message of the command entered. Also contains the avatar image.</p>
+</li>
+<li>
+<p><code>ModuleListPanel</code> - Panel displaying the modules input into the system.</p>
+</li>
+<li>
+<p><code>RequirementListPanel</code> - Panel displaying the requirements input into the system.</p>
+</li>
+<li>
+<p><code>ProgressSidePanel</code> - Panel displaying the user&#8217;s academic progress and fundamental details (Eg. CAP).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>MainWindow</code> coordinates the development between the backend and frontend components to induce a visible change to the interface.</p>
+</div>
+<div class="paragraph">
+<p>This is done through the <code>executeCommand(String commandText, Model model)</code> method. Upon user input, the <code>logic</code> class
+executes the command in <code>commandText</code>, and the model is updated to reflect the changes. Subsequently, after the model
+has been updated, the following UI classes <code>ResultDisplay</code> and <code>ProgressSidePanel</code> are refreshed as a result.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="avatarselectionpanel"><a class="link" href="#avatarselectionpanel">2.2.2. AvatarSelectionPanel</a></h4>
+<div class="paragraph">
+<p>The <code>AvatarSelectionPanel</code> class displays the avatar selection screen upon first-time startup. Users will choose an
+that will act as a guide throughout their usage of the application.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="commandbox"><a class="link" href="#commandbox">2.2.3. CommandBox</a></h4>
+<div class="paragraph">
+<p>The <code>CommandBox</code> class contains an editable <code>TextArea</code> JavaFX component which allows the user to enter input commands.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="commandreceivedpanel"><a class="link" href="#commandreceivedpanel">2.2.4. CommandReceivedPanel</a></h4>
+<div class="paragraph">
+<p>The <code>CommandReceivedPanel</code> class contains a panel that shows the last command entered into the system.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example of how the <code>CommandReceivedPanel</code> works:</p>
+</div>
+<div id="fig-CommandReceivedPanelSequenceDiagram" class="imageblock">
+<div class="content">
+<img src="images/developer-guide/CommandReceivedSetCommand.png" alt="CommandReceivedSetCommand">
+</div>
+<div class="title">Figure 5. CommandReceivedPanel Updating from Received Command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="resultdisplay"><a class="link" href="#resultdisplay">2.2.5. ResultDisplay</a></h4>
+<div class="paragraph">
+<p>The <code>ResultDisplay</code> class shows the resultant message generated from the user&#8217;s input.
+The avatar will also showcase a different expression according to the success of the command given.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example of how the <code>ResultDisplay</code> works:</p>
+</div>
+<div id="fig-ResultDisplaySequenceDiagram" class="imageblock">
+<div class="content">
+<img src="images/developer-guide/ResultDisplayHandleCommand.png" alt="ResultDisplayHandleCommand">
+</div>
+<div class="title">Figure 6. ResultDisplay Updating from Received Command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="modulelistpanel"><a class="link" href="#modulelistpanel">2.2.6. ModuleListPanel</a></h4>
+<div class="paragraph">
+<p>The <code>ModuleListPanel</code> class contains the <code>ObservableList&lt;Module&gt;</code>  JavaFX component allowing for a list view of the
+components inside it, in this case, a list of <code>ModuleCard</code> objects.</p>
+</div>
+<div class="paragraph">
+<p>The contents of the list are dependent on the <code>modules</code> that the user has input into the system. Each module will be
+displayed as a <code>ModuleCard</code> object.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="requirementlistpanel"><a class="link" href="#requirementlistpanel">2.2.7. RequirementListPanel</a></h4>
+<div class="paragraph">
+<p>The <code>RequirementListPanel</code> class contains the <code>ObservableList&lt;Requirement</code> JavaFX component allowing for a list view of
+the components inside it, in this case, a list of <code>RequirementCard</code> objects.</p>
+</div>
+<div class="paragraph">
+<p>The contents of the list are dependent on the <code>requirements</code> that the user has input into the system. Each requirement
+will be displayed as a <code>RequirementCard</code> object.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="progresssidepanel"><a class="link" href="#progresssidepanel">2.2.8. ProgressSidePanel</a></h4>
+<div class="paragraph">
+<p>The <code>ProgressSidePanel</code> class contains the user&#8217;s academic progress, as well as essential information. The following
+information is displayed on the <code>ProgressSidePanel</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Course</code> name</p>
+</li>
+<li>
+<p>Inspiring quote from <code>QuoteGenerator</code></p>
+</li>
+<li>
+<p>Modular Credits Progress Indicator</p>
+</li>
+<li>
+<p><code>Semesters</code> left</p>
+</li>
+<li>
+<p>Current Cumulative Average Point (C.A.P)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here is an example of how the <code>ProgressSidePanel</code> works:</p>
+</div>
+<div id="fig-ProgressPanelUpdateProgress" class="imageblock">
+<div class="content">
+<img src="images/developer-guide/ProgressPanelUpdateProgress.png" alt="ProgressPanelUpdateProgress">
+</div>
+<div class="title">Figure 7. ProgressSidePanel Updating from Received Command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="other-components"><a class="link" href="#other-components">2.2.9. Other Components</a></h4>
+<div class="paragraph">
+<p>In addition to the main UI components grouped in the <code>MainWindow</code> class, these are the other UI components that are
+relevant to the interface:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AvatarImage</code> - Contains the image of the avatar.</p>
+</li>
+<li>
+<p><code>ModuleCard</code> - Individual card containing the relevant information of the module. List of <code>ModuleCard</code> contained in the <code>ModuleListPanel</code>.</p>
+</li>
+<li>
+<p><code>RequirementCard</code> - Individual card containing the relevant information of the requirement. List of <code>RequirementCards</code>  contained in the <code>RequirementListPanel</code>.</p>
+</li>
+<li>
+<p><code>HelpWindow</code> - Pop-up window containing the link the User Guide, as well as a list of all the commands in the applicatoin.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="Design-Logic"><a class="link" href="#Design-Logic">2.3. Logic component</a></h3>
 <div id="fig-LogicClassDiagram" class="imageblock">
 <div class="content">
-<img src="images/LogicClassDiagram.png" alt="LogicClassDiagram">
+<img src="images/developer-guide/LogicClassDiagram.png" alt="LogicClassDiagram">
 </div>
-<div class="title">Figure 5. Structure of the Logic Component</div>
+<div class="title">Figure 8. Structure of the Logic Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> :
@@ -239,9 +441,9 @@ For example, the layout of the <a href="https://github.com/se-edu/addressbook-le
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/DeleteSequenceDiagram.png" alt="DeleteSequenceDiagram">
+<img src="images/developer-guide/DeleteSequenceDiagram.png" alt="DeleteSequenceDiagram">
 </div>
-<div class="title">Figure 6. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
+<div class="title">Figure 9. Interactions Inside the Logic Component for the <code>delete 1</code> Command</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -260,9 +462,9 @@ The lifeline for <code>ModuleDeleteCommandParser</code> should end at the destro
 <h3 id="Design-Model"><a class="link" href="#Design-Model">2.4. Model component</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/ModelClassDiagram.png" alt="ModelClassDiagram">
+<img src="images/developer-guide/ModelClassDiagram.png" alt="ModelClassDiagram">
 </div>
-<div class="title">Figure 7. Structure of the Model Component</div>
+<div class="title">Figure 10. Structure of the Model Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/igrad/model/Model.java"><code>Model.java</code></a></p>
@@ -300,7 +502,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Course Book</
 This would allow <code>Course Book</code> to only require one <code>Tag</code> object per unique <code>Tag</code>, instead of each <code>Module</code> needing their own <code>Tag</code> object.
 An example of how such a model may look like is given below.<br>
 <br>
-<span class="image"><img src="images/BetterModelClassDiagram.png" alt="BetterModelClassDiagram"></span>
+<span class="image"><img src="images/developer-guide/BetterModelClassDiagram.png" alt="BetterModelClassDiagram"></span>
 </td>
 </tr>
 </table>
@@ -310,9 +512,9 @@ An example of how such a model may look like is given below.<br>
 <h3 id="Design-Storage"><a class="link" href="#Design-Storage">2.5. Storage component</a></h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/StorageClassDiagram.png" alt="StorageClassDiagram">
+<img src="images/developer-guide/StorageClassDiagram.png" alt="StorageClassDiagram">
 </div>
-<div class="title">Figure 8. Structure of the Storage Component</div>
+<div class="title">Figure 11. Structure of the Storage Component</div>
 </div>
 <div class="paragraph">
 <p><strong>API</strong> : <a href="https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/igrad/memo/Storage.java"><code>Storage.java</code></a></p>
@@ -354,9 +556,9 @@ An example of how such a model may look like is given below.<br>
 <h4 id="implementation-2"><a class="link" href="#implementation-2">3.1.1. Implementation</a></h4>
 <div class="imageblock">
 <div class="content">
-<img src="images/CourseInfoClassDiagram.png" alt="CourseInfoClassDiagram">
+<img src="images/developer-guide/CourseInfoClassDiagram.png" alt="CourseInfoClassDiagram">
 </div>
-<div class="title">Figure 9. Structure of CourseInfo Class</div>
+<div class="title">Figure 12. Structure of CourseInfo Class</div>
 </div>
 <div class="paragraph">
 <p>A course consists of three information: Name, CAP, and SemsLeft. One course should only have one name,
@@ -383,9 +585,9 @@ and one CAP.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/CourseEditSequenceDiagram.png" alt="CourseEditSequenceDiagram">
+<img src="images/developer-guide/CourseEditSequenceDiagram.png" alt="CourseEditSequenceDiagram">
 </div>
-<div class="title">Figure 10. Sequence Diagram when editing course name.</div>
+<div class="title">Figure 13. Sequence Diagram when editing course name.</div>
 </div>
 <div class="paragraph">
 <p>When a user edits name of a course, the user has to specify the prefix <code>/n</code> for name.
@@ -400,57 +602,210 @@ Then the application proceeds to do the following steps:</p>
 <div class="paragraph">
 <p>Step 3: The new course name is set in the course book.</p>
 </div>
+<hr>
 </div>
 </div>
 <div class="sect2">
 <h3 id="module-feature"><a class="link" href="#module-feature">3.2. Module Feature</a></h3>
 <div class="sect3">
-<h4 id="module-auto-add"><a class="link" href="#module-auto-add">3.2.1. Module Auto Add</a></h4>
+<h4 id="module-component"><a class="link" href="#module-component">3.2.1. Module Component</a></h4>
+<div class="paragraph">
+<p>The <code>Module</code> component is the building block of all other components in the system.
+In order to track the number of <code>credits</code> left to fulfill
+for each <code>requirement</code>, each <code>module</code> is stored in a <code>UniqueModuleList</code> and the <code>credits</code> tied to each
+<code>module</code> is then tabulated.</p>
+</div>
+<div class="paragraph">
+<p>Besides being necessary in tracking the amount of credits left for a <code>requirement</code>, <code>modules</code> are also
+used to decide which <code>semester</code> the user is currently in. When a <code>semester</code> is tagged to a <code>module</code>, either when
+a new <code>module</code> is added or an existing <code>module</code> is edited, the latest <code>semester</code> of all <code>modules</code> in the <code>filteredList</code> of modules is taken
+to be the current semester.</p>
+</div>
+<div class="paragraph">
+<p>A module must have the following non-optional values:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value Type</th>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Software Engineering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ModuleCode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CS2103T</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Credits</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ModulePrerequisites</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CS2030, CS2040</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ModulePreclusions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CS2103, CS2103T, CS2113T, CS2113</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>A module may also have the following optional values:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value Type</th>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Semester</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y3S1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grade</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A+</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><a href="#moduleClassDiagram">Figure 14, &#8220;Module Class Diagram&#8221;</a> illustrates the relation between the various classes:</p>
+</div>
+<div id="moduleClassDiagram" class="imageblock">
+<div class="content">
+<img src="images/developer-guide/ModuleClassDiagram.png" alt="ModuleClassDiagram">
+</div>
+<div class="title">Figure 14. Module Class Diagram</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="module-add-auto"><a class="link" href="#module-add-auto">3.2.2. Module Add Auto</a></h4>
+<div class="sect4">
+<h5 id="overview"><a class="link" href="#overview">Overview</a></h5>
+<div class="paragraph">
+<p>The "automatic" addition of <code>modules</code> allows users to add up to 10 <code>modules</code> at once with all non-optional values filled in.
+This is done by making a HTTP GET request to the <a href="https://api.nusmods.com/">NUSMods API</a> and fetching the module data
+given in a JSON format.</p>
+</div>
+</div>
 <div class="sect4">
 <h5 id="implementation-3"><a class="link" href="#implementation-3">Implementation</a></h5>
 <div class="paragraph">
-<p>The automatic filling in of module details on addition of a new module is facilitated by <code>NusModsRequester</code>.
-It creates a new instance of <code>GetRequestManager</code> in order to make a request to <a href="https://nusmods.com/">NUSMods</a>.
-Upon receiving a response, it creates an instance of <code>JsonParsedModule</code>.</p>
+<p>The automatic filling in of <code>module</code> details on addition of a new <code>module</code> is facilitated by <code>NusModsRequester</code>.
+It creates a new instance of <code>GetRequestManager</code> which it relies on to make a request to the <a href="https://api.nusmods.com/">NUSMods API</a>.
+Upon receiving a response, it creates an instance of JsonParsedModule.</p>
 </div>
 <div class="paragraph">
 <p><code>JsonParsedModule</code> parses the JSON object given in the response of the initial request and stores the following values:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>title</code> e.g. Software Engineering</p>
-</li>
-<li>
-<p><code>moduleCode</code> e.g. CS2103T</p>
-</li>
-<li>
-<p><code>credits</code> e.g. 4</p>
-</li>
-<li>
-<p><code>description</code> e.g. This module introduces the necessary conceptual and analytical tools for systematic and rigorous development of software systems&#8230;&#8203;</p>
-</li>
-</ul>
+<table id="JsonParsedModuleTableOfValues" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. JsonParsedModule Table of Values</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Value Type</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Software Engineering</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">moduleCode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CS2103T</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">credits</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prerequisite</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CS2040C or (CS2030 and (CS2040 or its equivalent))</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">preclusion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CS2103, CS2103T, (CS2113T for CS2113), (CS2113 for CS2113T)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<a href="#JsonParsedModuleTableOfValues">Table 1, &#8220;JsonParsedModule Table of Values&#8221;</a> illustrates the difficulty in parsing <code>prerequisites</code> and <code>preclusions</code> as
+the data provided is not in a standard format
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>The above process is initiated by <code>AddAutoCommandParser</code> which then converts a <code>JsonParsedModule</code> instance to a <code>Module</code>.</p>
+<p>The created <code>JsonParsedModule</code> object is then converted into a <code>Module</code> object, which is subsequently added
+to the <code>courseBook</code> via the method <code>addModule</code> of the <code>ModelManager</code>.</p>
 </div>
 <div class="paragraph">
-<p>The sequence diagram below provide further insight into its execution:</p>
+<p><a href="#moduleAddAutoSequenceDiagram">Figure 15, &#8220;Module Add Auto Sequence Diagram&#8221;</a> illustrates this:</p>
 </div>
-<div class="imageblock">
+<div id="moduleAddAutoSequenceDiagram" class="imageblock">
 <div class="content">
-<img src="images/AutoAddSequenceDiagram.png" alt="AutoAddSequenceDiagram">
+<img src="images/developer-guide/ModuleAddAutoSequenceDiagram.png" alt="ModuleAddAutoSequenceDiagram">
 </div>
+<div class="title">Figure 15. Module Add Auto Sequence Diagram</div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h5>
 <div class="paragraph">
+<p>Most of the design considerations arose as a result of having to make a network request.</p>
+</div>
+<div class="paragraph">
+<p><strong>A <em>secondary</em> module addition feature</strong></p>
+</div>
+<div class="paragraph">
 <p>As with all network requests, this feature might not work as intended in certain circumstances. Possible cases are:</p>
 </div>
 <div class="olist arabic">
-<ol class="arabic" start="1">
+<ol class="arabic">
 <li>
 <p>High Network Congestion</p>
 </li>
@@ -463,33 +818,224 @@ Upon receiving a response, it creates an instance of <code>JsonParsedModule</cod
 </ol>
 </div>
 <div class="paragraph">
-<p>In such situations, the user would be prompted to manually fill in the necessary details for a module. The compulsory
-and optional fields are shown in the class diagram below:</p>
+<p>In such situations, it becomes difficult or impossible to carry out the addition of <code>modules</code> using this command.
+Therefore, this feature was built on top of the primary <code>module add</code> feature, ensuring that the user
+could still manage to add <code>modules</code> even when faced with the issues as listed above.</p>
 </div>
-<div class="imageblock">
+<div class="paragraph">
+<p>The use case for this situation is as follows:</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>System: iGrad</p>
+</div>
+<div class="paragraph">
+<p>Use case: UCM1 - Add module via NUSMods</p>
+</div>
+<div class="paragraph">
+<p>Actor: User, NUSMods</p>
+</div>
+<div class="paragraph">
+<p>MSS:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User wants to add a module.</p>
+</li>
+<li>
+<p>iGrad requires user to specify the module codes.</p>
+</li>
+<li>
+<p>User enters the module codes corresponding to the modules
+he wishes to add.</p>
+</li>
+<li>
+<p>iGrad sends a request to NUSMods.</p>
+</li>
+<li>
+<p>NUSMods responds with the requested data.</p>
+</li>
+<li>
+<p>iGrad adds the module to the module list.</p>
+</li>
+<li>
+<p>User views the module in the module list.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+<div class="paragraph">
+<p>Extensions:</p>
+</div>
+<div class="paragraph">
+<p>5a. NUSMods does not respond with the requested data.</p>
+</div>
+<div class="paragraph">
+<p>5a1. User adds module manually</p>
+</div>
+<div id="moduleAutoAddUseCaseDiagram" class="imageblock">
 <div class="content">
-<img src="images/ModuleClassDiagram.png" alt="ModuleClassDiagram">
+<img src="images/developer-guide/ModuleAutoAddUseCaseDiagram.png" alt="ModuleAutoAddUseCaseDiagram">
 </div>
+<div class="title">Figure 16. Module Auto Add Use Case Diagram</div>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Messages for individual modules</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Pros</strong></p>
+<p>As this feature allows a user to add <code>modules</code> by batches, it is possible that one or more <code>modules</code> in
+the batch are invalid or require warning messages. In order to facilitate this, the processing of the list of <code>modules</code> and the
+generation of error and warning messages were done in parallel. This was because if the list of <code>modules</code> was processed first,
+<code>modules</code> with issues would be filtered out without notice, leading to a confusing user experience.</p>
+</div>
+<div id="moduleAddAutoBatchProcessing" class="imageblock">
+<div class="content">
+<img src="images/developer-guide/ModuleAddAutoBatchActivityDiagram.png" alt="ModuleAddAutoBatchActivityDiagram">
+</div>
+<div class="title">Figure 17. Module Add Auto Batch Processing</div>
+</div>
+<div class="paragraph">
+<p><strong>Improving the user experience [PROPOSED]</strong></p>
+</div>
+<div class="paragraph">
+<p>Due to network latency - the Round Trip Time taken from when a request is made to when a response is
+received - the user might experience a situation where it appears that the application has stopped working.</p>
+</div>
+<div class="paragraph">
+<p>For a large batch of <code>modules</code>, the application might also display a <em>not responding</em> label in the toolbar.
+In order to improve the user experience, it is ideal that a loader be displayed when waiting for the response from the server.
+However, due to time constraints, this was not implemented.</p>
+</div>
+<div class="paragraph">
+<p><strong>Getting the latest data [DEPRECATED]</strong></p>
+</div>
+<div class="paragraph">
+<p>Past iterations of this feature made a maximum of two requests for one <code>module</code>. The first request would
+attempt to get the <code>module</code> for the current academic year, whilst the second request attempted to get
+the <code>module</code> for the previous academic year, in the event the module for the current academic year was not available.</p>
+</div>
+<div class="paragraph">
+<p>This process is illustrated in <a href="#previousImplementationOfModuleAddAuto">Figure 18, &#8220;Previous implementation of Module Add Auto&#8221;</a>. However, it was decided
+that the benefits of making a maximum of one request outweighed that of getting the latest module information and thus,
+currently only one request is made.</p>
+</div>
+<div id="previousImplementationOfModuleAddAuto" class="imageblock">
+<div class="content">
+<img src="images/developer-guide/ModuleAddAutoActivityDiagram.png" alt="ModuleAddAutoActivityDiagram">
+</div>
+<div class="title">Figure 18. Previous implementation of Module Add Auto</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="module-filter"><a class="link" href="#module-filter">3.2.3. Module Filter</a></h4>
+<div class="sect4">
+<h5 id="overview-2"><a class="link" href="#overview-2">Overview</a></h5>
+<div class="paragraph">
+<p>The average number of <code>modules</code> a student has for a 4 year program in NUS is 40. The application window, however, can display
+a maximum of 9 <code>modules</code> for a 17" screen and considerably less for smaller displays. As a result, it is imperative that users have
+a way to filter <code>modules</code> so that only what is required is displayed.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="implementation-4"><a class="link" href="#implementation-4">Implementation</a></h5>
+<div class="paragraph">
+<p>The filtering of modules is done by calling the <code>execute</code> function of <code>ModuleFilterCommand</code>.<code>ModuleFilterCommand</code> takes in
+optional parameters <code>Semester</code>, <code>Credits</code>, <code>Grade</code> and an operator, which could be <code>AND</code> or <code>OR</code>.</p>
+</div>
+<div class="paragraph">
+<p>The matching is done by the functions <code>checkSemesterMatch(Module m)</code>, <code>checkCreditsMatch(Module m)</code> and <code>checkGradeMatch(Module m)</code>. Unlike
+the other two functions, <code>checkCreditsMatch(Module m)</code> does not check if the actual <code>credits</code> for a module is present since the
+<code>credits</code> field in a module is compulsory.</p>
+</div>
+<div class="paragraph">
+<p>The <code>AND</code> operator specifies that the provided parameters be chained with the logical <em>and</em> operator.</p>
+</div>
+<div class="paragraph">
+<p>The <code>OR</code> operator specifies that provided parameters be chained with the logical <em>or</em> operator.</p>
+</div>
+<div class="paragraph">
+<p>When the filter command is issued, the <code>Model</code> updates the module list based on the predicate given. <a href="#moduleFilterSequenceDiagram">Figure 19, &#8220;Module Filter Sequence Diagram&#8221;</a>
+illustrates this sequence of events:</p>
+</div>
+<div id="moduleFilterSequenceDiagram" class="imageblock">
+<div class="content">
+<img src="images/developer-guide/ModuleFilterSequenceDiagram.png" alt="ModuleFilterSequenceDiagram">
+</div>
+<div class="title">Figure 19. Module Filter Sequence Diagram</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="design-considerations-2"><a class="link" href="#design-considerations-2">Design Considerations</a></h5>
+<div class="paragraph">
+<p><strong>Resetting the state</strong></p>
+</div>
+<div class="paragraph">
+<p>When this command is issued, the modules that do not match the predicate given will disappear from the module list.
+It is thus necessary to allow the user to issue a new command in order to view all the modules again.</p>
+</div>
+<div class="paragraph">
+<p>Whilst creating a new command such as <code>module reset</code> was proposed, it was decided that a new command would only serve to
+make the user experience more complicated than it should be.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, an allowance was made for <code>module filter</code> to reset the state when receiving no parameters, a divergence from
+the way other functions handled the situation of empty parameters.</p>
+</div>
+<div class="paragraph">
+<p><a href="#moduleFilterActivityDiagram">Figure 20, &#8220;Module Filter Activity Diagram&#8221;</a> illustrates this clearly:</p>
+</div>
+<div id="moduleFilterActivityDiagram" class="imageblock">
+<div class="content">
+<img src="images/developer-guide/ModuleFilterActivityDiagram.png" alt="ModuleFilterActivityDiagram">
+</div>
+<div class="title">Figure 20. Module Filter Activity Diagram</div>
+</div>
+<div class="paragraph">
+<p>The <code>filteredList</code> of <code>modules</code> therefore takes three general states (see <a href="#moduleFilterStateDiagram">Figure 21, &#8220;Module Filter State Diagram&#8221;</a>):</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Time taken to add a module with accurate <code>moduleCode</code>, <code>title</code> and <code>credits</code> is reduced by a factor of <strong>0.85</strong> (statistic derived from user trials).</p>
+<p>Initial State</p>
+<div class="paragraph">
+<p>The <code>module</code> list is unfiltered. All <code>modules</code> are displayed.</p>
+</div>
+</li>
+<li>
+<p>Filtered by <code>AND</code> State</p>
+<div class="paragraph">
+<p>The <code>module</code> list is filtered by a predicate composed of the provided parameters
+chained together with the logical <em>and</em> operator</p>
+</div>
+</li>
+<li>
+<p>Filtered by <code>OR</code> State</p>
+<div class="paragraph">
+<p>The <code>module</code> list is filtered by a predicate composed of the provided parameters
+chained together with the logical <em>or</em> operator</p>
+</div>
 </li>
 </ol>
+</div>
+<div id="moduleFilterStateDiagram" class="imageblock">
+<div class="content">
+<img src="images/developer-guide/ModuleFilterStateDiagram.png" alt="ModuleFilterStateDiagram">
+</div>
+<div class="title">Figure 21. Module Filter State Diagram</div>
 </div>
 <div class="paragraph">
-<p><strong>Cons</strong></p>
+<p><strong>Displaying Filter State [PROPOSED]</strong></p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Successful addition of module is not always guaranteed.</p>
-</li>
-</ol>
+<div class="paragraph">
+<p>An issue with the filtering of modules is that when the current state is not obvious, the
+user might lose track of what the module list is filtering on. To solve this problem,
+it would be an improvement to display the current state prominently to the user.
+'''</p>
 </div>
 </div>
 </div>
@@ -500,12 +1046,12 @@ and optional fields are shown in the class diagram below:</p>
 <p>Within a course, there are multiple requirements to be tracked.</p>
 </div>
 <div class="sect3">
-<h4 id="implementation-4"><a class="link" href="#implementation-4">3.3.1. Implementation</a></h4>
+<h4 id="implementation-5"><a class="link" href="#implementation-5">3.3.1. Implementation</a></h4>
 <div class="imageblock">
 <div class="content">
-<img src="images/RequirementClassDiagram.png" alt="RequirementClassDiagram">
+<img src="images/developer-guide/RequirementClassDiagram.png" alt="RequirementClassDiagram">
 </div>
-<div class="title">Figure 11. Structure of the Requirement class.</div>
+<div class="title">Figure 22. Structure of the Requirement class.</div>
 </div>
 <div class="paragraph">
 <p>A requirement consists of three components: title, credits and unique module list.
@@ -536,9 +1082,9 @@ Multiple requirements can exist in the course book at any one time.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/RequirementAddSequenceDiagram.png" alt="RequirementAddSequenceDiagram">
+<img src="images/developer-guide/RequirementAddSequenceDiagram.png" alt="RequirementAddSequenceDiagram">
 </div>
-<div class="title">Figure 12. Sequence Diagram when adding a requirement.</div>
+<div class="title">Figure 23. Sequence Diagram when adding a requirement.</div>
 </div>
 <div class="paragraph">
 <p>When the user adds a requirement, the user has to specify two prefixes: <code>n/</code> for title and <code>u/</code> for credits value (number of credits needed to fulfill for the requirement).
@@ -560,61 +1106,131 @@ Then, the application proceeds to do the following steps</p>
 <div class="paragraph">
 <p>Step 3: The new requirement is added to the course book.</p>
 </div>
+<hr>
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-undo-redo-feature"><a class="link" href="#proposed-undo-redo-feature">3.4. [Proposed] Undo/Redo feature</a></h3>
+<h3 id="export-feature"><a class="link" href="#export-feature">3.4. Export Feature</a></h3>
 <div class="sect3">
-<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.4.1. Proposed Implementation</a></h4>
+<h4 id="overview-3"><a class="link" href="#overview-3">3.4.1. Overview</a></h4>
 <div class="paragraph">
-<p>The undo/redo mechanism is facilitated by <code>VersionedCourseBook</code>.
-It extends <code>CourseBook</code> with an undo/redo history, stored internally as an <code>addressBookStateList</code> and <code>currentStatePointer</code>.
-Additionally, it implements the following operations:</p>
+<p>The export feature allows the user to export their data into a .csv file.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="implementation-6"><a class="link" href="#implementation-6">3.4.2. Implementation</a></h4>
+<div class="paragraph">
+<p>The export feature is facilitated by the <code>CsvWriter</code>. The <code>ExportCommand</code> calls <code>exportModuleList()</code> on <code>ModelManager</code>,
+which then performs a filter on the <code>filteredList</code> of modules in order to filter out all modules where the <code>Optional&lt;Semester&gt;</code> object
+<code>isEmpty()</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>ModelManager</code> allows for <code>write()</code> to be called on <code>CsvWriter</code> only if the <code>filteredList</code> has at least one module.</p>
+</div>
+<div class="paragraph">
+<p><a href="#exportSequenceDiagram">Figure 24, &#8220;Export Sequence Diagram&#8221;</a> shows the process of exporting modules with semesters:</p>
+</div>
+<div id="exportSequenceDiagram" class="imageblock">
+<div class="content">
+<img src="images/developer-guide/ExportSequenceDiagram.png" alt="ExportSequenceDiagram">
+</div>
+<div class="title">Figure 24. Export Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>Once the <code>CsvWriter</code> returns from <code>write()</code>, a file titled <em>study_plan.csv</em> will be created in the top-level directory.</p>
+</div>
+<div class="paragraph">
+<p>The top-level directory has two states concerning the generated file (see <a href="#exportStateDiagram">Figure 25, &#8220;Export State Diagram&#8221;</a>):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Empty State</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>VersionedCourseBook#commit()</code>&#8201;&#8212;&#8201;Saves the current course book state in its history.</p>
-</li>
-<li>
-<p><code>VersionedCourseBook#undo()</code>&#8201;&#8212;&#8201;Restores the previous course book state from its history.</p>
-</li>
-<li>
-<p><code>VersionedCourseBook#redo()</code>&#8201;&#8212;&#8201;Restores a previously undone course book state from its history.</p>
+<p>does not contain the file study_plan.csv</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>These operations are exposed in the <code>Model</code> interface as <code>Model#commitCourseBook()</code>, <code>Model#undoCourseBook()</code> and <code>Model#redoCourseBook()</code> respectively.</p>
+</li>
+<li>
+<p>Non-empty State</p>
+<div class="ulist">
+<ul>
+<li>
+<p>contains the file study_plan.csv</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="exportStateDiagram" class="imageblock">
+<div class="content">
+<img src="images/developer-guide/ExportStateDiagram.png" alt="ExportStateDiagram">
+</div>
+<div class="title">Figure 25. Export State Diagram</div>
 </div>
 <div class="paragraph">
-<p>Given below is an example usage scenario and how the undo/redo mechanism behaves at each step.</p>
+<p>As seen in the figure, it is only possible to revert the state i.e. from Non-empty State to Empty State, by externally
+deleting the file.</p>
 </div>
 <div class="paragraph">
-<p>Step 1. The user launches the application for the first time.
-The <code>VersionedCourseBook</code> will be initialized with the initial course book state, and the <code>currentStatePointer</code> pointing to that single memo book state.</p>
+<p>Additionally, if <code>export</code> is issued when there is an existing <em>study_plan.csv</em>, the current file will be overwritten.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.4.3. Design Considerations</a></h4>
+<div class="paragraph">
+<p><strong>Writing and Reading Issues</strong></p>
+</div>
+<div class="paragraph">
+<p>It is possible that the user has the <em>study_plan.csv</em> file open while attempting to export data. The only known solution is
+for the user to close the file and issuing the command again.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="undo-feature"><a class="link" href="#undo-feature">3.5. Undo Feature</a></h3>
+<div class="sect3">
+<h4 id="overview-4"><a class="link" href="#overview-4">3.5.1. Overview</a></h4>
+<div class="paragraph">
+<p>The undo feature allows for the prior state of a <code>courseBook</code> to be saved and loaded from when needed.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="implementation-7"><a class="link" href="#implementation-7">3.5.2. Implementation</a></h4>
+<div class="paragraph">
+<p>The undo mechanism is facilitated by the <code>ModelManager</code> and the <code>LogicManager</code>.</p>
+</div>
+<div class="paragraph">
+<p>The function <code>saveCourseBook()</code>, which composes the <code>storage</code> object, is used to save the previous state of the <code>coursebook</code>
+in the file <em>backup_coursebook.json</em> when a new command is executed.</p>
+</div>
+<div class="paragraph">
+<p>The function <code>undoCourseBook()</code>, implemented by the <code>ModelManager</code>, reads from the file <em>backup_coursebook.json</em> and restores
+the data by calling <code>setCourseBook()</code></p>
+</div>
+<div class="paragraph">
+<p>Given below is an example usage scenario and how the undo mechanism behaves at each step:</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user starts up the application.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/UndoRedoState0.png" alt="UndoRedoState0">
+<img src="images/developer-guide/UndoState0.png" alt="UndoState0">
 </div>
 </div>
 <div class="paragraph">
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD Step 2. The user executes <code>delete 5</code> command to delete the 5th module in the course book.
-The <code>delete</code> command calls <code>Model#commitCourseBook()</code>, causing the modified state of the course book after the <code>delete 5</code> command executes to be saved in the <code>addressBookStateList</code>, and the <code>currentStatePointer</code> is shifted to the newly inserted course book state.</p>
+<p>Step 2. The user issues the command <code>module delete CS2103T</code>. The previous state of the course book is stored into the file
+at <code>backup_coursebook.json</code> by <code>saveCourseBook()</code>. This state still contains the module CS2103T.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/UndoRedoState1.png" alt="UndoRedoState1">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 3. The user executes <code>add n/David &#8230;&#8203;</code> to add a new module.
-The <code>add</code> command also calls <code>Model#commitCourseBook()</code>, causing another modified address course book state to be saved into the <code>addressBookStateList</code>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/UndoRedoState2.png" alt="UndoRedoState2">
+<img src="images/developer-guide/UndoState1.png" alt="UndoState1">
 </div>
 </div>
 <div class="admonitionblock note">
@@ -624,109 +1240,47 @@ The <code>add</code> command also calls <code>Model#commitCourseBook()</code>, c
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If a command fails its execution, it will not call <code>Model#commitCourseBook()</code>, so the course book state will not be saved into the <code>addressBookStateList</code>.
+When the <code>undo</code> command is executed, the state of the <code>courseBook</code> is not saved.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Step 4. The user now decides that adding the module was a mistake, and decides to undo that action by executing the <code>undo</code> command.
-The <code>undo</code> command will call <code>Model#undoCourseBook()</code>, which will shift the <code>currentStatePointer</code> once to the left, pointing it to the previous course book state, and restores the course book to that state.</p>
+<p>Step 3. The user issues the command <code>undo</code>. The file at <code>backup_coursebook.json</code> is read from and loaded as the main <code>courseBook</code>
+to be read from.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/UndoRedoState3.png" alt="UndoRedoState3">
+<img src="images/developer-guide/UndoState2.png" alt="UndoState2">
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If the <code>currentStatePointer</code> is at index 0, pointing to the initial course book state, then there are no previous course book states to restore.
-The <code>undo</code> command uses <code>Model#canUndoCourseBook()</code> to check if this is the case.
-If so, it will return an error to the user rather than attempting to perform the undo.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Step 4. The <code>backupCourseBook</code> becomes the main <code>courseBook</code> and another instance of <code>courseBook</code> will be created as its
+backup if another command is issued.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/developer-guide/UndoState3.png" alt="UndoState3">
+</div>
 </div>
 <div class="paragraph">
 <p>The following sequence diagram shows how the undo operation works:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/UndoSequenceDiagram.png" alt="UndoSequenceDiagram">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The lifeline for <code>UndoCommand</code> should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The <code>redo</code> command does the opposite&#8201;&#8212;&#8201;it calls <code>Model#redoCourseBook()</code>, which shifts the <code>currentStatePointer</code> once to the right, pointing to the previously undone state, and restores the course book to that state.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If the <code>currentStatePointer</code> is at index <code>addressBookStateList.size() - 1</code>, pointing to the latest course book state, then there are no undone course book states to restore.
-The <code>redo</code> command uses <code>Model#canRedoCourseBook()</code> to check if this is the case.
-If so, it will return an error to the user rather than attempting to perform the redo.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Step 5. The user then decides to execute the command <code>list</code>.
-Commands that do not modify the course book, such as <code>list</code>, will usually not call <code>Model#commitCourseBook()</code>, <code>Model#undoCourseBook()</code> or <code>Model#redoCourseBook()</code>.
-Thus, the <code>addressBookStateList</code> remains unchanged.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/UndoRedoState4.png" alt="UndoRedoState4">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 6. The user executes <code>clear</code>, which calls <code>Model#commitCourseBook()</code>.
-Since the <code>currentStatePointer</code> is not pointing at the end of the <code>addressBookStateList</code>, all course book states after the <code>currentStatePointer</code> will be purged.
-We designed it this way because it no longer makes sense to redo the <code>add n/David &#8230;&#8203;</code> command.
-This is the behavior that most modern desktop applications follow.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/UndoRedoState5.png" alt="UndoRedoState5">
-</div>
-</div>
-<div class="paragraph">
-<p>The following activity diagram summarizes what happens when a user executes a new command:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/CommitActivityDiagram.png" alt="CommitActivityDiagram">
+<img src="images/developer-guide/UndoSequenceDiagram.png" alt="UndoSequenceDiagram">
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.4.2. Design Considerations</a></h4>
-<div class="sect4">
-<h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
+<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.5.3. Design Considerations</a></h4>
+<div class="paragraph">
+<p><strong>How undo executes</strong></p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Saves the entire course book.</p>
+<p>Option 1 (current choice): Saves the entire course book.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -739,7 +1293,7 @@ This is the behavior that most modern desktop applications follow.</p>
 </div>
 </li>
 <li>
-<p><strong>Alternative 2:</strong> Individual command knows how to undo/redo by itself.</p>
+<p>Option 2: Individual command knows how to undo/]] by itself.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -753,52 +1307,31 @@ This is the behavior that most modern desktop applications follow.</p>
 </li>
 </ul>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+While it is recognised that Option 1 may have performance issues in terms of memory, the actual implementation
+of the feature is unlikely to cause any memory issues. This is due to the fact that modules, requirements and other data
+users would require are limited to a degree which will not require large memory allocation.
+</td>
+</tr>
+</table>
 </div>
-<div class="sect4">
-<h5 id="aspect-data-structure-to-support-the-undo-redo-commands"><a class="link" href="#aspect-data-structure-to-support-the-undo-redo-commands">Aspect: Data structure to support the undo/redo commands</a></h5>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Alternative 1 (current choice):</strong> Use a list to store the history of course book states.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project.</p>
-</li>
-<li>
-<p>Cons: Logic is duplicated twice.
-For example, when a new command is executed, we must remember to update both <code>HistoryManager</code> and <code>VersionedCourseBook</code>.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Alternative 2:</strong> Use <code>HistoryManager</code> for undo/redo</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: We do not need to maintain a separate list, and just reuse what is already in the codebase.</p>
-</li>
-<li>
-<p>Cons: Requires dealing with commands that have already been undone: We must remember to skip these commands.
-Violates Single Responsibility Principle and Separation of Concerns as <code>HistoryManager</code> now needs to do two different things.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
+<hr>
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.5. [Proposed] Data Encryption</a></h3>
+<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.6. [Proposed] Data Encryption</a></h3>
 <div class="paragraph">
 <p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.6. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.7. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging.
 The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
@@ -806,7 +1339,7 @@ The <code>LogsCenter</code> class is used to manage the logging levels and loggi
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.7, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.8, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -837,7 +1370,7 @@ The <code>LogsCenter</code> class is used to manage the logging levels and loggi
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.7. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.8. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -1453,4 +1986,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-08 15:57:51 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-12 05:57:29 UTC</div></div></div></body></html>
