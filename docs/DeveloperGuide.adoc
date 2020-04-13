@@ -520,9 +520,9 @@ Extensions:
 
 5a1. User adds module manually
 
-[#moduleAutoAddUseCaseDiagram]
-.Module Auto Add Use Case Diagram
-image::developer-guide/ModuleAutoAddUseCaseDiagram.png[]
+[#moduleAddAutoUseCaseDiagram]
+.Module Add Auto Use Case Diagram
+image::developer-guide/ModuleAddAutoUseCaseDiagram.png[]
 
 //end::wayne-ug[]
 '''
