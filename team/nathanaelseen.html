@@ -33,26 +33,23 @@
 <ul>
 <li>
 <p><em>What it does</em>: Allows the user to create/edit/delete a course, through which various modules,
-and requirements (degree requirements) are 'housed'. Also allows users to track other
-import degree progress information, such as overal MCs completed for the course, and current CAP.</p>
+and requirements (degree requirements) are 'housed'. Also allows users to track overall
+degree progress information, such as overal MCs completed for the course, and current CAP.</p>
 </li>
 <li>
-<p><em>Justification</em>: This feature is crucial because our application is a course management app, which
-helps students plan their graduation requirements. Without a course, it does not make sense to
-have modules and degree requirements (by which those modules are mapped under) as standalone
+<p><em>Justification</em>: Without a course, it does not make sense to
+have modules and degree requirements (by which those modules are mapped under), as standalone
 features. In fact, this feature could be said to be the most important feature.</p>
 </li>
 <li>
-<p><em>Credits</em>: The original AB3 codebase which provided the necessary backing for the implementation
-of this feature, and my teamates for implementing the <strong>module management</strong> and <strong>requirement
-management</strong> features.</p>
+<p><em>Credits</em>: The original AB3 codebase which provided the necessary 'backing'</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
 <p><strong>Major enhancement</strong>: Integrate <strong>course management</strong>, <strong>requirement management</strong>, and <strong>module management</strong>
-feature together, through the <code>module done</code>,  <code>requirement assign</code>, and <code>requirement unassign</code>,
+feature together, by implementing the <code>module done</code>,  <code>requirement assign</code>, and <code>requirement unassign</code>,
 commands.</p>
 <div class="ulist">
 <ul>
@@ -78,18 +75,16 @@ module she has completed</p>
 requirements and overall degree progress.</p>
 </li>
 <li>
-<p><em>Highlights</em>: This three commands function like a 'glue' in the entire application, glueing the
-<strong>module management</strong>, <strong>requirement management</strong>, and <strong>course management</strong> altogether.</p>
+<p><em>Highlights</em>: This three commands function helps to 'glue' the three components of the app altogether.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Take for example, the <code>module done</code> command. It might seem trivial, but when a
-module is marked as 'done' with a certain grade recorded for it, first of all,
-the <em>module manager</em> has to be called so as to update the module with that grade.
-Next, the <em>requirement manager</em> has to also be invoked to updated all requirements which contains
-this module with this new module information, as well as recompute the total MCs fulfilled
-for those requirements. Finally, the <em>course manager</em> has to called as well, as the total
-MCs fulfilled for the course needs to be updated, and the CAP needs to be recomputed.</p>
+<p>For instance, in the <code>module done</code> command, when a module is marked as 'done', the
+<em>module manager</em> is involved to update that module.
+Also, <em>requirement manager</em> helps to update all requirements which contains
+this module.
+Finally, the <em>course manager</em> helps to update information such as the total overal MCs fulfilled,
+and CAP.</p>
 </li>
 </ul>
 </div>
@@ -103,42 +98,25 @@ been able to make sense.</p>
 </div>
 </li>
 <li>
-<p><strong>Minor enhancement</strong>: remodularise animal guide (avatar) selection logic,
-which <a href="https://github.com/waynewee">Wayne</a>, has initially written.</p>
-</li>
-<li>
-<p><strong>Minor enhancement</strong>: assisted in updating of UI information for course information (left
-most panel in screenshot above),
-which <a href="https://github.com/waynewee">Wayne</a>, has initially written.</p>
+<p><strong>Minor enhancement</strong>: remodularise some UI logic (avatar, Progress Side Panel, etc),
+<a href="https://github.com/waynewee">Wayne</a>, has initially written.</p>
 </li>
 <li>
 <p><strong>Contribution to Team Based Tasks</strong>:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>In-charge of merging any pull request in the team, this involves critically reviewing the code,
+<p>In-charge of merging any PRs request, this involves critically reviewing the code,
 and fixing it if necessary.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Things I checked/helped my teamates fix upon merging any pull request were;
+<p>Things I checked/helped my teamates fix when merging PRs were;
 violating checkstyle, obvious logic bug errors, design/implementation considerations and concerns,
 remodularising of code.</p>
 </li>
 <li>
-<p>Also, before I give the thumbs-up for merging those PRs, I always help my teamates test
-the features they implemented, i.e, whether it works as 'advertised'. Sometimes, when I test
-their features with the latest code in 'master' branch, it does not work as 'advertised', due
-to integration issues. In those cases, I helped to pinpoint exact location of fault,
-and feedback to them for further fixing.</p>
-</li>
-<li>
-<p>Somehow in my role of merging PRs, I was also part of the initial refactoring of the codebase.
-This was because two of my teamates refactored the codebase at the same time, causing
-a very huge merge <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/93">conflict</a> which I had to resolve.</p>
-</li>
-<li>
-<p>Besides that, other merge conflicts I helped resolved while merging are;
+<p>Also, helped resolve merge conflicts;
 <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/320">#320</a>,
 <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/307">#307</a>, and
 <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/295">#295</a>.</p>
@@ -151,11 +129,7 @@ a very huge merge <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/9
 UG/DG docs.</p>
 </li>
 <li>
-<p>Remind my teamates on upcoming deadlines; submission of UG, DG, milestone deadline tasks, etc</p>
-</li>
-<li>
-<p>Managed the issue tracker for the first-half of this project, creating and assigning issues
-to track the progress of my teamates</p>
+<p>Managed the issue tracker for the first-half of this project.</p>
 </li>
 <li>
 <p>Designed the initial application UI prototype for the first draft UG submission.</p>
@@ -170,13 +144,11 @@ to track the progress of my teamates</p>
 <li>
 <p>Assisted <a href="https://github.com/teriaiw">Teri</a>, in her initial difficulties understanding and
 adapting to such a large code-base, by creating stubs for her implementation. She feedbacked that
-she liked my way of mentoring and found it to be really helpful. I also provided her
-a listening ear for voicing any difficulties or concerns she had when implementing her code
-portions.</p>
+she liked my way of mentoring and found it to be really helpful.</p>
 </li>
 <li>
-<p>Provided PR code reviews to my team members on how potential things they could improve
-and work on, as I merged their PRs
+<p>Provided PR code reviews to my team members on code aspects I felt could be be improved, as I
+was merging their PRs
 (<a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/313">#313</a>,
 <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/295">#295</a>,
 <a href="https://github.com/AY1920S2-CS2103T-F09-3/main/pull/281">#281</a>,
@@ -395,5 +367,346 @@ have obtained for those modules.</p>
 </tr>
 </tbody>
 </table>
+<div class="sect2">
+<h3 id="course-feature"><a class="link" href="#course-feature">Course Feature</a></h3>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/nathanaelseen">Nathanael Seen</a></p>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 13:49:06 UTC</div></div></div></body></html>
+<div class="paragraph">
+<p>As per the Model diagram <a href="#anchor-tag-a">above</a>, there is only one <code>CourseBook</code> in the system.</p>
+</div>
+<div class="paragraph">
+<p>A <code>CourseBook</code> represents all information related to helping a user track her graduation
+requirements, including the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>One <code>UniqueModuleList</code>, consisting of all <a href="#anchor-tag-b"><code>Modules</code></a> in the system,
+which may or may not be mapped to any (degree) <a href="#anchor-tag-c"><code>Requirement(s)</code></a></p>
+</li>
+<li>
+<p>One <code>UniqueRequirementList</code>, consisting of all (degree) <a href="#anchor-tag-c"><code>Requirements</code></a></p>
+</li>
+<li>
+<p>One <code>CourseInfo</code>, representing important information related to a degree course, which
+would be detailed more in this section</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="implementation"><a class="link" href="#implementation">Implementation</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/nathanaelseen">Nathanael Seen</a></p>
+</div>
+<div class="paragraph">
+<p>In the implementation of the course feature which 'houses' the various <a href="#anchor-tag-c"><code>Requirements</code></a>
+and the <a href="#anchor-tag-b"><code>Modules</code></a> mapped under those requirements, a <code>CourseInfo</code> class is
+necessary in order to represent overall course information, such as the name of the course, the
+current cap of the student (or user), the total credits (MCs) fulfilled/required, and
+semesters left before she could graduate.</p>
+</div>
+<div class="paragraph">
+<p>These important information are encapsulated in the <code>CourseInfo</code> class which should only
+have one <code>Name</code>, one <code>Cap</code>, one <code>Credits</code> and one <code>Semesters</code> object(s), at any one time:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/CourseInfoClassDiagram.png" alt="CourseInfoClassDiagram">
+</div>
+<div class="title">Figure 5. Structure of CourseInfo Class</div>
+</div>
+<div class="paragraph">
+<p>Also, as per the diagram above, we note that these fields (in a <code>CourseInfo</code>) are optional,
+because a user might not even have a course set in the first place. This occurs when the
+application is started out in a 'blank' state, with no initial or sample data.</p>
+</div>
+<div class="paragraph">
+<p>Now, to describe more of this <code>CourseInfo</code> class, its fields, the following two sub-sections would
+detail the <code>Credits</code> and <code>Semesters</code> classes and their design.</p>
+</div>
+<div class="paragraph">
+<p>Thereafter, the next two sub-sections would attempt to explain the mechanics of the two crucial static
+methods <code>computeCredits(&#8230;&#8203;)</code> and <code>computeCap(&#8230;&#8203;)</code>, which is used
+throughout the application.</p>
+</div>
+<div class="paragraph">
+<p>Finally, the last two sections would be dedicated to elaborating how the various
+course commands; <code>course edit</code> and <code>course achieve</code> works.</p>
+</div>
+<div class="sect4">
+<h5 id="credits"><a class="link" href="#credits">Credits</a></h5>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/nathanaelseen">Nathanael Seen</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/CourseCreditsClassDiagram.png" alt="CourseCreditsClassDiagram">
+</div>
+<div class="title">Figure 6. Course Credits Class Diagram</div>
+</div>
+<div class="paragraph">
+<p>The <code>Credits</code> class maintains 2 integers; <code>creditsRequired</code> and <code>creditsFulfilled</code>, for
+storing both the total number of course credits (MCs) required for graduation,
+and also the number credits the user has fulfilled thus far, respectively.</p>
+</div>
+<div class="paragraph">
+<p>Also, it some <code>public</code> validation methods (<code>isValidCreditsFulfilled()</code> and <code>isValidCreditsFulfilled()</code>)
+which is used in the constructor for constructing a 'valid' <code>Credits</code> object.</p>
+</div>
+<div class="paragraph">
+<p>The following constraints defines a 'valid' <code>Credits</code> object:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>creditsRequired</code> &gt; 0</p>
+</li>
+<li>
+<p><code>creditsFulfilled</code> &gt;= 0</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note that <code>creditsFulfilled</code> can be <strong>more than or equals</strong> to <code>creditsRequired</code>, as it is
+possible that a student 'over-fulfills' the graduation requirements in her course.</p>
+</div>
+<div class="paragraph">
+<p>The following are some noteworthy details on the <code>Credits</code> class/object:</p>
+</div>
+<div class="paragraph">
+<p><a id="anchor-tag-f"></a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Credits</code> is recomputed through the <a href="#anchor-tag-d"><code>computeCredits(&#8230;&#8203;)</code></a> method in
+<code>CourseInfo</code> (whenever there is a possible change). This newly recomputed <code>Credits</code> object would be
+subsequently updated in the <code>CourseInfo</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a id="anchor-tag-g"></a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>creditsRequired</code> is recomputed by summing all the <code>creditsRequired</code> of the
+individual <code>Requirements</code> in the <code>UniqueRequirementList</code></p>
+</li>
+<li>
+<p><code>creditsFulfilled</code> is recomputed in the same way as <code>creditsFulfilled</code></p>
+</li>
+<li>
+<p>In the <code>CourseInfo</code> class, <code>Credits</code> is first initialized (to some non-empty value) only when the
+following conditions have been met:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The user has already set a course, through the <code>course set</code> command.</p>
+</li>
+<li>
+<p>There is at least one <code>Requirement</code> in the <code>UniqueRequirementList</code>,` by which <code>creditsRequired</code>
+and <code>creditsFulfilled</code> could be re/computed.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a id="anchor-tag-d"></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="compute-credits"><a class="link" href="#compute-credits">Compute Credits</a></h5>
+<div class="paragraph">
+<p>In this section, we describe how <code>computeCredits(requirement: Requirement[])</code> works to recompute
+the latest <code>Credits</code>.</p>
+</div>
+<div class="paragraph">
+<p>As previously <a href="#anchor-tag-f">mentioned</a>, this method is invoked everytime there is a
+possible change in the total course <code>Credits</code>.</p>
+</div>
+<div class="paragraph">
+<p>This might be caused through the following commands:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>module done</code> where a <code>Module</code> is attributed a grade and marked done. Resultantly, all
+<code>Requirements</code> in the <code>UniqueRequirementList</code>, consisting of that <code>Module</code> would have to be updated.
+Also, but most importantly, the <code>creditsFulfilled</code> attribute of those <code>Requirements</code> would
+have to be updated, causing an eventual change in the total course <code>creditsFulfilled</code> of <code>Credits</code>
+(in <code>CourseInfo</code>).</p>
+</li>
+<li>
+<p><code>requirement un/assign</code> where <code>Module(s)</code> are assigned to that particular requirement, where
+some <code>Modules</code> might have already been marked as done and given a grade, hence falling back
+to the first scenario, where <code>creditsFulfilled</code> of a course would have to be updated.</p>
+</li>
+<li>
+<p><code>requirement edit</code> where the <code>creditsRequired</code> attribute of that requirement might be
+updated, resulting in the need to update the overall course <code>creditsRequired</code> as well</p>
+</li>
+<li>
+<p>And many others such as; <code>requirement add</code>, <code>requirement delete</code>, <code>module edit</code>, <code>module delete</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Now, we have specified the possible scenarios where <code>computeCredits(&#8230;&#8203;)</code> might have to be
+invoked to update <code>Credits</code> of <code>CourseInfo</code>, however we have not described how it actually works.</p>
+</div>
+<div class="paragraph">
+<p>As from our previous <a href="#anchor-tag-g">discussion</a>, we note that <code>creditsFulfilled</code> and
+<code>creditsRequired</code> is computed through summing up the <code>creditsFulfilled</code> and <code>creditsRequired</code>
+for the individual <code>Requirements</code>.</p>
+</div>
+<div class="paragraph">
+<p>More formally, the interactions between the various classes, for the computation to be
+performed are as such:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/ComputeCreditsSequenceDiagram.png" alt="ComputeCreditsSequenceDiagram">
+</div>
+<div class="title">Figure 7. Sequence Diagram for computing updated credits</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="compute-cap"><a class="link" href="#compute-cap">Compute Cap</a></h5>
+<div class="paragraph">
+<p>Similar to <a href="#compute-credits">Compute Credits</a>, <code>Cap</code> has to be updated frequently, each time module information
+in <code>coursebook</code> changes, and the <code>computeCap(&#8230;&#8203;)</code> method facilitates the recomputation of the
+updated <code>Cap</code>.</p>
+</div>
+<div class="paragraph">
+<p>The diagram below describes the interactions between the various classes, as the computation
+is performed:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/ComputeCapSequenceDiagram.png" alt="ComputeCapSequenceDiagram">
+</div>
+<div class="title">Figure 8. Sequence Diagram for computing updated cap</div>
+</div>
+<div class="paragraph">
+<p>We note that from above, <code>CourseInfo</code> does most of the interfacing with other classes,
+and the rest of the classes don&#8217;t interact with each another.</p>
+</div>
+<div class="paragraph">
+<p>In summary, the following steps are performed as <code>computeCap(&#8230;&#8203;)</code> is invoked:</p>
+</div>
+<div class="paragraph">
+<p>(For each <code>Module</code> in the <code>moduleList</code>):</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>CourseInfo</code> first iterates through <code>reqList</code> to determine if a <code>Module</code> belongs to any <code>Requirement</code></p>
+</li>
+<li>
+<p>If it does, <code>CourseInfo</code> again interfaces with <code>Module</code> to extract its <code>Grade</code>.</p>
+</li>
+<li>
+<p>Finally, <code>CourseInfo</code> interacts with <code>Grade</code> to determine if the <code>Grade</code> is a non-SU grade.</p>
+</li>
+<li>
+<p>If the <code>Grade</code> is non-SU, the <code>Module</code> is factored into Cap computation.</p>
+</li>
+</ol>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect3">
+<h4 id="module-done"><a class="link" href="#module-done">Module Done</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/nathanaelseen">Nathanael Seen</a></p>
+</div>
+<div class="sect4">
+<h5 id="overview-2"><a class="link" href="#overview-2">Overview</a></h5>
+<div class="paragraph">
+<p>This feature enables students to mark a module which they have completed with a certain grade.
+Once a module is marked 'done', it would be counted to graduation requirements.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="implementation-2"><a class="link" href="#implementation-2">Implementation</a></h5>
+<div class="paragraph">
+<p>Trivial as it might seem, there are actually quite a number of <code>coursebook</code> data which needs to
+be updated when a module is marked 'done'.</p>
+</div>
+<div class="paragraph">
+<p>This includes the <code>Module</code> itself, the various <code>Requirements</code> in the <code>UniqueRequirementList</code>,
+and the <code>CourseInfo</code>.</p>
+</div>
+<div class="paragraph">
+<p>The following diagram illustrates this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/ModuleDoneActivityDiagram.png" alt="ModuleDoneActivityDiagram">
+</div>
+<div class="title">Figure 9. Module Done Sequence Diagram</div>
+</div>
+<div class="paragraph">
+<p>As from the above, there are two possible scenarios; either a <code>Module</code> belongs to at least one
+<code>Requirement</code> or that it does not belong to any <code>Requirement</code>.</p>
+</div>
+<div class="paragraph">
+<p>In the latter case, calls to methods which update <code>CourseInfo</code> would be immediately invoked,
+bypassing the updating of the <code>Requirement(s)</code>.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect3">
+<h4 id="requirement-assign"><a class="link" href="#requirement-assign">Requirement Assign</a></h4>
+<div class="sect4">
+<h5 id="overview-3"><a class="link" href="#overview-3">Overview</a></h5>
+<div class="paragraph">
+<p>This feature allows <code>Module(s)</code> to be assigned or mapped under a <code>Requirement</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="implementation-3"><a class="link" href="#implementation-3">Implementation</a></h5>
+<div class="paragraph">
+<p>We note that as like the <code>module done</code> command, a few pieces of information in the
+<code>coursebook</code> would have to be updated.</p>
+</div>
+<div class="paragraph">
+<p>The command-parsing-execute mechanism is largely similar to <code>requirement add</code> the above, however,
+we would like to focus more on the activities (such as validations, etc) that happens
+at the <code>Model</code> side.</p>
+</div>
+<div class="paragraph">
+<p>The following diagram details this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/developer-guide/RequirementAssignActivityDiagram.png" alt="RequirementAssignActivityDiagram">
+</div>
+<div class="title">Figure 10. Activity Diagram when assigning modules under a requirement.</div>
+</div>
+<div class="paragraph">
+<p>Hence as per the diagram, we observe that modules are assigned to a <code>Requirement</code>
+on the following two conditions:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>All <code>Modules</code> to assign are existent in the <code>coursebook</code> (more specifically, the <code>UniqueModuleList</code>)</p>
+</li>
+<li>
+<p><code>Modules</code> have not already been previously assigned to that <code>Requirement</code></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:35:35 UTC</div></div></div></body></html>
