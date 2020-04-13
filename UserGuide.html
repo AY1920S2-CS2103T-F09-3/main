@@ -44,15 +44,15 @@
 <li><a href="#command-list">7. Command List</a>
 <ul class="sectlevel2">
 <li><a href="#command-format">7.1. Command Format</a></li>
-<li><a href="#help">7.2. Help</a></li>
-<li><a href="#course-2">7.3. Course</a>
+<li><a href="#helpSection">7.2. Help</a></li>
+<li><a href="#courseSection">7.3. Course</a>
 <ul class="sectlevel3">
 <li><a href="#course-set">7.3.1. Course Set</a></li>
 <li><a href="#course-edit">7.3.2. Course Edit</a></li>
 <li><a href="#course-delete">7.3.3. Course Delete</a></li>
 </ul>
 </li>
-<li><a href="#requirement">7.4. Requirement</a>
+<li><a href="#requirementSection">7.4. Requirement</a>
 <ul class="sectlevel3">
 <li><a href="#requirement-add">7.4.1. Requirement Add</a></li>
 <li><a href="#requirement-edit">7.4.2. Requirement Edit</a></li>
@@ -709,14 +709,19 @@ edited as well.</p>
 <h2 id="command-list"><a class="link" href="#command-list">7. Command List</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section provides a detailed breakdown of the various commands you may use in iGrad,
-by typing the commands into the command box.
+<p>Section by: <a href="https://github.com/yjskrs">Yijie</a></p>
+</div>
+<div class="paragraph">
+<p>This section provides a detailed breakdown of the various commands you may use in iGrad.
 Please read <a href="#command-format">Section 7.1, &#8220;Command Format&#8221;</a> to understand how our commands work!</p>
 </div>
 <div class="sect2">
 <h3 id="command-format"><a class="link" href="#command-format">7.1. Command Format</a></h3>
 <div class="paragraph">
-<p>This section explains the syntax for the commands in iGrad. You may move onto <a href="#course">Section 5.1, &#8220;Course&#8221;</a> if you are already
+<p>Section by: <a href="https://github.com/yjskrs">Yijie</a></p>
+</div>
+<div class="paragraph">
+<p>This section explains the syntax for the commands in iGrad. You may move onto <a href="#helpSection">Section 7.2, &#8220;Help&#8221;</a> if you are already
 familiar with our syntax which involves the command word(s), prefixes, parameters, specifiers and flags.</p>
 </div>
 <div class="paragraph">
@@ -750,8 +755,8 @@ A prefix consists of an alphabet followed by a forward slash (i.e. <code>/</code
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Parameter</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters tell iGrad the information you want to key in. Parameters come directly
-after a prefix, and you can chain prefix-parameters pairs.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters tell iGrad the information you want to key in. Parameters are specified in <strong>uppercase</strong>.
+Parameters come directly after a prefix, and you can chain prefix-parameters pairs.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">E.g. In <code>t/TITLE</code>, <code>TITLE</code> is the parameter where you can key in your desired title.</p></td>
 </tr>
 <tr>
@@ -771,7 +776,12 @@ Flags can only be indicated at the end of the command.</p></td>
 </tbody>
 </table>
 <div class="paragraph">
-<p>We have also listed all the parameters and their corresponding prefixes in the table below.</p>
+<p>We have also listed all the parameters and their corresponding prefixes in the table below.
+If square brackets (i.e. <code>[</code> <code>]</code>) are specified around a parameter-prefix pair, this means
+that the parameter-prefix pair is optional. However, do note that if all parameter-prefix pairs
+are indicated with square brackets, this means that at least one of them must be provided. Parameter-prefix
+pairs which can be entered multiple times in a single command are also indicated by ellipses
+(i.e. <code>&#8230;&#8203;</code>) behind the parameter.</p>
 </div>
 <table id="tableParameterPrefixPairs" class="tableblock frame-all grid-all spread">
 <caption class="title">Table 2. Parameter Prefix Pairs</caption>
@@ -838,10 +848,13 @@ Flags can only be indicated at the end of the command.</p></td>
 </table>
 </div>
 <div class="sect2">
-<h3 id="help"><a class="link" href="#help">7.2. Help</a></h3>
+<h3 id="helpSection"><a class="link" href="#helpSection">7.2. Help</a></h3>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/yjskrs">Yijie</a></p>
+</div>
 <div class="paragraph">
 <p>This command opens up a help window for easy reference on the list of commands that can be used in iGrad.
-A link is also provided to link back to the user guide for more detailed explanations.</p>
+A link is also provided to direct users to the user guide for more detailed explanations.</p>
 </div>
 <table id="tableHelpQuickReference" class="tableblock frame-all grid-all spread">
 <caption class="title">Table 4. Help Quick Reference</caption>
@@ -866,7 +879,10 @@ A link is also provided to link back to the user guide for more detailed explana
 </table>
 </div>
 <div class="sect2">
-<h3 id="course-2"><a class="link" href="#course-2">7.3. Course</a></h3>
+<h3 id="courseSection"><a class="link" href="#courseSection">7.3. Course</a></h3>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/yjskrs">Yijie</a></p>
+</div>
 <div class="paragraph">
 <p>This section details each command used in manipulating the course. All course commands begin with the identifier
 <code>course</code>, followed by the action, e.g. <code>set</code>.</p>
@@ -892,8 +908,8 @@ A link is also provided to link back to the user guide for more detailed explana
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>COURSE_TITLE</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The course title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>COURSE_NAME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The course name</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Computer Science</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
 </tr>
@@ -901,25 +917,316 @@ A link is also provided to link back to the user guide for more detailed explana
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SEMESTER</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The total number of semesters you will be spending in NUS</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must be a number less than 100.</p></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>If the parameter restrictions are not strictly adhered to when issuing a course command, or if
+iGrad cannot find what you&#8217;re looking for, you might come across a common error.
+The following error is generic and may be encountered when dealing with any course command:</p>
+</div>
+<table id="tableCourseParametersErrorReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 6. Course Parameters Error Reference</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Error Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>COURSE_CREDITS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Course Credits</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This error can be resolved by adhering to the restriction detailed in <a href="#tableCourseParameters">Table 5, &#8220;Course Parameters&#8221;</a></p>
+</div>
 <div class="sect3">
 <h4 id="course-set"><a class="link" href="#course-set">7.3.1. Course Set</a></h4>
-
+<div class="paragraph">
+<p>This command sets the course.</p>
+</div>
+<table id="CourseSetQuickReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 7. Course Set Quick Reference</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets the course</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>course set n/COURSE_NAME s/SEMESTERS</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>course set n/Computer Science s/8</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>How it Works</strong></p>
+</div>
+<div class="paragraph">
+<p>When you type in this command, we take the values given for the <code>COURSE_NAME</code> and <code>SEMESTERS</code>
+and fill in those fields for your course. We do not check if the given course refers
+to actual courses in NUS. However, restrictions stated in the <a href="#tableRequirementParameters">Requirement Parameters</a>
+table still apply.</p>
+</div>
+<div class="paragraph">
+<p><a href="#CourseSetErrorReference">Table 8, &#8220;Course Set Error Reference&#8221;</a> lists errors you might encounter after issuing this command:</p>
+</div>
+<table id="CourseSetErrorReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 8. Course Set Error Reference</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Explanation</th>
+<th class="tableblock halign-left valign-top">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters Not Provided Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All fields to be filled, course set n/COURSE_NAME s/SEMESTERS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not all parameters needed to set the course have been provided</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provide all parameters prepended with their prefixes</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Tutorial</strong></p>
+</div>
+<div class="paragraph">
+<p>Follow these steps to get a clearer idea of how this command works.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For this tutorial, actual values will be given instead of placeholders.
+You may undo changes made from this tutorial by using the appropriate command.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure that you do not have a course yet. You may do so by deleting the existing course
+with the <code>course delete</code> command.</p>
+</li>
+<li>
+<p>Type the following into the command box:
+<code>course set n/Computer Science s/8</code>, and press enter.</p>
+</li>
+<li>
+<p>The message in the response box should change and you should see the course name and semesters
+updated in the top left corner panel.</p>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect3">
 <h4 id="course-edit"><a class="link" href="#course-edit">7.3.2. Course Edit</a></h4>
-
+<div class="paragraph">
+<p>This command edits the editable fields in a course which include the <code>COURSE_NAME</code> and <code>SEMESTERS</code>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Course name does not need to be specified.
+</td>
+</tr>
+</table>
+</div>
+<table id="CourseEditQuickReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 9. Course Edit Quick Reference</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edits the course</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>course edit [n/COURSE_NAME] [s/SEMESTERS]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>course edit n/Engineering s/8</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>How it Works</strong></p>
+</div>
+<div class="paragraph">
+<p>When you issue the command, we replace the fields provided with the given values. You are able to
+change the values as you wish as long as they follow the restrictions as listed in the parameters table.</p>
+</div>
+<div class="paragraph">
+<p><a href="#CourseEditErrorReference">Table 10, &#8220;Course Edit Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+</div>
+<table id="CourseEditErrorReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 10. Course Edit Error Reference</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Explanation</th>
+<th class="tableblock halign-left valign-top">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters Not Provided Or Not Modified</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">At least one field to edit must be provided</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters needed to edit the course are not provided</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Try specifying either the name or the credits, or provide a value that is different from the existing one</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Tutorial</strong></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For this tutorial, actual values will be given instead of placeholders.
+You may undo or delete objects created from this tutorial by using the appropriate commands.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure that you have a course set.</p>
+</li>
+<li>
+<p>Type the following into the command box:
+<code>course edit n/Computer Science s/8</code>, and press enter.</p>
+</li>
+<li>
+<p>The message in the response box should change and you should see the course name and semesters
+updated in the top left corner panel.</p>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect3">
 <h4 id="course-delete"><a class="link" href="#course-delete">7.3.3. Course Delete</a></h4>
-
+<div class="paragraph">
+<p>This command <strong>deletes the course as well as all other information stored</strong> in iGrad. Please use with caution!</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Course name does not need to be specified.
+</td>
+</tr>
+</table>
+</div>
+<table id="CourseDeleteQuickReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 11. Course Delete Quick Reference</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes the course</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>course delete</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>course delete</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Tutorial</strong></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You may undo changes made from this tutorial by using the appropriate command.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure that you have a course set.</p>
+</li>
+<li>
+<p>Type the following into the command box:
+<code>course delete</code>, and press enter.</p>
+</li>
+<li>
+<p>The message in the response box should change and you should see the course name and semesters
+disappear, as well as all other information in iGrad.</p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="requirement"><a class="link" href="#requirement">7.4. Requirement</a></h3>
+<h3 id="requirementSection"><a class="link" href="#requirementSection">7.4. Requirement</a></h3>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/yjskrs">Yijie</a></p>
+</div>
 <div class="paragraph">
 <p>This section details each command used in manipulating requirements. All requirement commands begin with the identifier
 <code>requirement</code>, followed by the action, e.g. <code>add</code>.</p>
@@ -928,7 +1235,7 @@ A link is also provided to link back to the user guide for more detailed explana
 <p>All requirement commands use the same parameters, as listed in the table below:</p>
 </div>
 <table id="tableRequirementParameters" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 6. Requirement Parameters</caption>
+<caption class="title">Table 12. Requirement Parameters</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -954,29 +1261,29 @@ A link is also provided to link back to the user guide for more detailed explana
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>REQUIREMENT_TITLE</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A requirement&#8217;s title</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Computer Science Foundation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must contain at least one alphabet</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>REQUIREMENT_CREDITS</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The number of <a href="http://www.nus.edu.sg/registrar/academic-information-policies/graduate/modular-system">modular credits</a> needed to fulfill the requirement</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Must be a positive number less than or equals to 10,000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must be a positive number less than or equal to 10,000</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>MODULE_CODE</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A module&#8217;s module code, used when assigning or unassigning modules to and from a requirement</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CS2103T</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Detailed restrictions are specified <a href="#tableModuleParameters">here</a>, but the requirement-specific restriction is that the module code must exist in iGrad.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Detailed restrictions are specified <a href="#tableModuleParameters">here</a>, but the requirement-specific restriction is that the module must already be added to iGrad.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>If, when issuing a requirement command, the parameter restrictions are not strictly adhered to, or if
+<p>If the parameter restrictions are not strictly adhered to when issuing a requirement command, or if
 iGrad cannot find what you&#8217;re looking for, you might come across some common errors.
 The following errors are generic and may be encountered when dealing with any requirement command:</p>
 </div>
 <table id="tableRequirementParametersErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 7. Requirement Parameters Error Reference</caption>
+<caption class="title">Table 13. Requirement Parameters Error Reference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -993,33 +1300,559 @@ The following errors are generic and may be encountered when dealing with any re
 <td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Requirement Code</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MODULE_CREDITS</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Module Credits</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>REQUIREMENT_TITLE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Requirement Title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>REQUIREMENT_CREDITS</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Requirement Credits</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>These errors can all be resolved by adhering to the restrictions detailed in <a href="#tableModuleParameters">Table 8, &#8220;Module Parameters&#8221;</a></p>
+<p>These errors can all be resolved by adhering to the restrictions detailed in <a href="#tableRequirementParameters">Table 12, &#8220;Requirement Parameters&#8221;</a></p>
 </div>
 <div class="sect3">
 <h4 id="requirement-add"><a class="link" href="#requirement-add">7.4.1. Requirement Add</a></h4>
-
+<div class="paragraph">
+<p>This command adds a requirement to the requirement list.</p>
+</div>
+<table id="RequirementAddQuickReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 14. Requirement Add Quick Reference</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds a requirement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requirement add t/REQUIREMENT_TITLE u/REQUIREMENT_CREDITS</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requirement add t/Computer Science Foundation u/32</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>How it Works</strong></p>
+</div>
+<div class="paragraph">
+<p>When you type in this command, we take the values given for the <code>REQUIREMENT_TITLE</code> and <code>REQUIREMENT_CREDITS</code>
+and fill in those fields for your requirement. We do not check if the given requirement title or credits refer
+to actual requirements as stated on NUS websites. However, restrictions stated in the
+<a href="#tableRequirementParameters">Requirement Parameters</a> table still apply.</p>
+</div>
+<div class="paragraph">
+<p><a href="#RequirementAddErrorReference">Table 15, &#8220;Requirement Add Error Reference&#8221;</a> lists errors you might encounter after issuing this command:</p>
+</div>
+<table id="RequirementAddErrorReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 15. Requirement Add Error Reference</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Explanation</th>
+<th class="tableblock halign-left valign-top">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters Not Provided Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Added requirement must be provided with arguments t/TITLE u/CREDITS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not all parameters needed to add a requirement are provided</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provide all parameters prepended with their prefixes</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Tutorial</strong></p>
+</div>
+<div class="paragraph">
+<p>Follow these steps to get a clearer idea of how this command works.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For this tutorial, actual values will be given instead of placeholders.
+You may undo changes made from this tutorial by using the appropriate command.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Type the following into the command box:
+<code>requirement add t/Computer Science Foundation u/32</code>, and press enter</p>
+</li>
+<li>
+<p>The message in the response box should change and you should see the following in the requirement panel:</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/user-guide/requirementCommand/requirementAddSuccess.png" alt="requirementAddSuccess">
+</div>
+<div class="title">Figure 5. Requirement "Computer Science Foundation" successfully added</div>
+</div>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect3">
 <h4 id="requirement-edit"><a class="link" href="#requirement-edit">7.4.2. Requirement Edit</a></h4>
-
+<div class="paragraph">
+<p>This command edits the editable fields in a requirement which include the <code>REQUIREMENT_TITLE</code> and <code>REQUIREMENT_CREDITS</code>.
+The <code>REQUIREMENT_CODE</code> is not editable as it is a unique identifier assigned by iGrad.</p>
+</div>
+<table id="RequirementEditQuickReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 16. Requirement Edit Quick Reference</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edits a requirement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requirement edit REQUIREMENT_CODE [t/REQUIREMENT_TITLE] [u/REQUIREMENT_CREDITS]</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requirement edit CSF0 t/Engineering Foundation u/40</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>How it Works</strong></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Please type the requirement code in uppercase.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When you issue the command, we replace the fields provided with the given values. You are able to
+change the values as you wish as long as they follow the restrictions as listed in the parameters table.</p>
+</div>
+<div class="paragraph">
+<p><a href="#RequirementEditErrorReference">Table 17, &#8220;Requirement Edit Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+</div>
+<table id="RequirementEditErrorReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 17. Requirement Edit Error Reference</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Explanation</th>
+<th class="tableblock halign-left valign-top">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requirement Not Found Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The requirement code provided is invalid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The requirement you are attempting to edit does not exist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Try changing the requirement code to one that you can find in the list, or add a new one instead</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters Not Provided Or Not Modified</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">At least one field to edit must be provided</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameters needed to edit the requirement are not provided</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Try specifying either the title or the credits, or provide a value that is different from the existing one</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Tutorial</strong></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For this tutorial, actual values will be given instead of placeholders.
+You may undo or delete objects created from this tutorial by using the appropriate commands.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure that you have the requirement "Computer Science Foundation", coded CSF0, in the list.</p>
+</li>
+<li>
+<p>Type the following into the command box: <code>requirement edit CSF0 t/Engineering Foundation u/40</code>, and press enter.</p>
+</li>
+<li>
+<p>The message in the response box should change and you should see the following updated in the list:</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/user-guide/requirementCommand/requirementEditSuccess.png" alt="requirementEditSuccess">
+</div>
+<div class="title">Figure 6. Requirement "Computer Science Foundation" successfully edited</div>
+</div>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect3">
 <h4 id="requirement-delete"><a class="link" href="#requirement-delete">7.4.3. Requirement Delete</a></h4>
-
+<div class="paragraph">
+<p>This command deletes a requirement from the list.</p>
+</div>
+<table id="RequirementDeleteQuickReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 18. Requirement Delete Quick Reference</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes a requirement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requirement delete REQUIREMENT_CODE</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>module delete CSF0</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>How it Works</strong></p>
+</div>
+<div class="paragraph">
+<p>The requirement that you wish to delete is completely removed from the list.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Restoring the requirement is only possible using the <code>undo</code> command which would only work if <code>delete</code> was the last issued command.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><a href="#RequirementDeleteErrorReference">Table 19, &#8220;Requirement Delete Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+</div>
+<table id="RequirementDeleteErrorReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 19. Requirement Delete Error Reference</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Explanation</th>
+<th class="tableblock halign-left valign-top">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requirement Not Found Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The requirement code provided is invalid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The requirement you are attempting to delete does not exist in the list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Your problem is your solution!</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Tutorial</strong></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For this tutorial, actual values will be given instead of placeholders.
+You may undo objects deleted from this tutorial by using the appropriate command.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure that you have the requirement with requirement code "CSF0" in the list.</p>
+</li>
+<li>
+<p>Type the following into the command box: <code>requirement delete CSF0</code>, and hit enter.</p>
+</li>
+<li>
+<p>The message in the response box should change and you should see that the requirement CSF0
+disappears from the list.</p>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect3">
 <h4 id="requirement-assign"><a class="link" href="#requirement-assign">7.4.4. Requirement Assign</a></h4>
-
+<div class="paragraph">
+<p>This command assigns one or more than one module to a requirement.</p>
+</div>
+<table id="RequirementAssignQuickReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 20. Requirement Assign Quick Reference</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assigns module(s) to a requirement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requirement assign REQUIREMENT_CODE n/MODULE_CODE &#8230;&#8203;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requirement assign CSF0 n/CS2103T n/CS2101</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>How it Works</strong></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The module must already be added in iGrad for this command to work!
+Refer to <a href="#ModuleAddCommand">Section 7.5.1, &#8220;Module Add&#8221;</a> to find out how to add a module.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><a href="#RequirementAssignErrorReference">Table 21, &#8220;Requirement Assign Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+</div>
+<table id="RequirementAssignErrorReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 21. Requirement Assign Error Reference</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Explanation</th>
+<th class="tableblock halign-left valign-top">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requirement Not Found Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The requirement code provided is invalid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The requirement you are attempting to assign to does not exist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Try changing the requirement code to one that you can find in the list</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The module does not exit in system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to assign does not exist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">You need to first add the module!</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Module Already Assigned Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The module is already assigned under the requirement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The module has been assigned to the requirement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Try assigning a different module instead</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Tutorial</strong></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For this tutorial, actual values will be given instead of placeholders.
+You may undo changes made from this tutorial by using the appropriate command.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure that you have the requirement "Computer Science Foundation", coded CSF0, in the list.</p>
+</li>
+<li>
+<p>Type the following into the command box: <code>requirement assign CSF0 n/CS2103T n/CS2101</code>, and press enter.</p>
+</li>
+<li>
+<p>The message in the response box should change and you should see the following updated in the list:</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/user-guide/requirementCommand/requirementAssignSuccess.png" alt="requirementAssignSuccess">
+</div>
+<div class="title">Figure 7. Modules successfully assigned to requirement "Computer Science Foundation"</div>
+</div>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect3">
 <h4 id="requirement-unassign"><a class="link" href="#requirement-unassign">7.4.5. Requirement Unassign</a></h4>
-
+<div class="paragraph">
+<p>This command unassigns one or more than one module from a requirement.</p>
+</div>
+<table id="RequirementUnassignQuickReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 22. Requirement Unassign Quick Reference</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unassign module(s) from a requirement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requirement unassign REQUIREMENT_CODE n/MODULE_CODE &#8230;&#8203;</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requirement unassign CSF0 n/CS2103T n/CS2101</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>How it Works</strong></p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The module must already be assigned to the requirement for this command to work!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><a href="#RequirementUnassignErrorReference">Table 23, &#8220;Requirement Unassign Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+</div>
+<table id="RequirementUnassignErrorReference" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 23. Requirement Unassign Error Reference</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Explanation</th>
+<th class="tableblock halign-left valign-top">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requirement Not Found Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The requirement code provided is invalid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The requirement you are attempting to unassign from does not exist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Try changing the requirement code to one that you can find in the list</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The module does not exit in system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to unassign does not exist</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">You can add the module if you want</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Tutorial</strong></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For this tutorial, actual values will be given instead of placeholders.
+You may undo changes made from this tutorial by using the appropriate command.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Ensure that you have the requirement "Computer Science Foundation", coded CSF0, in the list, with modules CS2103T and CS2101 assigned to it.</p>
+</li>
+<li>
+<p>Type the following into the command box: <code>requirement unassign CSF0 n/CS2103T n/CS2101</code>, and press enter.</p>
+</li>
+<li>
+<p>The message in the response box should change and you should see the modules disappear from the requirement.</p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -1035,7 +1868,7 @@ The following errors are generic and may be encountered when dealing with any re
 <p>All module commands use the same parameters, listed in the table below:</p>
 </div>
 <table id="tableModuleParameters" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 8. Module Parameters</caption>
+<caption class="title">Table 24. Module Parameters</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -1089,7 +1922,7 @@ you might come across some common errors.
 The following errors are generic and may be encountered when dealing with any module command:</p>
 </div>
 <table id="tableModuleParametersErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 9. Module Parameters Error Reference</caption>
+<caption class="title">Table 25. Module Parameters Error Reference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1120,7 +1953,7 @@ The following errors are generic and may be encountered when dealing with any mo
 </tbody>
 </table>
 <div class="paragraph">
-<p>These errors can all be resolved by adhering to the restrictions detailed in <a href="#tableModuleParameters">Table 8, &#8220;Module Parameters&#8221;</a></p>
+<p>These errors can all be resolved by adhering to the restrictions detailed in <a href="#tableModuleParameters">Table 24, &#8220;Module Parameters&#8221;</a></p>
 </div>
 <div class="sect3">
 <h4 id="ModuleAddCommand"><a class="link" href="#ModuleAddCommand">7.5.1. Module Add</a></h4>
@@ -1131,7 +1964,7 @@ The following errors are generic and may be encountered when dealing with any mo
 <p>This command adds a module to the module list.</p>
 </div>
 <table id="ModuleAddQuickReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 10. Module Add Quick Reference</caption>
+<caption class="title">Table 26. Module Add Quick Reference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1159,10 +1992,10 @@ The following errors are generic and may be encountered when dealing with any mo
 and fill in those fields. We do not check if the given <code>MODULE_CODE</code> or <code>MODULE_TITLE</code> refer to actual modules offered by NUS. However, the restrictions stated in the module parameters table still apply.</p>
 </div>
 <div class="paragraph">
-<p><a href="#ModuleAddErrorReference">Table 11, &#8220;Module Add Error Reference&#8221;</a> lists errors you might encounter after issuing this command:</p>
+<p><a href="#ModuleAddErrorReference">Table 27, &#8220;Module Add Error Reference&#8221;</a> lists errors you might encounter after issuing this command:</p>
 </div>
 <table id="ModuleAddErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 11. Module Add Error Reference</caption>
+<caption class="title">Table 27. Module Add Error Reference</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -1223,7 +2056,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <div class="content">
 <img src="images/user-guide/moduleAutoAddCommand/two_modules.png" alt="user guide\moduleAutoAddCommand\two modules">
 </div>
-<div class="title">Figure 5. Modules CS2103T and CS2101 successfully added</div>
+<div class="title">Figure 8. Modules CS2103T and CS2101 successfully added</div>
 </div>
 </li>
 </ol>
@@ -1240,7 +2073,7 @@ from the <a href="https://api.nusmods.com/">NUSMods API</a> and includes the <co
 and <code>MODULE_CREDITS</code>.</p>
 </div>
 <table id="ModuleAutoAddQuickReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 12. Module Auto Add Quick Reference</caption>
+<caption class="title">Table 28. Module Auto Add Quick Reference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1328,10 +2161,10 @@ You can add up to 10 modules at once! Try this: <code>module add n/CS1101 n/CS12
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#ModuleAutoAddErrorReference">Table 13, &#8220;Module Auto Add Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+<p><a href="#ModuleAutoAddErrorReference">Table 29, &#8220;Module Auto Add Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
 </div>
 <table id="ModuleAutoAddErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 13. Module Auto Add Error Reference</caption>
+<caption class="title">Table 29. Module Auto Add Error Reference</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -1409,7 +2242,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <div class="content">
 <img src="images/user-guide/moduleAutoAddCommand/two_modules.png" alt="user guide\moduleAutoAddCommand\two modules">
 </div>
-<div class="title">Figure 6. Modules CS2103T and CS2101 successfully added from NUSMods</div>
+<div class="title">Figure 9. Modules CS2103T and CS2101 successfully added from NUSMods</div>
 </div>
 </li>
 </ol>
@@ -1441,7 +2274,7 @@ Section by: <a href="https://github.com/waynewee">Wayne</a>
 <p>This command marks a module as done by giving it a grade and optionally, a semester.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 14. Module Done Quick Reference</caption>
+<caption class="title">Table 30. Module Done Quick Reference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1486,10 +2319,10 @@ during special term, you could input the most recent semester instead
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#ModuleDoneErrorReference">Table 15, &#8220;Module Done Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+<p><a href="#ModuleDoneErrorReference">Table 31, &#8220;Module Done Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
 </div>
 <table id="ModuleDoneErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 15. Module Done Error Reference</caption>
+<caption class="title">Table 31. Module Done Error Reference</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -1542,7 +2375,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <div class="content">
 <img src="images/user-guide/moduleAutoAddCommand/one_module.png" alt="user guide\moduleAutoAddCommand\one module">
 </div>
-<div class="title">Figure 7. Modules CS2103T successfully given a grade and a semester</div>
+<div class="title">Figure 10. Modules CS2103T successfully given a grade and a semester</div>
 </div>
 </li>
 </ol>
@@ -1559,7 +2392,7 @@ Although it is possible to edit the fields as listed, it is unadvisable unless y
 in the values.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 16. Module Edit Quick Reference</caption>
+<caption class="title">Table 32. Module Edit Quick Reference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1587,10 +2420,10 @@ in the values.</p>
 change the values as you wish as long as they follow the restrictions as listed in the parameters table.</p>
 </div>
 <div class="paragraph">
-<p><a href="#ModuleEditErrorReference">Table 17, &#8220;Module Edit Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+<p><a href="#ModuleEditErrorReference">Table 33, &#8220;Module Edit Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
 </div>
 <table id="ModuleEditErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 17. Module Edit Error Reference</caption>
+<caption class="title">Table 33. Module Edit Error Reference</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -1643,7 +2476,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <div class="content">
 <img src="images/user-guide/moduleAutoAddCommand/module_edit.png" alt="user guide\moduleAutoAddCommand\module edit">
 </div>
-<div class="title">Figure 8. Modules CS2103T successfully given a grade and a semester</div>
+<div class="title">Figure 11. Modules CS2103T successfully given a grade and a semester</div>
 </div>
 </li>
 </ol>
@@ -1658,7 +2491,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <p>This command deletes a module from the module list.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 18. Delete Quick Reference</caption>
+<caption class="title">Table 34. Delete Quick Reference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1697,10 +2530,10 @@ Restoring the module is only possible using the <code>undo</code> command which 
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#ModuleDeleteErrorReference">Table 19, &#8220;Module Delete Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+<p><a href="#ModuleDeleteErrorReference">Table 35, &#8220;Module Delete Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
 </div>
 <table id="ModuleDeleteErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 19. Module Delete Error Reference</caption>
+<caption class="title">Table 35. Module Delete Error Reference</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -1763,7 +2596,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 complete module list by <code>SEMESTER</code>, <code>MODULE_CREDITS</code> and <code>GRADE</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 20. Filter Quick Reference</caption>
+<caption class="title">Table 36. Filter Quick Reference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1934,7 +2767,7 @@ This section contains information which requires prior knowledge of discrete mat
 administration for processing of Leave of Absence (LOA), exchange programmes or internship applications.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 21. Export Quick Reference</caption>
+<caption class="title">Table 37. Export Quick Reference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1964,7 +2797,7 @@ administration for processing of Leave of Absence (LOA), exchange programmes or 
 <div class="content">
 <img src="images/user-guide/exportCommand/export_csv_example.png" alt="user guide\exportCommand\export csv example">
 </div>
-<div class="title">Figure 9. Study Plan Example CSV</div>
+<div class="title">Figure 12. Study Plan Example CSV</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1994,10 +2827,10 @@ For example, if the app is stored in your Desktop folder, the file <em>study_pla
 </table>
 </div>
 <div class="paragraph">
-<p><a href="#ExportErrorReference">Table 22, &#8220;Export Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
+<p><a href="#ExportErrorReference">Table 38, &#8220;Export Error Reference&#8221;</a> lists the errors you might encounter after issuing this command:</p>
 </div>
 <table id="ExportErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 22. Export Error Reference</caption>
+<caption class="title">Table 38. Export Error Reference</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -2038,7 +2871,7 @@ For example, if the app is stored in your Desktop folder, the file <em>study_pla
 <p>This command assists you in exiting the program.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 23. Exit Quick Reference</caption>
+<caption class="title">Table 39. Exit Quick Reference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2086,7 +2919,7 @@ For example, if the app is stored in your Desktop folder, the file <em>study_pla
 to you what modules to take next.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 24. Suggest Quick Reference</caption>
+<caption class="title">Table 40. Suggest Quick Reference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2174,7 +3007,7 @@ categories:</p>
 <div class="sect2">
 <h3 id="essential-commands"><a class="link" href="#essential-commands">10.1. Essential Commands</a></h3>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 25. Essential Commands</caption>
+<caption class="title">Table 41. Essential Commands</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2208,7 +3041,7 @@ categories:</p>
 <div class="sect2">
 <h3 id="course-commands"><a class="link" href="#course-commands">10.2. Course Commands</a></h3>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 26. Course Commands</caption>
+<caption class="title">Table 42. Course Commands</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2242,7 +3075,7 @@ categories:</p>
 <div class="sect2">
 <h3 id="requirement-commands"><a class="link" href="#requirement-commands">10.3. Requirement Commands</a></h3>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 27. Requirement Commands</caption>
+<caption class="title">Table 43. Requirement Commands</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2276,7 +3109,7 @@ categories:</p>
 <div class="sect2">
 <h3 id="module-commands"><a class="link" href="#module-commands">10.4. Module Commands</a></h3>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 28. Module Commands</caption>
+<caption class="title">Table 44. Module Commands</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2355,4 +3188,4 @@ categories:</p>
 </tbody>
 </table>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:35:35 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:37:22 UTC</div></div></div></body></html>

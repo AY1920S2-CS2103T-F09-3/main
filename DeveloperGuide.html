@@ -49,29 +49,31 @@
 <li><a href="#module-done">3.2.4. Module Done</a></li>
 </ul>
 </li>
-<li><a href="#requirements-feature">3.3. Requirements Feature</a>
+<li><a href="#requirement-feature">3.3. Requirement Feature</a></li>
+<li><a href="#requirements-feature">3.4. Requirements Feature</a>
 <ul class="sectlevel3">
-<li><a href="#implementation-8">3.3.1. Implementation</a></li>
-<li><a href="#requirement-assign">3.3.2. Requirement Assign</a></li>
+<li><a href="#implementation-8">3.4.1. Implementation</a></li>
+<li><a href="#requirement-add">3.4.2. Requirement Add</a></li>
+<li><a href="#requirement-assign">3.4.3. Requirement Assign</a></li>
 </ul>
 </li>
-<li><a href="#export-feature">3.4. Export Feature</a>
-<ul class="sectlevel3">
-<li><a href="#overview-7">3.4.1. Overview</a></li>
-<li><a href="#implementation-10">3.4.2. Implementation</a></li>
-<li><a href="#design-considerations-4">3.4.3. Design Considerations</a></li>
-</ul>
-</li>
-<li><a href="#undo-feature">3.5. Undo Feature</a>
+<li><a href="#export-feature">3.5. Export Feature</a>
 <ul class="sectlevel3">
 <li><a href="#overview-8">3.5.1. Overview</a></li>
 <li><a href="#implementation-11">3.5.2. Implementation</a></li>
 <li><a href="#design-considerations-5">3.5.3. Design Considerations</a></li>
 </ul>
 </li>
-<li><a href="#proposed-data-encryption">3.6. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.7. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.8. Configuration</a></li>
+<li><a href="#undo-feature">3.6. Undo Feature</a>
+<ul class="sectlevel3">
+<li><a href="#overview-9">3.6.1. Overview</a></li>
+<li><a href="#implementation-12">3.6.2. Implementation</a></li>
+<li><a href="#design-considerations-6">3.6.3. Design Considerations</a></li>
+</ul>
+</li>
+<li><a href="#proposed-data-encryption">3.7. [Proposed] Data Encryption</a></li>
+<li><a href="#logging">3.8. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.9. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -80,14 +82,13 @@
 <li><a href="#product-scope">Appendix A: Product Scope</a></li>
 <li><a href="#user-stories">Appendix B: User Stories</a></li>
 <li><a href="#use-cases">Appendix C: Use Cases</a></li>
-<li><a href="#non-functional-requirements">Appendix D: Non Functional Requirements</a></li>
-<li><a href="#glossary">Appendix E: Glossary</a></li>
-<li><a href="#product-survey">Appendix F: Product Survey</a></li>
-<li><a href="#instructions-for-manual-testing">Appendix G: Instructions for Manual Testing</a>
+<li><a href="#nonFunctionalRequirements">7. Non Functional Requirements</a></li>
+<li><a href="#glossary">Appendix D: Glossary</a></li>
+<li><a href="#instructions-for-manual-testing">Appendix E: Instructions for Manual Testing</a>
 <ul class="sectlevel2">
-<li><a href="#launch-and-shutdown">G.1. Launch and Shutdown</a></li>
-<li><a href="#deleting-a-module">G.2. Deleting a module</a></li>
-<li><a href="#saving-data">G.3. Saving data</a></li>
+<li><a href="#launch-and-shutdown">E.1. Launch and Shutdown</a></li>
+<li><a href="#deleting-a-module">E.2. Deleting a module</a></li>
+<li><a href="#saving-data">E.3. Saving data</a></li>
 </ul>
 </li>
 </ul>
@@ -1597,32 +1598,97 @@ and the <code>CourseInfo</code>.</p>
 bypassing the updating of the <code>Requirement(s)</code>.</p>
 </div>
 <hr>
-<div class="paragraph">
-<p><a id="anchor-tag-c"></a></p>
-</div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="requirements-feature"><a class="link" href="#requirements-feature">3.3. Requirements Feature</a></h3>
+<h3 id="requirement-feature"><a class="link" href="#requirement-feature">3.3. Requirement Feature</a></h3>
 <div class="paragraph">
-<p>Within a course, there are multiple requirements to be tracked.</p>
+<p>Section by: <a href="https://github.com/yjskrs">Yijie</a></p>
+</div>
+<div class="paragraph">
+<p><a id="anchor-tag-c"></a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="requirements-feature"><a class="link" href="#requirements-feature">3.4. Requirements Feature</a></h3>
+<div class="paragraph">
+<p>The <code>Requirement</code> feature bridges the connection between a <code>Module</code> and a <code>Course</code>. A <code>Requirement</code> represents
+a category with a set amount of modular credits needed to be fulfilled in order to graduate. By
+adding modules to a <code>Requirement</code>, these modules are tracked under the modular credits needed to fulfill
+the <code>Requirement</code>, as well as the total modular credits needed to fulfill the <code>Course</code>.</p>
+</div>
+<div class="paragraph">
+<p>Multiple requirements can exist in a <code>Course</code>. When all requirements have been fulfilled,
+we indicate that the <code>Course</code> has been completed.</p>
 </div>
 <div class="sect3">
-<h4 id="implementation-8"><a class="link" href="#implementation-8">3.3.1. Implementation</a></h4>
-<div class="imageblock">
+<h4 id="implementation-8"><a class="link" href="#implementation-8">3.4.1. Implementation</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/yjskrs">Yijie</a></p>
+</div>
+<div class="paragraph">
+<p>The <code>Requirement</code> component contains 4 sub-components: <code>RequirementCode</code>, <code>Title</code>, <code>Credits</code> and <code>UniqueModuleList</code>.
+All four sub-components are compulsory and must always be specified in a <code>Requirement</code>. The properties of these four
+sub-components are specified in the table below:</p>
+</div>
+<table id="tableRequirementComponentProperties" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Requirement Component Properties.</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Class Name</th>
+<th class="tableblock halign-left valign-top">Properties</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RequirementCode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <strong>unique</strong> identifier of a requirement.</p>
+<p class="tableblock">Implemented to allow users to easily specify the requirement they want to modify or remove. See <a href="#requirementCodeDesignConsiderations">Requirement Code Design Considerations</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CSF0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The title of a requirement.</p>
+<p class="tableblock">Does not have to be unique.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Computer Science Foundation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Credits</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The credits of a requirement,</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>UniqueModuleList</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of modules assigned to a requirement.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List containing modules CS1101S, CS2101, CS2103T</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>When a <code>Module</code> is added to a <code>Requirement</code>, the <code>UniqueModuleList</code> is updated with the new <code>Module</code>.
+At the same time, the <code>creditsAssigned</code> property of the <code>Credits</code> class also updates accordingly. If
+the <code>Module</code> is completed, the <code>creditsFulfilled</code> property of <code>Credits</code> also updates to add the
+credits of the <code>Module</code>. For example, if a module with 4 modular credits was marked as done and assigned
+to a <code>Requirement</code>, <code>creditsAssigned</code> and <code>creditsFulfilled</code> would both increase by 4.</p>
+</div>
+<div class="paragraph">
+<p>The class diagram below illustrates the relationship between <code>Requirement</code> components.</p>
+</div>
+<div id="requirementClassDiagram" class="imageblock">
 <div class="content">
 <img src="images/developer-guide/RequirementClassDiagram.png" alt="RequirementClassDiagram">
 </div>
 <div class="title">Figure 30. Structure of the Requirement class.</div>
 </div>
 <div class="paragraph">
-<p>A requirement consists of three components: title, credits and unique module list.
-The unique module list implies that each requirement stores modules assigned to that requirement.
-Multiple requirements can exist in the course book at any one time.</p>
-</div>
-<div class="paragraph">
-<p>The requirement-related commands that can be called are:</p>
+<p><code>Requirement</code> commands that are available are:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1640,46 +1706,150 @@ Multiple requirements can exist in the course book at any one time.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Here is how the requirement class updates when a requirement is added:</p>
 </div>
-<div class="imageblock">
+<div class="sect3">
+<h4 id="requirement-add"><a class="link" href="#requirement-add">3.4.2. Requirement Add</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/yjskrs">Yijie</a></p>
+</div>
+<div class="sect4">
+<h5 id="overview-6"><a class="link" href="#overview-6">Overview</a></h5>
+<div class="paragraph">
+<p>The <code>requirement add</code> command adds a <code>Requirement</code> to the <code>Course</code>. The <code>Credits</code> information held by the <code>Course</code>
+is updated to reflect the total modular credits required to complete the course.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="implementation-9"><a class="link" href="#implementation-9">Implementation</a></h5>
+<div class="paragraph">
+<p>When a user enters a <code>requirement add</code> command, the parameters specified by the user, i.e. the requirement title
+and the requirement credits required to fulfill the <code>Requirement</code>, are passed to the <code>LogicManager</code>,
+<code>CourseBookParser</code> and subsequently into the <code>RequirementAddCommandParser</code> where the parameters are extracted
+and parsed into <code>Title</code> and <code>Credits</code> objects.</p>
+</div>
+<div class="paragraph">
+<p>The <code>RequirementCode</code> is generated at this stage by using the first letter of every word in the
+title parameter passed in, upper-cased. For example, if the title provided is "Computer Science Foundation",
+the <code>RequirementCode</code> generated would be <code>CSF</code>. Similarly, if the title provided is "3Computer Science 4Foundation",
+the <code>RequirementCode</code> generated would still be <code>CSF</code> because non-alphabets in the title are ignored.</p>
+</div>
+<div class="paragraph">
+<p>The parsed <code>Title</code>, <code>Credits</code> and the generated <code>RequirementCode</code> are used to create a <code>RequirementAddCommand</code> object,
+which is later executed by the <code>LogicManager</code>, as shown in the
+<a href="#requirementAddSequenceDiagram">Requirement Add Sequence Diagram</a> below.</p>
+</div>
+<div class="paragraph">
+<p>When the command is executed by the <code>LogicManager</code>, the new <code>Requirement</code> is created and
+stored in the <code>CourseBook</code> through the <code>Model</code>.</p>
+</div>
+<div id="requirementAddSequenceDiagram" class="imageblock">
 <div class="content">
 <img src="images/developer-guide/RequirementAddSequenceDiagram.png" alt="RequirementAddSequenceDiagram">
 </div>
 <div class="title">Figure 31. Sequence Diagram when adding a requirement.</div>
 </div>
+</div>
+<div class="sect4">
+<h5 id="design-considerations-4"><a class="link" href="#design-considerations-4">Design Considerations</a></h5>
+<div class="sect5">
+<h6 id="requirementCodeDesignConsiderations"><a class="link" href="#requirementCodeDesignConsiderations">Requirement Code</a></h6>
 <div class="paragraph">
-<p>When the user adds a requirement, the user has to specify two prefixes: <code>n/</code> for title and <code>u/</code> for credits value (number of credits needed to fulfill for the requirement).
-Then, the application proceeds to do the following steps</p>
+<p>Originally, we chose to use the requirement <code>Title</code> as the <strong>unique</strong> identifier for requirements, which means that
+specifying a <code>Requirement</code> to be modified or deleted would be handled by entering the <code>Title</code>. However, we realised
+that that was a big deterrent in users staying on our application in the long run. The reason is because requirement
+titles are generally long, and often require more than one word to be expressed. For example, typing "Computer
+Science Foundation" or "Computer Science Breadth and Depth" every time a module was to be assigned to a requirement
+would require a relatively long time, and would violate our <a href="#nonFunctionalRequirements">Non-Functional Requirement</a>
+of providing users with an application which can be navigated quickly through typing.</p>
 </div>
 <div class="paragraph">
-<p>Step 1: The RequirementAddCommandParser is called to parse the RequirementAddCommand with the <code>n/</code> and the <code>u/</code> prefixes into a new requirement.</p>
+<p>Hence, we chose the design of providing users with a <code>RequirementCode</code>, the <strong>unique</strong> identifier which allows
+users to quickly access the <code>Requirement</code> they want to modify or delete.</p>
 </div>
 <div class="paragraph">
-<p>Step 2: The RequirementAddCommand is executed to add the new requirement to the model. In this step, the following check is performed:</p>
+<p>In order to make the <code>RequirementCode</code> strictly <strong>unique</strong>, further parsing is performed on the <code>RequirementCode</code>
+generated by the <code>RequirementAddCommandParser</code>. When the <code>RequirementAddCommand</code> is executed by the <code>LogicManager</code>,
+a new <code>RequirementCode</code> is generated, as shown in the
+<a href="#requirementAddSequenceDiagram">Requirement Add Sequence Diagram</a>, by appending an integer to the back of
+the original <code>RequirementCode</code>. This is necessary as multiple requirements with the same starting alphabets
+may exist, so we need to allow users to differentiate amongst such requirements. Furthermore, users are also
+allowed to add requirements with the same <code>Title</code> to enhance the flexibility of adding requirements, so the
+<code>RequirementCode</code> also allows users to differentiate amongst these requirements.</p>
 </div>
-<div class="ulist">
-<ul>
+<div class="paragraph">
+<p>The use case for adding a requirement is as follows:</p>
+</div>
+<div class="paragraph">
+<p>System: iGrad</p>
+</div>
+<div class="paragraph">
+<p>Use case: UCR1 - Add requirement</p>
+</div>
+<div class="paragraph">
+<p>Actor: User</p>
+</div>
+<div class="paragraph">
+<p>MSS:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Check if a requirement with the same title already exists in the course book.</p>
+<p>User requests to add a requirement.</p>
 </li>
-</ul>
+<li>
+<p>iGrad requires user to enter a requirement title and credits.</p>
+</li>
+<li>
+<p>User enters the title and credits.</p>
+</li>
+<li>
+<p>iGrad creates the requirement.</p>
+</li>
+<li>
+<p>Use case ends.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>Step 3: The new requirement is added to the course book.</p>
+<p>Extensions:</p>
+</div>
+<div class="paragraph">
+<p>3a. The requirement title is not provided.</p>
+</div>
+<div class="paragraph">
+<p>3a1. iGrad prompts user for requirement title.</p>
+</div>
+<div class="paragraph">
+<p>3a2. User enters a requirement title.</p>
+</div>
+<div class="paragraph">
+<p>Steps 3a1-3a2 are repeated until a valid requirement title is provided.</p>
+</div>
+<div class="paragraph">
+<p>Use case resumes at step 4.</p>
+</div>
+<div class="paragraph">
+<p>Below displays the activity diagram for adding a requirement.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/developer-guide/RequirementAddActivityDiagram.png" alt="RequirementAddActivityDiagram">
+</div>
+<div class="title">Figure 32. Activity Diagram when adding a requirement.</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="requirement-assign"><a class="link" href="#requirement-assign">3.3.2. Requirement Assign</a></h4>
+<h4 id="requirement-assign"><a class="link" href="#requirement-assign">3.4.3. Requirement Assign</a></h4>
 <div class="sect4">
-<h5 id="overview-6"><a class="link" href="#overview-6">Overview</a></h5>
+<h5 id="overview-7"><a class="link" href="#overview-7">Overview</a></h5>
 <div class="paragraph">
 <p>This feature allows <code>Module(s)</code> to be assigned or mapped under a <code>Requirement</code>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="implementation-9"><a class="link" href="#implementation-9">Implementation</a></h5>
+<h5 id="implementation-10"><a class="link" href="#implementation-10">Implementation</a></h5>
 <div class="paragraph">
 <p>We note that as like the <code>module done</code> command, a few pieces of information in the
 <code>coursebook</code> would have to be updated.</p>
@@ -1696,7 +1866,7 @@ at the <code>Model</code> side.</p>
 <div class="content">
 <img src="images/developer-guide/RequirementAssignActivityDiagram.png" alt="RequirementAssignActivityDiagram">
 </div>
-<div class="title">Figure 32. Activity Diagram when assigning modules under a requirement.</div>
+<div class="title">Figure 33. Activity Diagram when assigning modules under a requirement.</div>
 </div>
 <div class="paragraph">
 <p>Hence as per the diagram, we observe that modules are assigned to a <code>Requirement</code>
@@ -1717,18 +1887,18 @@ on the following two conditions:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="export-feature"><a class="link" href="#export-feature">3.4. Export Feature</a></h3>
+<h3 id="export-feature"><a class="link" href="#export-feature">3.5. Export Feature</a></h3>
 <div class="paragraph">
 <p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
 </div>
 <div class="sect3">
-<h4 id="overview-7"><a class="link" href="#overview-7">3.4.1. Overview</a></h4>
+<h4 id="overview-8"><a class="link" href="#overview-8">3.5.1. Overview</a></h4>
 <div class="paragraph">
 <p>The export feature allows the user to export their data into a .csv file.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="implementation-10"><a class="link" href="#implementation-10">3.4.2. Implementation</a></h4>
+<h4 id="implementation-11"><a class="link" href="#implementation-11">3.5.2. Implementation</a></h4>
 <div class="paragraph">
 <p>The export feature is facilitated by the <code>CsvWriter</code>. The <code>ExportCommand</code> calls <code>exportModuleList()</code> on <code>ModelManager</code>,
 which then performs a filter on the <code>filteredList</code> of modules in order to filter out all modules where the <code>Optional&lt;Semester&gt;</code> object
@@ -1738,19 +1908,19 @@ which then performs a filter on the <code>filteredList</code> of modules in orde
 <p>The <code>ModelManager</code> allows for <code>write()</code> to be called on <code>CsvWriter</code> only if the <code>filteredList</code> has at least one module.</p>
 </div>
 <div class="paragraph">
-<p><a href="#exportSequenceDiagram">Figure 33, &#8220;Export Sequence Diagram&#8221;</a> shows the process of exporting modules with semesters:</p>
+<p><a href="#exportSequenceDiagram">Figure 34, &#8220;Export Sequence Diagram&#8221;</a> shows the process of exporting modules with semesters:</p>
 </div>
 <div id="exportSequenceDiagram" class="imageblock">
 <div class="content">
 <img src="images/developer-guide/ExportSequenceDiagram.png" alt="ExportSequenceDiagram">
 </div>
-<div class="title">Figure 33. Export Sequence Diagram</div>
+<div class="title">Figure 34. Export Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Once the <code>CsvWriter</code> returns from <code>write()</code>, a file titled <em>study_plan.csv</em> will be created in the top-level directory.</p>
 </div>
 <div class="paragraph">
-<p>The top-level directory has two states concerning the generated file (see <a href="#exportStateDiagram">Figure 34, &#8220;Export State Diagram&#8221;</a>):</p>
+<p>The top-level directory has two states concerning the generated file (see <a href="#exportStateDiagram">Figure 35, &#8220;Export State Diagram&#8221;</a>):</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1780,7 +1950,7 @@ which then performs a filter on the <code>filteredList</code> of modules in orde
 <div class="content">
 <img src="images/developer-guide/ExportStateDiagram.png" alt="ExportStateDiagram">
 </div>
-<div class="title">Figure 34. Export State Diagram</div>
+<div class="title">Figure 35. Export State Diagram</div>
 </div>
 <div class="paragraph">
 <p>As seen in the figure, it is only possible to revert the state i.e. from Non-empty State to Empty State, by externally
@@ -1791,7 +1961,7 @@ deleting the file.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.4.3. Design Considerations</a></h4>
+<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.5.3. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>Writing and Reading Issues</strong></p>
 </div>
@@ -1803,18 +1973,18 @@ for the user to close the file and issuing the command again.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undo-feature"><a class="link" href="#undo-feature">3.5. Undo Feature</a></h3>
+<h3 id="undo-feature"><a class="link" href="#undo-feature">3.6. Undo Feature</a></h3>
 <div class="paragraph">
 <p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
 </div>
 <div class="sect3">
-<h4 id="overview-8"><a class="link" href="#overview-8">3.5.1. Overview</a></h4>
+<h4 id="overview-9"><a class="link" href="#overview-9">3.6.1. Overview</a></h4>
 <div class="paragraph">
 <p>The undo feature allows for the prior state of a <code>courseBook</code> to be saved and loaded from when needed.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="implementation-11"><a class="link" href="#implementation-11">3.5.2. Implementation</a></h4>
+<h4 id="implementation-12"><a class="link" href="#implementation-12">3.6.2. Implementation</a></h4>
 <div class="paragraph">
 <p>The undo mechanism is facilitated by the <code>ModelManager</code> and the <code>LogicManager</code>.</p>
 </div>
@@ -1886,7 +2056,7 @@ backup if another command is issued.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.5.3. Design Considerations</a></h4>
+<h4 id="design-considerations-6"><a class="link" href="#design-considerations-6">3.6.3. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>How undo executes</strong></p>
 </div>
@@ -1938,13 +2108,13 @@ users would require are limited to a degree which will not require large memory 
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.6. [Proposed] Data Encryption</a></h3>
+<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.7. [Proposed] Data Encryption</a></h3>
 <div class="paragraph">
 <p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.7. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.8. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging.
 The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
@@ -1952,7 +2122,7 @@ The <code>LogsCenter</code> class is used to manage the logging levels and loggi
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.8, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.9, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -1983,7 +2153,7 @@ The <code>LogsCenter</code> class is used to manage the logging levels and loggi
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.8. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.9. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -2192,7 +2362,10 @@ The <code>LogsCenter</code> class is used to manage the logging levels and loggi
 <h2 id="use-cases"><a class="link" href="#use-cases">Appendix C: Use Cases</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>(For all use cases below, the <strong>System</strong> is <code>iGrad</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
+<p>Section by: <a href="https://github.com/yjskrs">Yijie</a></p>
+</div>
+<div class="paragraph">
+<p>(For all use cases below, the <strong>System</strong> is <code>iGrad</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise.)</p>
 </div>
 <h3 id="use-case-u01-create-course" class="discrete">Use case: U01 - Create Course</h3>
 <div class="paragraph">
@@ -2403,13 +2576,10 @@ Module has already been assigned to the requirement.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="non-functional-requirements"><a class="link" href="#non-functional-requirements">Appendix D: Non Functional Requirements</a></h2>
+<h2 id="nonFunctionalRequirements"><a class="link" href="#nonFunctionalRequirements">7. Non Functional Requirements</a></h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -2433,7 +2603,7 @@ Module has already been assigned to the requirement.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="glossary"><a class="link" href="#glossary">Appendix E: Glossary</a></h2>
+<h2 id="glossary"><a class="link" href="#glossary">Appendix D: Glossary</a></h2>
 <div class="sectionbody">
 <div id="mainstream-os" class="dlist">
 <dl>
@@ -2454,44 +2624,7 @@ Module has already been assigned to the requirement.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="product-survey"><a class="link" href="#product-survey">Appendix F: Product Survey</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Product Name</strong></p>
-</div>
-<div class="paragraph">
-<p>Author: &#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>Pros:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Cons:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="instructions-for-manual-testing"><a class="link" href="#instructions-for-manual-testing">Appendix G: Instructions for Manual Testing</a></h2>
+<h2 id="instructions-for-manual-testing"><a class="link" href="#instructions-for-manual-testing">Appendix E: Instructions for Manual Testing</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Given below are instructions to test the app manually.</p>
@@ -2509,7 +2642,7 @@ These instructions only provide a starting point for testers to work on; testers
 </table>
 </div>
 <div class="sect2">
-<h3 id="launch-and-shutdown"><a class="link" href="#launch-and-shutdown">G.1. Launch and Shutdown</a></h3>
+<h3 id="launch-and-shutdown"><a class="link" href="#launch-and-shutdown">E.1. Launch and Shutdown</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2545,7 +2678,7 @@ Expected: Shows the GUI with a set of sample contacts. The window size may not b
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-module"><a class="link" href="#deleting-a-module">G.2. Deleting a module</a></h3>
+<h3 id="deleting-a-module"><a class="link" href="#deleting-a-module">E.2. Deleting a module</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2576,12 +2709,9 @@ Expected: Similar to previous.</p>
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
-</div>
 </div>
 <div class="sect2">
-<h3 id="saving-data"><a class="link" href="#saving-data">G.3. Saving data</a></h3>
+<h3 id="saving-data"><a class="link" href="#saving-data">E.3. Saving data</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2589,8 +2719,7 @@ Expected: Similar to previous.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p><em>{explain how to simulate a missing/corrupted file and the expected behavior}</em>
-<em>{ more test cases &#8230;&#8203; }</em></p>
+<p><em>{explain how to simulate a missing/corrupted file and the expected behavior}</em></p>
 </li>
 </ol>
 </div>
@@ -2599,4 +2728,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:35:35 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:37:22 UTC</div></div></div></body></html>
