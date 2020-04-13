@@ -37,6 +37,9 @@
 <li><a href="#course-feature">3.1. Course Feature</a>
 <ul class="sectlevel3">
 <li><a href="#implementation-2">3.1.1. Implementation</a></li>
+<li><a href="#semesters">3.1.2. Semesters</a></li>
+<li><a href="#course-edit">3.1.3. Course Edit</a></li>
+<li><a href="#course-achieve">3.1.4. Course Achieve</a></li>
 </ul>
 </li>
 <li><a href="#module-feature">3.2. Module Feature</a>
@@ -48,21 +51,21 @@
 </li>
 <li><a href="#requirements-feature">3.3. Requirements Feature</a>
 <ul class="sectlevel3">
-<li><a href="#implementation-5">3.3.1. Implementation</a></li>
+<li><a href="#implementation-7">3.3.1. Implementation</a></li>
 </ul>
 </li>
 <li><a href="#export-feature">3.4. Export Feature</a>
 <ul class="sectlevel3">
-<li><a href="#overview-3">3.4.1. Overview</a></li>
-<li><a href="#implementation-6">3.4.2. Implementation</a></li>
-<li><a href="#design-considerations-3">3.4.3. Design Considerations</a></li>
+<li><a href="#overview-5">3.4.1. Overview</a></li>
+<li><a href="#implementation-8">3.4.2. Implementation</a></li>
+<li><a href="#design-considerations-4">3.4.3. Design Considerations</a></li>
 </ul>
 </li>
 <li><a href="#undo-feature">3.5. Undo Feature</a>
 <ul class="sectlevel3">
-<li><a href="#overview-4">3.5.1. Overview</a></li>
-<li><a href="#implementation-7">3.5.2. Implementation</a></li>
-<li><a href="#design-considerations-4">3.5.3. Design Considerations</a></li>
+<li><a href="#overview-6">3.5.1. Overview</a></li>
+<li><a href="#implementation-9">3.5.2. Implementation</a></li>
+<li><a href="#design-considerations-5">3.5.3. Design Considerations</a></li>
 </ul>
 </li>
 <li><a href="#proposed-data-encryption">3.6. [Proposed] Data Encryption</a></li>
@@ -657,8 +660,8 @@ An example of how such a model may look like is given below.<br>
 <div class="title">Figure 12. Structure of CourseInfo Class</div>
 </div>
 <div class="paragraph">
-<p>A course consists of three information: Name, CAP, and SemsLeft. One course should only have one name,
-and one CAP.</p>
+<p>A course consists of four information: Name, Cap, Credits and Semesters. One course should only have one name,
+one Cap, one Credits and one Semesters.</p>
 </div>
 <div class="paragraph">
 <p>The course related commands that can be called are:</p>
@@ -676,29 +679,184 @@ and one CAP.</p>
 </li>
 </ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="semesters"><a class="link" href="#semesters">3.1.2. Semesters</a></h4>
 <div class="paragraph">
-<p>Here is how the courseInfo class updates when name of course is edited:</p>
+<p>Section by: <a href="https://github.com/teriaiw">Teri</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/developer-guide/CourseSemestersClassDiagram.png" alt="CourseSemestersClassDiagram">
+</div>
+<div class="title">Figure 13. Course Semesters Class Diagram</div>
+</div>
+<div class="paragraph">
+<p><code>Semesters</code> stores the total semesters and remaining semesters that a user has in the course.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Semesters</code> is first initialized when user does command <code>course set</code>. <code>totalSemesters</code> will be equal to
+<code>remainingSemesters</code> as user has not entered any other data to indicate completion of semesters.</p>
+</li>
+<li>
+<p><code>Semesters</code> is updated through method <code>computeSemesters</code> in <code>CourseInfo</code>.</p>
+</li>
+<li>
+<p><code>totalSemesters</code> is changed by user through the command <code>course edit</code>.</p>
+</li>
+<li>
+<p><code>remainingSemesters</code> is computed by method <code>computeRemainingSemesters</code>. This method uses the <code>moduleList</code>
+to check for <code>module</code> that has <code>Semester</code> and <code>Grade</code>. The <code>module</code> which fulfils the mentioned and has the latest
+<code>Semester</code> will be taken as the latest completed semester.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="course-edit"><a class="link" href="#course-edit">3.1.3. Course Edit</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/teriaiw">Teri</a></p>
+</div>
+<div class="sect4">
+<h5 id="overview"><a class="link" href="#overview">Overview</a></h5>
+<div class="paragraph">
+<p>Users can edit their course info, which are <code>Name</code> and <code>Semesters</code> by using the <code>course edit</code> command.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="implementation-3"><a class="link" href="#implementation-3">Implementation</a></h5>
+<div class="paragraph">
+<p>Here is how the courseInfo class updates when name of course is edited.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/developer-guide/CourseEditSequenceDiagram.png" alt="CourseEditSequenceDiagram">
 </div>
-<div class="title">Figure 13. Sequence Diagram when editing course name.</div>
+<div class="title">Figure 14. Sequence Diagram when editing course name and course semesters.</div>
 </div>
 <div class="paragraph">
-<p>When a user edits name of a course, the user has to specify the prefix <code>/n</code> for name.
+<p>When a user edits name of a course, the user has to specify the prefix <code>n/</code> for <code>Name</code> or <code>s/</code> prefix
+for <code>Semesters</code>.
 Then the application proceeds to do the following steps:</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The <code>CourseEditCommandParser</code> is called to parse the <code>CourseEditCommand</code> with the <code>n/</code> and <code>s/</code> prefix.</p>
+</li>
+<li>
+<p>The <code>CourseEditCommand</code> is executed and calls <code>setCourseInfo</code> to <code>Model</code>.</p>
+</li>
+<li>
+<p><code>Model</code> calls the same method <code>setCourseInfo</code> to <code>CourseBook</code>.</p>
+</li>
+<li>
+<p>The new course <code>Name</code> and course <code>Semesters</code> is set in the <code>CourseBook</code>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="course-achieve"><a class="link" href="#course-achieve">3.1.4. Course Achieve</a></h4>
 <div class="paragraph">
-<p>Step 1: The CourseEditCommandParser is called to parse the CourseEditCommand with the n/ prefix.</p>
+<p>Section by: <a href="https://github.com/teriaiw">Teri</a></p>
+</div>
+<div class="sect4">
+<h5 id="overview-2"><a class="link" href="#overview-2">Overview</a></h5>
+<div class="paragraph">
+<p>Users can get an automatic calculation of their desired C.A.P. by using the <code>course achieve</code> command and
+entering their desired <code>Cap</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="implementation-4"><a class="link" href="#implementation-4">Implementation</a></h5>
+<div class="paragraph">
+<p>The computation of C.A.P. is done through <code>computeEstimatedCap</code> in <code>courseInfo</code> which uses <code>Semesters</code>
+and <code>Cap</code> of <code>courseInfo</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/developer-guide/CourseAchieveSequenceDiagram.png" alt="CourseAchieveSequenceDiagram">
+</div>
+<div class="title">Figure 15. Course Achieve Sequence Diagram</div>
 </div>
 <div class="paragraph">
-<p>Step 2: The CourseEditCommand is executed to set the new course name to the model.</p>
+<p>When a user wants to calculate achievable C.A.P., the user has to specify the prefix <code>c/</code> for <code>Cap</code>.
+Then the application proceeds to do the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The <code>CourseAchieveCommandParser</code> is called to parse the <code>CourseAchieveCommand</code> with the <code>c/</code> prefix.</p>
+</li>
+<li>
+<p>The <code>CourseAchieveCommand</code> is executed and it calls method <code>getCourseInfo</code> in <code>Model</code> to get <code>CourseInfo</code>.</p>
+</li>
+<li>
+<p>With the <code>CourseInfo</code> and <code>Cap</code>, <code>CourseAchieveCommand</code> calls method <code>calculateEstimatedCap</code> in <code>CourseInfo</code>.</p>
+</li>
+<li>
+<p><code>CourseInfo</code> calls method <code>getSemesters</code> and <code>getCap</code> to itself to get the following information:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p><code>Semesters</code></p>
+</li>
+<li>
+<p><code>Cap</code></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><code>computeEstimmatedCap</code> computes and returns estimate <code>Cap</code>.</p>
+</li>
+<li>
+<p>The result is passed back to the user.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect4">
+<h5 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h5>
+<div class="paragraph">
+<p><strong>Invalid and Unachievable C.A.P.</strong></p>
 </div>
 <div class="paragraph">
-<p>Step 3: The new course name is set in the course book.</p>
+<p>It is possible that a calculated <code>Cap</code> to achieve is not a valid <code>Cap</code>. In such situations, an exception is
+thrown within the <code>computeEstimatedCap</code> command and it is caught in the <code>CourseAchieveCommand</code>. User will be
+given feedback that the desired C.A.P. is not achievable.</p>
+</div>
+<div class="paragraph">
+<p>The figure below illustrates this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/developer-guide/CourseAchieveActivityDiagram.png" alt="CourseAchieveActivityDiagram">
+</div>
+<div class="title">Figure 16. Course Achieve Activity Diagram</div>
+</div>
+<div class="paragraph">
+<p>Therefore, there are three types of result displayed to User:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>When User enters invalid Cap to achieve</p>
+</li>
+<li>
+<p>When computed Cap is invalid</p>
+</li>
+<li>
+<p>When computed Cap is valid</p>
+</li>
+</ol>
 </div>
 <hr>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -791,19 +949,19 @@ to be the current semester.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><a href="#moduleClassDiagram">Figure 14, &#8220;Module Class Diagram&#8221;</a> illustrates the relation between the various classes:</p>
+<p><a href="#moduleClassDiagram">Figure 17, &#8220;Module Class Diagram&#8221;</a> illustrates the relation between the various classes:</p>
 </div>
 <div id="moduleClassDiagram" class="imageblock">
 <div class="content">
 <img src="images/developer-guide/ModuleClassDiagram.png" alt="ModuleClassDiagram">
 </div>
-<div class="title">Figure 14. Module Class Diagram</div>
+<div class="title">Figure 17. Module Class Diagram</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="module-add-auto"><a class="link" href="#module-add-auto">3.2.2. Module Add Auto</a></h4>
 <div class="sect4">
-<h5 id="overview"><a class="link" href="#overview">Overview</a></h5>
+<h5 id="overview-3"><a class="link" href="#overview-3">Overview</a></h5>
 <div class="paragraph">
 <p>The "automatic" addition of <code>modules</code> allows users to add up to 10 <code>modules</code> at once with all non-optional values filled in.
 This is done by making a HTTP GET request to the <a href="https://api.nusmods.com/">NUSMods API</a> and fetching the module data
@@ -811,7 +969,7 @@ given in a JSON format.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="implementation-3"><a class="link" href="#implementation-3">Implementation</a></h5>
+<h5 id="implementation-5"><a class="link" href="#implementation-5">Implementation</a></h5>
 <div class="paragraph">
 <p>The automatic filling in of <code>module</code> details on addition of a new <code>module</code> is facilitated by <code>NusModsRequester</code>.
 It creates a new instance of <code>GetRequestManager</code> which it relies on to make a request to the <a href="https://api.nusmods.com/">NUSMods API</a>.
@@ -880,17 +1038,17 @@ the data provided is not in a standard format
 to the <code>courseBook</code> via the method <code>addModule</code> of the <code>ModelManager</code>.</p>
 </div>
 <div class="paragraph">
-<p><a href="#moduleAddAutoSequenceDiagram">Figure 15, &#8220;Module Add Auto Sequence Diagram&#8221;</a> illustrates this:</p>
+<p><a href="#moduleAddAutoSequenceDiagram">Figure 18, &#8220;Module Add Auto Sequence Diagram&#8221;</a> illustrates this:</p>
 </div>
 <div id="moduleAddAutoSequenceDiagram" class="imageblock">
 <div class="content">
 <img src="images/developer-guide/ModuleAddAutoSequenceDiagram.png" alt="ModuleAddAutoSequenceDiagram">
 </div>
-<div class="title">Figure 15. Module Add Auto Sequence Diagram</div>
+<div class="title">Figure 18. Module Add Auto Sequence Diagram</div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h5>
+<h5 id="design-considerations-2"><a class="link" href="#design-considerations-2">Design Considerations</a></h5>
 <div class="paragraph">
 <p>Most of the design considerations arose as a result of having to make a network request.</p>
 </div>
@@ -976,7 +1134,7 @@ he wishes to add.</p>
 <div class="content">
 <img src="images/developer-guide/ModuleAutoAddUseCaseDiagram.png" alt="ModuleAutoAddUseCaseDiagram">
 </div>
-<div class="title">Figure 16. Module Auto Add Use Case Diagram</div>
+<div class="title">Figure 19. Module Auto Add Use Case Diagram</div>
 </div>
 <hr>
 <div class="paragraph">
@@ -992,7 +1150,7 @@ generation of error and warning messages were done in parallel. This was because
 <div class="content">
 <img src="images/developer-guide/ModuleAddAutoBatchActivityDiagram.png" alt="ModuleAddAutoBatchActivityDiagram">
 </div>
-<div class="title">Figure 17. Module Add Auto Batch Processing</div>
+<div class="title">Figure 20. Module Add Auto Batch Processing</div>
 </div>
 <div class="paragraph">
 <p><strong>Improving the user experience [PROPOSED]</strong></p>
@@ -1015,7 +1173,7 @@ attempt to get the <code>module</code> for the current academic year, whilst the
 the <code>module</code> for the previous academic year, in the event the module for the current academic year was not available.</p>
 </div>
 <div class="paragraph">
-<p>This process is illustrated in <a href="#previousImplementationOfModuleAddAuto">Figure 18, &#8220;Previous implementation of Module Add Auto&#8221;</a>. However, it was decided
+<p>This process is illustrated in <a href="#previousImplementationOfModuleAddAuto">Figure 21, &#8220;Previous implementation of Module Add Auto&#8221;</a>. However, it was decided
 that the benefits of making a maximum of one request outweighed that of getting the latest module information and thus,
 currently only one request is made.</p>
 </div>
@@ -1023,14 +1181,14 @@ currently only one request is made.</p>
 <div class="content">
 <img src="images/developer-guide/ModuleAddAutoActivityDiagram.png" alt="ModuleAddAutoActivityDiagram">
 </div>
-<div class="title">Figure 18. Previous implementation of Module Add Auto</div>
+<div class="title">Figure 21. Previous implementation of Module Add Auto</div>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="module-filter"><a class="link" href="#module-filter">3.2.3. Module Filter</a></h4>
 <div class="sect4">
-<h5 id="overview-2"><a class="link" href="#overview-2">Overview</a></h5>
+<h5 id="overview-4"><a class="link" href="#overview-4">Overview</a></h5>
 <div class="paragraph">
 <p>The average number of <code>modules</code> a student has for a 4 year program in NUS is 40. The application window, however, can display
 a maximum of 9 <code>modules</code> for a 17" screen and considerably less for smaller displays. As a result, it is imperative that users have
@@ -1038,7 +1196,7 @@ a way to filter <code>modules</code> so that only what is required is displayed.
 </div>
 </div>
 <div class="sect4">
-<h5 id="implementation-4"><a class="link" href="#implementation-4">Implementation</a></h5>
+<h5 id="implementation-6"><a class="link" href="#implementation-6">Implementation</a></h5>
 <div class="paragraph">
 <p>The filtering of modules is done by calling the <code>execute</code> function of <code>ModuleFilterCommand</code>.<code>ModuleFilterCommand</code> takes in
 optional parameters <code>Semester</code>, <code>Credits</code>, <code>Grade</code> and an operator, which could be <code>AND</code> or <code>OR</code>.</p>
@@ -1055,18 +1213,18 @@ the other two functions, <code>checkCreditsMatch(Module m)</code> does not check
 <p>The <code>OR</code> operator specifies that provided parameters be chained with the logical <em>or</em> operator.</p>
 </div>
 <div class="paragraph">
-<p>When the filter command is issued, the <code>Model</code> updates the module list based on the predicate given. <a href="#moduleFilterSequenceDiagram">Figure 19, &#8220;Module Filter Sequence Diagram&#8221;</a>
+<p>When the filter command is issued, the <code>Model</code> updates the module list based on the predicate given. <a href="#moduleFilterSequenceDiagram">Figure 22, &#8220;Module Filter Sequence Diagram&#8221;</a>
 illustrates this sequence of events:</p>
 </div>
 <div id="moduleFilterSequenceDiagram" class="imageblock">
 <div class="content">
 <img src="images/developer-guide/ModuleFilterSequenceDiagram.png" alt="ModuleFilterSequenceDiagram">
 </div>
-<div class="title">Figure 19. Module Filter Sequence Diagram</div>
+<div class="title">Figure 22. Module Filter Sequence Diagram</div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="design-considerations-2"><a class="link" href="#design-considerations-2">Design Considerations</a></h5>
+<h5 id="design-considerations-3"><a class="link" href="#design-considerations-3">Design Considerations</a></h5>
 <div class="paragraph">
 <p><strong>Resetting the state</strong></p>
 </div>
@@ -1083,16 +1241,16 @@ make the user experience more complicated than it should be.</p>
 the way other functions handled the situation of empty parameters.</p>
 </div>
 <div class="paragraph">
-<p><a href="#moduleFilterActivityDiagram">Figure 20, &#8220;Module Filter Activity Diagram&#8221;</a> illustrates this clearly:</p>
+<p><a href="#moduleFilterActivityDiagram">Figure 23, &#8220;Module Filter Activity Diagram&#8221;</a> illustrates this clearly:</p>
 </div>
 <div id="moduleFilterActivityDiagram" class="imageblock">
 <div class="content">
 <img src="images/developer-guide/ModuleFilterActivityDiagram.png" alt="ModuleFilterActivityDiagram">
 </div>
-<div class="title">Figure 20. Module Filter Activity Diagram</div>
+<div class="title">Figure 23. Module Filter Activity Diagram</div>
 </div>
 <div class="paragraph">
-<p>The <code>filteredList</code> of <code>modules</code> therefore takes three general states (see <a href="#moduleFilterStateDiagram">Figure 21, &#8220;Module Filter State Diagram&#8221;</a>):</p>
+<p>The <code>filteredList</code> of <code>modules</code> therefore takes three general states (see <a href="#moduleFilterStateDiagram">Figure 24, &#8220;Module Filter State Diagram&#8221;</a>):</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1122,7 +1280,7 @@ chained together with the logical <em>or</em> operator</p>
 <div class="content">
 <img src="images/developer-guide/ModuleFilterStateDiagram.png" alt="ModuleFilterStateDiagram">
 </div>
-<div class="title">Figure 21. Module Filter State Diagram</div>
+<div class="title">Figure 24. Module Filter State Diagram</div>
 </div>
 <div class="paragraph">
 <p><strong>Displaying Filter State [PROPOSED]</strong></p>
@@ -1142,12 +1300,12 @@ it would be an improvement to display the current state prominently to the user.
 <p>Within a course, there are multiple requirements to be tracked.</p>
 </div>
 <div class="sect3">
-<h4 id="implementation-5"><a class="link" href="#implementation-5">3.3.1. Implementation</a></h4>
+<h4 id="implementation-7"><a class="link" href="#implementation-7">3.3.1. Implementation</a></h4>
 <div class="imageblock">
 <div class="content">
 <img src="images/developer-guide/RequirementClassDiagram.png" alt="RequirementClassDiagram">
 </div>
-<div class="title">Figure 22. Structure of the Requirement class.</div>
+<div class="title">Figure 25. Structure of the Requirement class.</div>
 </div>
 <div class="paragraph">
 <p>A requirement consists of three components: title, credits and unique module list.
@@ -1180,7 +1338,7 @@ Multiple requirements can exist in the course book at any one time.</p>
 <div class="content">
 <img src="images/developer-guide/RequirementAddSequenceDiagram.png" alt="RequirementAddSequenceDiagram">
 </div>
-<div class="title">Figure 23. Sequence Diagram when adding a requirement.</div>
+<div class="title">Figure 26. Sequence Diagram when adding a requirement.</div>
 </div>
 <div class="paragraph">
 <p>When the user adds a requirement, the user has to specify two prefixes: <code>n/</code> for title and <code>u/</code> for credits value (number of credits needed to fulfill for the requirement).
@@ -1208,13 +1366,13 @@ Then, the application proceeds to do the following steps</p>
 <div class="sect2">
 <h3 id="export-feature"><a class="link" href="#export-feature">3.4. Export Feature</a></h3>
 <div class="sect3">
-<h4 id="overview-3"><a class="link" href="#overview-3">3.4.1. Overview</a></h4>
+<h4 id="overview-5"><a class="link" href="#overview-5">3.4.1. Overview</a></h4>
 <div class="paragraph">
 <p>The export feature allows the user to export their data into a .csv file.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="implementation-6"><a class="link" href="#implementation-6">3.4.2. Implementation</a></h4>
+<h4 id="implementation-8"><a class="link" href="#implementation-8">3.4.2. Implementation</a></h4>
 <div class="paragraph">
 <p>The export feature is facilitated by the <code>CsvWriter</code>. The <code>ExportCommand</code> calls <code>exportModuleList()</code> on <code>ModelManager</code>,
 which then performs a filter on the <code>filteredList</code> of modules in order to filter out all modules where the <code>Optional&lt;Semester&gt;</code> object
@@ -1224,19 +1382,19 @@ which then performs a filter on the <code>filteredList</code> of modules in orde
 <p>The <code>ModelManager</code> allows for <code>write()</code> to be called on <code>CsvWriter</code> only if the <code>filteredList</code> has at least one module.</p>
 </div>
 <div class="paragraph">
-<p><a href="#exportSequenceDiagram">Figure 24, &#8220;Export Sequence Diagram&#8221;</a> shows the process of exporting modules with semesters:</p>
+<p><a href="#exportSequenceDiagram">Figure 27, &#8220;Export Sequence Diagram&#8221;</a> shows the process of exporting modules with semesters:</p>
 </div>
 <div id="exportSequenceDiagram" class="imageblock">
 <div class="content">
 <img src="images/developer-guide/ExportSequenceDiagram.png" alt="ExportSequenceDiagram">
 </div>
-<div class="title">Figure 24. Export Sequence Diagram</div>
+<div class="title">Figure 27. Export Sequence Diagram</div>
 </div>
 <div class="paragraph">
 <p>Once the <code>CsvWriter</code> returns from <code>write()</code>, a file titled <em>study_plan.csv</em> will be created in the top-level directory.</p>
 </div>
 <div class="paragraph">
-<p>The top-level directory has two states concerning the generated file (see <a href="#exportStateDiagram">Figure 25, &#8220;Export State Diagram&#8221;</a>):</p>
+<p>The top-level directory has two states concerning the generated file (see <a href="#exportStateDiagram">Figure 28, &#8220;Export State Diagram&#8221;</a>):</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1266,7 +1424,7 @@ which then performs a filter on the <code>filteredList</code> of modules in orde
 <div class="content">
 <img src="images/developer-guide/ExportStateDiagram.png" alt="ExportStateDiagram">
 </div>
-<div class="title">Figure 25. Export State Diagram</div>
+<div class="title">Figure 28. Export State Diagram</div>
 </div>
 <div class="paragraph">
 <p>As seen in the figure, it is only possible to revert the state i.e. from Non-empty State to Empty State, by externally
@@ -1277,7 +1435,7 @@ deleting the file.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.4.3. Design Considerations</a></h4>
+<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.4.3. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>Writing and Reading Issues</strong></p>
 </div>
@@ -1291,13 +1449,13 @@ for the user to close the file and issuing the command again.</p>
 <div class="sect2">
 <h3 id="undo-feature"><a class="link" href="#undo-feature">3.5. Undo Feature</a></h3>
 <div class="sect3">
-<h4 id="overview-4"><a class="link" href="#overview-4">3.5.1. Overview</a></h4>
+<h4 id="overview-6"><a class="link" href="#overview-6">3.5.1. Overview</a></h4>
 <div class="paragraph">
 <p>The undo feature allows for the prior state of a <code>courseBook</code> to be saved and loaded from when needed.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="implementation-7"><a class="link" href="#implementation-7">3.5.2. Implementation</a></h4>
+<h4 id="implementation-9"><a class="link" href="#implementation-9">3.5.2. Implementation</a></h4>
 <div class="paragraph">
 <p>The undo mechanism is facilitated by the <code>ModelManager</code> and the <code>LogicManager</code>.</p>
 </div>
@@ -1369,7 +1527,7 @@ backup if another command is issued.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.5.3. Design Considerations</a></h4>
+<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.5.3. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>How undo executes</strong></p>
 </div>
@@ -2082,4 +2240,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-12 16:45:39 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 08:47:14 UTC</div></div></div></body></html>
