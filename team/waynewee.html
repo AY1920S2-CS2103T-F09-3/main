@@ -3,12 +3,7 @@
 <link rel="stylesheet" href="./coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="../index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">iGrad</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103T-F09-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Wayne Wee - Project Portfolio</h1></div><div id="content"><div class="sect1">
 <h2 id="project-igrad"><a class="link" href="#project-igrad">PROJECT: iGrad</a></h2>
 <div class="sectionbody">
-<hr>
-<div class="imageblock">
-<div class="content">
-<img src="../images/Ui.png" alt="Ui">
-</div>
-</div>
+
 </div>
 </div>
 <div class="sect1">
@@ -188,6 +183,7 @@ for exchange programme, leave of absence and internship applications.</p>
 </li>
 </ul>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect1">
@@ -203,216 +199,18 @@ for exchange programme, leave of absence and internship applications.</p>
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="module"><a class="link" href="#module">Module</a></h3>
-<div class="paragraph">
-<p>This section details each command used to manipulate modules. All module commands begin with the identifier
-<code>module</code> followed by the action e.g. <code>add</code>.</p>
-</div>
-<div class="paragraph">
-<p>All modules use the same parameters, listed in the table below:</p>
-</div>
-<table id="tableModuleParameters" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Module Parameters</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Example</th>
-<th class="tableblock halign-left valign-top">Restrictions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MODULE_CODE</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A module&#8217;s unique identifier</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CS2103T</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Must have two letters in the front, four numbers in the middle with an optional letter at the back</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MODULE_TITLE</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A module&#8217;s title</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Software Engineering</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MODULE_CREDITS</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The number of <a href="http://www.nus.edu.sg/registrar/academic-information-policies/graduate/modular-system">modular credits</a> a module is worth</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Must be a number</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SEMESTER</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An academic semester. There are two semesters in a year</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Y1S1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Must be in the format Y?S* where ? represents a digit from 0 - 4 and * represents a digit from 1 -2</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>GRADE</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A module&#8217;s grade</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A+</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Must be one of the following:  A+, A, A-, B+, B-, C+, C, D, D+, F, S, U</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>If, when issuing a command, the parameter restrictions are not strictly adhered to,
-you might come across some common errors.
-The following errors are generic and may be encountered when dealing with any module command:</p>
-</div>
-<table id="tableModuleParametersErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Module Parameters Error Reference</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Parameter</th>
-<th class="tableblock halign-left valign-top">Error Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MODULE_CODE</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Module Code</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MODULE_CREDITS</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Module Credits</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SEMESTER</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Semester</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>GRADE</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Grade</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>These errors can all be resolved by adhering to the restrictions detailed in <a href="#tableModuleParameters">Module Parameters</a></p>
-</div>
-<div class="sect3">
-<h4 id="ModuleAddCommand"><a class="link" href="#ModuleAddCommand">Module Add</a></h4>
-<div class="paragraph">
-<p>This command adds a module to the module list.</p>
-</div>
-<table id="ModuleAddQuickReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 3. Module Add Quick Reference</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Adds a module</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>module add n/MODULE_CODE t/MODULE_TITLE u/MODULE_CREDITS [s/SEMESTER]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>module add n/CS2103T t/Software Engineering u/4 s/Y1S1</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>How it Works</strong></p>
-</div>
-<div class="paragraph">
-<p>When you type in this command, we take the given values for the <code>MODULE_CODE</code>, <code>MODULE_TITLE</code>, <code>MODULE_CREDITS</code> and optionally, the <code>SEMESTER</code>,
-and fill in those fields. We do not check if the given <code>MODULE_CODE</code> or <code>MODULE_TITLE</code> refer to actual modules offered by NUS. However, the restrictions stated in the module parameters table still apply.</p>
-</div>
-<div class="paragraph">
-<p><a href="#ModuleAddErrorReference">Module Add Error Reference</a> lists errors you might encounter after issuing this command:</p>
-</div>
-<table id="ModuleAddErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 4. Module Add Error Reference</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Explanation</th>
-<th class="tableblock halign-left valign-top">Solution</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Duplicate Module Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Duplicate Detected</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to add already exists in the module list</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delete the existing module in the list and try again</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Tutorial</strong></p>
-</div>
-<div class="paragraph">
-<p>Follow these steps to get a clearer idea of how this command works</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-For this tutorial, actual values will be given instead of placeholders. Undo or Delete objects created from this tutorial by using the appropriate commands
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Check that you do not have the modules with <code>MODULE_CODE</code> CS2103T and CS2101 in your list of modules</p>
-</li>
-<li>
-<p>Type the following into the command box
-<code>module add n/CS2103T u/4 t/Software Engineering</code> and press enter</p>
-</li>
-<li>
-<p>Type the following into the command box
-<code>module add n/CS2101 u/4 t/Effective Communication for Computing Professionals</code> and press enter</p>
-</li>
-<li>
-<p>The message in the response box should change and you should see the following in the module panel:</p>
-<div class="imageblock">
-<div class="content">
-<img src="../images/user-guide/moduleAutoAddCommand/two_modules.png" alt="user guide\moduleAutoAddCommand\two modules">
-</div>
-<div class="title">Figure 1. Modules CS2103T and CS2101 successfully added</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
 <div class="sect3">
 <h4 id="ModuleAutoAddCommand"><a class="link" href="#ModuleAutoAddCommand">Module Auto Add</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
 <div class="paragraph">
 <p>This command adds a module to the module list. The module information is taken
 from the <a href="https://api.nusmods.com/">NUSMods API</a> and includes the <code>MODULE_CODE</code>, <code>MODULE_TITLE</code>
 and <code>MODULE_CREDITS</code>.</p>
 </div>
 <table id="ModuleAutoAddQuickReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 5. Module Auto Add Quick Reference</caption>
+<caption class="title">Table 1. Module Auto Add Quick Reference</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -503,7 +301,7 @@ You can add up to 10 modules at once! Try this: <code>module add n/CS1101 n/CS12
 <p><a href="#ModuleAutoAddErrorReference">Module Auto Add Error Reference</a> lists the errors you might encounter after issuing this command:</p>
 </div>
 <table id="ModuleAutoAddErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 6. Module Auto Add Error Reference</caption>
+<caption class="title">Table 2. Module Auto Add Error Reference</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -522,32 +320,26 @@ You can add up to 10 modules at once! Try this: <code>module add n/CS1101 n/CS12
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Duplicate Module Error</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Duplicate Detected</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to add already exists in the module list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorry, this module already exists in the course book.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Delete the existing module in the list and try again</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found Error</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to add could not be found on the NUSMods API</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Use the command <a href="#ModuleAddCommand">Module Add</a> instead</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorry, I was unable to find this module. Is your internet down?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use the command <a href="#ModuleAddCommand">[ModuleAddCommand]</a> instead</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Overload Error</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Overload Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">You attemped to add too many modules. The limit is 10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Please do not attempt to add more then 10 modules.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Divide the list of modules into smaller batches of size less than 10 and try again</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Connection Error I</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Connection Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">You are not connected to the internet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connection Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorry, I was unable to find this module. Is your internet down?</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Whilst all other commands work offline. You need an internet connection to issue this command. Go online before trying again</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Connection Error II</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Connection Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The NUSMods API server is down</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Use the command module add instead or wait until the NUSMods API server is restored</p></td>
 </tr>
 </tbody>
 </table>
@@ -587,7 +379,7 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 <div class="content">
 <img src="../images/user-guide/moduleAutoAddCommand/two_modules.png" alt="user guide\moduleAutoAddCommand\two modules">
 </div>
-<div class="title">Figure 2. Modules CS2103T and CS2101 successfully added from NUSMods</div>
+<div class="title">Figure 1. Modules CS2103T and CS2101 successfully added from NUSMods</div>
 </div>
 </li>
 </ol>
@@ -613,485 +405,7 @@ the data given by NUSMods. This remains a BETA feature and we hope to upgrade it
 </tr>
 </table>
 </div>
-</div>
-<div class="sect3">
-<h4 id="module-done"><a class="link" href="#module-done">Module Done</a></h4>
-<div class="paragraph">
-<p>This command marks a module as done by giving it a grade and optionally, a semester.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 7. Module Done Quick Reference</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Marks a module as done</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>module done MODULE_CODE g/GRADE [s/SEMESTER]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>module done CS2103T g/A s/Y1S1</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>How it Works</strong></p>
-</div>
-<div class="paragraph">
-<p>When you issue the command, we give your module the grade, and optionally the semester, that you provided. This helps us keep track of both your CAP and the number
-of semesters you have left before graduating.</p>
-</div>
-<div class="paragraph">
-<p>In order to calculate your CAP, we use a known algorithm which is guaranteed to be accurate. To see what semester you are currently at, we
-take the latest semester given to a module which has been marked as done. From that, we are able to tell you how many semesters you have left.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-We do not currently allow the input of special terms. As a workaround, for modules taken
-during special term, you could input the most recent semester instead
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><a href="#ModuleDoneErrorReference">Module Done Error Reference</a> lists the errors you might encounter after issuing this command:</p>
-</div>
-<table id="ModuleDoneErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 8. Module Done Error Reference</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Explanation</th>
-<th class="tableblock halign-left valign-top">Solution</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to mark as done does not exist in the module list</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Add the module you wish to mark as done and try again</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Tutorial</strong></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-For this tutorial, actual values will be given instead of placeholders. Undo or Delete objects created from this tutorial by using the appropriate commands
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Ensure that you have the module CS2103T in the module list</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Type the following into the command box <code>module done CS2103T g/A s/Y4S1</code></p>
-</li>
-<li>
-<p>The message in the response box should change and you should see the following</p>
-<div class="imageblock">
-<div class="content">
-<img src="../images/user-guide/moduleAutoAddCommand/one_module.png" alt="user guide\moduleAutoAddCommand\one module">
-</div>
-<div class="title">Figure 3. Modules CS2103T successfully given a grade and a semester</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="module-edit"><a class="link" href="#module-edit">Module Edit</a></h4>
-<div class="paragraph">
-<p>This command edits the editable fields in a module which include the <code>MODULE_TITLE</code>, <code>MODULE_CREDITS</code>, <code>SEMESTER</code>.
-Although it is possible to edit the fields as listed, it is unadvisable unless you made a mistake while keying
-in the values.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 9. Module Edit Quick Reference</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Edits a module</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>module edit MODULE_CODE [t/MODULE_TITLE] [u/MODULE_CREDITS] [s/SEMESTER]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>module edit CS2103T t/Hardware Engineering u/8 s/Y1S2</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>How it Works</strong></p>
-</div>
-<div class="paragraph">
-<p>When you issue the command, we replace the fields provided with the given values. You are able to
-change the values as you wish as long as they follow the restrictions as listed in the parameters table.</p>
-</div>
-<div class="paragraph">
-<p><a href="#ModuleEditErrorReference">Module Edit Error Reference</a> lists the errors you might encounter after issuing this command:</p>
-</div>
-<table id="ModuleEditErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 10. Module Edit Error Reference</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Explanation</th>
-<th class="tableblock halign-left valign-top">Solution</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to edit does not exist in the module list</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Instead of editing a module that does not exist, try adding a new one!</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Tutorial</strong></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-For this tutorial, actual values will be given instead of placeholders. Undo or Delete objects created from this tutorial by using the appropriate commands
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Ensure that you have the module CS2103T in the module list</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Type the following into the command box <code>module edit CS2103T t/Hardware Engineering s/Y1S1 u/8</code></p>
-</li>
-<li>
-<p>The message in the response box should change and you should see the following</p>
-<div class="imageblock">
-<div class="content">
-<img src="../images/user-guide/moduleAutoAddCommand/module_edit.png" alt="user guide\moduleAutoAddCommand\module edit">
-</div>
-<div class="title">Figure 4. Modules CS2103T successfully given a grade and a semester</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="module-delete"><a class="link" href="#module-delete">Module Delete</a></h4>
-<div class="paragraph">
-<p>This command deletes a module from the module list.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 11. Delete Quick Reference</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes a module</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">`module delete MODULE_CODE`https://xxx[]</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>module delete CS2103T</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>How it Works</strong></p>
-</div>
-<div class="paragraph">
-<p>The module that you wish to delete is completely removed from the module list.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Restoring the module is only possible using the <code>undo</code> command which would only work if <code>delete</code> was the last issued command.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><a href="#ModuleDeleteErrorReference">Module Delete Error Reference</a> lists the errors you might encounter after issuing this command:</p>
-</div>
-<table id="ModuleDeleteErrorReference" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 12. Module Delete Error Reference</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Explanation</th>
-<th class="tableblock halign-left valign-top">Solution</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to delete does not exist in the module list</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Your problem is your solution!</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Tutorial</strong></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-For this tutorial, actual values will be given instead of placeholders. Undo or Delete objects created from this tutorial by using the appropriate commands
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Ensure that you have the module CS2103T in the module list</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Type the following into the command box <code>module delete CS2103T</code></p>
-</li>
-<li>
-<p>The message in the response box should change and you should see that the module CS2103T disappears from the module list</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="module-filter"><a class="link" href="#module-filter">Module Filter</a></h4>
-<div class="paragraph">
-<p>This command allows you to find your modules by various parameters. You can filter the
-complete module list by <code>SEMESTER</code>, <code>MODULE_CREDITS</code> and <code>GRADE</code>.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 13. Filter Quick Reference</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Purpose</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Displays a module list filtered based on the given parameters</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Syntax</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>module filter [s/SEMESTER] [u/MODULE_CREDITS] [g/GRADE] [-o]</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Example</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>module filter s/Y1S1 u/4 g/A -o</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>How it Works</strong></p>
-</div>
-<div class="paragraph">
-<p>Two options are provided for you:</p>
-</div>
-<div class="paragraph">
-<p>[Option 1] Displays modules that match all provided parameters</p>
-</div>
-<div class="paragraph">
-<p>or</p>
-</div>
-<div class="paragraph">
-<p>[Option 2] Displays modules that match at least one of the provided parameters.</p>
-</div>
-<div class="paragraph">
-<p>If the flag <code>-o</code> is included at the end of the command, Option 2 will be chosen. Otherwise, the default option is Option 1.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-In order to display all modules once again, simply type <code>module filter</code>. This will display an unfiltered module list containing all modules.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>There are no notable errors to list. If wrong parameters are given, the app will simply
-display the unfiltered module list. However, you should always take note of what filters are currently in place. If you
-are unable to find some modules after using this command, please reset the display by typing in <code>module filter</code>.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-If you
-are unable to find some modules after using this command, please reset the display by typing in <code>module filter</code>.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><strong>Tutorial</strong></p>
-</div>
-<div class="paragraph">
-<p>Ensure that the following modules are in the module list:</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Module Code</th>
-<th class="tableblock halign-left valign-top">Credits</th>
-<th class="tableblock halign-left valign-top">Semester</th>
-<th class="tableblock halign-left valign-top">Grade</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CS2103T</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Y1S1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CS2101</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Y1S2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">B</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CS2040</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Y2S1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C</p></td>
-</tr>
-</tbody>
-</table>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Retrieving modules which have 4 <code>CREDITS</code></p>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Type <code>module filter u/4</code> into the command box</p>
-</li>
-<li>
-<p>The message in the response box should change and you should see the modules CS2103T and CS2101 in the module panel</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Retrieving modules which have either <code>SEMESTER</code> Y1S2 or <code>GRADE</code> C</p>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Type <code>module filter s/Y1S1 g/B -o</code></p>
-</li>
-<li>
-<p>The message in the response box should change and you should see the modules CS2101 and CS2040 in the module panel</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Additional Information</strong></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This section contains information which requires prior knowledge of discrete mathematics or more specifically, logical operators
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The flag <code>-o</code>, is present, sets the logical operator used in concatenating the parameters as <em>"or"</em>. The default logical operator used is <em>"and"</em>.</p>
-</div>
-</div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>
@@ -1108,107 +422,11 @@ This section contains information which requires prior knowledge of discrete mat
 </tr>
 </tbody>
 </table>
-<div class="sect2">
-<h3 id="module-feature"><a class="link" href="#module-feature">Module Feature</a></h3>
-<div class="sect3">
-<h4 id="module-component"><a class="link" href="#module-component">Module Component</a></h4>
-<div class="paragraph">
-<p>The <code>Module</code> component is the building block of all other components in the system.
-In order to track the number of <code>credits</code> left to fulfill
-for each <code>requirement</code>, each <code>module</code> is stored in a <code>UniqueModuleList</code> and the <code>credits</code> tied to each
-<code>module</code> is then tabulated.</p>
-</div>
-<div class="paragraph">
-<p>Besides being necessary in tracking the amount of credits left for a <code>requirement</code>, <code>modules</code> are also
-used to decide which <code>semester</code> the user is currently in. When a <code>semester</code> is tagged to a <code>module</code>, either when
-a new <code>module</code> is added or an existing <code>module</code> is edited, the latest <code>semester</code> of all <code>modules</code> in the <code>filteredList</code> of modules is taken
-to be the current semester.</p>
-</div>
-<div class="paragraph">
-<p>A module must have the following non-optional values:</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Value Type</th>
-<th class="tableblock halign-left valign-top">Class Name</th>
-<th class="tableblock halign-left valign-top">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Title</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Software Engineering</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ModuleCode</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CS2103T</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Credits</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ModulePrerequisites</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CS2030, CS2040</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">List</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ModulePreclusions</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CS2103, CS2103T, CS2113T, CS2113</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>A module may also have the following optional values:</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Value Type</th>
-<th class="tableblock halign-left valign-top">Class Name</th>
-<th class="tableblock halign-left valign-top">Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Semester</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Y3S1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Grade</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A+</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><a href="#moduleClassDiagram">Module Class Diagram</a> illustrates the relation between the various classes:</p>
-</div>
-<div id="moduleClassDiagram" class="imageblock">
-<div class="content">
-<img src="../images/developer-guide/ModuleClassDiagram.png" alt="ModuleClassDiagram">
-</div>
-<div class="title">Figure 5. Module Class Diagram</div>
-</div>
-</div>
 <div class="sect3">
 <h4 id="module-add-auto"><a class="link" href="#module-add-auto">Module Add Auto</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
 <div class="sect4">
 <h5 id="overview-2"><a class="link" href="#overview-2">Overview</a></h5>
 <div class="paragraph">
@@ -1228,7 +446,7 @@ Upon receiving a response, it creates an instance of JsonParsedModule.</p>
 <p><code>JsonParsedModule</code> parses the JSON object given in the response of the initial request and stores the following values:</p>
 </div>
 <table id="JsonParsedModuleTableOfValues" class="tableblock frame-all grid-all spread">
-<caption class="title">Table 14. JsonParsedModule Table of Values</caption>
+<caption class="title">Table 3. JsonParsedModule Table of Values</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1293,7 +511,7 @@ to the <code>courseBook</code> via the method <code>addModule</code> of the <cod
 <div class="content">
 <img src="../images/developer-guide/ModuleAddAutoSequenceDiagram.png" alt="ModuleAddAutoSequenceDiagram">
 </div>
-<div class="title">Figure 6. Module Add Auto Sequence Diagram</div>
+<div class="title">Figure 2. Module Add Auto Sequence Diagram</div>
 </div>
 </div>
 <div class="sect4">
@@ -1383,177 +601,9 @@ he wishes to add.</p>
 <div class="content">
 <img src="../images/developer-guide/ModuleAutoAddUseCaseDiagram.png" alt="ModuleAutoAddUseCaseDiagram">
 </div>
-<div class="title">Figure 7. Module Auto Add Use Case Diagram</div>
-</div>
-<hr>
-<div class="paragraph">
-<p><strong>Messages for individual modules</strong></p>
-</div>
-<div class="paragraph">
-<p>As this feature allows a user to add <code>modules</code> by batches, it is possible that one or more <code>modules</code> in
-the batch are invalid or require warning messages. In order to facilitate this, the processing of the list of <code>modules</code> and the
-generation of error and warning messages were done in parallel. This was because if the list of <code>modules</code> was processed first,
-<code>modules</code> with issues would be filtered out without notice, leading to a confusing user experience.</p>
-</div>
-<div id="moduleAddAutoBatchProcessing" class="imageblock">
-<div class="content">
-<img src="../images/developer-guide/ModuleAddAutoBatchActivityDiagram.png" alt="ModuleAddAutoBatchActivityDiagram">
-</div>
-<div class="title">Figure 8. Module Add Auto Batch Processing</div>
-</div>
-<div class="paragraph">
-<p><strong>Improving the user experience [PROPOSED]</strong></p>
-</div>
-<div class="paragraph">
-<p>Due to network latency - the Round Trip Time taken from when a request is made to when a response is
-received - the user might experience a situation where it appears that the application has stopped working.</p>
-</div>
-<div class="paragraph">
-<p>For a large batch of <code>modules</code>, the application might also display a <em>not responding</em> label in the toolbar.
-In order to improve the user experience, it is ideal that a loader be displayed when waiting for the response from the server.
-However, due to time constraints, this was not implemented.</p>
-</div>
-<div class="paragraph">
-<p><strong>Getting the latest data [DEPRECATED]</strong></p>
-</div>
-<div class="paragraph">
-<p>Past iterations of this feature made a maximum of two requests for one <code>module</code>. The first request would
-attempt to get the <code>module</code> for the current academic year, whilst the second request attempted to get
-the <code>module</code> for the previous academic year, in the event the module for the current academic year was not available.</p>
-</div>
-<div class="paragraph">
-<p>This process is illustrated in <a href="#previousImplementationOfModuleAddAuto">Previous implementation of Module Add Auto</a>. However, it was decided
-that the benefits of making a maximum of one request outweighed that of getting the latest module information and thus,
-currently only one request is made.</p>
-</div>
-<div id="previousImplementationOfModuleAddAuto" class="imageblock">
-<div class="content">
-<img src="../images/developer-guide/ModuleAddAutoActivityDiagram.png" alt="ModuleAddAutoActivityDiagram">
-</div>
-<div class="title">Figure 9. Previous implementation of Module Add Auto</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="module-filter-2"><a class="link" href="#module-filter-2">Module Filter</a></h4>
-<div class="sect4">
-<h5 id="overview-3"><a class="link" href="#overview-3">Overview</a></h5>
-<div class="paragraph">
-<p>The average number of <code>modules</code> a student has for a 4 year program in NUS is 40. The application window, however, can display
-a maximum of 9 <code>modules</code> for a 17" screen and considerably less for smaller displays. As a result, it is imperative that users have
-a way to filter <code>modules</code> so that only what is required is displayed.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="implementation-2"><a class="link" href="#implementation-2">Implementation</a></h5>
-<div class="paragraph">
-<p>The filtering of modules is done by calling the <code>execute</code> function of <code>ModuleFilterCommand</code>.<code>ModuleFilterCommand</code> takes in
-optional parameters <code>Semester</code>, <code>Credits</code>, <code>Grade</code> and an operator, which could be <code>AND</code> or <code>OR</code>.</p>
-</div>
-<div class="paragraph">
-<p>The matching is done by the functions <code>checkSemesterMatch(Module m)</code>, <code>checkCreditsMatch(Module m)</code> and <code>checkGradeMatch(Module m)</code>. Unlike
-the other two functions, <code>checkCreditsMatch(Module m)</code> does not check if the actual <code>credits</code> for a module is present since the
-<code>credits</code> field in a module is compulsory.</p>
-</div>
-<div class="paragraph">
-<p>The <code>AND</code> operator specifies that the provided parameters be chained with the logical <em>and</em> operator.</p>
-</div>
-<div class="paragraph">
-<p>The <code>OR</code> operator specifies that provided parameters be chained with the logical <em>or</em> operator.</p>
-</div>
-<div class="paragraph">
-<p>When the filter command is issued, the <code>Model</code> updates the module list based on the predicate given. <a href="#moduleFilterSequenceDiagram">Module Filter Sequence Diagram</a>
-illustrates this sequence of events:</p>
-</div>
-<div id="moduleFilterSequenceDiagram" class="imageblock">
-<div class="content">
-<img src="../images/developer-guide/ModuleFilterSequenceDiagram.png" alt="ModuleFilterSequenceDiagram">
-</div>
-<div class="title">Figure 10. Module Filter Sequence Diagram</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="design-considerations-2"><a class="link" href="#design-considerations-2">Design Considerations</a></h5>
-<div class="paragraph">
-<p><strong>Resetting the state</strong></p>
-</div>
-<div class="paragraph">
-<p>When this command is issued, the modules that do not match the predicate given will disappear from the module list.
-It is thus necessary to allow the user to issue a new command in order to view all the modules again.</p>
-</div>
-<div class="paragraph">
-<p>Whilst creating a new command such as <code>module reset</code> was proposed, it was decided that a new command would only serve to
-make the user experience more complicated than it should be.</p>
-</div>
-<div class="paragraph">
-<p>Therefore, an allowance was made for <code>module filter</code> to reset the state when receiving no parameters, a divergence from
-the way other functions handled the situation of empty parameters.</p>
-</div>
-<div class="paragraph">
-<p><a href="#moduleFilterActivityDiagram">Module Filter Activity Diagram</a> illustrates this clearly:</p>
-</div>
-<div id="moduleFilterActivityDiagram" class="imageblock">
-<div class="content">
-<img src="../images/developer-guide/ModuleFilterActivityDiagram.png" alt="ModuleFilterActivityDiagram">
-</div>
-<div class="title">Figure 11. Module Filter Activity Diagram</div>
-</div>
-<div class="paragraph">
-<p>The <code>filteredList</code> of <code>modules</code> therefore takes three general states (see <a href="#moduleFilterStateDiagram">Module Filter State Diagram</a>):</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Initial State</p>
-<div class="paragraph">
-<p>The <code>module</code> list is unfiltered. All <code>modules</code> are displayed.</p>
-</div>
-</li>
-<li>
-<p>Filtered by <code>AND</code> State</p>
-<div class="paragraph">
-<p>The <code>module</code> list is filtered by a predicate composed of the provided parameters
-chained together with the logical <em>and</em> operator</p>
-</div>
-</li>
-<li>
-<p>Filtered by <code>OR</code> State</p>
-<div class="paragraph">
-<p>The <code>module</code> list is filtered by a predicate composed of the provided parameters
-chained together with the logical <em>or</em> operator</p>
-</div>
-</li>
-</ol>
-</div>
-<div id="moduleFilterStateDiagram" class="imageblock">
-<div class="content">
-<img src="../images/developer-guide/ModuleFilterStateDiagram.png" alt="ModuleFilterStateDiagram">
-</div>
-<div class="title">Figure 12. Module Filter State Diagram</div>
-</div>
-<div class="paragraph">
-<p><strong>Displaying Filter State [PROPOSED]</strong></p>
-</div>
-<div class="paragraph">
-<p>An issue with the filtering of modules is that when the current state is not obvious, the
-user might lose track of what the module list is filtering on. To solve this problem,
-it would be an improvement to display the current state prominently to the user.</p>
+<div class="title">Figure 3. Module Auto Add Use Case Diagram</div>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="project-eezee"><a class="link" href="#project-eezee">PROJECT: Eezee</a></h2>
-<div class="sectionbody">
-<div class="imageblock">
-<div class="content">
-<img src="../images/eezee-screenshot.png" alt="eezee screenshot">
-</div>
-</div>
-<div class="paragraph">
-<p>Singapore&#8217;s Largest B2B Marketplace</p>
-</div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 08:47:14 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 08:51:44 UTC</div></div></div></body></html>

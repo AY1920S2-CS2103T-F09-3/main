@@ -49,10 +49,9 @@
 <ul class="sectlevel3">
 <li><a href="#ModuleAddCommand">6.4.1. Module Add</a></li>
 <li><a href="#ModuleAutoAddCommand">6.4.2. Module Auto Add</a></li>
-<li><a href="#module-done">6.4.3. Module Done</a></li>
-<li><a href="#module-edit">6.4.4. Module Edit</a></li>
-<li><a href="#module-delete">6.4.5. Module Delete</a></li>
-<li><a href="#module-filter">6.4.6. Module Filter</a></li>
+<li><a href="#module-edit">6.4.3. Module Edit</a></li>
+<li><a href="#module-delete">6.4.4. Module Delete</a></li>
+<li><a href="#module-filter">6.4.5. Module Filter</a></li>
 </ul>
 </li>
 <li><a href="#export">6.5. Export</a></li>
@@ -681,9 +680,6 @@ edited as well.</p>
 <h2 id="command-list"><a class="link" href="#command-list">6. Command List</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Section by: <a href="https://github.com/waynewee">Wayne</a> &amp; <a href="https://github.com/yjskrs">Yijie</a></p>
-</div>
-<div class="paragraph">
 <p>This segment contains a list of commands with examples that you can use to make full use of iGrad.</p>
 </div>
 <div class="paragraph">
@@ -944,6 +940,9 @@ You should be able to see the requirement created and/or edited in the main pane
 <div class="sect2">
 <h3 id="module"><a class="link" href="#module">6.4. Module</a></h3>
 <div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
+<div class="paragraph">
 <p>This section details each command used to manipulate modules. All module commands begin with the identifier
 <code>module</code> followed by the action e.g. <code>add</code>.</p>
 </div>
@@ -1013,25 +1012,25 @@ The following errors are generic and may be encountered when dealing with any mo
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Parameter</th>
-<th class="tableblock halign-left valign-top">Error Name</th>
+<th class="tableblock halign-left valign-top">Error Message</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>MODULE_CODE</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Module Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Module Code provided for the module is invalid!</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>MODULE_CREDITS</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Module Credits</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Module Credits provided for the module is invalid!</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SEMESTER</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Semester</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Semester provided for the module is invalid!</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>GRADE</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Invalid Grade</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Grade provided for the module is invalid!</p></td>
 </tr>
 </tbody>
 </table>
@@ -1040,6 +1039,9 @@ The following errors are generic and may be encountered when dealing with any mo
 </div>
 <div class="sect3">
 <h4 id="ModuleAddCommand"><a class="link" href="#ModuleAddCommand">6.4.1. Module Add</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
 <div class="paragraph">
 <p>This command adds a module to the module list.</p>
 </div>
@@ -1093,7 +1095,7 @@ and fill in those fields. We do not check if the given <code>MODULE_CODE</code> 
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Duplicate Module Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Duplicate Detected</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorry, this module already exists in the course book.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to add already exists in the module list</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Delete the existing module in the list and try again</p></td>
 </tr>
@@ -1144,6 +1146,9 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 </div>
 <div class="sect3">
 <h4 id="ModuleAutoAddCommand"><a class="link" href="#ModuleAutoAddCommand">6.4.2. Module Auto Add</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
 <div class="paragraph">
 <p>This command adds a module to the module list. The module information is taken
 from the <a href="https://api.nusmods.com/">NUSMods API</a> and includes the <code>MODULE_CODE</code>, <code>MODULE_TITLE</code>
@@ -1260,32 +1265,26 @@ You can add up to 10 modules at once! Try this: <code>module add n/CS1101 n/CS12
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Duplicate Module Error</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Duplicate Detected</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to add already exists in the module list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorry, this module already exists in the course book.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Delete the existing module in the list and try again</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found Error</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to add could not be found on the NUSMods API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorry, I was unable to find this module. Is your internet down?</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Use the command <a href="#ModuleAddCommand">Section 6.4.1, &#8220;Module Add&#8221;</a> instead</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Overload Error</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Overload Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">You attemped to add too many modules. The limit is 10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Please do not attempt to add more then 10 modules.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Divide the list of modules into smaller batches of size less than 10 and try again</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Connection Error I</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Connection Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">You are not connected to the internet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connection Error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorry, I was unable to find this module. Is your internet down?</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Whilst all other commands work offline. You need an internet connection to issue this command. Go online before trying again</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Connection Error II</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Connection Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The NUSMods API server is down</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Use the command module add instead or wait until the NUSMods API server is restored</p></td>
 </tr>
 </tbody>
 </table>
@@ -1347,13 +1346,12 @@ in addition to tracking your graduation requirements, we do not prevent you from
 As the prerequisites and preclusions from NUSMods do not follow any standard formatting, the warning messages shown might not
 always be accurate. This is due to a difficulty of interpreting
 the data given by NUSMods. This remains a BETA feature and we hope to upgrade it in time.
+==== Module Done
+Section by: <a href="https://github.com/waynewee">Wayne</a>
 </td>
 </tr>
 </table>
 </div>
-</div>
-<div class="sect3">
-<h4 id="module-done"><a class="link" href="#module-done">6.4.3. Module Done</a></h4>
 <div class="paragraph">
 <p>This command marks a module as done by giving it a grade and optionally, a semester.</p>
 </div>
@@ -1424,7 +1422,7 @@ during special term, you could input the most recent semester instead
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorry, I was unable to find this module.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to mark as done does not exist in the module list</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Add the module you wish to mark as done and try again</p></td>
 </tr>
@@ -1466,7 +1464,10 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 </div>
 </div>
 <div class="sect3">
-<h4 id="module-edit"><a class="link" href="#module-edit">6.4.4. Module Edit</a></h4>
+<h4 id="module-edit"><a class="link" href="#module-edit">6.4.3. Module Edit</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
 <div class="paragraph">
 <p>This command edits the editable fields in a module which include the <code>MODULE_TITLE</code>, <code>MODULE_CREDITS</code>, <code>SEMESTER</code>.
 Although it is possible to edit the fields as listed, it is unadvisable unless you made a mistake while keying
@@ -1522,7 +1523,7 @@ change the values as you wish as long as they follow the restrictions as listed 
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorry, I was unable to find this module</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to edit does not exist in the module list</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Instead of editing a module that does not exist, try adding a new one!</p></td>
 </tr>
@@ -1564,7 +1565,10 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 </div>
 </div>
 <div class="sect3">
-<h4 id="module-delete"><a class="link" href="#module-delete">6.4.5. Module Delete</a></h4>
+<h4 id="module-delete"><a class="link" href="#module-delete">6.4.4. Module Delete</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
 <div class="paragraph">
 <p>This command deletes a module from the module list.</p>
 </div>
@@ -1629,7 +1633,7 @@ Restoring the module is only possible using the <code>undo</code> command which 
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Module Not Found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorry, I was unable to find this module</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The module you are attempting to delete does not exist in the module list</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Your problem is your solution!</p></td>
 </tr>
@@ -1665,7 +1669,10 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 </div>
 </div>
 <div class="sect3">
-<h4 id="module-filter"><a class="link" href="#module-filter">6.4.6. Module Filter</a></h4>
+<h4 id="module-filter"><a class="link" href="#module-filter">6.4.5. Module Filter</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
 <div class="paragraph">
 <p>This command allows you to find your modules by various parameters. You can filter the
 complete module list by <code>SEMESTER</code>, <code>MODULE_CREDITS</code> and <code>GRADE</code>.</p>
@@ -1827,13 +1834,16 @@ This section contains information which requires prior knowledge of discrete mat
 </table>
 </div>
 <div class="paragraph">
-<p>The flag <code>-o</code>, is present, sets the logical operator used in concatenating the parameters as <em>"or"</em>. The default logical operator used is <em>"and"</em>.
-'''</p>
+<p>The flag <code>-o</code>, is present, sets the logical operator used in concatenating the parameters as <em>"or"</em>. The default logical operator used is <em>"and"</em>.</p>
 </div>
+<hr>
 </div>
 </div>
 <div class="sect2">
 <h3 id="export"><a class="link" href="#export">6.5. Export</a></h3>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
 <div class="paragraph">
 <p>This command exports your data to a comma-separated values (.csv) file. This file can then be submitted to the relevant
 administration for processing of Leave of Absence (LOA), exchange programmes or internship applications.</p>
@@ -1921,12 +1931,12 @@ For example, if the app is stored in your Desktop folder, the file <em>study_pla
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Write Error</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Unable to write to file</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">You have the file open. The system is unable to write to an open file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorry, I was unable to export data to CSV file. Please ensure that you do not have the file 'study_plan.csv' open</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Close the file and try again</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Data Not Found Error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Nothing to write</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sorry, I couldn&#8217;t find any modules that are tagged to a semester! I can only export modules that are tagged with a semester.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">You do not have any modules tagged with a semester</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tag at least one module with a semester and try again</p></td>
 </tr>
@@ -1936,6 +1946,9 @@ For example, if the app is stored in your Desktop folder, the file <em>study_pla
 </div>
 <div class="sect2">
 <h3 id="exit"><a class="link" href="#exit">6.6. Exit</a></h3>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
 <div class="paragraph">
 <p>This command assists you in exiting the program.</p>
 </div>
@@ -1973,10 +1986,16 @@ For example, if the app is stored in your Desktop folder, the file <em>study_pla
 <h2 id="version-2-0"><a class="link" href="#version-2-0">7. Version 2.0</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
+<div class="paragraph">
 <p>This sections details features that would be packaged with the next release</p>
 </div>
 <div class="sect2">
 <h3 id="module-suggester"><a class="link" href="#module-suggester">7.1. Module Suggester</a></h3>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
 <div class="paragraph">
 <p>Using tried and tested recommendation algorithms such as <a href="https://en.wikipedia.org/wiki/Collaborative_filtering">collborative filtering</a>, we would be able to automatically suggest
 to you what modules to take next.</p>
@@ -2005,6 +2024,9 @@ to you what modules to take next.</p>
 </div>
 <div class="sect2">
 <h3 id="integration-with-nusmods"><a class="link" href="#integration-with-nusmods">7.2. Integration with NUSMods</a></h3>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
+</div>
 <div class="paragraph">
 <p>We plan to integrate with popular timetabling application NUSMods so that you can manage all aspects of your academics
 in one place.</p>
@@ -2260,4 +2282,4 @@ categories:</p>
 <p><a href="http://www.nus.edu.sg/registrar/calendar">NUS - Academic Calendar</a></p>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 08:47:14 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 08:51:44 UTC</div></div></div></body></html>
