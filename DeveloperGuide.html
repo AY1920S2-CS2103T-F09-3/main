@@ -49,31 +49,30 @@
 <li><a href="#module-done">3.2.4. Module Done</a></li>
 </ul>
 </li>
-<li><a href="#requirement-feature">3.3. Requirement Feature</a></li>
-<li><a href="#requirements-feature">3.4. Requirements Feature</a>
+<li><a href="#requirement-feature">3.3. Requirement Feature</a>
 <ul class="sectlevel3">
-<li><a href="#implementation-8">3.4.1. Implementation</a></li>
-<li><a href="#requirement-add">3.4.2. Requirement Add</a></li>
-<li><a href="#requirement-assign">3.4.3. Requirement Assign</a></li>
+<li><a href="#implementation-8">3.3.1. Implementation</a></li>
+<li><a href="#requirement-add">3.3.2. Requirement Add</a></li>
+<li><a href="#requirement-assign">3.3.3. Requirement Assign</a></li>
 </ul>
 </li>
-<li><a href="#export-feature">3.5. Export Feature</a>
+<li><a href="#export-feature">3.4. Export Feature</a>
 <ul class="sectlevel3">
-<li><a href="#overview-8">3.5.1. Overview</a></li>
-<li><a href="#implementation-11">3.5.2. Implementation</a></li>
-<li><a href="#design-considerations-5">3.5.3. Design Considerations</a></li>
+<li><a href="#overview-8">3.4.1. Overview</a></li>
+<li><a href="#implementation-11">3.4.2. Implementation</a></li>
+<li><a href="#design-considerations-5">3.4.3. Design Considerations</a></li>
 </ul>
 </li>
-<li><a href="#undo-feature">3.6. Undo Feature</a>
+<li><a href="#undo-feature">3.5. Undo Feature</a>
 <ul class="sectlevel3">
-<li><a href="#overview-9">3.6.1. Overview</a></li>
-<li><a href="#implementation-12">3.6.2. Implementation</a></li>
-<li><a href="#design-considerations-6">3.6.3. Design Considerations</a></li>
+<li><a href="#overview-9">3.5.1. Overview</a></li>
+<li><a href="#implementation-12">3.5.2. Implementation</a></li>
+<li><a href="#design-considerations-6">3.5.3. Design Considerations</a></li>
 </ul>
 </li>
-<li><a href="#proposed-data-encryption">3.7. [Proposed] Data Encryption</a></li>
-<li><a href="#logging">3.8. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.9. Configuration</a></li>
+<li><a href="#proposed-data-encryption">3.6. [Proposed] Data Encryption</a></li>
+<li><a href="#logging">3.7. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.8. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -1598,6 +1597,9 @@ and the <code>CourseInfo</code>.</p>
 bypassing the updating of the <code>Requirement(s)</code>.</p>
 </div>
 <hr>
+<div class="paragraph">
+<p><a id="anchor-tag-c"></a></p>
+</div>
 </div>
 </div>
 </div>
@@ -1606,12 +1608,6 @@ bypassing the updating of the <code>Requirement(s)</code>.</p>
 <div class="paragraph">
 <p>Section by: <a href="https://github.com/yjskrs">Yijie</a></p>
 </div>
-<div class="paragraph">
-<p><a id="anchor-tag-c"></a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="requirements-feature"><a class="link" href="#requirements-feature">3.4. Requirements Feature</a></h3>
 <div class="paragraph">
 <p>The <code>Requirement</code> feature bridges the connection between a <code>Module</code> and a <code>Course</code>. A <code>Requirement</code> represents
 a category with a set amount of modular credits needed to be fulfilled in order to graduate. By
@@ -1623,7 +1619,7 @@ the <code>Requirement</code>, as well as the total modular credits needed to ful
 we indicate that the <code>Course</code> has been completed.</p>
 </div>
 <div class="sect3">
-<h4 id="implementation-8"><a class="link" href="#implementation-8">3.4.1. Implementation</a></h4>
+<h4 id="implementation-8"><a class="link" href="#implementation-8">3.3.1. Implementation</a></h4>
 <div class="paragraph">
 <p>Section by: <a href="https://github.com/yjskrs">Yijie</a></p>
 </div>
@@ -1708,7 +1704,7 @@ to a <code>Requirement</code>, <code>creditsAssigned</code> and <code>creditsFul
 </div>
 </div>
 <div class="sect3">
-<h4 id="requirement-add"><a class="link" href="#requirement-add">3.4.2. Requirement Add</a></h4>
+<h4 id="requirement-add"><a class="link" href="#requirement-add">3.3.2. Requirement Add</a></h4>
 <div class="paragraph">
 <p>Section by: <a href="https://github.com/yjskrs">Yijie</a></p>
 </div>
@@ -1841,7 +1837,10 @@ allowed to add requirements with the same <code>Title</code> to enhance the flex
 </div>
 </div>
 <div class="sect3">
-<h4 id="requirement-assign"><a class="link" href="#requirement-assign">3.4.3. Requirement Assign</a></h4>
+<h4 id="requirement-assign"><a class="link" href="#requirement-assign">3.3.3. Requirement Assign</a></h4>
+<div class="paragraph">
+<p>Section by: <a href="https://github.com/nathanaelseen">Nathanael Seen</a></p>
+</div>
 <div class="sect4">
 <h5 id="overview-7"><a class="link" href="#overview-7">Overview</a></h5>
 <div class="paragraph">
@@ -1887,18 +1886,18 @@ on the following two conditions:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="export-feature"><a class="link" href="#export-feature">3.5. Export Feature</a></h3>
+<h3 id="export-feature"><a class="link" href="#export-feature">3.4. Export Feature</a></h3>
 <div class="paragraph">
 <p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
 </div>
 <div class="sect3">
-<h4 id="overview-8"><a class="link" href="#overview-8">3.5.1. Overview</a></h4>
+<h4 id="overview-8"><a class="link" href="#overview-8">3.4.1. Overview</a></h4>
 <div class="paragraph">
 <p>The export feature allows the user to export their data into a .csv file.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="implementation-11"><a class="link" href="#implementation-11">3.5.2. Implementation</a></h4>
+<h4 id="implementation-11"><a class="link" href="#implementation-11">3.4.2. Implementation</a></h4>
 <div class="paragraph">
 <p>The export feature is facilitated by the <code>CsvWriter</code>. The <code>ExportCommand</code> calls <code>exportModuleList()</code> on <code>ModelManager</code>,
 which then performs a filter on the <code>filteredList</code> of modules in order to filter out all modules where the <code>Optional&lt;Semester&gt;</code> object
@@ -1961,7 +1960,7 @@ deleting the file.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.5.3. Design Considerations</a></h4>
+<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.4.3. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>Writing and Reading Issues</strong></p>
 </div>
@@ -1973,18 +1972,18 @@ for the user to close the file and issuing the command again.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="undo-feature"><a class="link" href="#undo-feature">3.6. Undo Feature</a></h3>
+<h3 id="undo-feature"><a class="link" href="#undo-feature">3.5. Undo Feature</a></h3>
 <div class="paragraph">
 <p>Section by: <a href="https://github.com/waynewee">Wayne</a></p>
 </div>
 <div class="sect3">
-<h4 id="overview-9"><a class="link" href="#overview-9">3.6.1. Overview</a></h4>
+<h4 id="overview-9"><a class="link" href="#overview-9">3.5.1. Overview</a></h4>
 <div class="paragraph">
 <p>The undo feature allows for the prior state of a <code>courseBook</code> to be saved and loaded from when needed.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="implementation-12"><a class="link" href="#implementation-12">3.6.2. Implementation</a></h4>
+<h4 id="implementation-12"><a class="link" href="#implementation-12">3.5.2. Implementation</a></h4>
 <div class="paragraph">
 <p>The undo mechanism is facilitated by the <code>ModelManager</code> and the <code>LogicManager</code>.</p>
 </div>
@@ -2056,7 +2055,7 @@ backup if another command is issued.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-6"><a class="link" href="#design-considerations-6">3.6.3. Design Considerations</a></h4>
+<h4 id="design-considerations-6"><a class="link" href="#design-considerations-6">3.5.3. Design Considerations</a></h4>
 <div class="paragraph">
 <p><strong>How undo executes</strong></p>
 </div>
@@ -2108,13 +2107,13 @@ users would require are limited to a degree which will not require large memory 
 </div>
 </div>
 <div class="sect2">
-<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.7. [Proposed] Data Encryption</a></h3>
+<h3 id="proposed-data-encryption"><a class="link" href="#proposed-data-encryption">3.6. [Proposed] Data Encryption</a></h3>
 <div class="paragraph">
 <p><em>{Explain here how the data encryption feature will be implemented}</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.8. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.7. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging.
 The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
@@ -2122,7 +2121,7 @@ The <code>LogsCenter</code> class is used to manage the logging levels and loggi
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.9, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.8, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -2153,7 +2152,7 @@ The <code>LogsCenter</code> class is used to manage the logging levels and loggi
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.9. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.8. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -2728,4 +2727,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:37:22 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:51:43 UTC</div></div></div></body></html>
