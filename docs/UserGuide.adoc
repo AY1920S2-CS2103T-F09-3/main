@@ -686,7 +686,7 @@ This command deletes a requirement from the list.
 |===
 |Purpose | Deletes a requirement
 |Syntax| `requirement delete REQUIREMENT_CODE`
-|Example | `module delete CSF0`
+|Example | `requirement delete CSF0`
 |===
 
 *How it Works*
