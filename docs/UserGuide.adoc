@@ -26,21 +26,6 @@ By: `Team-iGrad`      Since: `Feb 2020`
 Welcome! Thanks for choosing to use iGrad. This official iGrad User Guide will help guide you as you explore the ways you can
 track your graduation!
 
-== Quick Start
-
-*Follow the steps below to get started with iGrad:*
-
-1. Ensure that you have Java 11 installed on your computer. Java 11 is bundled together with the Java Development Kit and can be found link:https://www.oracle.com/java/technologies/javase-jdk11-downloads.html[here]
-
-2. Download our latest link:https://github.com/AY1920S2-CS2103T-F09-3/main/releases[release]!
-
-3. Copy or move the downloaded file into an *empty* folder.
-+
-IMPORTANT: Ensure that the folder is empty! Doing otherwise might result in unexpected errors.
-
-4. Simply double-click on the file to begin! We hope we make tracking your graduation a breeze!
-
-
 == How to use this guide
 
 You may proceed to <<Command List>> if you would like to learn how to use each of the commands, and <<Cheat Sheet>>
@@ -55,6 +40,21 @@ NOTE: Specifies expected command outcomes.
 TIP: Specifies extra tips you can use when navigating through our app.
 
 IMPORTANT: Specifies important things to take note of
+
+== Quick Start
+
+*Follow the steps below to get started with iGrad:*
+
+1. Ensure that you have Java 11 installed on your computer. Java 11 is bundled together with the Java Development Kit and can be found link:https://www.oracle.com/java/technologies/javase-jdk11-downloads.html[here]
+
+2. Download the .jar file from our latest link:https://github.com/AY1920S2-CS2103T-F09-3/main/releases[release]!
+
+3. Copy or move the downloaded file into an *empty* folder.
++
+IMPORTANT: Ensure that the folder is empty! Doing otherwise might result in unexpected errors.
+
+4. Simply double-click on the file to begin! We hope we make tracking your graduation a breeze!
+
 
 // tag::nat-ug[]
 == Features
@@ -252,7 +252,9 @@ Section by: https://github.com/teriaiw[Teri]
 - Edit modules with additional information such as Semester. Other information that has already be input can be
   edited as well.
 - Enter edit to be done to the module in the format: `module edit MODULE_CODE s/SEMESTER`
-- Note: For Semester, it has to follow the format of `Y_S_`
+
+WARNING: For Semester, it has to follow the format of `Y_S_`
+
 - E.g. `module edit GER1000 s/Y1S1`
 +
 image::../images/user-guide/walkthrough6.1.png[]
@@ -299,13 +301,14 @@ Section by: https://github.com/teriaiw[Teri]
 
 - Data of your entire study plan can to exported to a comma-separated values (.csv) file.
 - Export your data in the format: `export`
-- Note: Data file can be found in the same folder as this application.
 +
 image::../images/user-guide/walkthrough10.1.png[]
 +
 image::../images/user-guide/walkthrough10.2.png[]
 +
 image::../images/user-guide/walkthrough10.3.png[]
+
+NOTE: Data file can be found in the same folder as this application.
 //end::walkthrough[]
 
 == Command List
