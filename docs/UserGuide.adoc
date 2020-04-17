@@ -94,9 +94,9 @@ xref:anchor-tag-c[CAP (Cumulative Average Point) Tracker].
 If you would like a more in-depth overview of the actual components of our application, please
 refer to the next segment; <<Components>>, for more details.
 
-anchor:anchor-tag-a[]
-
 <<<
+
+anchor:anchor-tag-a[]
 
 ==== Course Planner
 _iGrad_ was built with every NUS student in mind. Our flexible course planner allows you to
@@ -118,9 +118,9 @@ image::../images/user-guide/components/graduation_degree_requirements.png[]
 
 But our flexible course planner takes care of all these details for you. 
 
-anchor:anchor-tag-b[]
-
 <<<
+
+anchor:anchor-tag-b[]
 
 ==== MCs Tracker
 
