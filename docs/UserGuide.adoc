@@ -127,7 +127,7 @@ anchor:anchor-tag-b[]
 We are sick of counting our MCs at the beginning of every semester. Be it counting the
 total number of MCs left before you can graduate, or counting the number of MCs left
 for those invidual requirements (boxed in [green]#green#,
-in xref:figure-a-anchor[_Figure 1_] above).
+in xref:figure-a-anchor[_Figure 3_] above).
 
 With our MCs feature, you would be able to easily keep track of how close you are to
 graduation, as all this information is automatically updated and recomputed, each time you have
@@ -153,7 +153,7 @@ track of your graduation requirements.
 == Components
 This segment details the various components of _iGrad_.
 
-As shown in _Figure 2_ below,
+As shown in _Figure 4_ below,
 the components of our application follows a hierachical structure, exactly like how an
 (NUS) course is structured:
 
@@ -176,13 +176,11 @@ of our application highlighted:
 .iGrad Components
 image::../images/user-guide/components/app_screenshot_ui_components_highlighted.png[]
 
-As per the screenshot above (in _Figure 4_):
-
 * xref:Course[Course] is indicated in [blue]#blue#,
 * xref:Requirements[Requirements] are indicated in [red]#red#, and
 * xref:Modules[Modules] are indicated in [yellow]#yellow#
 
-You may refer to xref:figure-b-anchor[_Figure 2_] above, if you would like a quick recap on the
+You may refer to xref:figure-b-anchor[_Figure 4_] above, if you would like a quick recap on the
 hierarchical structuring of these components.
 
 ==== Course
@@ -195,7 +193,7 @@ you have completed so far, and the number of semesters left before you can gradu
 ==== Requirements
 
 Under a course are the various requirements, such as the ones shown in
-xref:figure-b-anchor[_Figure 2_] above; _Computer Science Foundation_,
+xref:figure-b-anchor[_Figure 4_] above; _Computer Science Foundation_,
 _Mathematics and Sciences_, and _Unrestricted Electives_.
 
 Each requirement comprises of the modules under it, which you have to complete in order to
