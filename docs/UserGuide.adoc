@@ -62,51 +62,68 @@ IMPORTANT: Ensure that the folder is empty! Doing otherwise might result in unex
 Section by: https://github.com/nathanaelseen[Nathanael Seen]
 
 This segment highlights three key features iGrad offers to NUS students, namely;
-a Course Planner, an MCs Tracker, and a CAP Tracker.
+a xref:anchor-tag-a[Course Planner], an xref:anchor-tag-b[MCs (Modular Credits) Tracker], and a
+xref:anchor-tag-c[CAP (Cumulative Average Point) Tracker].
 
 If you would like a more in-depth overview of the actual components of our application, please
-refer to the next section; <<Components>>, for more details.
+refer to the next segment; <<Components>>, for more details.
+
+anchor:anchor-tag-a[]
 
 ==== Course Planner
-_iGrad_ was built with every NUS student in mind. Our flexible course planner allows you to plan
-a course of your own dreams, be it those of you doing a single degree programme,
+_iGrad_ was built with every NUS student in mind. Our flexible course planner allows you to
+plan a course of your own dreams, be it those of you doing a single degree programme,
 a double degree programme, and even a concurrent degree programme.
 
 With our course planner, you would be able to enter your current course details such as your
-*modules* and the various degree *requirements* by which those modules are mapped.
+*modules* and the various *requirements* by which those modules are categorised under.
 
-(For instance, the _Computer Science_ course has the various
-*modules*, highlighted in [blue]#blue#, and degree *requirements*, boxed in [red]#red#):
+Take for instance, the _Computer Science_ course. There so are so many
+*modules*, highlighted in [blue]#blue#, and *requirements*, boxed in [red]#red#, you have to keep
+track of:
 
 anchor:figure-a-anchor[]
 
-.Computer science degree requirements
+.Computer science degree programme
+
 image::../images/user-guide/components/graduation_degree_requirements.png[]
+
+But our flexible course planner takes care of all these details for you. 
+
+anchor:anchor-tag-b[]
 
 ==== MCs Tracker
 
-We are sick of counting our MCs at the beginning of every semester; be it counting the
-total course MCs left before you can graduate, or tracking the number of MCs left
-for those invidual degree requirements (boxed in [green]#green#,
-in xref:figure-a-anchor[_Figure 1_]).
+We are sick of counting our MCs at the beginning of every semester. Be it counting the
+total number of MCs left before you can graduate, or counting the number of MCs left
+for those invidual requirements (boxed in [green]#green#,
+in xref:figure-a-anchor[_Figure 1_] above).
 
 With our MCs feature, you would be able to easily keep track of how close you are to
 graduation, as all this information is automatically updated and recomputed, each time you have
 completed a certain module.
 
+anchor:anchor-tag-c[]
+
 ==== CAP Tracker
 No more googling for CAP calculators. iGrad's CAP tracker helps you keeps track of your current CAP at
-every step of your journey in your course. In addition, it even offers predictive features so you know how
-well you have to do in order to achieve your dream CAP.
+every step of your journey in your course.
 
-==== Everything Integrated into One Application
-But the best part is that these features are all integrated into our application; _iGrad_.
+In addition, it also offers predictive features so you know how well you have to do in order to
+achieve your dream CAP.
+
+==== Everything Integrated into one Application
+But the best part of it, is that these features are all integrated into one application; _iGrad_.
+
 And with all these important pieces of information in one place, you would never go amiss keeping
-track of all your graduation requirements.
+track of your graduation requirements.
 
 == Components
-This segment details the various components of _iGrad_. As shown in _Figure 2_ below,
-these components follow a hierachical structure, exactly like how an NUS course is structured.
+This segment details the various components of _iGrad_.
+
+As shown in _Figure 2_ below,
+the components of our application follows a hierachical structure, exactly like how an
+(NUS) course is structured:
 
 anchor:figure-b-anchor[]
 
@@ -124,44 +141,42 @@ of our application highlighted:
 .iGrad components screenshot
 image::../images/user-guide/components/app_screenshot_ui_components_highlighted.png[]
 
-As per the screenshot above (in _figure 4_):
+As per the screenshot above (in _Figure 4_):
 
 * xref:Course[Course] is indicated in [blue]#blue#,
-* xref:Degree Requirements[Degree Requirements] is indicated in [red]#red#, and
-* xref:Modules[Modules] is indicated in [yellow]#yellow#
+* xref:Requirements[Requirements] are indicated in [red]#red#, and
+* xref:Modules[Modules] are indicated in [yellow]#yellow#
 
-You may refer to xref:figure-b-anchor[_Figure 2_], if you would like a quick recap on the
+You may refer to xref:figure-b-anchor[_Figure 2_] above, if you would like a quick recap on the
 hierarchical structuring of these components.
 
 ==== Course
 
-A course is simply a group of degree requirements.
+A course is simply a group of requirements.
 
-It contains important information such as your current CAP, total number of MCs
-you have completed thus far, and semesters left before you can graduate.
+It contains important information such as your current CAP, the total number of MCs
+you have completed so far, and the number of semesters left before you can graduate.
 
-In short, it helps you keep track of your overall degree progress.
+==== Requirements
 
-==== Degree Requirements
-
-Under a course are the various degree requirements, such as the ones shown in
+Under a course are the various requirements, such as the ones shown in
 xref:figure-b-anchor[_Figure 2_] above; _Computer Science Foundation_,
 _Mathematics and Sciences_, and _Unrestricted Electives_.
 
-Each requirement comprises of the modules you need to complete in order to fulfill that particular
-requirement.
+Each requirement comprises of the modules under it, which you have to complete in order to
+fulfill that particular requirement.
 
-Additionally, each requirement consists of important information such as
-the number of MCs you have already fulfilled.
+Additionally, each requirement also consists of important information such as
+the number of MCs you have already fulfilled for that particular requirement.
 
 ==== Modules
 
 Finally, modules are the basic building block of all the other components.
 
-These could be modules you have taken, modules you are currently taking and modules that
-you plan to take.
+These could be the modules you have taken, the modules you are currently taking or
+the modules that you plan to take.
 
-Each module allows recording of other optional information, such as indicating the grade you
+Each module allows recording of other optional information, such as the grade you
 have obtained for those modules.
 
 //end::nat-ug[]
