@@ -1,4 +1,5 @@
 = iGrad - User Guide
+:icons: font
 :site-section: UserGuide
 :toc:
 :toc-title:
@@ -15,23 +16,29 @@ ifdef::env-github[]
 :important-caption: :heavy_exclamation_mark:
 :caution-caption: :fire:
 :warning-caption: :warning:
-:icons: :font:
 endif::[]
 :repoURL: https://github.com/AY1920S2-CS2103T-F09-3/main
 
 By: `Team-iGrad`      Since: `Feb 2020`
 
+<<<
+
+
 == Introduction
 
-Welcome! Thanks for choosing to use iGrad. This official iGrad User Guide will help guide you as you explore the ways you can
-track your graduation!
+Welcome! Thanks for choosing to use iGrad.
+
+Are you an NUS student? Have you been struggling to manage your academic administrative matters
+whilst trying to juggle a heavy school workload? If so, then iGrad, the ground-breaking graduation tracking application is for you. This official iGrad User Guide will help guide you as you explore
+the ways to make managing your graduation much more efficient!
 
 == How to use this guide
 
-You may proceed to <<Command List>> if you would like to learn how to use each of the commands, and <<Cheat Sheet>>
-if you would just like a list of all the commands for easy reference.
+To navigate this guide, please scroll back to the top of this page and look at the table of contents.
+If you wish to go to a certain section, simply click on the name of the section!
 
-The figure below explains the symbols used throughout the user guide.
+Also, we make use of certain symbols throughout this guide to help emphasis multiple things.
+The following symbols are:
 
 WARNING: Specifies the constraints of the command or situation.
 
@@ -41,7 +48,11 @@ TIP: Specifies extra tips you can use when navigating through our app.
 
 IMPORTANT: Specifies important things to take note of
 
+<<<
+
 == Quick Start
+
+=== Installation
 
 *Follow the steps below to get started with iGrad:*
 
@@ -55,6 +66,21 @@ IMPORTANT: Ensure that the folder is empty! Doing otherwise might result in unex
 
 4. Simply double-click on the file to begin! We hope we make tracking your graduation a breeze!
 
+=== Using the app
+
+* If you wish to type in a command, click the command box and type in your command
++
+.The Command Box
+image::../images/user-guide/command-box.png[]
+
+* To minimize the window, press the minimize button as shown circled in [yellow]#yellow#
+* To make the window full-screen, press the full-screen button as shown circled in [green]#green#
+* To close the window, press the close button  as shown circled in [red]#red#
++
+.Window Controls
+image::../images/user-guide/window-controls.png[]
+
+<<<
 
 // tag::nat-ug[]
 == Features
@@ -70,6 +96,8 @@ refer to the next segment; <<Components>>, for more details.
 
 anchor:anchor-tag-a[]
 
+<<<
+
 ==== Course Planner
 _iGrad_ was built with every NUS student in mind. Our flexible course planner allows you to
 plan a course of your own dreams, be it those of you doing a single degree programme,
@@ -84,13 +112,15 @@ track of:
 
 anchor:figure-a-anchor[]
 
-.Computer science degree programme
+.Computer Science Degree Programme
 
 image::../images/user-guide/components/graduation_degree_requirements.png[]
 
 But our flexible course planner takes care of all these details for you. 
 
 anchor:anchor-tag-b[]
+
+<<<
 
 ==== MCs Tracker
 
@@ -118,6 +148,8 @@ But the best part of it, is that these features are all integrated into one appl
 And with all these important pieces of information in one place, you would never go amiss keeping
 track of your graduation requirements.
 
+<<<
+
 == Components
 This segment details the various components of _iGrad_.
 
@@ -127,18 +159,20 @@ the components of our application follows a hierachical structure, exactly like 
 
 anchor:figure-b-anchor[]
 
-.Hierachical overview of iGrad components
+.Overview of iGrad Components
 image::../images/user-guide/components/hierachical_structure.png[]
 
 Here is how our application looks like (on a typical usage):
 
-.iGrad application screenshot
+.iGrad Application
 image::../images/user-guide/components/app_screenshot_ui.png[]
+
+<<<
 
 The following is the same screenshot of our application, but with the various components
 of our application highlighted:
 
-.iGrad components screenshot
+.iGrad Components
 image::../images/user-guide/components/app_screenshot_ui_components_highlighted.png[]
 
 As per the screenshot above (in _Figure 4_):
@@ -180,6 +214,7 @@ Each module allows recording of other optional information, such as the grade yo
 have obtained for those modules.
 
 //end::nat-ug[]
+<<<
 
 //tag::walkthrough[]
 == Walkthrough
@@ -199,7 +234,9 @@ utilise the main components of the application, and covers the following:
 * Tracking your academic progress: `MCs` and `CAP`
 * Exporting your data
 
-Here is a 10-step guide on how to use `iGrad`.
+The following pages consist of a 10-step guide on how to use `iGrad`.
+
+<<<
 
 === Start up the application
 
@@ -209,7 +246,10 @@ Section by: https://github.com/dargohzy[Daryl]
 - Select an avatar by typing its name before pressing enter.
 - The avatar will act as your guide for the application.
 +
+.Avatar Selection
 image::../images/user-guide/walkthrough1.png[]
+
+<<<
 
 === Enter your course details
 
@@ -219,9 +259,13 @@ Section by: https://github.com/dargohzy[Daryl]
 - Enter the name of your course in the format: `course add n/COURSE_NAME s/TOTAL_SEMESTERS`
 - E.g. `course add n/Computer Science s/2`
 +
+.Course Set Command
 image::../images/user-guide/walkthrough2.1.png[]
 +
+.A Successfully Set Course
 image::../images/user-guide/walkthrough2.2.png[]
+
+<<<
 
 === Key in your graduation requirements
 
@@ -231,9 +275,13 @@ Section by: https://github.com/dargohzy[Daryl]
 - Enter your course graduation requirements in the format: `requirement add t/REQUIREMENT_TITLE u/MCS_REQUIRED`
 - E.g. `requirement add n/General Education u/20`
 +
+.Requirement Add Command
 image::../images/user-guide/walkthrough3.1.png[]
 +
+.Successfully Added Requirement
 image::../images/user-guide/walkthrough3.2.png[]
+
+<<<
 
 === Add modules to the tracker
 
@@ -243,9 +291,13 @@ Section by: https://github.com/dargohzy[Daryl]
 - Enter modules into the system in the format: `module add n/MODULE_CODE t/MODULE_TITLE u/MCs`
 - E.g. `module add n/GER1000 t/Quantitative Reasoning u/4`
 +
+.Module Add Command
 image::../images/user-guide/walkthrough4.1.png[]
 +
+.Successfully Added Module
 image::../images/user-guide/walkthrough4.2.png[]
+
+<<<
 
 === Assign your modules
 
@@ -256,9 +308,13 @@ Section by: https://github.com/dargohzy[Daryl]
 - Note: Requirement codes are generated by the system.
 - E.g. `requirement assign GE0 n/GER1000`
 +
+.Requirement Assign Command
 image::../images/user-guide/walkthrough5.1.png[]
 +
+.Successfully Assigned Module
 image::../images/user-guide/walkthrough5.2.png[]
+
+<<<
 
 === Key in additional details for your modules
 
@@ -272,9 +328,13 @@ WARNING: For Semester, it has to follow the format of `Y_S_`
 
 - E.g. `module edit GER1000 s/Y1S1`
 +
+.Module Edit Command
 image::../images/user-guide/walkthrough6.1.png[]
 +
+.Successfully Edited Module
 image::../images/user-guide/walkthrough6.2.png[]
+
+<<<
 
 === Mark a module as done and assign a grade to it
 
@@ -284,9 +344,13 @@ Section by: https://github.com/teriaiw[Teri]
 - Enter grade for the module in the format: `module done MODULE_CODE g/GRADE`
 - E.g. `module done GER1000 g/A+`
 +
+.Module Done Command
 image::../images/user-guide/walkthrough7.1.png[]
 +
+.Successfully Marked as Done Module
 image::../images/user-guide/walkthrough7.2.png[]
+
+<<<
 
 === Track your MCs
 
@@ -297,7 +361,10 @@ Section by: https://github.com/teriaiw[Teri]
 - Total MCs count is the total of all requirement MCs.
 - MCs are fulfilled when modules that are within a requirement are marked done.
 +
+.Module Credits Tracked
 image::../images/user-guide/walkthrough8.png[]
+
+<<<
 
 === View your CAP
 
@@ -307,8 +374,10 @@ Section by: https://github.com/teriaiw[Teri]
 - CAP is automatically tracked and updated.
 - CAP is updated whenever a module within a requirement is marked done with a grade.
 +
+.CAP Tracked
 image::../images/user-guide/walkthrough9.png[]
 
+<<<
 
 === Export your data
 
@@ -317,14 +386,16 @@ Section by: https://github.com/teriaiw[Teri]
 - Data of your entire study plan can to exported to a comma-separated values (.csv) file.
 - Export your data in the format: `export`
 +
-image::../images/user-guide/walkthrough10.1.png[]
-+
+.Export Command
 image::../images/user-guide/walkthrough10.2.png[]
 +
+.Successfully exported file - study_plan.csv
 image::../images/user-guide/walkthrough10.3.png[]
 
 NOTE: Data file can be found in the same folder as this application.
 //end::walkthrough[]
+
+<<<
 
 == Command List
 Section by: https://github.com/yjskrs[Yijie]
@@ -394,6 +465,7 @@ The two flags used in iGrad are listed in the table below.
 |===
 
 //end::command-yijie[]
+<<<
 
 [#helpSection]
 === Help
@@ -410,6 +482,8 @@ A link is also provided to direct users to the user guide for more detailed expl
 |Example | `help`
 
 |===
+
+<<<
 
 [#courseSection]
 === Course
@@ -441,6 +515,8 @@ The following error is generic and may be encountered when dealing with any cour
 |===
 
 This error can be resolved by adhering to the restriction detailed in <<tableCourseParameters>>
+
+<<<
 
 ==== Course Set
 
@@ -489,6 +565,8 @@ with the `course delete` command.
 3. The message in the response box should change and you should see the course name and semesters
 updated in the top left corner panel.
 
+<<<
+
 ==== Course Edit
 
 This command edits the editable fields in a course which include the `COURSE_NAME` and `SEMESTERS`.
@@ -534,6 +612,8 @@ You may undo or delete objects created from this tutorial by using the appropria
 3. The message in the response box should change and you should see the course name and semesters
 updated in the top left corner panel.
 
+<<<
+
 ==== Course Delete
 
 This command *deletes the course as well as all other information stored* in iGrad. Please use with caution!
@@ -560,6 +640,8 @@ You may undo changes made from this tutorial by using the appropriate command.
 
 3. The message in the response box should change and you should see the course name and semesters
 disappear, as well as all other information in iGrad.
+
+<<<
 
 //tag::requirement-yijie[]
 [#requirementSection]
@@ -597,6 +679,8 @@ The following errors are generic and may be encountered when dealing with any re
 |===
 
 These errors can all be resolved by adhering to the restrictions detailed in <<tableRequirementParameters>>
+
+<<<
 
 ==== Requirement Add
 
@@ -642,7 +726,9 @@ You may undo changes made from this tutorial by using the appropriate command.
 
 +
 .Requirement "Computer Science Foundation" successfully added
-image::../images/user-guide/requirementCommand/requirementAddSuccess.png[]
+image::../images/user-guide/requirementCommand/requirementAddSuccess.png[req-success, 400]
+
+<<<
 
 ==== Requirement Edit
 
@@ -679,6 +765,8 @@ change the values as you wish as long as they follow the restrictions as listed 
 |Try specifying either the title or the credits, or provide a value that is different from the existing one
 |===
 
+<<<
+
 *Tutorial*
 
 [NOTE]
@@ -693,7 +781,9 @@ You may undo or delete objects created from this tutorial by using the appropria
 
 +
 .Requirement "Computer Science Foundation" successfully edited
-image::../images/user-guide/requirementCommand/requirementEditSuccess.png[]
+image::../images/user-guide/requirementCommand/requirementEditSuccess.png[req-edit, 400]
+
+<<<
 
 ==== Requirement Delete
 
@@ -738,6 +828,8 @@ You may undo objects deleted from this tutorial by using the appropriate command
 disappears from the list.
 //end::requirement-yijie[]
 
+<<<
+
 ==== Requirement Assign
 
 This command assigns one or more than one module to a requirement.
@@ -773,6 +865,8 @@ Refer to <<ModuleAddCommand>> to find out how to add a module.
 |Try assigning a different module instead
 |===
 
+<<<
+
 *Tutorial*
 
 [NOTE]
@@ -787,7 +881,9 @@ You may undo changes made from this tutorial by using the appropriate command.
 
 +
 .Modules successfully assigned to requirement "Computer Science Foundation"
-image::../images/user-guide/requirementCommand/requirementAssignSuccess.png[]
+image::../images/user-guide/requirementCommand/requirementAssignSuccess.png[req-assign, 400]
+
+<<<
 
 ==== Requirement Unassign
 
@@ -834,6 +930,8 @@ You may undo changes made from this tutorial by using the appropriate command.
 
 // tag::module[]
 
+<<<
+
 === Module
 Section by: https://github.com/waynewee[Wayne]
 
@@ -854,6 +952,8 @@ All module commands use the same parameters, listed in the table below:
 |`GRADE` | A module's grade | A+ | Must be one of the following:  A+, A, A-, B+, B-, C+, C, D, D+, F, S, U |
 |===
 
+<<<
+
 If, when issuing a command, the parameter restrictions are not strictly adhered to,
 you might come across some common errors.
 The following errors are generic and may be encountered when dealing with any module command:
@@ -870,6 +970,8 @@ The following errors are generic and may be encountered when dealing with any mo
 |===
 
 These errors can all be resolved by adhering to the restrictions detailed in <<tableModuleParameters>>
+
+<<<
 
 [#ModuleAddCommand]
 ==== Module Add
@@ -900,6 +1002,7 @@ and fill in those fields. We do not check if the given `MODULE_CODE` or `MODULE_
 |Duplicate Module Error |Sorry, this module already exists in the course book. | The module you are attempting to add already exists in the module list| Delete the existing module in the list and try again|
 |===
 
+<<<
 
 *Tutorial*
 
@@ -921,6 +1024,8 @@ For this tutorial, actual values will be given instead of placeholders. Undo or 
 +
 .Modules CS2103T and CS2101 successfully added
 image::../images/user-guide\moduleAutoAddCommand\two_modules.png[]
+
+<<<
 
 //tag::wayne-ug[]
 [#ModuleAutoAddCommand]
@@ -965,6 +1070,8 @@ we skip that module and let you know what went wrong.
 [TIP]
 You can add up to 10 modules at once! Try this: `module add n/CS1101 n/CS1231 n/CS2030 n/CS2040 n/CS2100 n/CS2103T n/CS2105 n/CS2106 n/CS3230 n/CS3219 -a`
 
+<<<
+
 <<ModuleAutoAddErrorReference>> lists the errors you might encounter after issuing this command:
 
 [#ModuleAutoAddErrorReference]
@@ -977,6 +1084,8 @@ You can add up to 10 modules at once! Try this: `module add n/CS1101 n/CS1231 n/
 |Module Overload Error | Module Overload Error| Please do not attempt to add more then 10 modules. | Divide the list of modules into smaller batches of size less than 10 and try again
 |Connection Error| Connection Error| Sorry, I was unable to find this module. Is your internet down? | Whilst all other commands work offline. You need an internet connection to issue this command. Go online before trying again
 |===
+
+<<<
 
 *Tutorial*
 
@@ -1007,7 +1116,11 @@ WARNING: As the prerequisites and preclusions from NUSMods do not follow any sta
 always be accurate. This is due to a difficulty of interpreting
 the data given by NUSMods. This remains a BETA feature and we hope to upgrade it in time.
 // end::wayne-ug[]
+
+<<<
+
 ==== Module Done
+
 Section by: https://github.com/waynewee[Wayne]
 
 This command marks a module as done by giving it a grade and optionally, a semester.
@@ -1041,6 +1154,8 @@ during special term, you could input the most recent semester instead
 |Module Not Found Error | Sorry, I was unable to find this module. | The module you are attempting to mark as done does not exist in the module list| Add the module you wish to mark as done and try again
 |===
 
+<<<
+
 *Tutorial*
 
 [NOTE]
@@ -1055,6 +1170,8 @@ Ensure that you have the module CS2103T in the module list
 +
 .Modules CS2103T successfully given a grade and a semester
 image::../images/user-guide\moduleAutoAddCommand\one_module.png[]
+
+<<<
 
 ==== Module Edit
 Section by: https://github.com/waynewee[Wayne]
@@ -1085,6 +1202,8 @@ change the values as you wish as long as they follow the restrictions as listed 
 |Module Not Found Error | Sorry, I was unable to find this module | The module you are attempting to edit does not exist in the module list| Instead of editing a module that does not exist, try adding a new one!
 |===
 
+<<<
+
 *Tutorial*
 
 [NOTE]
@@ -1099,6 +1218,8 @@ Ensure that you have the module CS2103T in the module list
 +
 .Modules CS2103T successfully given a grade and a semester
 image::../images/user-guide\moduleAutoAddCommand\module_edit.png[]
+
+<<<
 
 ==== Module Delete
 Section by: https://github.com/waynewee[Wayne]
@@ -1138,6 +1259,8 @@ Ensure that you have the module CS2103T in the module list
 
 2. The message in the response box should change and you should see that the module CS2103T disappears from the module list
 
+<<<
+
 [#ModuleFilterCommand]
 ==== Module Filter
 Section by: https://github.com/waynewee[Wayne]
@@ -1173,6 +1296,8 @@ are unable to find some modules after using this command, please reset the displ
 WARNING: If you
 are unable to find some modules after using this command, please reset the display by typing in `module filter`.
 
+<<<
+
 *Tutorial*
 
 Ensure that the following modules are in the module list:
@@ -1201,6 +1326,8 @@ This section contains information which requires prior knowledge of discrete mat
 The flag `-o`, is present, sets the logical operator used in concatenating the parameters as _"or"_. The default logical operator used is _"and"_.
 
 '''
+
+<<<
 
 === Export
 Section by: https://github.com/waynewee[Wayne]
@@ -1241,6 +1368,8 @@ NOTE: For example, if the app is stored in your Desktop folder, the file _study_
 
 '''
 
+<<<
+
 === Exit
 Section by: https://github.com/waynewee[Wayne]
 
@@ -1256,6 +1385,8 @@ This command assists you in exiting the program.
 *Additional Information*
 
 You can also exit the program by clicking the close icon on the top right hand corner of the application's window.
+
+<<<
 
 ## Version 2.0
 Section by: https://github.com/waynewee[Wayne]
@@ -1281,9 +1412,9 @@ Section by: https://github.com/waynewee[Wayne]
 We plan to integrate with popular timetabling application NUSMods so that you can manage all aspects of your academics
 in one place.
 
+<<<
+
 ## FAQs
-
-
 
 _I'm not an NUS student. Can I still use iGrad?_
 
@@ -1300,6 +1431,7 @@ _Where can I get the icons for the avatars?_
 The avatar icons were obtained from https://www.freepik.com/free-vector/hand-drawn-kawaii-characters-collection_4098554.htm#page=1&query=cute%20animals&position=2[Freepik].
 All credits go to the original creator.
 
+<<<
 //tag::cheatsheet[]
 == Cheat Sheet
 
@@ -1337,6 +1469,8 @@ categories:
 
 |===
 
+<<<
+
 === Requirement Commands
 .Requirement Commands
 |===
@@ -1362,6 +1496,8 @@ categories:
 //end::cheatsheet[]
 
 |===
+
+<<<
 
 ## Glossary
 
