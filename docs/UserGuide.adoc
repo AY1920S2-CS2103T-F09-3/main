@@ -159,6 +159,7 @@ the components of our application follows a hierachical structure, exactly like 
 
 anchor:figure-b-anchor[]
 
+[#overview-components]
 .Overview of iGrad Components
 image::../images/user-guide/components/hierachical_structure.png[]
 
@@ -1418,7 +1419,7 @@ in one place.
 
 _I'm not an NUS student. Can I still use iGrad?_
 
-As long as your university follows a similar <<fig-2,hierachical structure>>!
+As long as your university follows a similar structure as shown in <<overview-components>>!
 However, we will be unable to provide features such as validation from NUSMods.
 
 _Do I require an online connection to use iGrad?_
